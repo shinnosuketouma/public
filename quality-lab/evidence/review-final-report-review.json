@@ -1,0 +1,352 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_at_utc": "2026-11-13T21:48:49.493873+00:00",
+  "scope": "Read-only final report/guide/sanitized-evidence/source-guard review. No source implementation, frozen artwork, Git commit/push or real public checkout modified. Temporary independent source fixtures only.",
+  "status": "APPROVED_FOR_REPORT_PUBLICATION",
+  "result": "問題なし",
+  "findings": [],
+  "acceptance_claim_audit": {
+    "Sound_v7": "Report/data/index/analysis/sanitized review agree on independentA/BPASS,6axes4, scoped selected1280desktop visual comparison plus predeclared internal quality criteria.",
+    "Book_v4": "Report/data/index/analysis/sanitized review keepA/BPENDING, visual4axes4 andactualhiddenNOT_RUN. No accepted-work increment.",
+    "older_revisions": "Previous failures andSoundv6PENDING are retained; v7realhidden is not backfilled into v6 orBook.",
+    "not_claimed": "AllMotionSitesworks/alloriginalfunctions/allmobiledevices/allGPU/browser parity,realOSreduce/physicaltouch/BFCache observation or daily3futurecapacity are not claimed.",
+    "new_scope": "Current works singlepage only; oldBookv2reader is labelled old-scope failed immutable history. Future destinations belong to adopting users; no business backend/destination completion is imposed."
+  },
+  "report_consistency": {
+    "reviewed_files_sha256": {
+      "index.html": "68b0ccadba2a124b91d14f5c75b79ab8405f30cc6851c13a97899b2ad7a27de2",
+      "analysis.md": "c6fdb3c1a6108f86c470fce62578c97ac4d807f5df96e40e60cb48f2791dec8f",
+      "production-guide.md": "e7f795c4d1264b4a16ea8cdfd554e0d7d0ab512a71ef46344e0dcc7e079855d4",
+      "data.json": "e6b1300c9d23d2b58f94906895fcd5193298ed07e2beb998b24cc84f9c491c3f",
+      "style.css": "52d35f0d1b07034075691224326b91b1a203d7aa22c4ced76440c5e2699a52d4",
+      "app.js": "ae8e43023a4b2048513c08acb338e1c7a89e6fc37dee420014ae23ca29c998e9"
+    },
+    "revisions": [
+      {
+        "id": "sound-v1",
+        "path": "../gs-000011/v1/",
+        "gate": "FAIL"
+      },
+      {
+        "id": "sound-v2",
+        "path": "../gs-000011/v2/",
+        "gate": "FAIL"
+      },
+      {
+        "id": "sound-v3",
+        "path": "../gs-000011/v3/",
+        "gate": "FAIL"
+      },
+      {
+        "id": "sound-v4",
+        "path": "../gs-000011/v4/",
+        "gate": "FAIL"
+      },
+      {
+        "id": "sound-v5",
+        "path": "../gs-000011/v5/",
+        "gate": "FAIL"
+      },
+      {
+        "id": "sound-v6",
+        "path": "../gs-000011/v6/",
+        "gate": "PENDING"
+      },
+      {
+        "id": "sound-v7",
+        "path": "../gs-000011/v7/",
+        "gate": "PASS"
+      },
+      {
+        "id": "editorial-v1",
+        "path": "../gs-000012/v1/",
+        "gate": "FAIL"
+      },
+      {
+        "id": "editorial-v2",
+        "path": "../gs-000012/v2/",
+        "gate": "FAIL"
+      },
+      {
+        "id": "editorial-v3",
+        "path": "../gs-000012/v3/",
+        "gate": "FAIL"
+      },
+      {
+        "id": "editorial-v4",
+        "path": "../gs-000012/v4/",
+        "gate": "PENDING"
+      }
+    ],
+    "all11_source_and_code_URLs": "PASS: canonical../gs-N/vN/ plus40hexcommit treeURL agree for every entry.",
+    "old8_archive": {
+      "verification": "Fetched actual quality-lab/data.json through the GitHub read connector at immutable publiccommit4a1142e3a021bbbf727bad6a504c48934f85ab72. All8ids,path,codecommit andgate remain unchanged in current11-entry report.",
+      "ids": [
+        "sound-v1",
+        "sound-v2",
+        "sound-v3",
+        "sound-v4",
+        "sound-v5",
+        "sound-v6",
+        "editorial-v1",
+        "editorial-v2"
+      ],
+      "result": "PASS",
+      "local_HEAD_scope": "PrivateHEAD has only6 earlier entries; it was not mislabeled as the8-entry publicbaseline."
+    },
+    "guide": {
+      "byte_identical_to_master": true,
+      "sha256": "e7f795c4d1264b4a16ea8cdfd554e0d7d0ab512a71ef46344e0dcc7e079855d4",
+      "latest_semantics": "Strong singlepage rule,Bvisual-relative vsinternal-quality distinction,numericthresholds unchanged,latestprofile/DB_MIRROR authority/temporaryreservation vsDBregistration/non-ingestion of unaligned experiments. NoDB write or main merge is implied by this report."
+    },
+    "comparison_selector": {
+      "source_sha256": "ae8e43023a4b2048513c08acb338e1c7a89e6fc37dee420014ae23ca29c998e9",
+      "review": "Latest entry determines exactsitePrefix including slash; left selects first revision of thatsite,right selects latest arrayentry.",
+      "actual_source_block_fixtures": 5,
+      "result": "PASS",
+      "cases": [
+        "Current11entries",
+        "Singleentry",
+        "Interleavedsitehistories",
+        "Similar-numberprefixescannotcrossmatch",
+        "Emptyhistory"
+      ]
+    },
+    "static_links": "All6 declared screenshot paths exist; figure/revisionids are unique;data and HTML summaries agree on11/PASS1/BookPENDING."
+  },
+  "sanitized_export": {
+    "indexed_JSON_count": 65,
+    "index_sha256": "a0d388affb10eea42cfbdb3db284c7e88e6f37c20ed59910ea64172111485fa9",
+    "all_export_hashes_match_index": true,
+    "all_original_hashes_match_current_saved_evidence": true,
+    "numeric_boolean_null_values_compared": 2837,
+    "numeric_boolean_null_changes": [],
+    "unchanged_status_strings": 592,
+    "string_changes": {
+      "count": 15,
+      "review": "All15 originals contain private local paths; exported strings redact those paths. One status-bearing errorstack changes only its path portion;FAIL/assertion facts remain.",
+      "removed_fields": [
+        "harness_source",
+        "harness_location"
+      ]
+    },
+    "result_integrity": "NoNOT_RUN/UNKNOWN/PENDING/FAIL was converted into observedPASS by export. Originalsha and limitations remain available.",
+    "sensitive_data_checks": {
+      "private_userpaths": [],
+      "email_patterns": [],
+      "high_confidence_secret_signatures": [],
+      "decoded_service_role_JWTs": [],
+      "embedded_harness_fields": [],
+      "manual_scope": "Primary report and acceptance fields reviewed semantically; synthetic test inputs and own QA tab identifiers are not represented as actual customer data."
+    },
+    "competitor_prompt_checks": {
+      "method": "Read all5 supplied raw attachments as research data, compare normalized distinctive160-character spans against every publicreport text/JSON/JS/CSS/HTML. No such copied span found; no competitor media file is included.",
+      "files": [
+        {
+          "attachment": 1,
+          "bytes": 21952,
+          "distinctive_long_span_matches": []
+        },
+        {
+          "attachment": 2,
+          "bytes": 22282,
+          "distinctive_long_span_matches": []
+        },
+        {
+          "attachment": 3,
+          "bytes": 36847,
+          "distinctive_long_span_matches": []
+        },
+        {
+          "attachment": 4,
+          "bytes": 39783,
+          "distinctive_long_span_matches": []
+        },
+        {
+          "attachment": 5,
+          "bytes": 21754,
+          "distinctive_long_span_matches": []
+        }
+      ],
+      "limit": "Targeted long-span/semantic source audit, not an exhaustive proof that no common short phrase or idea appears elsewhere."
+    },
+    "limits": "Pattern scans alone are not universal secret/PII/copyright clearance. This review also relies on original-source authorship audits and the strictly bounded release contents. Newly created final-review files are separate from the65-entry export snapshot."
+  },
+  "images": {
+    "count": 6,
+    "hashes_dimensions": [
+      {
+        "path": "evidence/sound-v1-1280x720.png",
+        "width": 1280,
+        "height": 720,
+        "sha256": "06fa896a87acce605ec2a9764bcdeae774b0b909ac562b21cc7b419b0e1138e6",
+        "bytes": 278950
+      },
+      {
+        "path": "evidence/sound-v1-390x844.png",
+        "width": 390,
+        "height": 844,
+        "sha256": "1afddb0b645d7e2b0891f177693ab2b58ee10660db76d17accb4424caa48a108",
+        "bytes": 122507
+      },
+      {
+        "path": "evidence/sound-v5-1280x720.png",
+        "width": 1280,
+        "height": 720,
+        "sha256": "02f7af11016294d61d5d8439d17015e6a569939d15b763a176e704a4c443c43c",
+        "bytes": 196947
+      },
+      {
+        "path": "evidence/sound-v7-1280x720.png",
+        "width": 1280,
+        "height": 720,
+        "sha256": "085a26bb0f4560ec12ec07d04a3d56ae65f2e063606535c8a3a7896c45ac2128",
+        "bytes": 197154
+      },
+      {
+        "path": "evidence/book-v4-1280x720.png",
+        "width": 1280,
+        "height": 720,
+        "sha256": "2073c2bc5fd6cd45db48ac103c679dec9a894b291bc0604fb6aad0c67ff91922",
+        "bytes": 186475
+      },
+      {
+        "path": "evidence/book-v4-320x740.png",
+        "width": 320,
+        "height": 740,
+        "sha256": "8c7151fe7d5ae9eb8948963aff02b93e1ad21073811570cb0950a86b82109798",
+        "bytes": 66376
+      }
+    ],
+    "independent_pixel_comparison": [
+      {
+        "image": "book-v4-1280x720.png",
+        "pixels_equal_original_viewport": true,
+        "dimensions": [
+          1280,
+          720
+        ],
+        "PNG_metadata_keys": []
+      },
+      {
+        "image": "book-v4-320x740.png",
+        "pixels_equal_original_viewport": true,
+        "dimensions": [
+          320,
+          740
+        ],
+        "PNG_metadata_keys": []
+      },
+      {
+        "image": "sound-v1-1280x720.png",
+        "pixels_equal_original_viewport": true,
+        "dimensions": [
+          1280,
+          720
+        ],
+        "PNG_metadata_keys": []
+      },
+      {
+        "image": "sound-v1-390x844.png",
+        "pixels_equal_original_viewport": true,
+        "dimensions": [
+          390,
+          844
+        ],
+        "PNG_metadata_keys": []
+      },
+      {
+        "image": "sound-v5-1280x720.png",
+        "pixels_equal_original_viewport": true,
+        "dimensions": [
+          1280,
+          720
+        ],
+        "PNG_metadata_keys": []
+      },
+      {
+        "image": "sound-v7-1280x720.png",
+        "pixels_equal_original_viewport": true,
+        "dimensions": [
+          1280,
+          720
+        ],
+        "PNG_metadata_keys": []
+      }
+    ],
+    "result": "PASS: all6exactexporthashes matchcapturemetadata and raw retained top-leftviewport crop pixels; noPNGmetadata fields.",
+    "claim_limit": "Static composition only. No animationquality/FPS/GPU proof is inferred from software-rendered screenshots."
+  },
+  "freeze_singlepage_guard": {
+    "script_sha256": "261e7ba0b8629e2c1909786c1f95ffe6a5eb32b45c605e26f2acae2f0863b856",
+    "diff_result": "問題なし: validateSinglePageScope runs before readSnapshot returns/newmanifest/publiccopy. Newrootpublication.html,nestedindex.html orotherHTML cannot become a newwork.",
+    "legacy_exception": {
+      "site": "gs-000012",
+      "revision": "v2",
+      "manifest_sha256": "a10e15e9f33d65e6b50a69c5dfe3c5790201c22192ca299569a125f7e8a49d7e",
+      "checks": "Exactmanifestbytehash alone is not enough: site/revision andeverypath/hash/bytes mustmatch. Wrongcalleridentity cannot copy it. NofreeCLIlegacyflag."
+    },
+    "unchanged_guards": "Existinghigh-confidencesecrets/path/symlink/read-race/size/append-only/idempotence gates remain; newpolicy doesnot rewrite historicalsources.",
+    "author_fixture_assessment": {
+      "evidence": "evidence/freeze-single-page-tests.json",
+      "cases_passed": 20,
+      "cases_failed": 0,
+      "harness_hash": "441d80f4768d99fcfbc0e90eaf0d9e874d7d9ead95e06dae564a9c8f98fee0d0",
+      "newline_question": "Evaluated the2actualunknown/forgedmanifest writeexpressions fromharnesssource inNodeVM. Both endinactual LF (lastcharcodes125,10) andJSON.parse succeeds. Fixturecorrection unnecessary; rejection is not just malformedJSON."
+    },
+    "independent_fixture_run": {
+      "result": "PASS",
+      "cases": 9,
+      "checks": [
+        {
+          "name": "new second HTML rejected before new manifest",
+          "result": "PASS"
+        },
+        {
+          "name": "nested root-name HTML rejected",
+          "result": "PASS"
+        },
+        {
+          "name": "valid unknown manifest and hashes do not bypass",
+          "result": "PASS"
+        },
+        {
+          "name": "exact historical archive allowed",
+          "result": "PASS"
+        },
+        {
+          "name": "legacy exact manifest does not permit altered payload",
+          "result": "PASS"
+        },
+        {
+          "name": "valid forged legacy metadata rejected by pinned digest",
+          "result": "PASS"
+        },
+        {
+          "name": "legacy cannot copy under different identity",
+          "result": "PASS"
+        },
+        {
+          "name": "normal source idempotent append-only copy and gallery retention",
+          "result": "PASS"
+        },
+        {
+          "name": "new singlepage remains valid, symlink still rejected",
+          "result": "PASS"
+        }
+      ],
+      "original_sources_and_real_public_checkout_modified": false,
+      "temporary_fixtures_retained": true
+    },
+    "javascript_syntax": "node--check PASS forfreeze andreportapp"
+  },
+  "publication_boundary": {
+    "artwork_source": "New3sourcearchives already have14HTTP200/hash matches each, independently integrated earlier; parent alsoreports currentpubliccheckoutall11frozenentries verified.",
+    "report_release": "This is content/code approval before finalreportpush/HTTP. Do not mark this newreport deployment complete from localreview alone. Parentmustrecord finalcommit/Pagesbuilt/allreviewedreportasset HTTP/hashreadback.",
+    "private_PR": "Draft/private integration and currentmainDBmigration are parentworkflow; this review doesnot authorize orperform mainmerge/DBwrites."
+  },
+  "decision": "Approve the reviewed report package for publication. Soundv7 scopedPASS andBookv4PENDING remain truthful and consistent; old8history/6images/65sanitizedevidence/mastercopy/sourceguard align. Final publicreportHTTP/hashreadback remains a separate publishing success record.",
+  "original_evidence_sha256": "2e9089c3570cd12d580879642c419b1617d7eb767fb029d5994d91d8e9d063b8",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}
