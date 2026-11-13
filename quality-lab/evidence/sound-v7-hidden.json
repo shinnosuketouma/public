@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "observer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "revision": "sound-studies/v7",
+  "url": "http://127.0.0.1:8765/sound-studies/v7/?qa=native-hidden-v7",
+  "manifest_sha256_supplied": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+  "app_hash_descriptor_supplied": "f43abbbf…",
+  "source_or_manifest_independently_hashed": false,
+  "result": "PASS_REAL_VISIBILITY_EVENT_INTERVAL",
+  "scope": "This native-only Chrome tab's actual hidden→visible event interval, zero frame-count increase between the app's suspend-after/wake-before markers, automatic audio stop and no audio restart. This is distinct from source/VM simulation and does not retroactively change v6's frame NOT_RUN.",
+  "environment": {
+    "browser": "Chrome native app; browser extension binding was first used only after native return-state verification",
+    "creation": "Native Command-N, native omnibox URL entry. No cua.createBrowserTab/getTab/browser/playwright/evaluate binding to the v7 URL before the leave/return test completed.",
+    "leave_and_return": "Native Command-T in the same task-created window, sleep5507.5ms without reading the target, then native Command-W closing only the task-created New Tab.",
+    "no_settings_changes": true,
+    "no_Dock_or_minimize": true,
+    "no_script_mutation_or_visibility_faking": true,
+    "viewport_override_used": false,
+    "cleanup_viewport_read_back": [
+      1710,
+      896
+    ],
+    "claim_limit": "Current desktop Chrome only, not every browser/GPU/physical phone."
+  },
+  "native_steps": [
+    {
+      "host_time_ms": 1794601427875,
+      "state": "Native URL loaded in a new single-tab window; Stopped/play0; Motion on"
+    },
+    {
+      "host_time_ms": 1794601436786,
+      "state": "The first native play click still showed Stopped; this was not counted as playback success."
+    },
+    {
+      "host_time_ms": 1794601446905,
+      "state": "After a fresh UI read and a second direct click: Playing; 音を停止する toggle1; Emberを再生しています。音量はいつでも調整できます。"
+    },
+    {
+      "host_time_ms": 1794601455513,
+      "state": "Native Command-T leave action"
+    },
+    {
+      "host_time_ms": 1794601456273,
+      "state": "Native AX: New Tab selected/on; Sound tab off; no browser target bound"
+    },
+    {
+      "state": "clock.sleep returned5507.5ms; no target page observation or browser binding during this quiet interval"
+    },
+    {
+      "host_time_ms": 1794601472581,
+      "state": "Native Command-W closed only the created New Tab"
+    },
+    {
+      "host_time_ms": 1794601473371,
+      "state": "Native return readback before any manual stop: Sound selected/on; Stopped; 音を再生する toggle0; タブを離れたため音を停止しました。再生ボタンで再開できます。; browser_binding_used=false"
+    }
+  ],
+  "post_return_first_browser_binding": {
+    "method": "cua.getTab by the exact QA URL, only after the native return readback",
+    "tab_id": "356766375",
+    "read_method": "Read-only JSON.parse of DOM #diagnostics-json textContent; canvas dataset and displayed play/status attributes read alongside it. No runtime state or source was modified.",
+    "read_at_epoch_ms": 1794601501686,
+    "diagnostics_text_length": 4110,
+    "full_observed_visibility_events": [
+      {
+        "hidden": true,
+        "at_ms": 28829.199999809265,
+        "frame": 1714,
+        "playing": false,
+        "pageInactive": false
+      },
+      {
+        "hidden": false,
+        "at_ms": 45892.699999809265,
+        "frame": 1714,
+        "playing": false,
+        "pageInactive": false
+      }
+    ],
+    "current_state_at_read": {
+      "visibility": "visible",
+      "hidden": false,
+      "frame": 3458,
+      "motion": "running",
+      "playing": false,
+      "message": "タブを離れたため音を停止しました。再生ボタンで再開できます。"
+    }
+  },
+  "calculated_result": {
+    "calculation": "Second observed event minus first observed event; arithmetic performed outside the page from the read-back event array",
+    "hidden_duration_ms": 17063.5,
+    "hidden_frame_start": 1714,
+    "visible_wake_frame_before_resume": 1714,
+    "hidden_frame_delta": 0,
+    "hidden_duration_greater_than_5000ms": true,
+    "both_event_playing_values_false": true,
+    "post_wake_frame": 3458,
+    "post_wake_frame_increase": 1744,
+    "motion_resumed_without_audio": true,
+    "pass_predicate": true
+  },
+  "cleanup": {
+    "read_at_epoch_ms": 1794601542382,
+    "frame": 5886,
+    "motion": "paused",
+    "playing": false,
+    "signal": "Stopped",
+    "manual_play_restart": false,
+    "tab_closed": true,
+    "closure_verification": "Closed only the bound task-created Sound tab. A browser tab inventory readback confirmed that exact tab ID absent, with19 other tabs remaining. It had been the sole tab in the task-created test window after closing the created blank.",
+    "native_cleanup_limit": "A final native App AX read reported the Mac locked. No unlock/bypass was attempted. The authorized owned-tab close and inventory readback used the existing browser API; no user tab/window was closed or altered by that cleanup.",
+    "viewport_reset_needed": false
+  },
+  "limits": [
+    "Event markers are app-exposed diagnostics from a real native tab-leave/return, as supplied by the frozen instrument. This reviewer did not independently audit their implementation/source timing; the orchestrator's separate code review covers suspend-after/wake-before semantics.",
+    "No page DOM was read until after native leave/return and stopped-state confirmation. Binding after the return can affect future focus/visibility behavior, so only the already-recorded two events are used for the hidden interval claim.",
+    "Audio stop/no restart is established by native playback control/status and event playing=false, not a physical audio-output recording.",
+    "The record certifies this observed interval, not universal background throttling behavior or performance."
+  ],
+  "evidence_retention": "Native AX step outputs and complete DOM event array are retained in the CUA transcript and serialized here. No local screenshot/video artifact is claimed.",
+  "original_evidence_sha256": "566d08b5c3f6c67f0206431c497b90b5e6efe2d9eb5e0d4b96d08571a787f6fa",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

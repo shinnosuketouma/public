@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "public_repository": "https://github.com/shinnosuketouma/public",
+  "source_v1": "87614847ec7c2aad88b42f1bdd8e269a992fd1cd",
+  "push_sha": "43bef7bd0e717a6c8d0aba69ccb9183c3819d61f",
+  "push_readback": "MATCH",
+  "pages_readback": "BUILT_SOURCE_MATCH",
+  "urls": [
+    "https://shinnosuketouma.github.io/public/gs-000011/v1/",
+    "https://shinnosuketouma.github.io/public/quality-lab/"
+  ],
+  "http_v1": "PASS_11_FILES",
+  "report_browser": "PASS_VISIBLE_AND_TWO_IFRAMES",
+  "original_evidence_sha256": "429c749f85ebf57cc270ffe6d0e3c24fb80a643cd37f085faf8855507ba92609",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

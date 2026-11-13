@@ -1,116 +1,471 @@
 {
+  "schema_version": "1.0",
+  "generated_at_jst": "2026-11-14T06:12:56.283113+09:00",
   "purpose": "Static composition record only. No aesthetic judgment, motion-quality pass, or FPS/performance acceptance.",
+  "requested_capture_count": 11,
+  "captured_count": 6,
+  "source_file_hashes_verified": 75,
+  "official_script": "USER_HOME/.agents/skills/design-taste-frontend/scripts/shoot.mjs",
+  "official_script_sha256": "183cde0444a7a17310e157c031f565d36d9b704afd0c9ce7aadde05d933647fd",
   "browser": "Google Chrome headless=new",
+  "browser_bundle_version": "157.0.8103.51",
   "renderer_flags": [
     "--disable-gpu",
     "--use-angle=swiftshader",
     "--enable-unsafe-swiftshader"
   ],
-  "notes": [
-    "Initial screenshots only; no aesthetic or performance pass",
-    "Unmodified viewport crops from retained originals"
-  ],
+  "execution": "One official script and one dedicated headless Chrome at a time, foreground, self-PID cleanup by official script. No source or skill mutation.",
+  "profiles": "Dedicated task folders under /private/tmp, retained; no user profile reused or deleted.",
+  "approved_crop": "Parent explicitly approved unmodified top-left viewport crop [0,0,w,h], originals retained. No scaling, color, text or spacing changes.",
   "records": [
     {
       "revision": "v1",
+      "source": "content/quality-lab/sound-studies/v1/index.html",
+      "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
+      "frozen_source_hashes_match": true,
       "viewport_requested": [
         1280,
         720
       ],
-      "status": "CAPTURED",
-      "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
-      "frozen_source_hashes_match": true,
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms plus visible WebGL settle4000ms and two RAFs; initial idle continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "raw_file": "full/sound-v1-1280x720.png",
       "initial_file": "sound-v1-1280x720.png",
-      "initial_sha256": "06fa896a87acce605ec2a9764bcdeae774b0b909ac562b21cc7b419b0e1138e6",
+      "log_file": "logs/sound-v1-1280x720.log",
+      "status": "CAPTURED",
+      "full_image_dimensions": [
+        1280,
+        2378
+      ],
       "initial_image_dimensions": [
         1280,
         720
       ],
-      "cropped_pixels_equal_raw_region": true
+      "cropped_pixels_equal_raw_region": true,
+      "raw_sha256": "d32f561a6acdd1dd85d6c18a4e5d50c49ca825947332e9483899980a32f973b2",
+      "initial_sha256": "06fa896a87acce605ec2a9764bcdeae774b0b909ac562b21cc7b419b0e1138e6",
+      "completed_at_utc": "2026-11-13T18:37:43.842151+00:00",
+      "bytes_full": 393835,
+      "bytes_initial": 278950,
+      "stdout_stderr": "saved PROJECT_ROOT/docs/content-production/quality-lab/evidence/screenshots/full/sound-v1-1280x720.png (1280x2378, 4 screens)\n"
     },
     {
       "revision": "v1",
-      "viewport_requested": [
-        390,
-        844
-      ],
-      "status": "CAPTURED",
+      "source": "content/quality-lab/sound-studies/v1/index.html",
       "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
       "frozen_source_hashes_match": true,
+      "viewport_requested": [
+        390,
+        844
+      ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms plus visible WebGL settle4000ms and two RAFs; initial idle continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "raw_file": "full/sound-v1-390x844.png",
       "initial_file": "sound-v1-390x844.png",
-      "initial_sha256": "1afddb0b645d7e2b0891f177693ab2b58ee10660db76d17accb4424caa48a108",
+      "log_file": "logs/sound-v1-390x844.log",
+      "status": "CAPTURED",
+      "full_image_dimensions": [
+        390,
+        2615
+      ],
       "initial_image_dimensions": [
         390,
         844
       ],
-      "cropped_pixels_equal_raw_region": true
+      "cropped_pixels_equal_raw_region": true,
+      "raw_sha256": "6306a1888283a1180952e20fb50940b7782031e524391d2c1c63c43a23e67218",
+      "initial_sha256": "1afddb0b645d7e2b0891f177693ab2b58ee10660db76d17accb4424caa48a108",
+      "completed_at_utc": "2026-11-13T18:40:55.910764+00:00",
+      "bytes_full": 196634,
+      "bytes_initial": 122507,
+      "stdout_stderr": "saved PROJECT_ROOT/docs/content-production/quality-lab/evidence/screenshots/full/sound-v1-390x844.png (390x2615, 4 screens)\n"
     },
     {
       "revision": "v2",
+      "source": "content/quality-lab/sound-studies/v2/index.html",
+      "frozen_manifest_sha256": "b74f10262e9e4f5c00886f328aeafd43c85d1ee5ab9c84890590e2a9b1be6155",
+      "frozen_source_hashes_match": true,
       "viewport_requested": [
         1280,
         720
       ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms plus visible WebGL settle4000ms and two RAFs; initial idle continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "raw_file": "full/sound-v2-1280x720.png",
+      "initial_file": "sound-v2-1280x720.png",
+      "log_file": "logs/sound-v2-1280x720.log",
       "status": "NOT_RUN",
-      "frozen_manifest_sha256": "b74f10262e9e4f5c00886f328aeafd43c85d1ee5ab9c84890590e2a9b1be6155",
-      "frozen_source_hashes_match": true
+      "not_run_reason": "Stopped by orchestrator after the current capture finished to reserve the final performance-test window. No replacement browser path used."
     },
     {
       "revision": "v2",
+      "source": "content/quality-lab/sound-studies/v2/index.html",
+      "frozen_manifest_sha256": "b74f10262e9e4f5c00886f328aeafd43c85d1ee5ab9c84890590e2a9b1be6155",
+      "frozen_source_hashes_match": true,
       "viewport_requested": [
         390,
         844
       ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms plus visible WebGL settle4000ms and two RAFs; initial idle continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "raw_file": "full/sound-v2-390x844.png",
+      "initial_file": "sound-v2-390x844.png",
+      "log_file": "logs/sound-v2-390x844.log",
       "status": "NOT_RUN",
-      "frozen_manifest_sha256": "b74f10262e9e4f5c00886f328aeafd43c85d1ee5ab9c84890590e2a9b1be6155",
-      "frozen_source_hashes_match": true
+      "not_run_reason": "Stopped by orchestrator after the current capture finished to reserve the final performance-test window. No replacement browser path used."
     },
     {
       "revision": "v3",
+      "source": "content/quality-lab/sound-studies/v3/index.html",
+      "frozen_manifest_sha256": "088dea4698f951d112b579585edd3d159ff5b3d8196e0beb758719179b212e20",
+      "frozen_source_hashes_match": true,
       "viewport_requested": [
         1280,
         720
       ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms plus visible WebGL settle4000ms and two RAFs; initial idle continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "raw_file": "full/sound-v3-1280x720.png",
+      "initial_file": "sound-v3-1280x720.png",
+      "log_file": "logs/sound-v3-1280x720.log",
       "status": "NOT_RUN",
-      "frozen_manifest_sha256": "088dea4698f951d112b579585edd3d159ff5b3d8196e0beb758719179b212e20",
-      "frozen_source_hashes_match": true
+      "not_run_reason": "Stopped by orchestrator after the current capture finished to reserve the final performance-test window. No replacement browser path used."
     },
     {
       "revision": "v3",
+      "source": "content/quality-lab/sound-studies/v3/index.html",
+      "frozen_manifest_sha256": "088dea4698f951d112b579585edd3d159ff5b3d8196e0beb758719179b212e20",
+      "frozen_source_hashes_match": true,
       "viewport_requested": [
         390,
         844
       ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms plus visible WebGL settle4000ms and two RAFs; initial idle continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "raw_file": "full/sound-v3-390x844.png",
+      "initial_file": "sound-v3-390x844.png",
+      "log_file": "logs/sound-v3-390x844.log",
       "status": "NOT_RUN",
-      "frozen_manifest_sha256": "088dea4698f951d112b579585edd3d159ff5b3d8196e0beb758719179b212e20",
-      "frozen_source_hashes_match": true
+      "not_run_reason": "Stopped by orchestrator after the current capture finished to reserve the final performance-test window. No replacement browser path used."
     },
     {
       "revision": "v5",
-      "viewport_requested": [
-        1280,
-        720
-      ],
-      "status": "CAPTURED",
+      "source": "content/quality-lab/sound-studies/v5/index.html",
       "frozen_manifest_sha256": "d74f68958f1e80dc983008a24eef9ad67f6228c4c2a64d5f1eab3a6b0fa7dc94",
       "frozen_source_hashes_match": true,
+      "viewport_requested": [
+        1280,
+        720
+      ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms plus visible WebGL settle4000ms and two RAFs; initial idle continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "raw_file": "full/sound-v5-1280x720.png",
       "initial_file": "sound-v5-1280x720.png",
-      "initial_sha256": "02f7af11016294d61d5d8439d17015e6a569939d15b763a176e704a4c443c43c",
+      "log_file": "logs/sound-v5-1280x720.log",
+      "status": "CAPTURED",
+      "full_image_dimensions": [
+        1280,
+        2465
+      ],
       "initial_image_dimensions": [
         1280,
         720
       ],
-      "cropped_pixels_equal_raw_region": true
+      "cropped_pixels_equal_raw_region": true,
+      "exit_code": 0,
+      "raw_sha256": "09afcd3efd0d9a4f807d42f96249230a1bc52bf40ccc794c1ea950144324264f",
+      "initial_sha256": "02f7af11016294d61d5d8439d17015e6a569939d15b763a176e704a4c443c43c",
+      "completed_at_utc": "2026-11-13T19:09:39.876170+00:00",
+      "bytes_full": 301071,
+      "bytes_initial": 196947,
+      "stdout_stderr": "saved PROJECT_ROOT/docs/content-production/quality-lab/evidence/screenshots/full/sound-v5-1280x720.png (1280x2465, 4 screens)\nWARNING: loaded but invisible on screen (under 0.1 opacity or hidden: their frames show only the ground): sculpture-ember.svg\n"
     },
     {
       "revision": "v5",
+      "source": "content/quality-lab/sound-studies/v5/index.html",
+      "frozen_manifest_sha256": "d74f68958f1e80dc983008a24eef9ad67f6228c4c2a64d5f1eab3a6b0fa7dc94",
+      "frozen_source_hashes_match": true,
       "viewport_requested": [
         390,
         844
       ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms plus visible WebGL settle4000ms and two RAFs; initial idle continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "raw_file": "full/sound-v5-390x844.png",
+      "initial_file": "sound-v5-390x844.png",
+      "log_file": "logs/sound-v5-390x844.log",
       "status": "NOT_RUN",
-      "frozen_manifest_sha256": "d74f68958f1e80dc983008a24eef9ad67f6228c4c2a64d5f1eab3a6b0fa7dc94",
-      "frozen_source_hashes_match": true
+      "not_run_reason": "Orchestrator requested holding mobile before it began after reporting v5 contrast-gate failure; a later immutable revision will be recorded separately."
+    },
+    {
+      "revision": "v7",
+      "source": "content/quality-lab/sound-studies/v7/index.html",
+      "frozen_manifest_sha256": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+      "frozen_source_hashes_match": true,
+      "viewport_requested": [
+        1280,
+        720
+      ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms; visible WebGL canvases, if present, additionally settle4000ms and two RAFs. Page animation continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "raw_file": "full/sound-v7-1280x720.png",
+      "initial_file": "sound-v7-1280x720.png",
+      "log_file": "logs/sound-v7-1280x720.log",
+      "status": "CAPTURED",
+      "full_image_dimensions": [
+        1280,
+        2465
+      ],
+      "initial_image_dimensions": [
+        1280,
+        720
+      ],
+      "cropped_pixels_equal_raw_region": true,
+      "exit_code": 0,
+      "raw_sha256": "7a028b127732bbc5676dd25d3b830dcada93331755d05a669c4f59542deb2de0",
+      "initial_sha256": "085a26bb0f4560ec12ec07d04a3d56ae65f2e063606535c8a3a7896c45ac2128",
+      "completed_at_utc": "2026-11-13T21:06:02.863015+00:00",
+      "bytes_full": 302252,
+      "bytes_initial": 197154,
+      "stdout_stderr": "saved PROJECT_ROOT/docs/content-production/quality-lab/evidence/screenshots/full/sound-v7-1280x720.png (1280x2465, 4 screens)\nWARNING: loaded but invisible on screen (under 0.1 opacity or hidden: their frames show only the ground): sculpture-ember.svg\n",
+      "work": "sound-studies",
+      "site_code": "gs-000011",
+      "source_file_hashes_verified": 13,
+      "source_hash_check_timing": "All manifest files and frozen manifest checked before capture; rechecked after capture with the same hashes.",
+      "renderer_flags": [
+        "--disable-gpu",
+        "--use-angle=swiftshader",
+        "--enable-unsafe-swiftshader"
+      ],
+      "renderer_query": "No additional WebGL renderer query was performed; actual official Chrome launch flags are recorded without treating software rendering as a native-GPU performance result.",
+      "dedicated_profile": "TEMP/genseki-revision-shoot-sound-v7-1280x720-final-1794607246",
+      "actual_image_opened": true,
+      "rendered_content_observation": "Header, Sound title, ribbed metallic sculpture, material toolbar and call-to-action are visibly rendered.",
+      "quality_judgment": "Not scored; static composition record only.",
+      "owned_chrome_processes_after_completion": 0
+    },
+    {
+      "revision": "v4",
+      "source": "content/quality-lab/editorial-studio/v4/site/index.html",
+      "frozen_manifest_sha256": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+      "frozen_source_hashes_match": true,
+      "viewport_requested": [
+        1280,
+        720
+      ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms; visible WebGL canvases, if present, additionally settle4000ms and two RAFs. Page animation continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "raw_file": "full/book-v4-1280x720.png",
+      "initial_file": "book-v4-1280x720.png",
+      "log_file": "logs/book-v4-1280x720.log",
+      "status": "CAPTURED",
+      "full_image_dimensions": [
+        1280,
+        4815
+      ],
+      "initial_image_dimensions": [
+        1280,
+        720
+      ],
+      "cropped_pixels_equal_raw_region": true,
+      "exit_code": 0,
+      "raw_sha256": "a99c3e2f6a2d092a7522da5a4b9f774f9ccdaec23712d05113b7ff401be4b7e7",
+      "initial_sha256": "2073c2bc5fd6cd45db48ac103c679dec9a894b291bc0604fb6aad0c67ff91922",
+      "completed_at_utc": "2026-11-13T21:07:51.731911+00:00",
+      "bytes_full": 630791,
+      "bytes_initial": 186475,
+      "stdout_stderr": "saved PROJECT_ROOT/docs/content-production/quality-lab/evidence/screenshots/full/book-v4-1280x720.png (1280x4815, 7 screens)\n",
+      "work": "editorial-studio",
+      "site_code": "gs-000012",
+      "source_file_hashes_verified": 13,
+      "source_hash_check_timing": "All manifest files and frozen manifest checked before capture; rechecked after capture with the same hashes.",
+      "renderer_flags": [
+        "--disable-gpu",
+        "--use-angle=swiftshader",
+        "--enable-unsafe-swiftshader"
+      ],
+      "renderer_query": "No additional WebGL renderer query was performed; actual official Chrome launch flags are recorded without treating software rendering as a native-GPU performance result.",
+      "dedicated_profile": "TEMP/genseki-revision-shoot-book-v4-1280x720-final-1794607381",
+      "actual_image_opened": true,
+      "rendered_content_observation": "Header, Japanese design title, open-book spread, call-to-action buttons and motion controls are visibly rendered.",
+      "quality_judgment": "Not scored; static composition record only.",
+      "owned_chrome_processes_after_completion": 0
+    },
+    {
+      "revision": "v4",
+      "source": "content/quality-lab/editorial-studio/v4/site/index.html",
+      "frozen_manifest_sha256": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+      "frozen_source_hashes_match": true,
+      "viewport_requested": [
+        320,
+        740
+      ],
+      "viewport_method": "Official CDP Emulation.setDeviceMetricsOverride; deviceScaleFactor=1; mobile=width<600. Initial output pixel dimensions checked independently.",
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "readiness_wait": "Up to 6000ms for html.dataset.ready, then fonts.ready and 600ms; source does not set dataset.ready.",
+      "first_screen_settle": "Official scroll-to-zero wait4000ms; visible WebGL canvases, if present, additionally settle4000ms and two RAFs. Page animation continues. Not a deterministic time/frame freeze.",
+      "runtime_capture_changes": "Official script temporarily forces scroll-behavior:auto and scroll-snap-type:none. Later full-page stitching may reposition/hide sticky/fixed elements; crop only uses the first screen. Source and kit files were not edited.",
+      "crop_box": [
+        0,
+        0,
+        320,
+        740
+      ],
+      "raw_file": "full/book-v4-320x740.png",
+      "initial_file": "book-v4-320x740.png",
+      "log_file": "logs/book-v4-320x740.log",
+      "status": "CAPTURED",
+      "full_image_dimensions": [
+        320,
+        7042
+      ],
+      "initial_image_dimensions": [
+        320,
+        740
+      ],
+      "cropped_pixels_equal_raw_region": true,
+      "exit_code": 0,
+      "raw_sha256": "0f7486efab6b61e7ac2f0464a73fe424cc2b4be25cf82d8b169792666431b529",
+      "initial_sha256": "8c7151fe7d5ae9eb8948963aff02b93e1ad21073811570cb0950a86b82109798",
+      "completed_at_utc": "2026-11-13T21:10:29.183676+00:00",
+      "bytes_full": 373862,
+      "bytes_initial": 66376,
+      "stdout_stderr": "saved PROJECT_ROOT/docs/content-production/quality-lab/evidence/screenshots/full/book-v4-320x740.png (320x7042, 10 screens)\n",
+      "work": "editorial-studio",
+      "site_code": "gs-000012",
+      "source_file_hashes_verified": 13,
+      "source_hash_check_timing": "All manifest files and frozen manifest checked before capture; rechecked after capture with the same hashes.",
+      "renderer_flags": [
+        "--disable-gpu",
+        "--use-angle=swiftshader",
+        "--enable-unsafe-swiftshader"
+      ],
+      "renderer_query": "No additional WebGL renderer query was performed; actual official Chrome launch flags are recorded without treating software rendering as a native-GPU performance result.",
+      "dedicated_profile": "TEMP/genseki-revision-shoot-book-v4-320x740-final-1794607699",
+      "actual_image_opened": true,
+      "rendered_content_observation": "Mobile header, Japanese design title, two call-to-action buttons, one visible book page and motion controls are visibly rendered.",
+      "quality_judgment": "Not scored; static composition record only.",
+      "owned_chrome_processes_after_completion": 0
     }
-  ]
+  ],
+  "execution_state": "IDLE_FINAL_THREE_CAPTURES_COMPLETE",
+  "not_run_count": 5,
+  "counts": {
+    "planned": 11,
+    "captured": 6,
+    "not_run": 5,
+    "raw_png_files": 6,
+    "initial_png_files": 6
+  },
+  "final_capture_batch": {
+    "requested": 3,
+    "captured": 3,
+    "not_run": 0,
+    "frozen_unique_source_files_reverified": 26,
+    "owned_chrome_profile_processes_remaining": 0,
+    "process_cleanup_verification": "Official shoot commands all exited 0; a separate read-only process inventory found no Chrome process using the three dedicated profiles.",
+    "profiles_retained": true
+  },
+  "original_evidence_sha256": "c69c2c1d073c83e1188b12fc83bb3e3e33a37fdac8023be60b6e8a6d7782ce98"
 }

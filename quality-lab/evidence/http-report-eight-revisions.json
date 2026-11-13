@@ -1,0 +1,255 @@
+{
+  "public_commit": "4a1142e3a021bbbf727bad6a504c48934f85ab72",
+  "pages_status": "built",
+  "base_url": "https://shinnosuketouma.github.io/public/",
+  "files": [
+    {
+      "path": "quality-lab/index.html",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/analysis.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/production-guide.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/data.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/style.css",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/app.js",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-editorial-v2-code.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/http-editorial-v1.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v1-iab.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/screenshots.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v5-source-tests.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/http-sound-v4.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-sound-v6.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v1-1280x720.png",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/http-v1.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/editorial-v2-source-tests.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/secret-signature-tests.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-visual-v6.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v6-initial-bytes.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v1-390x844.png",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v6-exports.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v2-public-entry.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/audit-index.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v6-iab.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v6-source-tests.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v3-public-entry.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/http-sound-v3.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-sound-v1.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-benchmark-observation.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-visual-benchmark.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-sound-v2.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v5-exports.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-visual-v3.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v4-exports.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v2-iab.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/generator-allowlist-tests.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-sound-v3.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-editorial-v1.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v4-iab.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v5-iab.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v2-wav.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-editorial-v1-code.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/sound-v5-1280x720.png",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/http-v2.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-sound-v4.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-sound-v5.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/freeze-tests.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/http-report.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "quality-lab/evidence/review-visual-v4.json",
+      "status": 200,
+      "hash_match": true
+    }
+  ],
+  "all_match": true,
+  "original_evidence_sha256": "31a0c5e81d8598caf3bd2afdc4df2fc18a946a1d4e788a773846d643b8640770",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

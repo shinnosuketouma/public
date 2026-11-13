@@ -56,8 +56,6 @@
   ],
   "gate_a": "FAIL",
   "gate_b": "FAIL",
-  "public_export": {
-    "source_evidence_sha256": "73079eef27e518de4520da9ccdafb8f4f9467a1ce3d208c7c6eda542698064be",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "73079eef27e518de4520da9ccdafb8f4f9467a1ce3d208c7c6eda542698064be",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

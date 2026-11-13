@@ -1,0 +1,96 @@
+{
+  "revision": "v7",
+  "manifest_sha256": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+  "environment": "Codex IAB desktop; physical mobile/touch outside this viewport claim",
+  "normal_render": {
+    "1440x900": {
+      "span_seconds": 20.016,
+      "count": 1201,
+      "effective_fps": 60,
+      "median_ms": 16.7,
+      "p95_ms": 17.7,
+      "lcp_ms": 284,
+      "cls": 0,
+      "long_tasks": {
+        "supported": true,
+        "count": 1,
+        "max_duration_ms": 69,
+        "total_duration_ms": 69
+      }
+    },
+    "390x844": {
+      "span_seconds": 20.017,
+      "count": 1201,
+      "effective_fps": 60,
+      "median_ms": 16.7,
+      "p95_ms": 18.6,
+      "lcp_ms": 148,
+      "cls": 0,
+      "long_tasks": {
+        "supported": true,
+        "count": 0,
+        "max_duration_ms": 0,
+        "total_duration_ms": 0
+      }
+    }
+  },
+  "overflow_px": [
+    0,
+    0
+  ],
+  "inheritance": "HTML/CSS/geometry/renderer/audio/state/storage/import/export byte-equivalence from independent v7 source audit. v6 evidence retains six-width, contrast, key-only/actual files and reduce/fallback results. Final v7 visible smoke separately recorded below.",
+  "real_hidden_evidence": "sound-v7-hidden.json: native-only unbound Chrome then first DOM read after return;17,063.5ms/frame1714→1714, audio stopped/no auto restart, render resumes",
+  "final_smoke": {
+    "result": "PASS_IN_OBSERVED_IAB",
+    "viewport": [
+      1280,
+      720
+    ],
+    "sequence": [
+      "Halo -> tone100 -> explicit play(true) -> stop",
+      "save -> reset Ember38 -> restore Halo100/28/25",
+      "actual JSON download and byte inspection",
+      "pause frame144 -> frame144; console warnings/errors none"
+    ],
+    "actual_export": {
+      "filename": "sound-studies-halo (4).json",
+      "bytes": 170,
+      "sha256": "d9639861786a0b6a0c000c773d04dff2677eb46c8e5185b49dd3cc51a6e16e5e",
+      "settings": {
+        "preset": 2,
+        "tone": 100,
+        "motion": 28,
+        "volume": 25
+      }
+    }
+  },
+  "public_readback": {
+    "result": "PASS",
+    "evidence": "http-sound-v7.json",
+    "public_commit": "2a55dc01afec225e1c6e6fff21d021c6c73e37cc",
+    "pages_status": "built",
+    "http_files": 14,
+    "all_hash_match": true
+  },
+  "gate": "Independent final integration A=PASS/B=PASS in reviews/sound-v7.json.final_integration; selected visual comparison and predeclared internal criteria only",
+  "public_ui_smoke": {
+    "url": "https://shinnosuketouma.github.io/public/gs-000011/v7/",
+    "viewport": [
+      1280,
+      720
+    ],
+    "overflow_px": 0,
+    "canvas": {
+      "renderer": "webgl",
+      "frame": 504,
+      "vertices": 49575,
+      "triangles": 95040,
+      "resolution": "576x500"
+    },
+    "input": "Clicked actual 03 Halo control",
+    "visible_result": "Selected Halo 03; tone78/motion28/volume25 and sculpture description changed",
+    "limit": "Short public smoke is not another full performance run"
+  },
+  "original_evidence_sha256": "6755861d6c374ddb2c8cefc5a4082f5b5c640cb01e4ee189e5680d36309cd059",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

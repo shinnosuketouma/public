@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000012",
+  "revision": "v4",
+  "scope": "Independent code/function SOURCE_VM and static CSS review; singlepage design reference only.",
+  "source_review": "問題なし",
+  "status": "SOURCE_PASS_PENDING_FIXED_BROWSER_VISUAL_PUBLIC_ACCEPTANCE",
+  "gate_a": "PENDING",
+  "gate_b": "PENDING",
+  "accepted_production_count": 0,
+  "frozen_manifest": null,
+  "source_snapshot": [
+    {
+      "path": "README.md",
+      "bytes": 4822,
+      "sha256": "d2bc5c66145e8b49ff482bbe5fe7a048a02303b5d7fa3ab98da0c191f1e57ba7"
+    },
+    {
+      "path": "app.js",
+      "bytes": 35332,
+      "sha256": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01"
+    },
+    {
+      "path": "asset-manifest.json",
+      "bytes": 2826,
+      "sha256": "9428fb54f7b56eea30f73e60d047ca6213a6e42e52473904eafb0729a0319f92"
+    },
+    {
+      "path": "assets/aida-cover.svg",
+      "bytes": 1481,
+      "sha256": "a85886c97f90bb421f70cd925ddb9a640646e3170a69a8f66c3afdca1a9b5385"
+    },
+    {
+      "path": "assets/aida-left.svg",
+      "bytes": 2156,
+      "sha256": "df9d78e9678f99ff2222ea57b4d6502a332aff62a2d97bac68a577e040ef15e6"
+    },
+    {
+      "path": "assets/aida-right.svg",
+      "bytes": 2141,
+      "sha256": "620cc676b7c3e60867f92dedc1efaa655a612f24d67a5c00b2d90f303a193a51"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "bytes": 199,
+      "sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2"
+    },
+    {
+      "path": "assets/kutou-poster.svg",
+      "bytes": 866,
+      "sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04"
+    },
+    {
+      "path": "assets/layers-cover.svg",
+      "bytes": 903,
+      "sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954"
+    },
+    {
+      "path": "assets/outline-poster.svg",
+      "bytes": 1032,
+      "sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6"
+    },
+    {
+      "path": "index.html",
+      "bytes": 17998,
+      "sha256": "70c2b93c40abcd26a31d12562758539144463b2634f58339aa0d71888081a8c1"
+    },
+    {
+      "path": "style.css",
+      "bytes": 40280,
+      "sha256": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3"
+    },
+    {
+      "path": "telemetry.js",
+      "bytes": 3263,
+      "sha256": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61"
+    }
+  ],
+  "source_total_bytes": 113299,
+  "findings": [],
+  "source_tests": {
+    "path": "../evidence/editorial-v4-source-tests.json",
+    "result": "PASS",
+    "case_count": 39,
+    "assertions": 170,
+    "source_hashes": {
+      "app_js": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01",
+      "telemetry_js": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+      "style_css": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3",
+      "inline_paper_preview": "b4ffc8c33ea84d2d7856c952bbfd6c6b04a1d6c61a5073040a85dfed311781e2"
+    },
+    "harness_source_preserved": true,
+    "prior_unfrozen_runs": [
+      {
+        "tested_on": "2026-11-13T20:28:03.811Z",
+        "source_hashes": {
+          "app_js": "03efa1ed6bcc5201f8ede7f8f86a054c2aeeb0b6d49fd34c0f367986f4fd0ac1",
+          "telemetry_js": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+          "style_css": "158e016aca52b87dad72c4cc286d957280322b7905ff13067c9646889c4452f3",
+          "inline_paper_preview": "b4ffc8c33ea84d2d7856c952bbfd6c6b04a1d6c61a5073040a85dfed311781e2"
+        },
+        "result": "PASS",
+        "case_count": 37,
+        "assertions": 154,
+        "failing_checks": []
+      },
+      {
+        "tested_on": "2026-11-13T20:32:59.367Z",
+        "source_hashes": {
+          "app_js": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01",
+          "telemetry_js": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+          "style_css": "158e016aca52b87dad72c4cc286d957280322b7905ff13067c9646889c4452f3",
+          "inline_paper_preview": "b4ffc8c33ea84d2d7856c952bbfd6c6b04a1d6c61a5073040a85dfed311781e2"
+        },
+        "result": "PASS",
+        "case_count": 39,
+        "assertions": 170,
+        "failing_checks": []
+      }
+    ],
+    "scope": "Actual note handlers/validDraft/sync, actual tick and full telemetry module run in isolated vm with deterministic DOM/storage/file/RAF mocks. Inline manuscript/singlepage references and actual motion/reduced handlers checked with deterministic matchMedia/query/RAF mocks. CSS declarations checked statically; no rendered TOC fit claimed."
+  },
+  "reviewed_changes": [
+    {
+      "change": "320 cover internal rhythm",
+      "review": "Only max-width359 CSS block changes cover padding/edition spacing/title line-height/subtitle margin/TOC row padding. Face and font sizes remain. Actual third TOC visibility is not proven by static declarations.",
+      "result": "SOURCE_SCOPED_PATCH_PRESENT_RENDER_PENDING"
+    },
+    {
+      "change": "Forced reduced QA entry shares actual OS media path",
+      "review": "motion=reduce is ORed with actual matchMedia.matches by reducedNow(). Initial mode/progress, canRun, pause UI, class, manual pose and media listener all use it. Effective reduce unchanged means snapshot-only, preserving manual pose. Both CSS media rule and the shared motion-reduced class disable transition/animation/scroll and reset will-change. Diagnostic flags keepOS and forced values separate.",
+      "result": "SOURCE_VM_PASS; realOS preference toggle NOT_RUN"
+    },
+    {
+      "change": "Bounded actual visibility observations",
+      "review": "New metrics.visibility_events and recordVisibility read actual document.hidden,metrics.updates,RAFpending flag,performance.now,pageActive. Handler records after hidden stop and before visible schedule; final forced snapshot exposes it. Latest12 only. No UA/queryhidden/visibility override, new UI, timer or renderer/audio/state effect.",
+      "result": "SOURCE_VM_PASS; native hidden proof NOT_RUN_IN_THIS_REVIEW"
+    }
+  ],
+  "regression_identity": {
+    "note_async_prefix": "Byte-identical to v3 after normalizing three output revision strings/filenames. Full31case regression retains prior cancel/inactive/status/dirty/validation/storage/preview proofs.",
+    "telemetry_and_SVG": [
+      {
+        "path": "telemetry.js",
+        "sha256": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61"
+      },
+      {
+        "path": "assets/kutou-poster.svg",
+        "sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04"
+      },
+      {
+        "path": "assets/outline-poster.svg",
+        "sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6"
+      },
+      {
+        "path": "assets/aida-left.svg",
+        "sha256": "df9d78e9678f99ff2222ea57b4d6502a332aff62a2d97bac68a577e040ef15e6"
+      },
+      {
+        "path": "assets/aida-cover.svg",
+        "sha256": "a85886c97f90bb421f70cd925ddb9a640646e3170a69a8f66c3afdca1a9b5385"
+      },
+      {
+        "path": "assets/layers-cover.svg",
+        "sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954"
+      },
+      {
+        "path": "assets/aida-right.svg",
+        "sha256": "620cc676b7c3e60867f92dedc1efaa655a612f24d67a5c00b2d90f303a193a51"
+      },
+      {
+        "path": "assets/favicon.svg",
+        "sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2"
+      }
+    ],
+    "inline_manuscript": "Same b4ffc8… inline original paper data/render source and design/manuscript.json.",
+    "singlepage": {
+      "html": [
+        "index.html"
+      ],
+      "unique_ids": 56,
+      "broken_refs": []
+    },
+    "secret_path_symlink_gate": "readSnapshot13files PASS under current high-confidence signature/path/symlink checks plus source review. Not proof that every possible credential is detectable.",
+    "rights": "Own manuscript,SVGs and local source only; same7SVGs and no external font/media/runtime dependencies."
+  },
+  "new_source_cases": {
+    "reduced": "6 added cases check forced-withOSfalse, immediate manual/progress/CSSvariable/noRAF, mediaOR preserving pose, real-MQLproperty change stop/resume, initialOSreduce/manualpause/nonmatchingquery and CSSselector scoping. matchMedia is mocked, not a realOS change.",
+    "visibility": "2 added cases use actual motion/stop/schedule/record/snapshot functions with controlled property values. Mock stop assigns update31 after real cancellation; hidden record sees31 andRAF0; visible record sees31/RAF0 before mock schedule changes update99 and queuesRAF.30 events retain latest12 ordered values in actual diagnostics JSON. This proves ordering/control flow, not native frame-stop."
+  },
+  "not_run": [
+    "Actual final320TOC03 visibility and all configured viewport text/overlap checks",
+    "Native browser reduced/pause/hidden/frame-stop and final normal20-second measures",
+    "OS preference toggle and physical touch/phone/separateGPU/Safari/Firefox",
+    "Actual key-only/picker/menu/dialog/focus/file/print regressions in the fixed browser revision",
+    "Frozen/public hash readback unless recorded above; final publication evidence separate",
+    "RenderedNoJS fallback and actual paper readability/contrast"
+  ],
+  "decision": "Source approved to freeze after exact53byte hoverbrightness removal. Independent39cases170assertions pass with unchangedapp5c2f00… andnewCSS37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3. Earlier37/154 and39/170oldCSS runs are retained. A/B remainPENDING fixed-source hover/p1/320/hidden/UI/publication evidence.",
+  "hover_filter_followup": {
+    "result": "問題なし: exact53byte selector removal only",
+    "removed_rule": ".folio-hit:hover .book-leaf{filter:brightness(1.025)}",
+    "pre_fix_css_sha256": "158e016aca52b87dad72c4cc286d957280322b7905ff13067c9646889c4452f3",
+    "post_fix_css_sha256": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3",
+    "pre_fix_preserved_at": "content/quality-lab/editorial-studio/v4/evidence/pre-hover-fix/style.css",
+    "app_unchanged_sha256": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01",
+    "regression": "Independent39cases170assertions PASS on newCSS; prior oldCSS test run retained in evidence prior_unfrozen_runs.",
+    "actual_hover_p1_result": "PENDING separate parent/visual browser retest; no visual fix claim from source diff alone."
+  },
+  "final_integration": {
+    "schema": "quality-lab-final-integration-v1",
+    "reviewer": "independent /root/quality_reviewer",
+    "integrated_at_utc": "2026-11-13T21:33:10.585967+00:00",
+    "supersedes": "Current integrated verdict is here; earlier code-review and pre-hover-fix records remain intact.",
+    "gate_a": "PENDING",
+    "gate_b": "PENDING",
+    "gate_b_visual": "PASS_IN_OBSERVED_VISUAL_SCOPE",
+    "status": "VISUAL_REACHED_BUT_MANDATORY_NATIVE_HIDDEN_NOT_RUN",
+    "accepted_revision_count": 0,
+    "url": "https://shinnosuketouma.github.io/public/gs-000012/v4/",
+    "identity": {
+      "manifest_sha256": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+      "source_files": 13,
+      "public_source_and_manifest_files": 14,
+      "all_hash_match": true,
+      "http_status": 200,
+      "pages_status": "built",
+      "public_commit": "2a55dc01afec225e1c6e6fff21d021c6c73e37cc",
+      "http_evidence": "http-editorial-v4.json",
+      "html_files": [
+        "index.html"
+      ]
+    },
+    "scores": [
+      {
+        "axis": "composition_typography_assets",
+        "score": 4,
+        "evidence_type": "INDEPENDENT_FIXED_VISUAL",
+        "basis": "Corrected normal hover/nonhover two cream-page arrival;320all3TOC and390/320samepage manuscript preview.",
+        "comparison": "Fixed Vante/CardStack1280desktop observed visual scope."
+      },
+      {
+        "axis": "signature_motion",
+        "score": 4,
+        "evidence_type": "INDEPENDENT_FIXED_VISUAL",
+        "basis": "Open/close sampled intermediates and hover/nonhover endpoints retain one paper object,text protection and readable arrival.",
+        "comparison": "Selected desktop video material/readable-arrival comparison only."
+      },
+      {
+        "axis": "function_experience",
+        "score": 4,
+        "evidence_type": "LIVE_V4_SINGLEPAGE_PLUS_SOURCE_VM_AND_IDENTICAL_V3_KEY_ROUTE",
+        "basis": "Actual search0/clear4/filter2,menuEscape,save-reload/actualTXTmatch; samepage preview+arrows;39cases170assertions failure/async/selection/reduce/visibility controlflow pass.",
+        "comparison": "Predeclared internal onepage criteria; original live functionality UNKNOWN."
+      },
+      {
+        "axis": "mobile_accessibility",
+        "score": 4,
+        "evidence_type": "FIXED_V4_VISUAL_PLUS_SOURCE_EQUIVALENT_V3_A11Y_KEY",
+        "basis": "320TOC03 fixed,samepage modal reflows; v3 actual194text0contrastfails/37targets>=44 andnativeTab/modalEscape/Right route inherited through unchanged color,target andnoteDOM. v4 staticCSS sharedreduce/directlive verified.",
+        "comparison": "Internal viewport/pointer/key condition only; physicaltouch andoriginalmobileUNKNOWN."
+      },
+      {
+        "axis": "performance_resilience",
+        "score": null,
+        "status": "UNVERIFIED_MANDATORY_REAL_HIDDEN",
+        "evidence_type": "PARTIAL_DIRECT_V4_AND_SOURCE_VM",
+        "basis": "IAB1440/39020sec~60fps,p95~18.2,LCP140/104,CLS0,113299sourcebytes; pause1→1/RAF0 andqueryreduce pass. Actualhidden neverestablished: emptyvisibilityhistory underlockednativeenvironment. SourceVM stop is not liveproof.",
+        "comparison": "Original runtime UNKNOWN; internal mandatory hidden condition remainsNOT_RUN."
+      },
+      {
+        "axis": "originality_handoff",
+        "score": 4,
+        "evidence_type": "FROZEN_ORIGINAL_SOURCE_AND_PUBLIC_HASH_AUDIT",
+        "basis": "Own manuscript/SVGs andsingleindex,39sourceboundary tests;13files+manifest14HTTP200/hashmatch. Self-directed concept observed independently; no extra readerpage.",
+        "comparison": "Internal original/handoff criterion; broader futureautonomy guarantee not established."
+      }
+    ],
+    "fixed_standard": {
+      "quality_config": "quality-lab-v2.1",
+      "numeric_thresholds_relaxed": false,
+      "scope": "Latest user requires onepage design reference. Existing onepage interactions remain coherent; unbuilt destination/backend completion is not required.",
+      "score_definition": "Visual4 is selected-reference comparison. Nonvisual4 means predeclared internal mandatory criteria evidenced. Unknown competitor nonvisual results stayUNKNOWN; the guide clarification does not turn them into observations."
+    },
+    "evidence": {
+      "independent_source": "editorial-v4-source-tests.json39cases170assertionsPASS,app5c2f00…/CSS37a868…",
+      "independent_visual": "editorial-v4-visual.json currentposthoverfix4axes4; priorunfrozen3scores retained",
+      "actual_IAB": "editorial-v4-iab.json:normal1440/39020sec,6widthsmoke,queryreduce,live320search/menu/save+reload/TXT,pause1→1",
+      "a11y_keyboard_inheritance": "editorial-v3-iab.json:194text/37controls andactualnativeprimarykey route; v4prefix normalizedrevisionstrings/CSScolor-target properties identical",
+      "noJS": "editorial-v4-nojs.json:real scripting-disabled sandbox at1280/390,originalbytesunchanged,0overflow andstaticinfo/images; not browserglobalsettingtoggle",
+      "hover": "editorial-v4-hover.json actualbefore/after;53bytebrightnessfilter removal andfinalindependentvisual recheck",
+      "native_hidden": "editorial-v4-hidden.json NOT_RUN. Focusrequests/blankentries did not produce actualevents; no hiddeninterval/update0 was inferred. Maclocknotbypassed.",
+      "public": "http-editorial-v4.json all14hash200"
+    },
+    "remaining_mandatory": [
+      {
+        "item": "Actual document.hidden stop and return",
+        "result": "NOT_RUN",
+        "required_evidence": "After native access becomes available, leave an initially unbound tasktab,wait,return,thenread actualhidden→visible markers. Verify actualinterval,updatesdelta0,hiddenRAF0 andnormalresume. No synthetic document.hidden or sourceVM substitution."
+      }
+    ],
+    "not_run_or_out_of_scope": [
+      "Physicalphone/touchhardware,OS reduced preference,separateGPU/Safari/Firefox",
+      "RealBFCache restored-state timing beyond sourceVM ordinarylifecycle andobservedreload",
+      "Original competitor livefunctions/performance/mobile/a11y",
+      "Publicperformancefullrerun andalloptionalnoteprintfiledialogcases not claimed"
+    ],
+    "decision": "視覚4軸と観測済み内部条件は改善したが、必須の実非表示停止が未検証。A/B総合はPENDING、合格作品数へ加えない。Soundの実hiddenPASSを別作品へ転用しない。解除後は欠けた実条件だけ検査し、コードや閾値を偽装しない。"
+  },
+  "original_evidence_sha256": "debc16b398f229685d369a72c6bc50db48caa35306f0d6e06909efe27bacb351",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

@@ -231,8 +231,6 @@
     "Actual browser-generated WAV/JSON content, real normal interactions, BFCache/new-document restoration and source-bound performance are parent QA.",
     "The harness does not execute WebGL renderer/placeSculpture or layout."
   ],
-  "public_export": {
-    "source_evidence_sha256": "d1e7118d7dc5f6417566c97f06a261abaa1f7c185da9ab8a1612bad184146082",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "d1e7118d7dc5f6417566c97f06a261abaa1f7c185da9ab8a1612bad184146082",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

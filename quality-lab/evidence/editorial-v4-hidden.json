@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "observer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "content_id": "gs-000012",
+  "revision": "editorial-studio/v4",
+  "target_url": "http://127.0.0.1:8765/editorial-studio/v4/site/",
+  "manifest_sha256_supplied_by_orchestrator": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+  "source_independently_hashed": false,
+  "result": "NOT_RUN_REAL_HIDDEN_NOT_ESTABLISHED",
+  "summary": "window.open/focusと通常HTMLanchorの異なる入口を各1回実操作したが、両試行ともvisibility_events=[]。実hidden成立の証拠は得られずNOT_RUNを維持。対象バイトやvisibilityを偽装せず、追加反復なし。両試行の全観測履歴とcleanupを保持。",
+  "scope": {
+    "purpose": "Actual-browser hidden/suspend check, separate from sourceVM tests and visual quality",
+    "method": "Only the task-created localQA host UI buttons used before first childbind. No childgetTab/playwright/evaluate before Return study.",
+    "helper_url": "http://127.0.0.1:51498/",
+    "host_tab_id": "356766391",
+    "child_tab_id": "356766394",
+    "limitations": [
+      "Maclocked; no native tab/window selection attempted",
+      "window.focus is a request and not itself a visibility observation",
+      "Onlyonehelperattempt; no setup/OSsettings changed",
+      "No emulation/monkeypatch/UAorvisibility substitution"
+    ],
+    "no_javascript": "Host AX also exposed a sandbox iframe andnoscript content, but this task did not inspect its parser/source or score it. Orchestrator independently handles liveNoJS."
+  },
+  "operations": [
+    {
+      "action": "Open study",
+      "helper_log_utc": "2026-11-13T20:49:47.848Z",
+      "after_action_epoch_ms": 1794602988169,
+      "details": "Bookv4 selected; namedownedchild opened andfocusrequested; childunbound"
+    },
+    {
+      "action": "Open blank",
+      "helper_log_utc": "2026-11-13T20:49:55.945Z",
+      "after_action_epoch_ms": 1794602996226,
+      "details": "Ownedblankopened/focusrequested; no childbinding"
+    },
+    {
+      "action": "Wait",
+      "requested_ms": 5500,
+      "actual_tool_elapsed_ms": 5510.2
+    },
+    {
+      "action": "Return study",
+      "helper_log_utc": "2026-11-13T20:50:09.101Z",
+      "after_action_epoch_ms": 1794603009402,
+      "details": "Ownedblankclosed; originalchildfocusrequestedwithoutnavigation"
+    },
+    {
+      "action": "Firstchilddiscoveryandbind",
+      "details": "Afterreturn only, listTabs foundoneexacttargetURL child356766394; getTab thenboundthisid."
+    }
+  ],
+  "requested_blank_window_ms_from_helper_log": 13156,
+  "full_observed_visibility_events": [],
+  "post_return_readbacks": [
+    {
+      "read_at_epoch_ms": 1794603028496,
+      "current": {
+        "visibility": "visible",
+        "hidden": false,
+        "htmlClass": "js-ready",
+        "bookStyle": "--p: 0.683291; --scale: 0.899351;"
+      },
+      "diagnostics": {
+        "mode": "playing",
+        "progress": 0.6575582701450738,
+        "userPaused": false,
+        "reduced": false,
+        "osReduced": false,
+        "forcedReduced": false,
+        "visible": true,
+        "hidden": false,
+        "pageActive": true,
+        "scheduledFrames": 1,
+        "revision": "v4",
+        "updates": 2407,
+        "startedAt": "2026-11-13T20:49:47.905Z",
+        "visibility_events": [],
+        "totalActiveMs": 40098.5
+      }
+    },
+    {
+      "read_at_epoch_ms": 1794603047690,
+      "current": {
+        "visibility": "visible",
+        "hidden": false
+      },
+      "diagnostics": {
+        "mode": "playing",
+        "progress": 0.7249712000153766,
+        "userPaused": false,
+        "reduced": false,
+        "visible": true,
+        "hidden": false,
+        "pageActive": true,
+        "scheduledFrames": 1,
+        "revision": "v4",
+        "updates": 3557,
+        "startedAt": "2026-11-13T20:49:47.905Z",
+        "visibility_events": [],
+        "totalActiveMs": 59262.8
+      }
+    }
+  ],
+  "acceptance": {
+    "actual_hidden_true_event": "NOT_OBSERVED",
+    "actual_hidden_false_return_event": "NOT_OBSERVED",
+    "hidden_interval_over_5_seconds": "NOT_RUN",
+    "hidden_interval_updates_delta_0": "NOT_RUN",
+    "hidden_event_scheduledFrames_0": "NOT_RUN",
+    "inference": "Do not infer a realhidden interval from focus requests or emptyhistory."
+  },
+  "cleanup": {
+    "manual_pause_after_readback": {
+      "at_epoch_ms": 1794603048530,
+      "mode": "paused",
+      "userPaused": true,
+      "scheduledFrames": 0,
+      "updates": 3606,
+      "visibility_events": []
+    },
+    "close_owned_study_log_utc": "2026-11-13T20:50:57.631Z",
+    "study_tab_absence_verified": true,
+    "host_tab_closed": true,
+    "owned_blank_already_closed_by_return": true,
+    "viewport_override_applied": false,
+    "user_windows_tabs_untouched": true
+  },
+  "evidence_retention": "CUA AX/button operations andDOM-backedreadbacks intranscript. Fullvisibility_events arrays captured; unrelatedperformance intervals omitted. No screenshot/PNGartifactclaimed.",
+  "related": "Soundv7native-onlyrealhiddenPASS remains a separate completed observation; it does not certify thisbookattempt.",
+  "last_anchor_attempt": {
+    "result": "NOT_RUN_REAL_HIDDEN_NOT_ESTABLISHED",
+    "rationale": "A distinct ordinaryHTMLtarget_blank/noopener entry was attempted exactlyonce. Diagnosticsvisibility_events remainedempty afterdeparture; noactualhidden intervalorupdatesdelta0isclaimed.",
+    "method": "Host tabwasbound. StudyB andblank identitieswerefoundonlybytabinventorydiff+nonceURLs. NochildgetTab/playwright/evaluatebeforeblank departurewait. FirstgetTabafterwait mayitselfrestorevisible; thisisnotanobservednativereturn.",
+    "helper": "http://127.0.0.1:51498/",
+    "nonce": "mwfgkzi5-6qa1l9ay",
+    "normal_anchor_dom_readbacks": {
+      "study": {
+        "href": "http://127.0.0.1:8765/editorial-studio/v4/site/?qa=anchor-hidden-mwfgkzi5-6qa1l9ay",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      "blank": {
+        "href": "./blank.html?qa=anchor-blank-mwfgkzi5-6qa1l9ay",
+        "target": "_blank",
+        "rel": "noopener"
+      }
+    },
+    "created_tabs": {
+      "host": "356766406",
+      "study_B": "356766409",
+      "blank": "356766412"
+    },
+    "timeline": [
+      {
+        "step": "ClickOpenstudyaslink",
+        "after_action_epoch_ms": 1794603500442,
+        "observed_inventory_difference": [
+          "356766409"
+        ],
+        "child_bound": false
+      },
+      {
+        "step": "ClickOpenblankaslink",
+        "after_action_epoch_ms": 1794603506746,
+        "observed_inventory_difference": [
+          "356766412"
+        ],
+        "child_bound": false
+      },
+      {
+        "step": "Wait",
+        "requested_ms": 5500,
+        "actual_tool_elapsed_ms": 5506
+      },
+      {
+        "step": "FirstgetTabBrequested",
+        "at_epoch_ms": 1794603520215,
+        "blank_afteraction_to_firstbindrequest_ms": 13469,
+        "native_return": false
+      }
+    ],
+    "post_bind_readback": {
+      "at_epoch_ms": 1794603526366,
+      "currentVisibility": "visible",
+      "currentHidden": false,
+      "diagnostics": {
+        "hidden": false,
+        "mode": "playing",
+        "pageActive": true,
+        "revision": "v4",
+        "scheduledFrames": 1,
+        "startedAt": "2026-11-13T20:58:19.728Z",
+        "totalActiveMs": 25864.4,
+        "updates": 1553,
+        "userPaused": false,
+        "visibility_events": [],
+        "visible": true
+      }
+    },
+    "full_observed_visibility_events": [],
+    "acceptance": {
+      "actual_hidden_event": "NOT_OBSERVED",
+      "actual_visible_return_event": "NOT_OBSERVED",
+      "real_hidden_interval": "NOT_RUN",
+      "updates_delta_0": "NOT_RUN",
+      "scheduledFrames_0_while_hidden": "NOT_RUN"
+    },
+    "cleanup": {
+      "manual_pause_after_readback": {
+        "at_epoch_ms": 1794603542788,
+        "events": [],
+        "mode": "paused",
+        "scheduledFrames": 0,
+        "updates": 2534,
+        "userPaused": true
+      },
+      "study_B_closed": true,
+      "blank_bound_only_for_cleanup_and_closed": true,
+      "host_closed": true,
+      "all_three_ids_absent_from_final_inventory": true,
+      "viewport_override_applied": false,
+      "native_or_OS_settings_touched": false,
+      "user_tabs_windows_untouched": true
+    },
+    "stop_condition": "Noadditionalretryafteremptyhistory. Maclocknotbypassed; nosource/environmentspoofing."
+  },
+  "original_evidence_sha256": "0bd7613d2e5ada5cb5e779aa6b29ed232d94378dc420bae168c391a35f23fbdb",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

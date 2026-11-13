@@ -1,0 +1,186 @@
+{
+  "revision": "v4",
+  "manifest_sha256": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+  "environment": "Codex IAB desktop; viewport emulation is not physical phone/touch/Safari verification",
+  "normal_render": {
+    "1440x900": {
+      "span_ms": 20015.700000000033,
+      "count": 1201,
+      "effective_fps": 60.00289772528555,
+      "median_ms": 16.699999999953434,
+      "p95_ms": 18.20000000001164,
+      "lcp_ms": 140,
+      "cls": 0,
+      "long_tasks": [],
+      "independent_recalculation": {
+        "sum_ms": 20015.70000000001,
+        "wall_ms": 20015.70000000001,
+        "fps": 60.002897725285614,
+        "max_ms": 18.70000000001164
+      }
+    },
+    "390x844": {
+      "span_ms": 20016.100000000068,
+      "count": 1201,
+      "effective_fps": 60.00169863260055,
+      "median_ms": 16.699999999982538,
+      "p95_ms": 18.19999999999709,
+      "lcp_ms": 104,
+      "cls": 0,
+      "long_tasks": [],
+      "independent_recalculation": {
+        "sum_ms": 20016.10000000001,
+        "wall_ms": 20016.10000000001,
+        "fps": 60.001698632600736,
+        "max_ms": 18.70000000001164
+      }
+    }
+  },
+  "six_width_smoke": {
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "overflow_px": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "missing_images": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "toc03_present": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "limits": "Measurements were taken after close-book interaction with possible automatic scrolling; not a claim that all CTA bounding boxes describe initial viewport. Final independent visual review and screenshots separately check cover clipping."
+  },
+  "reduced_motion": {
+    "mechanism": "URL motion=reduce enters same reduced path ORed with real matchMedia; OS preference was not changed",
+    "start": {
+      "mode": "reduced",
+      "osReduced": false,
+      "forcedReduced": true,
+      "updates": 1,
+      "raf": 0
+    },
+    "close": {
+      "progress": 0,
+      "updates": 2,
+      "raf": 0
+    },
+    "open": {
+      "progress": 1,
+      "updates": 3,
+      "raf": 0
+    },
+    "later_reload": {
+      "mode": "reduced",
+      "updates": 1,
+      "scheduledFrames": 0,
+      "intervals": []
+    }
+  },
+  "visible_ui_smoke": {
+    "viewport": [
+      320,
+      740
+    ],
+    "menu_open": "true",
+    "menu_escape_closed": "false",
+    "search_empty": "0 results for zz-no-study",
+    "search_clear": "4 results",
+    "editorial_filter": "2 results",
+    "save_reload_restore": {
+      "result": "PASS",
+      "selected_work": "01 aidano-sekkei",
+      "purpose": "readable information",
+      "timing": "test next spring",
+      "note": "test manuscript reading-order note",
+      "external_transmission": false
+    },
+    "actual_text_download": {
+      "filename": "tsuzume-project-note-v4.txt",
+      "bytes": 489,
+      "sha256": "f65d0b14962f3a473583beca59122149d3463d1a69a759d4c8d15173099d6900",
+      "contents_match_saved_selection_and_fields": true
+    },
+    "console_errors_warnings": []
+  },
+  "nojs": "PASS: editorial-v4-nojs.json real sandbox scripting-disabled parser; original source unchanged",
+  "hover_3d_regression": "PASS: editorial-v4-hover.json actual before/after and independent final visual review",
+  "native_hidden": "NOT_RUN: editorial-v4-hidden.json; automation-bound targets did not become hidden, native desktop locked; no result inferred",
+  "pause": {
+    "result": "PASS_IN_OBSERVED_IAB",
+    "url_query": "qa=pause-final (normal motion, no reduce override)",
+    "viewport": [
+      320,
+      740
+    ],
+    "start": {
+      "mode": "paused",
+      "progress": 0,
+      "scheduledFrames": 0,
+      "updates": 1
+    },
+    "later_separate_tool_call": {
+      "mode": "paused",
+      "progress": 0,
+      "scheduledFrames": 0,
+      "updates": 1
+    },
+    "console_warnings_errors": [],
+    "limits": "Time-separated observation across intervening tool checks; this does not establish native document.hidden."
+  },
+  "initial_byte_upper_bound": 113299,
+  "gate": "Independent integration pending; mandatory native hidden NOT_RUN keeps overall A=PENDING",
+  "limits": [
+    "No claim of all MotionSites works or unobserved competitor functionality/performance equivalence",
+    "No physical phone/OS reduced-motion/Safari test",
+    "Single-page only; no destination page added"
+  ],
+  "public_readback": {
+    "result": "PASS",
+    "evidence": "http-editorial-v4.json",
+    "public_commit": "2a55dc01afec225e1c6e6fff21d021c6c73e37cc",
+    "pages_status": "built",
+    "http_files": 14,
+    "all_hash_match": true
+  },
+  "original_evidence_sha256": "5c854d68bd8dde36b5afe2becd0df063156878eec28598731c3879991841fb8d",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

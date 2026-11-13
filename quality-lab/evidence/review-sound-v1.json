@@ -174,8 +174,6 @@
   ],
   "tool_limit": "Final multi-action browser call with download event waiting timed out and reset the runtime; its unreturned observations are not claimed as PASS. Earlier screenshots were displayed in verifier tool output; no persistent screenshot artifact was saved by this verifier.",
   "decision": "Keep v1 as a public experimental failure. Fix the three dominant findings in v2; do not count v1 as a production-quality pass.",
-  "public_export": {
-    "source_evidence_sha256": "d1fa33421e3414058ac4821764b052f3000c7519d3e80334435e56629675b3ab",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "d1fa33421e3414058ac4821764b052f3000c7519d3e80334435e56629675b3ab",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

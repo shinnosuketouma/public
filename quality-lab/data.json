@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-14",
-  "status": "最新指定を反映: 作品は体験できるペライチのみ。CTA先の別ページは利用者が後から制作します。Sound Studies v6は最終受入中、綴目v3は別読書ページを制作範囲から外し、同じページの紙面と操作へ整理しています。",
+  "status": "制作範囲はペライチのみ。CTA先の別ページは利用者が後から制作します。Sound Studies 7版・綴目4版、計11版を公開。Sound v7は選定作例との視覚比較と自作品の内部品質基準に独立合格。綴目v4は実hiddenが未検証のため総合PENDINGです。",
   "revisions": [
     {
       "id": "sound-v1",
@@ -317,6 +317,60 @@
       ]
     },
     {
+      "id": "sound-v7",
+      "title": "Sound Studies / v7",
+      "date": "2026-11-14",
+      "verdict": "独立A/B合格（比較・環境の範囲を限定）",
+      "gate": "PASS",
+      "path": "../gs-000011/v7/",
+      "commit": "8a5b99db89d4eede3f36e8a0be016ba70e99d473",
+      "summary": "造形・構図・音と操作を保ちながら、実際の非表示区間の停止を測定。最終操作・実JSON・公開全ファイル一致を別の評価者が統合し、A/Bとも合格しました。選定動画との視覚比較と自作品の事前内部基準への合格であり、競合の未観察機能や全端末同等を主張しません。",
+      "changes": [
+        "見た目・geometry・音声・保存・JSON/WAVの処理をv6から継承し、非表示時の観測値を追加。v6の欠測を後から合格へ書き換えません。",
+        "native操作だけで別タブへ離脱し、復帰後に初めて状態を読み取る検証を実施。",
+        "通常モーションの初期1280×720静止画像を公式shootで保存。ソフトウェア描画の静止証跡で、FPSの合格証拠とは別です。",
+        "Halo100を再生・停止・保存→初期化→復元し、実JSON170bytesの設定とhashを確認。公開版のHalo切替も実操作。"
+      ],
+      "issues": [
+        "実機スマートフォン、Safari、別GPU、参照元の全機能や全端末との同等性は未検証。",
+        "Soundは詳細briefからの実装試験です。用途だけからの自律設計試験は綴目で別に実施し、将来の日次3件の品質・処理能力はまだ保証しません。"
+      ],
+      "checks": [
+        {
+          "name": "独立SOURCE_VM",
+          "result": "33 PASS / 177 assertions",
+          "evidence": "実sourceの非同期取消・後編集・音声・storage・WAV・観測指標。モック検証と実ブラウザを区別。"
+        },
+        {
+          "name": "実際の非表示と復帰",
+          "result": "PASS（観察したタブ離脱条件）",
+          "evidence": "17,063.5msの実hidden区間でframe1714→1714、差0。音を停止し、自動再生せず描画を再開。v6の未観測とは別の証跡。"
+        },
+        {
+          "name": "通常描画・PC viewport模擬",
+          "result": "PASS（測定範囲）",
+          "evidence": "1440×900:20.016秒60fps,p95 17.7ms,LCP284ms,CLS0。390×844:20.017秒60fps,p95 18.6ms,LCP148ms,CLS0。実機スマートフォンではありません。"
+        },
+        {
+          "name": "独立した最終受入A / B",
+          "result": "PASS / PASS・6軸すべて4",
+          "evidence": "review-sound-v7.jsonのfinal_integration。視覚は固定Vante/Medusa1280動画との比較、非視覚は事前内部基準。比較できない競合機能・性能・携帯/a11yはUNKNOWNを保持。"
+        },
+        {
+          "name": "実ファイル・停止・公開同一性",
+          "result": "PASS（検査範囲）",
+          "evidence": "JSON170bytesがHalo100/28/25と一致、pause frame144→144。Pages built、凍結source13＋manifestの14ファイルがHTTP200/hash一致。初期素材は非圧縮上限734127bytes。"
+        }
+      ],
+      "screenshots": [
+        {
+          "label": "v7 / PC 1280x720（通常motion・静止構図のみ）",
+          "path": "evidence/sound-v7-1280x720.png"
+        }
+      ],
+      "code": "https://github.com/shinnosuketouma/public/tree/8a5b99db89d4eede3f36e8a0be016ba70e99d473/gs-000011/v7"
+    },
+    {
       "id": "editorial-v1",
       "title": "綴目 / v1",
       "date": "2026-11-14",
@@ -397,6 +451,123 @@
           "evidence": "新版固定比較に沿った独立視覚評価を継続。AはFAILのため合格数へ含めない。"
         }
       ]
+    },
+    {
+      "id": "editorial-v3",
+      "title": "綴目 / v3",
+      "date": "2026-11-14",
+      "verdict": "不合格・320幅の表紙目次が欠ける",
+      "gate": "FAIL",
+      "path": "../gs-000012/v3/",
+      "commit": "03dbc160f072ceb38a6b8808eadfbf0c48cde48c",
+      "summary": "最新のペライチ範囲へ合わせ、別の全文読書ページを外して、表紙・見開き・同ページの拡大紙面へ整理。非同期の取消・後操作の整合も修正しましたが、320幅の閉じた表紙で目次03が下端に隠れるため不合格です。",
+      "changes": [
+        "index.htmlだけの1ページ構成へ整理。旧v2の別読書ページと失敗は凍結履歴として保持。",
+        "同じ原稿を主役の冊子と同ページの拡大紙面で読む構成に統一。CTA先の別ページは制作しません。",
+        "読込取消・後編集・離脱と古いerror表示を修正し、実装済みの1ページ内操作を検査。"
+      ],
+      "issues": [
+        "320×740、閉表紙で目次01/02は見える一方、03「問いを残す」が下端で欠けます。",
+        "通常の開閉や390幅が良好でも、意味のある情報の欠落は相殺しません。",
+        "実NoJS・実OS低モーション等の未実施を合格へ含めません。"
+      ],
+      "checks": [
+        {
+          "name": "独立視覚4軸",
+          "result": "4 / 4 / 3 / 4・未達",
+          "evidence": "構図・主役モーション・携帯構図・自主企画。携帯構図は320表紙の03欠落により3。"
+        },
+        {
+          "name": "独立SOURCE_VM",
+          "result": "31 PASS / 108 assertions",
+          "evidence": "1ページ範囲の読込・取消・状態整合。source合格を作品全体の合格へ置き換えません。"
+        },
+        {
+          "name": "通常描画・PC viewport模擬",
+          "result": "PASS（測定範囲）",
+          "evidence": "1440:20.0165秒60.00fps,p95 17.6ms,LCP164ms,CLS0.005075。390:20.0165秒58.95fps,p95 17.4ms,LCP80ms,CLS0。"
+        },
+        {
+          "name": "320幅の閉表紙",
+          "result": "FAIL",
+          "evidence": "独立した実画面観察で、全3章のうち目次03が欠ける状態を再現。"
+        }
+      ],
+      "code": "https://github.com/shinnosuketouma/public/tree/03dbc160f072ceb38a6b8808eadfbf0c48cde48c/gs-000012/v3"
+    },
+    {
+      "id": "editorial-v4",
+      "title": "綴目 / v4",
+      "date": "2026-11-14",
+      "verdict": "視覚4軸到達・実hidden未検証で受入保留",
+      "gate": "PENDING",
+      "path": "../gs-000012/v4/",
+      "commit": "2a55dc01afec225e1c6e6fff21d021c6c73e37cc",
+      "summary": "320幅の表紙へ全3章の目次を収め、通常3Dの開閉と同ページの拡大紙面を再検査。hoverのfilterが3D階層を平面化して裏表を崩す欠陥も最小修正しました。独立視覚4軸は各4ですが、実hidden成立を観測できておらず欠陥ゲートAはPENDINGです。",
+      "changes": [
+        "320×740の閉表紙で題・副題・全3章目次・下端余白を保持。390幅の片面と同ページ拡大紙面も再確認。",
+        "3D親要素のhover brightness filterだけを53bytes削除。hover有無の見開き終点で左右のクリーム色の本文が読める状態へ修正。",
+        "通常の開く途中・閉じる途中と終点を独立観察。修正前候補の赤い鏡文字と旧評価を履歴へ保持。",
+        "共有の低モーション経路と、実際にscriptを無効化するsandboxコンテキストを別々に検証。"
+      ],
+      "issues": [
+        "実hiddenの成立と非表示区間の更新差0はNOT_RUN。Macロック下の2種類の入口ではvisibility_eventsが空で、focus要求だけを成功扱いにしません。",
+        "欠陥ゲートAはPENDINGを維持。視覚4軸到達、SOURCE_VM、NoJS、通常描画の成功で未検証を相殺しません。",
+        "実機スマートフォン、OS低モーション設定変更、全GPU・全ブラウザでの同等性は未検証。"
+      ],
+      "checks": [
+        {
+          "name": "独立視覚4軸",
+          "result": "4 / 4 / 4 / 4",
+          "evidence": "固定1280×720のVante/Card Stack動画に対する構図・主役モーション・携帯構図・自主企画。通常hover有無、開閉の中間、320/390、同ページ拡大の観察範囲。"
+        },
+        {
+          "name": "独立SOURCE_VM",
+          "result": "39 PASS / 170 assertions",
+          "evidence": "凍結app5c2f00…とCSS37a868…へ結び付くsource検査。実ブラウザ・実APIの検証とは分けます。"
+        },
+        {
+          "name": "通常描画・PC viewport模擬",
+          "result": "PASS（測定範囲）",
+          "evidence": "1440×900:20.0157秒60.003fps,p95 18.2ms,LCP140ms,CLS0。390×844:20.0161秒60.002fps,p95 18.2ms,LCP104ms,CLS0。実機スマートフォンではありません。"
+        },
+        {
+          "name": "実NoJSのsandbox",
+          "result": "PASS（観察したコンテキスト）",
+          "evidence": "allow-scriptsのない実sandboxで原本HTMLを無改変表示。1280/390の横はみ出し0、静止原稿・素材・NoJS案内を確認。OS/ブラウザ全体の設定切替とは別です。"
+        },
+        {
+          "name": "実hidden停止・復帰",
+          "result": "NOT_RUN",
+          "evidence": "Macロックのためnative離脱を実行できず。window.open/focusとHTML anchorの各試行で実hidden eventなし。非表示区間の更新差0は未検証。"
+        },
+        {
+          "name": "6幅・低モーション・明示停止",
+          "result": "PASS（観察した条件）",
+          "evidence": "1440/1280/1024/768/390/320の横はみ出し0、画像欠け0、目次03あり。共有motion=reduceは継続RAF0、手動開閉のみ単発更新。通常motionの明示停止は別tool時点でもupdates1→1、scheduledFrames0。実OS設定や実hiddenとは別。"
+        },
+        {
+          "name": "1ページ内操作と実テキスト保存",
+          "result": "PASS（実操作範囲）",
+          "evidence": "320幅のmenu/Escape、検索0件→clear4件、editorial絞込2件、作品選択→保存→reload復元を確認。実txt489bytes、SHA-256 f65d0b14962f3a473583beca59122149d3463d1a69a759d4c8d15173099d6900で選択・入力内容一致。外部送信なし。"
+        },
+        {
+          "name": "欠陥ゲートA / 全体受入",
+          "result": "PENDING",
+          "evidence": "公開14ファイルはHTTP200/hash一致。独立統合で残る必須検査は実hiddenのみ。未検証を合格数へ含めません。"
+        }
+      ],
+      "screenshots": [
+        {
+          "label": "v4 / PC 1280x720（通常motion・静止構図のみ）",
+          "path": "evidence/book-v4-1280x720.png"
+        },
+        {
+          "label": "v4 / mobile viewport 320x740（通常motion・静止構図のみ）",
+          "path": "evidence/book-v4-320x740.png"
+        }
+      ],
+      "code": "https://github.com/shinnosuketouma/public/tree/2a55dc01afec225e1c6e6fff21d021c6c73e37cc/gs-000012/v4"
     }
   ],
   "references": [
@@ -414,14 +585,14 @@
     }
   ],
   "openItems": [
-    "Sound Studies v6の公開HTTP/hashと独立最終合否の統合。",
-    "綴目v3を最新のペライチ範囲へ整理し、1ページ内の構図・動き・反応・実装済み状態の整合を再検査。",
-    "実機スマホ・別GPU・Safari、日次3件の継続処理能力は今回の検証範囲外。"
+    "綴目v4の実hidden成立・非表示停止/復帰はNOT_RUN。公開14ファイル一致等は確認済みですが、必須の実条件が欠けるため総合A/BはPENDING。",
+    "今回の比較は固定した1280×720の選定動画の視覚範囲と、自前の1ページ内機能基準。MotionSites全作例・全機能・全端末との同等性を主張しない。",
+    "実機スマートフォン・別GPU・Safari、日次3件の継続処理能力は今回の検証範囲外。"
   ],
   "productionScope": {
     "singlePageOnly": true,
     "updated": "2026-11-14",
     "instruction": "作品はデザイン参考を体験するペライチのみ。CTA先の別ページは制作せず、必要なら利用者が後から制作する。",
-    "historicalRevisions": "綴目v1/v2は旧範囲の凍結実験として保持。v3はsinglepageへ整合。"
+    "historicalRevisions": "綴目v1/v2の旧範囲と別読書ページは凍結履歴として保持。v3/v4はペライチと同ページの紙面プレビューへ整合。"
   }
 }

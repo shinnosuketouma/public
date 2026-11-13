@@ -50,8 +50,6 @@
       "evidence": "視覚評価はVISUAL_NOT_REACHED。最終欠陥ゲートも未完了で、合格数へ含めません。"
     }
   ],
-  "public_export": {
-    "source_evidence_sha256": "a3541565adaaa6cdc993fb4c989b15975242826c443574efbfba14c8a3ee1d65",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "a3541565adaaa6cdc993fb4c989b15975242826c443574efbfba14c8a3ee1d65",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

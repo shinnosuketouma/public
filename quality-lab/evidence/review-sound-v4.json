@@ -223,8 +223,6 @@
       "Final touch-specific event coverage and OS reduced-motion versus query-forced route must be stated honestly; an unrun mandatory path cannot be labeledPASS."
     ]
   },
-  "public_export": {
-    "source_evidence_sha256": "e7337263f2122e33174a12135f3a1e1a0238412dfab4c6e8d8360ead506a6c51",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "e7337263f2122e33174a12135f3a1e1a0238412dfab4c6e8d8360ead506a6c51",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

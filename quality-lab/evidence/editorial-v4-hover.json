@@ -1,0 +1,39 @@
+{
+  "date_jst": "2026-11-14",
+  "revision": "editorial v4 pre-freeze to fixed-candidate investigation",
+  "app_sha256": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01",
+  "environment": "Codex IAB1280x720, normal motion, native coordinate click then native Right key, DOM reads only",
+  "before_css_sha256": "158e016aca52b87dad72c4cc286d957280322b7905ff13067c9646889c4452f3",
+  "before": [
+    {
+      "progress": 1,
+      "mode": "paused",
+      "hover": false,
+      "leaf_filter": "none",
+      "will_change": "auto",
+      "actual_visual": "Two cream manuscript pages"
+    },
+    {
+      "progress": 1,
+      "mode": "paused",
+      "hover": true,
+      "leaf_filter": "brightness(1.025)",
+      "will_change": "auto",
+      "actual_visual": "Mirrored red cover at left, cream manuscript at right"
+    }
+  ],
+  "after_css_sha256": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3",
+  "after": {
+    "progress": 1,
+    "mode": "paused",
+    "hover": true,
+    "leaf_filter": "none",
+    "actual_visual": "Two cream manuscript pages; mirrored cover absent; text/heading retained"
+  },
+  "change": "Remove only53-byte hover filter from3D parent leaf; no geometry/manuscript/JS changes",
+  "specification": "https://www.w3.org/TR/css-transforms-2/#grouping-property-values",
+  "inference": "Observed hover/filter condition and53-byte repair align with the specification requiring non-none filter to flatten preserve-3d descendants. Other browser/GPU cases are not universally certified.",
+  "evidence_note": "Native CUA screenshots were observed inline; this JSON does not claim a saved screenshot artifact.",
+  "original_evidence_sha256": "d2c64c06567aad368737dfb4da956ab5e575a9e954691d9bd31a06bb12bd8c3e",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

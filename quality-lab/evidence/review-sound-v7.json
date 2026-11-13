@@ -1,0 +1,347 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000011",
+  "revision": "v7",
+  "status": "SOURCE_PASS_PENDING_ACTUAL_HIDDEN_AND_FINAL_PUBLIC_IDENTITY",
+  "scope": "Singlepage design-reference experience; observability-only source change from v6. Unbuilt destination pages/backend are not required.",
+  "gate_a": "PENDING",
+  "gate_b": "PENDING",
+  "frozen_manifest": {
+    "sha256": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+    "files": 13,
+    "total_bytes": 2080881,
+    "mismatches": []
+  },
+  "tested_app_sha256": "f43abbbf1da758c1e48bc19bb6e518b15ba30f3ecab4e2396c4b67485831a262",
+  "source_review": {
+    "result": "問題なし",
+    "syntax": "PASS",
+    "change_scope": "Only metrics.visibility_events array, a small bounded record helper and calls from existing actual visibilitychange handler. No UA/native hidden override, new UI, timer, network or auto-operation.",
+    "record_fields": [
+      "hidden reads document.hidden",
+      "frame reads Number(canvas.dataset.frame)",
+      "playing reads authoritative existing audio state",
+      "at_ms reads performance.now()",
+      "pageInactive reads existing lifecycle state"
+    ],
+    "ordering": "On hidden the existing audio stop and renderer.suspend run before record. On visible the record runs before renderer.wake. No asynchronous yield is introduced inside this ordering.",
+    "capacity": "After each push a single oldest entry is removed when length>12; no more than12 retained entries.",
+    "unchanged_segments_and_assets": [
+      {
+        "name": "settings_storage_import_WAV_audio",
+        "identical_to_v6": true,
+        "sha256": "74b5f339b09e19e879561e08269d1dfa9bb70aa6f064c0a39be08904fd8a3d32",
+        "bytes": 14906
+      },
+      {
+        "name": "geometry_shader_render",
+        "identical_to_v6": true,
+        "sha256": "4d81ed887ca4eb44e76577d0660e44c42caadab722b3578ccffd0cd2cf154d56",
+        "bytes": 14759
+      },
+      {
+        "path": "index.html",
+        "identical_to_v6": true,
+        "sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e"
+      },
+      {
+        "path": "style.css",
+        "identical_to_v6": true,
+        "sha256": "acac5cf009bd413d0caadde86fdce08f836648486c6eac64322411f2ec9ce35c"
+      },
+      {
+        "path": "mark.svg",
+        "identical_to_v6": true,
+        "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+      },
+      {
+        "path": "sculpture-ember.svg",
+        "identical_to_v6": true,
+        "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+      },
+      {
+        "path": "sculpture-tidal.svg",
+        "identical_to_v6": true,
+        "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+      },
+      {
+        "path": "sculpture-halo.svg",
+        "identical_to_v6": true,
+        "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+      },
+      {
+        "path": "generate-fallback.py",
+        "identical_to_v6": true,
+        "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102"
+      }
+    ],
+    "rights_secret_path_review": "Same own SVG/generator/shaders/audio; no new third-party material or runtime. readSnapshot high-confidence secret/path/symlink scanner PASS13 source files; not an exhaustive credential-absence proof.",
+    "builder_self_test": "Not used as acceptance; own harness re-executes actual source."
+  },
+  "source_vm": {
+    "path": "../evidence/sound-v7-source-tests.json",
+    "result": "PASS",
+    "cases": 33,
+    "assertions": 177,
+    "failed_checks": [],
+    "harness_hash": "3078ebbc960d931a0ee86d200bcd82fcb1fda1041548ae087507569c0852ce03",
+    "harness_source_preserved": true,
+    "method": "Actual source prelude/metrics definition+writer/UI/settings/audio/WAV/lifecycle/motion/visibility handlers run with deterministic DOM/audio/timer mocks. Existing31 cases pass and2 instrumentation-specific cases pass.",
+    "ordering_fixture": "Mock suspend changes dataset17→31; hidden record sees31 after playing=false. Visible record sees31 before mock wake changes dataset31→99. Stored timestamps/flags are read from the provided actual properties, not helper arguments.",
+    "capacity_fixture": "30 events with distinct frame/time values retain latest12 in chronological insertion order, and actual diagnostics JSON contains the same list.",
+    "limit": "These are SOURCE_VM boundaries, not a native visibility/frame-stop observation. No hidden0 or real5-second span is claimed from mocks."
+  },
+  "inheritance": {
+    "visual": "v4 full selected-clip visual observations + v6 independent color regression review; exact HTML/CSS/geometry/shader/asset identity into v7.",
+    "layout_a11y_functions": "v6 actual six-width smoke/70text0contrastfails/21targets>=44/normal import-save-play-Back-restore/actualWAV-JSON/native keyboard-only journey remain source-equivalent.",
+    "performance": "v6 IAB1440/39020-second numeric metrics remain recorded as v6 observations. Render/geometry same, only bounded metrics serialization grows; final v7 smoke can support regression reuse but is not called a fresh v7 measurement.",
+    "noJS": "v6 independent native Chrome JS-disabled static art/information observation applies to byte-identical HTML/CSS/assets; no v7 fresh disabled-JS UI is claimed.",
+    "v6_limit_retained": "The actual native audio-stop observation belongs to v6, but hidden frame delta remainedNOT_RUN. Do not backfill v6 acceptance from future v7 instrumentation."
+  },
+  "scores": [
+    {
+      "axis": "composition_typography_assets",
+      "score": 4,
+      "basis": "Exact visual identity to independently observed v6/v4; selected1280clip scope only."
+    },
+    {
+      "axis": "signature_motion",
+      "score": 4,
+      "basis": "Same geometry/shader/scroll/render code; source-identical visual baseline plus finalsmoke pending."
+    },
+    {
+      "axis": "function_experience",
+      "score": 4,
+      "basis": "v6 source-equivalent live singlepage/key/import/files plus33 independent source fixtures."
+    },
+    {
+      "axis": "mobile_accessibility",
+      "score": 4,
+      "basis": "Source-identical viewport composition,actualcontrast/target/key/reduced observations. Physical touchscreen and original mobile parity unknown."
+    },
+    {
+      "axis": "performance_resilience",
+      "score": null,
+      "basis": "Numeric v6 performance target evidence exists; actual hidden frame-stop proof and finalsmoke pending."
+    },
+    {
+      "axis": "originality_handoff",
+      "score": 4,
+      "basis": "Own source/assets and contracts; final frozen/public identity still needs binding."
+    }
+  ],
+  "pending_evidence": [
+    "Native browser visibility true→false event pair after leaving a previously unbound tab/window, with actualframe equality/time span/playing=false and noautoplay; only then bind/read history.",
+    "Final ordinary renderer/UI/diagnostics smoke, scoped performance inheritance or fresh representative measures.",
+    "Public repository/HTTP hash readback of this frozen revision."
+  ],
+  "not_run_or_unknown": [
+    "Nativehidden observation in this source-review phase",
+    "RealBFCache persisted event,physicalphone/touchhardware,OSreduce preference,otherGPU/Safari/Firefox",
+    "Original reference live functionality/performance/mobile/a11y unknown from selected videos"
+  ],
+  "decision": "Source approved to freeze. A/B remainPENDING until actual hidden-state evidence and final source-bound smoke/publication readback are inspected. The prior v6 missing-frame observation stays missing historically; v7 is a new observed revision, not a rewrite of v6 results.",
+  "frozen_identity": "PASS:13filehash/bytes and independenttestappSHA match verified freeze91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+  "final_integration": {
+    "schema": "quality-lab-final-integration-v1",
+    "reviewer": "independent /root/quality_reviewer",
+    "integrated_at_utc": "2026-11-13T21:33:10.585967+00:00",
+    "supersedes": "Current acceptance verdict is this final_integration field. Earlier source-phase PENDING fields are preserved as review history.",
+    "gate_a": "PASS",
+    "gate_b": "PASS",
+    "status": "PASS_SCOPED_VISUAL_COMPARISON_AND_INTERNAL_QUALITY",
+    "accepted_revision_count": 1,
+    "url": "https://shinnosuketouma.github.io/public/gs-000011/v7/",
+    "identity": {
+      "manifest_sha256": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+      "source_files": 13,
+      "public_source_and_manifest_files": 14,
+      "all_hash_match": true,
+      "http_status": 200,
+      "pages_status": "built",
+      "public_commit": "2a55dc01afec225e1c6e6fff21d021c6c73e37cc",
+      "http_evidence": "http-sound-v7.json",
+      "html_files": [
+        "index.html"
+      ]
+    },
+    "scores": [
+      {
+        "axis": "composition_typography_assets",
+        "score": 4,
+        "evidence_type": "INDEPENDENT_VISUAL_OBSERVATION_PLUS_EXACT_INHERITANCE",
+        "basis": "visual-v4 full sampled1280/390/320 layout/material observations and visual-v6 fresh1280/390 color regression; v7 HTML/CSS/geometry/shaders/assets byte-identical.",
+        "comparison": "Selected Vante/Medusa desktop clips at1280×720; not every MotionSites work."
+      },
+      {
+        "axis": "signature_motion",
+        "score": 4,
+        "evidence_type": "INDEPENDENT_VISUAL_PLUS_SOURCE_IDENTITY_AND_FINAL_VISIBLE_SMOKE",
+        "basis": "Same large layered object through unfolding/arrival/reverse; v4 full samples, v6 live regression and v7 final liveHalo/input/render observations.",
+        "comparison": "Observed selected desktop visual transformations only."
+      },
+      {
+        "axis": "function_experience",
+        "score": 4,
+        "evidence_type": "LIVE_V7_SMOKE_PLUS_V6_EQUIVALENT_RUNTIME_AND_SOURCE_VM",
+        "basis": "v7Halo→tone100→play/stop→save/reset/restore→actualJSON; public actualHalo update. Byte-identical v6 import/Back/nativekey-only/generatedWAV-JSON plus v7 independent33cases177assertions for cancel/failure races.",
+        "comparison": "Fixed internal singlepage criteria met; original competitor live functions UNKNOWN."
+      },
+      {
+        "axis": "mobile_accessibility",
+        "score": 4,
+        "evidence_type": "SOURCE_IDENTICAL_V6_A11Y_SIXWIDTH_KEY_REDUCE_PLUS_V7_390_NORMAL",
+        "basis": "v6 six-width smoke and earlier sampled320/390 composition;70text0contrastfails(min4.818),21targets>=44,nativekey journey,queryreduce and fallback. Finalv7 mobile render has nooverflow.",
+        "comparison": "Internal viewport/currentdesktop criterion; original mobile/a11y and physicaltouch UNKNOWN."
+      },
+      {
+        "axis": "performance_resilience",
+        "score": 4,
+        "evidence_type": "DIRECT_V7_MEASURES_REAL_HIDDEN_PLUS_VALIDATED_FALLBACK_FAILURES",
+        "basis": "IAB1440/39020.016/20.017secs60fps,p9517.7/18.6ms,LCP284/148,CLS0,longtasks recorded; initialsource734127bytes. Native unboundChrome17,063.5ms hidden frame1714→1714,playingfalse; visible frame3458running withoutaudio. NoJS/sourcefailures from identicalv6 assets/core.",
+        "comparison": "Fixed internal numeric targets unchanged; original runtime performance UNKNOWN. NativeChrome hidden and IAB performance are separate observations."
+      },
+      {
+        "axis": "originality_handoff",
+        "score": 4,
+        "evidence_type": "INDEPENDENT_SOURCE_MANIFEST_AND_PUBLIC_HASH_AUDIT",
+        "basis": "Own geometry/shader/audio/SVGgenerator, explicit contracts andREADME;13sourceentries+manifest14HTTP200/hashmatches, singleindexHTML.",
+        "comparison": "Internal authorship/rights/reproducibility criteria; no claim of unique idea across the entire web or futureautonomy guarantee."
+      }
+    ],
+    "fixed_standard": {
+      "quality_config": "quality-lab-v2.1",
+      "numeric_thresholds_relaxed": false,
+      "scope": "Latest user requires onepage design reference. Existing onepage interactions remain coherent; unbuilt destination/backend completion is not required.",
+      "score_definition": "Visual4 is selected-reference comparison. Nonvisual4 means predeclared internal mandatory criteria evidenced. Unknown competitor nonvisual results stayUNKNOWN; the guide clarification does not turn them into observations."
+    },
+    "direct_v7_observation": {
+      "IAB_performance": {
+        "1440x900": {
+          "span_seconds": 20.016,
+          "count": 1201,
+          "effective_fps": 60,
+          "median_ms": 16.7,
+          "p95_ms": 17.7,
+          "lcp_ms": 284,
+          "cls": 0,
+          "long_tasks": {
+            "supported": true,
+            "count": 1,
+            "max_duration_ms": 69,
+            "total_duration_ms": 69
+          }
+        },
+        "390x844": {
+          "span_seconds": 20.017,
+          "count": 1201,
+          "effective_fps": 60,
+          "median_ms": 16.7,
+          "p95_ms": 18.6,
+          "lcp_ms": 148,
+          "cls": 0,
+          "long_tasks": {
+            "supported": true,
+            "count": 0,
+            "max_duration_ms": 0,
+            "total_duration_ms": 0
+          }
+        }
+      },
+      "final_local_smoke": {
+        "result": "PASS_IN_OBSERVED_IAB",
+        "viewport": [
+          1280,
+          720
+        ],
+        "sequence": [
+          "Halo -> tone100 -> explicit play(true) -> stop",
+          "save -> reset Ember38 -> restore Halo100/28/25",
+          "actual JSON download and byte inspection",
+          "pause frame144 -> frame144; console warnings/errors none"
+        ],
+        "actual_export": {
+          "filename": "sound-studies-halo (4).json",
+          "bytes": 170,
+          "sha256": "d9639861786a0b6a0c000c773d04dff2677eb46c8e5185b49dd3cc51a6e16e5e",
+          "settings": {
+            "preset": 2,
+            "tone": 100,
+            "motion": 28,
+            "volume": 25
+          }
+        }
+      },
+      "public_smoke": {
+        "url": "https://shinnosuketouma.github.io/public/gs-000011/v7/",
+        "viewport": [
+          1280,
+          720
+        ],
+        "overflow_px": 0,
+        "canvas": {
+          "renderer": "webgl",
+          "frame": 504,
+          "vertices": 49575,
+          "triangles": 95040,
+          "resolution": "576x500"
+        },
+        "input": "Clicked actual 03 Halo control",
+        "visible_result": "Selected Halo 03; tone78/motion28/volume25 and sculpture description changed",
+        "limit": "Short public smoke is not another full performance run"
+      },
+      "native_hidden": {
+        "evidence": "sound-v7-hidden.json",
+        "observer": "independent /root/visual_verifier",
+        "before_first_browser_binding": true,
+        "events": [
+          {
+            "hidden": true,
+            "at_ms": 28829.199999809265,
+            "frame": 1714,
+            "playing": false,
+            "pageInactive": false
+          },
+          {
+            "hidden": false,
+            "at_ms": 45892.699999809265,
+            "frame": 1714,
+            "playing": false,
+            "pageInactive": false
+          }
+        ],
+        "independent_duration_ms": 17063.5,
+        "frame_delta": 0,
+        "post_wake_frame": 3458,
+        "no_audio_restart": true,
+        "source_marker_order_verified_by_independent_VM": true
+      },
+      "initial_bytes": {
+        "value": 734127,
+        "method": "Source-derived uncompressed initial resource upper bound, not browser Resource Timing; system fonts, no external requests; other preset SVG loaded on selection. Full archive includes all three fallbacks and is reported separately.",
+        "independently_recomputed": true
+      }
+    },
+    "inheritance": {
+      "v6_byte_identical": "HTML,CSS,4SVG,generator,geometry/shader/render,audio/settings/storage/import/exports. Only bounded visibility_events telemetry differs;33case regression and v7 actual performance/smoke cover the change.",
+      "source_tests": "sound-v7-source-tests.json33cases177assertionsPASS at appf43abbbf…",
+      "visual": "visual-v4.json + visual-v6.json with exact visual-source identity",
+      "sixwidth_a11y_key_files": "sound-v6-iab.json and sound-v6-exports.json; no claim those were rerun entirely on v7",
+      "noJS": "visual-v6.json actual nativeChrome JS-disable/staticart/information check; identicalHTML/CSS/assets",
+      "history_rule": "v1-v5 failures and v6 missing realhiddenframe proof remain unchanged. v7 PASS does not retroactively certify v6."
+    },
+    "unknown_or_out_of_scope": [
+      "Original reference live functions/performance/mobile/a11y",
+      "Physicalphone/touchhardware,OS reduced preference toggle,separateGPU/Safari/Firefox",
+      "RealBFCache persisted event; ordinaryBack and source lifecycle mocks are separate",
+      "Physicalaudio-output recording and perceptualaudio comparison",
+      "PublicURL full performance rerun: localnumericmeasures+publichash+shortpublicsmoke are distinguished",
+      "Continuous future autonomous production/daily3capacity; Sound is detailed-brief implementation trial"
+    ],
+    "decision": "選定作例との視覚比較に到達し、観測した代表デスクトップ環境における自作品の内部機能・品質基準にも合格。競合全機能・全端末同等の宣言ではない。"
+  },
+  "original_evidence_sha256": "8d8b7404ead98821379af54d51d8c6ec78055df220cede8f16bbc42c8c468f70",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

@@ -1,0 +1,32 @@
+{
+  "source_revision": "v7",
+  "manifest_sha256": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+  "method": "Source-derived uncompressed initial resource upper bound, not browser Resource Timing; system fonts, no external requests; other preset SVG loaded on selection. Full archive includes all three fallbacks and is reported separately.",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 10254
+    },
+    {
+      "path": "style.css",
+      "bytes": 22929
+    },
+    {
+      "path": "app.js",
+      "bytes": 43523
+    },
+    {
+      "path": "mark.svg",
+      "bytes": 236
+    },
+    {
+      "path": "sculpture-ember.svg",
+      "bytes": 657185
+    }
+  ],
+  "initial_bytes_uncompressed": 734127,
+  "max_initial_bytes": 2000000,
+  "pass": true,
+  "original_evidence_sha256": "4caed9c4e255f05aa3244074ed522843159e9fed127d1cab649191afbfd409fc",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

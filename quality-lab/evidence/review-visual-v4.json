@@ -303,8 +303,6 @@
     "No author self-score or implementation source was used to justify the scores. Earlier observations identify which visual defect was resolved, but v4 was judged from its own visible states."
   ],
   "overall_gate_B": "PENDING_OTHER_AXES — four observed visual axes score4. Full B and A require the separate functional/performance/accessibility/rights evidence; this file alone is not a full PASS.",
-  "public_export": {
-    "source_evidence_sha256": "bb30af5f91e3182e5eac5c6c0ac07c52ae81791a78b7099d2547a9f32cebf319",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "bb30af5f91e3182e5eac5c6c0ac07c52ae81791a78b7099d2547a9f32cebf319",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

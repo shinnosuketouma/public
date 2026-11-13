@@ -149,8 +149,6 @@
     }
   ],
   "decision": "Do not mark all A/B PASS until the final source-bound browser evidence and fresh visual evaluation have been inspected. Source review alone has no new actionable blocker.",
-  "public_export": {
-    "source_evidence_sha256": "e3fcb50337467cda2e358b37e1bbbae4797fcbd9f8a84c735527a96a552e2c69",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "e3fcb50337467cda2e358b37e1bbbae4797fcbd9f8a84c735527a96a552e2c69",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

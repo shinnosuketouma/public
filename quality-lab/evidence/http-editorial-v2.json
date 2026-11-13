@@ -1,0 +1,90 @@
+{
+  "public_commit": "4a1142e3a021bbbf727bad6a504c48934f85ab72",
+  "pages_status": "built",
+  "base_url": "https://shinnosuketouma.github.io/public/",
+  "files": [
+    {
+      "path": "gs-000012/v2/index.html",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/publication.html",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/telemetry.js",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/frozen-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/asset-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/README.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/style.css",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/app.js",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/publication.js",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/assets/kutou-poster.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/assets/outline-poster.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/assets/aida-left.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/assets/aida-cover.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/assets/layers-cover.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/assets/aida-right.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v2/assets/favicon.svg",
+      "status": 200,
+      "hash_match": true
+    }
+  ],
+  "all_match": true,
+  "original_evidence_sha256": "3f3df878b30c92072a76c575f6a84e0dfa231626dd16d2478b7966241a39d774",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

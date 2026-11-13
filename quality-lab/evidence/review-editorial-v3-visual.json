@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "content_id": "gs-000012",
+  "revision": "editorial-studio/v3",
+  "url": "http://127.0.0.1:8765/editorial-studio/v3/site/",
+  "manifest_sha256_supplied_by_orchestrator": "64ceeb0e06b0e4f969a69e908aed47216369f9b6686cb63280ddb824350e4337",
+  "working_app_hash_descriptor_supplied": "74ca6383…",
+  "manifest_or_source_independently_hashed": false,
+  "source_read_to_infer_appearance": false,
+  "status": "VISUAL_NOT_REACHED_320_COVER_CONTENT_CUT",
+  "scope_change": {
+    "authority": "The orchestrator relayed the user's latest instruction: design-reference experiences are single-page only; separate destination pages are not required.",
+    "current_scope": "Index hero/booklet, selected work visuals and existing same-page enlarged-paper modal. Separate publication.html/js, standalone reader, print and another-page behavior are excluded.",
+    "history": "The v2 reader orphan『の』failure remains in editorial-v2-visual.json as evidence under the previous scope. This review does not claim that old failure was fixed or never existed. It is no longer a current deliverable; the new320 index cover failure is a separate observed defect."
+  },
+  "conclusion": "ペライチの案内→大きい表紙/見開き→同ページ拡大紙面は一貫し、1280/390の主役/文字/内容の精度は成立。ただし320の閉表紙では下端が目次03『問いを残す』を隠し、01/02しか見えない。原稿と読む順序を主役とする現版の携帯完成度は3。",
+  "environment": {
+    "browser": "Chrome extension browser1, dedicated tab356766357",
+    "viewports_read_back": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "motion": "Normal autoplay initially; visible pause/open/close used for endpoint inspection",
+    "mobile_is_viewport_simulation": true,
+    "viewport_reset": true,
+    "viewport_after_reset": [
+      1200,
+      852
+    ],
+    "not_run": [
+      "1440/1024/768 visual sweep",
+      "Exact normalized booklet progress sweep",
+      "Full-frame reverse continuity",
+      "Physical phone",
+      "Performance/source/rights audit"
+    ]
+  },
+  "reference_scope": {
+    "fixed_references": "Vante/Card Stack from editorial-studio/v2 design/benchmark.json, retained for v3",
+    "independent_observation": "The same verifier's exact1280×720 video observations in editorial-v2-visual.json: Vante2.282362/7 paused readyState4 plus prior independent0; Card Stack0/3.590614/7 paused readyState4.",
+    "comparison_axes": [
+      "Subject occupancy",
+      "Same paper/material through transformation",
+      "Readable arrival",
+      "Text safety and separation"
+    ],
+    "not_claimed": "Original live functionality/mobile/performance/accessibility equivalence. Third-party media was observed remotely and not copied/rehosted."
+  },
+  "observed_states": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Normal initial/opening, closed and open endpoints",
+      "observation": "左の案内/作品を選ぶ/紙面を見る、右の大きな朱の表紙/白い見開き。表紙の目次、見開きの章/要点/三段階の情報が同じ一冊として続き、左の説明/操作と競合しない。開閉の意味と紙の薄い面/中央の陰影を保持する。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "紙面を見る same-page modal",
+      "observation": "URLはindexのままで既存modalが開く。左に二面の原稿/図、右に題/課題/設計/範囲。図案の象徴だけでなく実際の文章から読む順序が見える。別ページを制作したことを品質へ加点しない。"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "Open one-page hero and same-page modal",
+      "observation": "Heroは第2章の一面へ再組版され、主CTA/紙面を見る/開閉操作が初期画面にある。modalでは二章が縦に並び、章題、要点、本文、三段階の項目を読める。本文スクロール後も閉じるが上部へ残る。紙面の内容を見られる場として成立し、readerURLへ移らない。"
+    },
+    {
+      "viewport": [
+        320,
+        740
+      ],
+      "state": "Open one-page hero and same-page modal",
+      "observation": "Open状態の第2章は見出し/要点/3段階の項目が読める。modalは本文を縦に読み、題や説明をページ外へ飛ばさない。modalの通常説明はcomputed16px、補助文は13pxを読戻した。全アクセシビリティをここから推定しない。"
+    },
+    {
+      "viewport": [
+        320,
+        740
+      ],
+      "state": "Closed cover atscrollY0, aria-pressed=false; repeated confirmation",
+      "observation": "『あいだの／設計』の題はまとまっているが、表紙下部の目次は01『入口を決める』/02『距離を分ける』まで。03『問いを残す』の行が閉じた表紙下端の外へ隠れ、見えない。スクロール位置によるviewport外ではなく、表紙自体の下端で欠ける。"
+    }
+  ],
+  "visual_scores": [
+    {
+      "axis": "composition_typography_material",
+      "score": 4,
+      "scope": "Observed1280/390 hero and paper preview",
+      "reason": "案内と紙面の領域が分かれ、朱/紙の白/黒い活字の体系が一貫する。読める大きさの紙面と安定した拡大終点は、固定Vante/Card Stackのmaterial inspection/arrival軸に対して成立する。320の内容切れはmobile軸へ残す。"
+    },
+    {
+      "axis": "hero_motion",
+      "score": 4,
+      "scope": "Sampled normal opening and closed/open/closing endpoints, not every progress",
+      "reason": "同じ表紙が開いて章/読む順序を示す因果があり、主役の同一性を保つ。案内/CTAの保護領域も保たれる。単なる飾りの回転だけで終わらず、読む内容を提示する終着がある。全フレームの速度/逆転検査とは区別する。"
+    },
+    {
+      "axis": "mobile_composition",
+      "score": 3,
+      "scope": "390/320 viewport simulation under the new single-page scope",
+      "reason": "一面への再組版とsame-page拡大は成立した。しかし320の閉表紙で3章のうち03の目次行が欠ける。表紙の読む順序を内容として示す現版では、意味のある情報の欠落を良いopen状態やmodalで相殺できない。"
+    },
+    {
+      "axis": "self_directed_visual_concept",
+      "score": 4,
+      "scope": "Main authored publication concept in one-page experience",
+      "reason": "原稿と図版から一冊を作り、表紙/見開き/拡大を同じ内容と読み順でつなぐ目的が明瞭。作品数/機能数/別ページの制作量を加点理由にしない。作者/権利のsource監査は別担当の範囲。"
+    }
+  ],
+  "dominant_deficiencies": [
+    {
+      "rank": 1,
+      "category": "mobile_content_clipping",
+      "evidence": "Index320×740, scrollY0, #folio-hit aria-pressed=false. Repeated screenshot of the closed cover shows rows01 and02, while03『問いを残す』is absent below the cover's bottom edge. The cover title and page controls are otherwise visible.",
+      "cause": "Observed layout cause: closed-cover content height and mobile paper/frame height are not coordinated. Implementation source was not read.",
+      "expected_change": "320幅の閉表紙に題/副題/3章目次がすべて収まるよう字面・行間・余白・紙面比率を調整する。章を消さず、同じ原稿の見開き/拡大との内容一致を保つ。",
+      "retest": "New frozen revisionの320/390閉表紙をscrollY0とsettled状態で実見し、03を含む全目次と下端余白を確認。open/closing/同ページmodalも退行がないか確認する。"
+    }
+  ],
+  "additional_real_browser_checks": {
+    "no_javascript": "NOT_RUN in v3 — native shortcut did not open DevTools, and native View→開発/管理 showed Developer Tools/JavaScript Console disabled in this app context. No JS setting was changed and no fallback success is inferred from source.",
+    "prefers_reduced_motion_emulation": "NOT_RUN in v3 for the same native DevTools UI limitation. No OS preference or browser emulation setting was changed. Source/VM tests are not counted as this live observation."
+  },
+  "unknown": [
+    "Full functional/error contracts",
+    "Keyboard/touch/focus/accessibility",
+    "Performance/hidden/fallback behavior",
+    "Source rights/handoff",
+    "All inherited studies as completed independent systems"
+  ],
+  "evidence_retention": "Screenshots and readbacks were observed in the CUA transcript; no local PNG/video artifact is claimed. All earlier v1/v2 results are preserved with their original scopes.",
+  "overall_gate_B": "NOT_PASS — mobile_composition remains3 under the new single-page scope. Nonvisual gates and unrun live fallback/reduced checks remain separate.",
+  "original_evidence_sha256": "6da33208a1727d7b33485bdadacc3c29729a17a4b1ef00bbf00410c0ea0ed0e7",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

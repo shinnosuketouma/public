@@ -51,8 +51,6 @@
       "evidence": "6軸:構図3、演出3、機能3、携帯2、性能3、独自性4。欠測を合格へ含めていません。"
     }
   ],
-  "public_export": {
-    "source_evidence_sha256": "020b2b0a47846293346649605e622853aa8f1a363abfd5579ef64b4be18b126e",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "020b2b0a47846293346649605e622853aa8f1a363abfd5579ef64b4be18b126e",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

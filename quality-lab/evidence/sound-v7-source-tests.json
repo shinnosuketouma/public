@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "evidence_type": "SOURCE_VM",
+  "tested_on": "2026-11-13T20:19:51.243Z",
+  "revision": "v7",
+  "app_sha256": "f43abbbf1da758c1e48bc19bb6e518b15ba30f3ecab4e2396c4b67485831a262",
+  "source_segments": [
+    {
+      "name": "actual metrics definition and writer",
+      "sha256": "f382e5ce696a681a3c10de65c5fa5b0eda43ab98308c112b56a76d924eab5d8d"
+    },
+    {
+      "name": "prelude",
+      "sha256": "abbb420f4fe63d6b3060c52406a4cf4265cdd4240f5d9c684d123959cf608302"
+    },
+    {
+      "name": "UI projection and parameter handlers",
+      "sha256": "7764d2265597fee9b7ba47536ca5859e2fea5510a5dbdbf41393fbf8daf8d6fd"
+    },
+    {
+      "name": "actual validation/storage/JSON/WAV/audio handlers",
+      "sha256": "74b5f339b09e19e879561e08269d1dfa9bb70aa6f064c0a39be08904fd8a3d32"
+    },
+    {
+      "name": "actual audio UI/lifecycle/motion/visibility handlers",
+      "sha256": "520a88c97ef1a8a3b9a014e3b7c0f65f98b346f5440019ecdac8e51202784208"
+    }
+  ],
+  "harness_sha256": "3078ebbc960d931a0ee86d200bcd82fcb1fda1041548ae087507569c0852ce03",
+  "method": "Actual frozen source substrings run without edits in isolated Node vm. DOM/storage/AudioContext/OfflineAudioContext/object URL/file read/timer/RAF APIs are deterministic mocks. Source updateLabels, audio graph/await cancellation, handlers and pagehide/pageshow are actual functions. No full renderer is instantiated.",
+  "no_js": {
+    "evidence_type": "STATIC_SOURCE",
+    "result": "Noscript declares original Ember SVG background in reserved hero slot, hides JS moving host, and provides static explanation plus JavaScript-required notice.",
+    "browser_javascript_disabled": "NOT_RUN; actual disabled-JS browser layout is not asserted"
+  },
+  "assertions": 177,
+  "checks": [
+    {
+      "id": "storage_denied_save_restore",
+      "result": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "restore_empty_invalid_and_retry",
+      "result": "PASS",
+      "assertions": 10
+    },
+    {
+      "id": "audio_resume_rejection_ui_recovers",
+      "result": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "audio_unsupported_and_nonrunning_resume",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "audio_pending_cancel_by_pagehide_then_late_resolve",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "audio_pending_hidden_late_resolve_and_reject",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "audio_normal_stop_then_reentry_never_autoplays",
+      "result": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "json_valid_round_known_fields_no_upload",
+      "result": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "json_invalid_variants_keep_state",
+      "result": "PASS",
+      "assertions": 20
+    },
+    {
+      "id": "json_cancel_and_read_rejection",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "json_pagehide_late_read_resolution_or_rejection_discarded",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "json_newer_read_wins",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "json_export_url_and_download_rejection",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "wav_unsupported_and_render_rejection",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "wav_user_cancel_late_resolution_or_rejection_discarded",
+      "result": "PASS",
+      "assertions": 10
+    },
+    {
+      "id": "wav_pagehide_late_resolution_or_rejection_discarded",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "wav_download_url_or_click_rejection",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "history_form_state_projection_and_frame_cancellation",
+      "result": "PASS",
+      "assertions": 7
+    },
+    {
+      "id": "json_pending_read_preserves_later_toneinput",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "json_pending_read_preserves_later_reset",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "json_pending_read_preserves_later_preset",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "json_pending_read_preserves_later_restore",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "json_pending_read_then_new_dialog_cancel_discards_old_read",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "json_old_read_reject_after_tone_preserves_later_status",
+      "result": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "json_old_read_reject_after_motion_preserves_later_status",
+      "result": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "json_old_read_reject_after_volume_preserves_later_status",
+      "result": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "json_old_read_reject_after_reset_preserves_later_status",
+      "result": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "json_old_read_reject_after_preset_preserves_later_status",
+      "result": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "json_old_read_reject_after_restore_preserves_later_status",
+      "result": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "visibility_actual_values_suspend_after_wake_before",
+      "result": "PASS",
+      "assertions": 9
+    },
+    {
+      "id": "visibility_history_cap_preserves_latest_order_and_values",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "longtask_observer_bounded_aggregate_and_unsupported",
+      "result": "PASS",
+      "assertions": 7
+    },
+    {
+      "id": "nojs_static_fallback_declaration",
+      "result": "PASS",
+      "assertions": 5,
+      "evidence_type": "STATIC_SOURCE"
+    }
+  ],
+  "race_observations": [
+    {
+      "scenario": "pending File.text -> toneinput -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 0,
+        "tone": 91,
+        "motion": 45,
+        "volume": 25
+      },
+      "actual_after_old_read": {
+        "preset": 0,
+        "tone": 91,
+        "motion": 45,
+        "volume": 25
+      },
+      "overwrote_later_intent": false
+    },
+    {
+      "scenario": "pending File.text -> reset -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 0,
+        "tone": 38,
+        "motion": 45,
+        "volume": 25
+      },
+      "actual_after_old_read": {
+        "preset": 0,
+        "tone": 38,
+        "motion": 45,
+        "volume": 25
+      },
+      "overwrote_later_intent": false
+    },
+    {
+      "scenario": "pending File.text -> preset -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 1,
+        "tone": 64,
+        "motion": 72,
+        "volume": 25
+      },
+      "actual_after_old_read": {
+        "preset": 1,
+        "tone": 64,
+        "motion": 72,
+        "volume": 25
+      },
+      "overwrote_later_intent": false
+    },
+    {
+      "scenario": "pending File.text -> restore -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 1,
+        "tone": 11,
+        "motion": 22,
+        "volume": 33
+      },
+      "actual_after_old_read": {
+        "preset": 1,
+        "tone": 11,
+        "motion": 22,
+        "volume": 33
+      },
+      "overwrote_later_intent": false
+    },
+    {
+      "scenario": "pending File.text -> open another import dialog -> cancel -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 0,
+        "tone": 38,
+        "motion": 45,
+        "volume": 25
+      },
+      "actual_after_old_read": {
+        "preset": 0,
+        "tone": 38,
+        "motion": 45,
+        "volume": 25
+      },
+      "cancel_status": {
+        "text": "JSONの読み込みを中止しました。現在の設定は変わりません。",
+        "error": false
+      },
+      "actual_status": {
+        "text": "JSONの読み込みを中止しました。現在の設定は変わりません。",
+        "error": false
+      },
+      "overwrote_later_intent": false
+    }
+  ],
+  "result": "PASS",
+  "limits": [
+    "SOURCE_VM is source-level control-flow evidence, not a browser permission-dialog, actual audio output, real file dialog, disk save, navigation-restoration timing, GPU or performance observation.",
+    "OfflineAudioContext cancellation discards its eventual result; harness does not claim cancellation stops native rendering computation.",
+    "Actual browser-generated WAV/JSON content, real normal interactions, BFCache/new-document restoration and source-bound performance are parent QA.",
+    "The harness does not execute WebGL renderer/placeSculpture or layout."
+  ],
+  "original_evidence_sha256": "414394b31b93c85a0ed59676369bb3944e6298acd179ee81d8446c70e33df05d",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

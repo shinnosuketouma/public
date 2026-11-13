@@ -4,7 +4,7 @@
   "reviewed_on_jst": "2026-11-14",
   "site_code": "gs-000011",
   "revision": "v6",
-  "status": "SOURCE_PASS_PENDING_FINAL_BROWSER_AND_PUBLIC_READBACK",
+  "status": "PENDING_ACTUAL_HIDDEN_CONDITION_ONLY",
   "gate_a": "PENDING",
   "gate_b": "PENDING",
   "frozen_manifest": {
@@ -98,8 +98,8 @@
     },
     {
       "finding": "Small-text contrast below4.5",
-      "result": "PENDING_BROWSER_COMPUTED_STYLE",
-      "evidence": "Only tokens darkened; final actual background/active/error/focus states must be checked by parent IAB."
+      "result": "LIVE_COMPUTED_STYLE_AND_VISUAL_SMOKE_PASS",
+      "evidence": "v6 actual390 scan70text0fail,min4.818; independent1280/390 visual reviewer found no color regression."
     }
   ],
   "additional_unfrozen_cancellation_fix": {
@@ -112,22 +112,26 @@
     {
       "axis": "composition_typography_assets",
       "score": 4,
-      "status": "V4_VISUAL_IDENTITY_PENDING_V6_COLOR_SMOKE"
+      "status": "V4_VISUAL_IDENTITY_PLUS_V6_LIVE_COLOR_REGRESSION",
+      "reason": "Independent visual1280/390 initial/middle/operation scope preserved; v4 broader source-identical layout/preset observations retained."
     },
     {
       "axis": "signature_motion",
       "score": 4,
-      "status": "V4_GEOMETRY_SHADER_IDENTITY_PENDING_V6_SMOKE"
+      "status": "V4_SAMPLED_MOTION_INHERITED_PLUS_V6_LIVE_SMOKE",
+      "reason": "Same geometry/shader/interpolation and fresh normal-mode1280/390 observations; fixed Vante/Medusa1280clip visual scope only."
     },
     {
       "axis": "function_experience",
-      "score": null,
-      "status": "PENDING_FINAL_BROWSER_NORMAL_IMPORT_BACK_EXPORT"
+      "score": 4,
+      "status": "SOURCE_VM_AND_LIVE_SINGLEPAGE_JOURNEYS_VERIFIED",
+      "reason": "Pointer normal import/save/play/Back/restore/actual JSON-WAV; native key-only preset/edit/play-stop/save/reset/restore/JSON export;31source failure/cancel fixtures. Unbuilt destination/backend not required."
     },
     {
       "axis": "mobile_accessibility",
-      "score": null,
-      "status": "PENDING_ACTUAL_CONTRAST_AND_KEYBOARD_SMOKE"
+      "score": 4,
+      "status": "SCOPED_VIEWPORT_POINTER_KEY_REDUCED_VERIFIED",
+      "reason": "390/320 composition baseline with fresh v6 width smoke,70color0fail/min4.818 and21targets>=44, visible key range/focus/dialog route, query-reduced route. Physical/native touchscreen and original mobile parity are not claimed."
     },
     {
       "axis": "performance_resilience",
@@ -137,23 +141,127 @@
     {
       "axis": "originality_handoff",
       "score": 4,
-      "status": "ORIGINAL_SOURCE_REVIEWED_PENDING_FROZEN_AND_PUBLIC_IDENTITY"
+      "status": "FROZEN_ORIGINAL_SOURCE_AND_PUBLIC_HASH_VERIFIED",
+      "reason": "Original media/geometry/audio/generator,13frozen source entries andmanifest public14filehashmatch; readme and explicit contracts retained."
     }
   ],
   "pending_evidence": [
-    "Frozen13-file manifest hash/bytes against source tested here.",
-    "Parent final IAB color/normal import/ordinary Back/generated-file checks plus reduced/static/keyboard smoke.",
-    "Exact inheritance audit for v4 six widths/visual and v5 representative20-second measurements; minor changed tokens still require fresh color observation.",
-    "Public HTTP and repository frozen-source hash readback."
+    "Actual representative browser hidden-state/frame/audio stop→return observation; condition establishment is required, sourceVM alone is not live evidence."
   ],
   "not_run_or_unknown": [
-    "Real BFCache event capture is separate from ordinary Back and mocked pagehide/pageshow.",
-    "Browser JavaScript-disabled rendered layout NOT_RUN; static noscript source path inspected.",
-    "Physical phone, OS preference toggle, other GPU/Safari/Firefox not asserted."
+    "Real BFCache persisted event not observed; ordinaryBack and sourceVM lifecycle are separately recorded.",
+    "Physical phone/touchhardware,OS reduced preference toggle,separateGPU/Safari/Firefox excluded from current environment claim."
   ],
   "decision": "Source changes are ready to freeze. Do not mark A/B PASS until source-bound final mandatory observations are inspected; prior visual4 alone does not clear missing functionality/a11y/performance or publishing evidence.",
-  "public_export": {
-    "source_evidence_sha256": "fc968cf758d61d677c3bf961c17649b503e99a40e5cedbbcf269f65f1a54803d",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "final_evidence_review": {
+    "directly_inspected_saved_evidence": [
+      "../evidence/sound-v6-iab.json",
+      "../evidence/sound-v6-exports.json",
+      "../evidence/sound-v6-initial-bytes.json",
+      "../evidence/sound-v6-source-tests.json",
+      "visual-v6.json"
+    ],
+    "frozen_identity_reverified": true,
+    "visual": "Independent v6 normal1280/390 initial/middle/control observations preserve v4 visual4 scores. Original full source geometry/shader/HTML/assets unchanged; two darkened tokens otherwise identical.",
+    "noJS": "Independent visual reviewer actually disabled Chrome JavaScript through native UI, reloaded, observed static copper sculpture, purpose/link/descriptive text and noscript notice, then restored working JS. This is live fallback evidence, not static inference. Exact disabled-JS viewport unmeasured and not compared to reference clips.",
+    "performance": "IAB1440/39020.017/20.000secs,60fps,median16.7ms,p9517.5ms,LCP244/144ms,CLS0,recordedlongtasks,resolutions649x680/350x360. Numeric targets unchanged and met.",
+    "initial_bytes": "Independent source-based5-resource733685-byte sum matches evidence; below2MB. This is an uncompressed source-resource estimate, not browser Resource Timing or measured wire bytes.",
+    "actual_files": "Parent actual390 import→save→play→Back→restore→export evidence contains coherentHalo2/64/72/18 JSON and8-second44100Hz mono16-bitPCM705644byte WAV with nonzero amplitude. File hashes and manifest match; reviewer checked metadata/arithmetic rather than repeating native download.",
+    "a11y_color_targets": "Parent actual390 computed70text/21control scan has0contrast failures,min4.818,0targets<44. Actual input keyboard End and prior help/Escape/focus-return observations are present.",
+    "other_runtime": "Pause frame2374 unchanged; queryreduced frame2 unchanged idle and finite2input frames; static fallback3images/menu/help/Escape andconsole0.",
+    "keyboard_only_journey": {
+      "method": "Native Tab/Shift+Tab/Return/End/Right/Left only, no pointer or programmatic focus after navigation",
+      "viewport": [
+        1280,
+        720
+      ],
+      "route": [
+        "skip link",
+        "brand",
+        "Instrument",
+        "help",
+        "hero CTA",
+        "Ember",
+        "Tidal",
+        "Halo",
+        "pause",
+        "tone",
+        "motion",
+        "volume",
+        "play",
+        "save",
+        "restore",
+        "export",
+        "import",
+        "WAV",
+        "reset"
+      ],
+      "actions": "Tab from initial body to Tidal, Return; Tab to Tone End, Motion Right, Volume Left; play Return/start then Return/stop; Tab/save Return; Tab/reset Return; Shift+Tab/restore Return; Tab/JSON export Return",
+      "preset": "Tidal02",
+      "edited_values": [
+        100,
+        73,
+        24
+      ],
+      "play_started": true,
+      "reset_values": [
+        38,
+        45,
+        25
+      ],
+      "restored_values": [
+        100,
+        73,
+        24
+      ],
+      "playing_after_restore": false,
+      "actual_download": {
+        "filename": "sound-studies-tidal.json",
+        "sha256": "0d2aeb95bbf8e969d9a599ab859ace2a8d174c63011092fe5429d167bf0469fb",
+        "data": {
+          "format": "genseki-sound-studies",
+          "version": 2,
+          "presetName": "Tidal",
+          "settings": {
+            "preset": 1,
+            "tone": 100,
+            "motion": 73,
+            "volume": 24
+          }
+        }
+      },
+      "pass": true
+    },
+    "input_scope": {
+      "pointer": "Mouse/trackpad-driven native CUA click/scroll in desktop IAB; mobile viewport does not emulate physical touch hardware",
+      "keyboard": "Native keys with actual Tab order, journey above",
+      "physical_touch": "NOT_RUN; explicitly outside the representative desktop viewport claim",
+      "hover_dependence": "No required operation depends on hover; presets/buttons/native range inputs support keyboard and pointer. Physical touchscreen behavior is not asserted."
+    }
+  },
+  "inheritance_audit": {
+    "visual_v4": "Full forward/reverse/state/preset390/320/1280 visual scope remains through audited visual-code identity, with fresh v6 color regression observations.",
+    "layout_v4": "Six widths and intermediate samples in sound-v4-iab.json remain applicable through unchangedHTML/CSSgeometry/render. Fresh v6 six-width initial/p.65smoke supplements inheritance.",
+    "controls_v4_v5": "Same original WebAudio/WAV/settings methods and native controls except reviewed guarded import changes; v6 actual normal import/save/play/Back/restore/exports retested.",
+    "not_inherited": "v4 state mismatch and v5 contrast/import failures are not inherited as PASS; v6 fixes have their own tests."
+  },
+  "score_scope": {
+    "visual_comparison": "SelectedVante/Medusa clips at matching1280×720, scoped observed composition/material/motion.",
+    "original_function_performance_mobile_a11y": "UNKNOWN; videos cannot establish original live controls, performance, mobile or accessibility. Nonvisual scores assess the fixed internal GENSEKI requirements and measured environment, not a measured competitor parity claim.",
+    "autonomy_proof": "ThisSound work is the detailed-brief implementation test; it does not by itself prove future autonomous original design. Held-out separate-work acceptance remains separate.",
+    "latest_user_scope": "Single-page design reference experience. Test responses/internal consistency of controls actually included; unbuilt destination pages/backend transmission are not required. Original prior-scope reviews remain history."
+  },
+  "publication_readback": {
+    "path": "../evidence/http-sound-v6.json",
+    "result": "PASS",
+    "public_commit": "4a1142e3a021bbbf727bad6a504c48934f85ab72",
+    "pages_status": "built",
+    "manifest_and_files": 14,
+    "exact_expected_paths": true,
+    "all_status200_and_hash_match": true,
+    "url": "https://shinnosuketouma.github.io/public/gs-000011/v6/",
+    "scope": "Saved parent HTTP-byte hash audit inspected by this reviewer; not repeated browser performance at public URL."
+  },
+  "original_evidence_sha256": "74ac3d21cd285d2df7099100abf16edf0fd351ef36b771061489d51e55938065",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

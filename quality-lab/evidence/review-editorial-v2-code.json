@@ -187,8 +187,6 @@
     "Physical phone, OS reduce preference and separate browser/GPU"
   ],
   "decision": "Publish v2 only as a frozen failed experiment with this review. Correct asynchronous chooser/lifecycle/error boundaries and the misleading NoJS print route in a new revision, then re-run independent source fixtures and parent browser checks. Do not count it as an accepted production work or infer MotionSites equivalence from fixed telemetry/manuscript source.",
-  "public_export": {
-    "source_evidence_sha256": "51f9c58cd4b8ac5a916af37def12226177367b558dde35bed1ee616f25a34c2a",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "51f9c58cd4b8ac5a916af37def12226177367b558dde35bed1ee616f25a34c2a",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

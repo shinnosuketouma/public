@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000012",
+  "revision": "v3",
+  "scope": "Code/function SOURCE_VM and static-source review of the singlepage design-reference experience. No UI browser used.",
+  "source_review": "問題なし",
+  "status": "SOURCE_PASS_PENDING_FROZEN_BROWSER_VISUAL_PUBLIC_ACCEPTANCE",
+  "gate_a": "PENDING",
+  "gate_b": "PENDING_SEPARATE_VISUAL_AND_BROWSER_REVIEW",
+  "accepted_production_count": 0,
+  "frozen_manifest": null,
+  "reviewed_working_source_snapshot": [
+    {
+      "path": "README.md",
+      "sha256": "df3f4990d3d2fdafd3c4e7372f6c525ffffd2ee5fa302b40a106d582974b06df",
+      "bytes": 3609
+    },
+    {
+      "path": "app.js",
+      "sha256": "74ca6383c8d35305605e4736409bdadb1edc79420bba64d4f0aabb8c9b652e47",
+      "bytes": 34657
+    },
+    {
+      "path": "asset-manifest.json",
+      "sha256": "41e254a012d8b198a5cd67108a274cc83b84a9fcc6059e7bf22273b2c65e8165",
+      "bytes": 2826
+    },
+    {
+      "path": "assets/aida-cover.svg",
+      "sha256": "a85886c97f90bb421f70cd925ddb9a640646e3170a69a8f66c3afdca1a9b5385",
+      "bytes": 1481
+    },
+    {
+      "path": "assets/aida-left.svg",
+      "sha256": "df9d78e9678f99ff2222ea57b4d6502a332aff62a2d97bac68a577e040ef15e6",
+      "bytes": 2156
+    },
+    {
+      "path": "assets/aida-right.svg",
+      "sha256": "620cc676b7c3e60867f92dedc1efaa655a612f24d67a5c00b2d90f303a193a51",
+      "bytes": 2141
+    },
+    {
+      "path": "assets/favicon.svg",
+      "sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2",
+      "bytes": 199
+    },
+    {
+      "path": "assets/kutou-poster.svg",
+      "sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04",
+      "bytes": 866
+    },
+    {
+      "path": "assets/layers-cover.svg",
+      "sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954",
+      "bytes": 903
+    },
+    {
+      "path": "assets/outline-poster.svg",
+      "sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6",
+      "bytes": 1032
+    },
+    {
+      "path": "index.html",
+      "sha256": "19dc55c30935fbfc2b756f787f3b4860c15f7e3b9213b2600ebd1c77a166bb99",
+      "bytes": 17998
+    },
+    {
+      "path": "style.css",
+      "sha256": "a68e9e2847c670a91167acc291caf817cd12c34bb851d77fd7e9ea79720fa22d",
+      "bytes": 39639
+    },
+    {
+      "path": "telemetry.js",
+      "sha256": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+      "bytes": 3263
+    }
+  ],
+  "source_total_bytes": 110770,
+  "source_tests": {
+    "path": "../evidence/editorial-v3-source-tests.json",
+    "result": "PASS",
+    "case_count": 31,
+    "assertions": 108,
+    "source_hashes": {
+      "app_js": "74ca6383c8d35305605e4736409bdadb1edc79420bba64d4f0aabb8c9b652e47",
+      "telemetry_js": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+      "inline_paper_preview": "b4ffc8c33ea84d2d7856c952bbfd6c6b04a1d6c61a5073040a85dfed311781e2"
+    },
+    "harness_source_preserved": true,
+    "failed_checks": [],
+    "scope": "Actual note handlers/validDraft/sync, actual tick and full telemetry module run in isolated vm with deterministic DOM/storage/file/RAF mocks. Inline manuscript compared to original design source; singlepage references checked without browser rendering."
+  },
+  "findings": [],
+  "v2_findings_resolution": [
+    {
+      "finding": "Chooser cancel / inactive completion does not invalidate import",
+      "result": "FIXED_SOURCE_VM",
+      "evidence": "Actual fileinputclick/cancel/newfile and pagehide/pageshow advance generation, clear pending owner, and pageActive prevents an inactive new read or stale apply. Direct cancel, chooserstart only, emptyfile, pagehide→pageshow old resolve/reject all pass."
+    },
+    {
+      "finding": "Late read failure overwrites newer status",
+      "result": "FIXED_SOURCE_VM",
+      "evidence": "Six all-input/selection/reset reject cases preserve latest state/status. Additional pendingread→save without edit→reject retains saved status at same generation, directly exercising statusRevision guard rather than only generation invalidation."
+    },
+    {
+      "finding": "NoJS index print promise contradicts CSS",
+      "result": "RESOLVED_BY_USER_REQUESTED_SINGLEPAGE_SCOPE_AND_CORRECTED_NOTICE",
+      "evidence": "NoJS notice now offers existing samepage static paper/descriptions and manual notes; it no longer promises index printing or points to a removed reader. Print with JS remains existing optional note behavior. Legacy v2 failure is retained unchanged."
+    }
+  ],
+  "other_retested_checks": {
+    "telemetry": "Actual tick retains16.7/300/16.7ms and reports8.9982fps/p95300.20sec/capacity/truncation/overrun/CLSsession/unsupportednull/longtaskbounded fixtures pass; telemetry.js byte-identical to v2.",
+    "dirty_persistence": "Selection change calls markDirty; simulated save/edit/reload/resave/reload behavior passes; startup successful local restore increments edit revision.",
+    "samepage_preview": "Actual hero data-detail handler opens native-dialog state using inline TsuzumePaper.makePreview; two chapter nodes entrance/distance are produced; actual detail-add mutates selected list and dirty notice; close returns to existing page state. This is mocked-DOM control-flow evidence, not rendered paper readability or native focus-trap proof.",
+    "paper_source": "Inline original manuscript equals design/manuscript.json. Both hero fillHero and existing detail makePreview refer to the same API/data. No external reader module/page is loaded.",
+    "HTML_scope": "index.html is the only HTML file in source. No publication.html/publication.js/full-reader link remains.56unique ids,0duplicate ids,0broken relative or fragment refs.",
+    "syntax": "app.js and telemetry.js node --check PASS",
+    "asset_integrity": "All7 originalSVG asset hash/bytes match. No external dependency/media/font binary.",
+    "secret_path_symlink_gate": "readSnapshot13files PASS under current high-confidence signature/path/symlink checks, plus manual code/input/output review. This is not an exhaustive credential-absence proof.",
+    "safe_output": "validDraft copies known fields and known project ids. Imported text uses textContent/input.value, not HTML interpolation. No new injection path found."
+  },
+  "scope_change_record": {
+    "authority": "Latest user instruction passed by orchestrator: onepage design reference; do not build button-destination pages.",
+    "publication_HTML_count": 1,
+    "out_of_scope_reader": "v2 publication.html/js retained only under design/retained-reader, not current public source. Do not build a replacement separate page.",
+    "removed_fixture_assertions": "43 v2 static reader-consistency assertions are no longer applicable because the user removed that destination from current scope. They were not silently turned into PASS; v2 evidence/review remain unchanged.",
+    "replacement": "Inline manuscript identity, only-one-HTML/ref checks and actual samepage preview state tests.",
+    "not_required": "Unbuilt reservation/contact/purchase destinations or real backend transmission are not current quality defects. Existing in-page controls still require coherent input/response/state."
+  },
+  "not_run": [
+    "Frozen/public HTTP identity until orchestrator freezes and publishes this exact source",
+    "Final actual IAB/Chrome normal interactions, native picker cancel/readback and actual TXT/JSON saved bytes",
+    "Native browser history form restoration timing after pageshow, including real BFCache; mocked lifecycle tests do not establish it",
+    "Live20-second representative performance/pause/hidden/reduced and actual longtask stream",
+    "Full rendered paper/readability/mobile/contrast/targets/keyboard-focus/dialog routes",
+    "Actual JavaScript-disabled render and normal note print preview",
+    "Physical phone/touch hardware, system reduce toggle, separate GPU/Safari/Firefox"
+  ],
+  "decision": "Source freeze is approved within the singlepage scope. Independent31case108assertion source tests found no remaining actionable source defect. This does not grant A/B or accepted production status: bind the eventual frozen manifest to this tested source, then integrate separate final browser/visual/performance/accessibility/publication evidence without treating out-of-scope reader work as missing.",
+  "original_evidence_sha256": "edd2fcd1595ebf4ff15640f98b5941f8e22e90ea81a233568ae163e6b2c79aef",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

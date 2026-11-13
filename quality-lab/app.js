@@ -22,7 +22,12 @@ fetch('data.json').then(r=>{if(!r.ok)throw Error('記録を取得できません
   const table=el('table'),thead=el('thead'),tr=el('tr');for(const t of ['項目','結果','証拠・範囲'])tr.append(el('th',t));thead.append(tr);table.append(thead);const tbody=el('tbody');for(const check of rev.checks){const row=el('tr');row.append(el('td',check.name),el('td',check.result),el('td',check.evidence));tbody.append(row)}table.append(tbody);detail.append(table);if(rev.commit)detail.append(el('p','Public source commit: '+rev.commit,'mono'));card.append(detail);list.append(card);
   for(const select of selectors){const opt=el('option',rev.title);opt.value=rev.path;select.append(opt)}
  }
- if(data.revisions.length)selectors[1].selectedIndex=data.revisions.length-1;
+ if(data.revisions.length){
+  const last=data.revisions.length-1;
+  const sitePrefix=data.revisions[last].path.replace(/v[1-9][0-9]*\/$/,'');
+  selectors[0].selectedIndex=data.revisions.findIndex(rev=>rev.path.startsWith(sitePrefix));
+  selectors[1].selectedIndex=last;
+ }
  const openItems=document.querySelector('#open-items');openItems.replaceChildren(...data.openItems.map(t=>el('li',t)));
  const refs=document.querySelector('#references');for(const ref of data.references){if(!safeLink(ref.url))continue;const a=el('a',ref.title+' ↗');a.href=ref.url;a.target='_blank';a.rel='noopener';refs.append(a)}
  const clear=document.querySelector('#clear-compare');

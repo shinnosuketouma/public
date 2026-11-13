@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "evidence_type": "SOURCE_VM_AND_STATIC_SOURCE",
+  "tested_on": "2026-11-13T20:42:43.707Z",
+  "revision": "editorial-v4",
+  "source_hashes": {
+    "app_js": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01",
+    "telemetry_js": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+    "style_css": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3",
+    "inline_paper_preview": "b4ffc8c33ea84d2d7856c952bbfd6c6b04a1d6c61a5073040a85dfed311781e2"
+  },
+  "harness_sha256": "9ac2b58d8a38e726039fee72bd2d9718d54db27974567947150c464b2b6f9815",
+  "method": "Actual note handlers/validDraft/sync, actual tick and full telemetry module run in isolated vm with deterministic DOM/storage/file/RAF mocks. Inline manuscript/singlepage references and actual motion/reduced handlers checked with deterministic matchMedia/query/RAF mocks. CSS declarations checked statically; no rendered TOC fit claimed.",
+  "assertions": 170,
+  "checks": [
+    {
+      "id": "telemetry_slow_frame_not_dropped_actual_tick",
+      "result": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "telemetry_twenty_second_window_and_capacity",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "telemetry_CLS_max_session_and_unsupported_null",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "telemetry_longtask_bounded_and_time_pruned",
+      "result": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "JSON_valid_invalid_boundaries_and_safe_fields",
+      "result": "PASS",
+      "assertions": 14
+    },
+    {
+      "id": "pending_JSON_resolve_preserves_later_purpose",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "pending_JSON_resolve_preserves_later_medium",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "pending_JSON_resolve_preserves_later_timing",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "pending_JSON_resolve_preserves_later_notes",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "pending_JSON_resolve_preserves_later_selection",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "pending_JSON_resolve_preserves_later_reset",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "newer_JSON_wins",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "selection_changes_saved_indicator_and_reload",
+      "result": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "storage_denied_restore_save_reset",
+      "result": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "pending_JSON_cancel_must_discard_old_result",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "pending_JSON_reject_preserves_later_action_status",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "pending_JSON_pagehide_must_discard_old_result",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "late_reject_keeps_current_purpose_state_and_status",
+      "result": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "late_reject_keeps_current_medium_state_and_status",
+      "result": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "late_reject_keeps_current_timing_state_and_status",
+      "result": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "late_reject_keeps_current_notes_state_and_status",
+      "result": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "late_reject_keeps_current_selection_state_and_status",
+      "result": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "late_reject_keeps_current_reset_state_and_status",
+      "result": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "old_read_after_pagehide_pageshow_stays_discarded",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "new_chooser_start_or_missing_file_invalidates_pending_read",
+      "result": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "inactive_new_read_does_not_read_file_or_apply",
+      "result": "PASS",
+      "assertions": 2
+    },
+    {
+      "id": "newer_import_error_then_old_valid_result_retains_current_error",
+      "result": "PASS",
+      "assertions": 3
+    },
+    {
+      "id": "cancelled_reset_preserves_note_but_invalidates_old_import",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "samepage_hero_detail_uses_inline_paper_and_selected_note",
+      "result": "PASS",
+      "assertions": 7
+    },
+    {
+      "id": "late_reject_after_save_without_edit_keeps_newer_status",
+      "result": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "forced_reduce_uses_real_reduced_state_and_class_without_raf",
+      "result": "PASS",
+      "assertions": 7
+    },
+    {
+      "id": "forced_reduce_manual_is_immediate_no_continuous_animation",
+      "result": "PASS",
+      "assertions": 7
+    },
+    {
+      "id": "forced_reduce_ors_media_changes_without_resetting_manual_state",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "real_media_toggle_follows_same_stop_resume_path",
+      "result": "PASS",
+      "assertions": 12
+    },
+    {
+      "id": "os_initial_reduce_manual_pause_and_nonmatching_query",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "reduced_CSS_stops_animation_and_320_patch_is_scoped",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "visibility_records_after_stop_and_before_visible_schedule",
+      "result": "PASS",
+      "assertions": 10
+    },
+    {
+      "id": "visibility_history_retains_latest_twelve_actual_values_in_order",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "singlepage_inline_manuscript_and_samepage_preview",
+      "result": "PASS",
+      "assertions": 11
+    }
+  ],
+  "observations": [
+    {
+      "id": "raw_stall",
+      "protocol": "active-window-v2",
+      "windowMs": 20000,
+      "capacity": 8192,
+      "sampleCount": 3,
+      "activeMs": 333.4000000000001,
+      "totalActiveMs": 333.4000000000001,
+      "truncated": false,
+      "windowOverrunMs": 0,
+      "intervals": [
+        {
+          "at": 1016.7,
+          "ms": 16.700000000000045,
+          "activeEnd": 16.700000000000045
+        },
+        {
+          "at": 1316.7,
+          "ms": 300,
+          "activeEnd": 316.70000000000005
+        },
+        {
+          "at": 1333.4,
+          "ms": 16.700000000000045,
+          "activeEnd": 333.4000000000001
+        }
+      ],
+      "medianFrameMs": 16.700000000000045,
+      "p95FrameMs": 300,
+      "effectiveFps": 8.998200359928012,
+      "lcpMs": null,
+      "cls": null,
+      "longTasks": null,
+      "supported": {
+        "lcp": false,
+        "cls": false,
+        "longtask": false
+      },
+      "clsSession": {
+        "startTime": null,
+        "lastShift": null,
+        "value": 0,
+        "maxSession": 0
+      }
+    },
+    {
+      "id": "cancel_race",
+      "cancel_handler_exists": true,
+      "expected": {
+        "schema": "tsuzume-project-note",
+        "version": 1,
+        "selected": [],
+        "purpose": "",
+        "medium": "未定・相談したい",
+        "timing": "",
+        "notes": ""
+      },
+      "actual": {
+        "schema": "tsuzume-project-note",
+        "version": 1,
+        "selected": [],
+        "purpose": "",
+        "medium": "未定・相談したい",
+        "timing": "",
+        "notes": ""
+      },
+      "status": {
+        "text": "前の読み込みを取り消しました。現在のノートを保持しています。",
+        "error": false
+      }
+    },
+    {
+      "id": "late_error_status",
+      "expected": {
+        "text": "あいだの設計をノートに追加しました。",
+        "error": false
+      },
+      "actual": {
+        "text": "あいだの設計をノートに追加しました。",
+        "error": false
+      }
+    },
+    {
+      "id": "pagehide_race",
+      "stop_called": 1,
+      "expected": {
+        "schema": "tsuzume-project-note",
+        "version": 1,
+        "selected": [],
+        "purpose": "",
+        "medium": "未定・相談したい",
+        "timing": "",
+        "notes": ""
+      },
+      "actual": {
+        "schema": "tsuzume-project-note",
+        "version": 1,
+        "selected": [],
+        "purpose": "",
+        "medium": "未定・相談したい",
+        "timing": "",
+        "notes": ""
+      }
+    }
+  ],
+  "result": "PASS",
+  "limits": [
+    "No UI browser, native file picker, real Back/BFCache form restore, saved export bytes, print pagination, runtime performance or physical phone test.",
+    "No rendered text/contrast/3D/readability claims. Real parent IAB and fresh visual evaluation remain separate."
+  ],
+  "prior_unfrozen_runs": [
+    {
+      "tested_on": "2026-11-13T20:28:03.811Z",
+      "source_hashes": {
+        "app_js": "03efa1ed6bcc5201f8ede7f8f86a054c2aeeb0b6d49fd34c0f367986f4fd0ac1",
+        "telemetry_js": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+        "style_css": "158e016aca52b87dad72c4cc286d957280322b7905ff13067c9646889c4452f3",
+        "inline_paper_preview": "b4ffc8c33ea84d2d7856c952bbfd6c6b04a1d6c61a5073040a85dfed311781e2"
+      },
+      "result": "PASS",
+      "case_count": 37,
+      "assertions": 154,
+      "failing_checks": []
+    },
+    {
+      "tested_on": "2026-11-13T20:32:59.367Z",
+      "source_hashes": {
+        "app_js": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01",
+        "telemetry_js": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+        "style_css": "158e016aca52b87dad72c4cc286d957280322b7905ff13067c9646889c4452f3",
+        "inline_paper_preview": "b4ffc8c33ea84d2d7856c952bbfd6c6b04a1d6c61a5073040a85dfed311781e2"
+      },
+      "result": "PASS",
+      "case_count": 39,
+      "assertions": 170,
+      "failing_checks": []
+    }
+  ],
+  "original_evidence_sha256": "495bdfa3aa37623c6f40e569b2598296fa31d46540552c07cc04054a7137b30c",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

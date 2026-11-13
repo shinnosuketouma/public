@@ -1,0 +1,80 @@
+{
+  "public_commit": "4a1142e3a021bbbf727bad6a504c48934f85ab72",
+  "pages_status": "built",
+  "base_url": "https://shinnosuketouma.github.io/public/",
+  "files": [
+    {
+      "path": "gs-000011/v5/source-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/motion-contract.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/index.html",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/sculpture-ember.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/frozen-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/generate-fallback.py",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/sculpture-halo.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/asset-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/README.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/interaction-contract.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/mark.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/style.css",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/sculpture-tidal.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v5/app.js",
+      "status": 200,
+      "hash_match": true
+    }
+  ],
+  "all_match": true,
+  "original_evidence_sha256": "22b2c93b429d8f826e14368cd5a19d06e186cf961f60ca4adb12a9758f731156",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

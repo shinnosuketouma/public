@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "observer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "revision": "sound-studies/v6",
+  "url": "http://127.0.0.1:8765/sound-studies/v6/",
+  "manifest_sha256_supplied": "afe8a7ac8a7209f7e9805bed4cca28f99063b9ed736f45aa820c806f0c118be2",
+  "test": "Real browser tab hiding, frame suspension and no automatic audio restart",
+  "overall_result": "PARTIAL_NATIVE_ONLY_TAB_LEAVE_AUDIO_PASS_FRAME_SUSPENSION_NOT_RUN",
+  "method": {
+    "browser": "Chrome extension browser1 with native Google Chrome app UI",
+    "sound_tab": "356766340",
+    "blank_tab": "356766343",
+    "scope": "DOM-backed canvas.dataset.frame/motion, document.visibilityState/hidden, play-toggle aria-pressed and displayed signal/status text. Native Chrome tab UI selected state was independently observed.",
+    "no_source_simulation": true,
+    "no_visibility_override_or_script_mutation": true,
+    "viewport": [
+      1200,
+      852
+    ],
+    "note": "cua.getTab or browser handle selection was not used as proof of a native tab switch. Both Sound and blank were explicitly clicked in the native Chrome tab strip."
+  },
+  "observations": [
+    {
+      "stage": "initial_normal",
+      "time_ms": 1794598704301,
+      "document_visibility": "visible",
+      "document_hidden": false,
+      "frame": 442,
+      "motion": "running",
+      "play_pressed": false
+    },
+    {
+      "stage": "explicit_play_control",
+      "time_ms": 1794598719163,
+      "document_visibility": "visible",
+      "document_hidden": false,
+      "frame": 1334,
+      "motion": "running",
+      "play_pressed": true,
+      "signal": "Playing",
+      "status": "Emberを再生しています。音量はいつでも調整できます。"
+    },
+    {
+      "stage": "native_sound_tab_selected",
+      "native_UI": "Sound Studies tab selected/on; Chrome window title and tab description indicated audio playback.",
+      "time_ms": 1794598757424,
+      "document_visibility": "visible",
+      "document_hidden": false,
+      "frame": 3630,
+      "motion": "running",
+      "play_pressed": true,
+      "signal": "Playing"
+    },
+    {
+      "stage": "native_blank_selected_observation_1",
+      "native_UI": "about:blank selected/on; Sound Studies off; Chrome address bar about:blank.",
+      "time_ms": 1794598768227,
+      "document_visibility": "visible",
+      "document_hidden": false,
+      "frame": 4277,
+      "motion": "running",
+      "play_pressed": true,
+      "signal": "Playing",
+      "status": "Emberを再生しています。音量はいつでも調整できます。"
+    },
+    {
+      "stage": "native_blank_selected_observation_2",
+      "native_UI": "Native Chrome still showed about:blank as selected, with no UI state change since the preceding observation.",
+      "time_ms": 1794598783855,
+      "document_visibility": "visible",
+      "document_hidden": false,
+      "frame": 5215,
+      "motion": "running",
+      "play_pressed": true,
+      "signal": "Playing",
+      "status": "Emberを再生しています。音量はいつでも調整できます。"
+    },
+    {
+      "stage": "native_return_then_explicit_stop",
+      "native_UI": "Sound Studies selected/on; about:blank off. The visible Sound stop control was then explicitly clicked.",
+      "time_ms": 1794598811327,
+      "document_visibility": "visible",
+      "document_hidden": false,
+      "frame": 6863,
+      "motion": "running",
+      "play_pressed": false,
+      "signal": "Stopped",
+      "status": "音を停止しました。設定を調整して、もう一度再生できます。"
+    },
+    {
+      "stage": "cleanup_motion_paused_and_viewport_reset",
+      "time_ms": 1794598836001,
+      "document_visibility": "visible",
+      "document_hidden": false,
+      "frame": 8323,
+      "motion": "paused",
+      "play_pressed": false,
+      "signal": "Stopped",
+      "viewport": [
+        1200,
+        852
+      ]
+    }
+  ],
+  "blank_selected_interval": {
+    "elapsed_ms": 15628,
+    "frame_delta": 938,
+    "interpretation": "These were visible-state frames despite the independently observed native blank-tab selection. They are not evidence of frames drawn while document.hidden=true."
+  },
+  "results": {
+    "normal_motion_start": "PASS_OBSERVED",
+    "explicit_audio_play_state": "PASS_OBSERVED_DOM_AND_NATIVE_PLAYBACK_INDICATION",
+    "native_blank_tab_selection": "PASS_OBSERVED",
+    "genuine_document_hidden": "NOT_RUN — target stayed visibility=visible/hidden=false in both samples",
+    "zero_frames_while_hidden": "NOT_RUN — hidden precondition absent",
+    "audio_stop_on_hidden": "PASS_NATIVE_ONLY_TAB_LEAVE_BEHAVIOR — see native_only_followup; direct document.hidden read remains NOT_RUN",
+    "frame_restart_on_return": "NOT_RUN — no observed hidden-to-visible transition",
+    "no_automatic_audio_restart": "PASS_NATIVE_ONLY_RETURN — Stopped/play toggle0 and tab-leave stop message observed before any manual stop; see native_only_followup",
+    "explicit_audio_stop_at_end": "PASS_OBSERVED",
+    "cleanup": "PASS — play=false, signal=Stopped, motion=paused, viewport default1200×852"
+  },
+  "single_window_minimize_followup": {
+    "result": "NOT_RUN_GENUINE_HIDDEN_NOT_ESTABLISHED",
+    "window_scope": "The owned Sound tab alone was moved through native Chrome tab context menu『タブを新しいウィンドウに移動』. Native AX confirmed a new window containing only the selected Sound tab. No unrelated user tab was moved or minimized intentionally.",
+    "before": {
+      "time_ms": 1794598976011,
+      "frame": 8474,
+      "motion": "running",
+      "play_pressed": true,
+      "signal": "Playing",
+      "visibility": "visible",
+      "hidden": false
+    },
+    "native_action": "After a native app-state refresh, Command-M was sent to the dedicated Sound window. Native AX/screenshot did not expose a reliable minimized flag. A Dock UI query intended to confirm minimization stalled in the CUA service for1216.596 seconds and returned timeoutReached. No page DOM was read during that interval.",
+    "restore": "The native Chrome Window menu listed Sound Studies as a separate window. Its own item was selected to restore/bring forward that dedicated window, without selecting or modifying another user's tab contents.",
+    "after_restore_before_manual_stop": {
+      "time_ms": 1794600315100,
+      "frame": 88798,
+      "motion": "running",
+      "play_pressed": true,
+      "signal": "Playing",
+      "visibility": "visible",
+      "hidden": false
+    },
+    "aggregate_interval_ms": 1339089,
+    "aggregate_frame_delta": 80324,
+    "interpretation": "The aggregate delta is approximately60fps over the whole attempt, and play remained true before manual cleanup. No near-zero-frame interval or automatic playback stop was observed. The actual minimized/hidden condition was not independently established, so this is not recorded as a hidden-state implementation FAIL or PASS.",
+    "final_cleanup": {
+      "time_ms": 1794600330816,
+      "frame": 89729,
+      "motion": "paused",
+      "play_pressed": false,
+      "signal": "Stopped",
+      "viewport": [
+        1200,
+        852
+      ]
+    },
+    "tool_limit": "The Dock lookup's long service timeout prevented the planned10-second coordination window. The followup was abandoned after restoration; no further Dock, focus-emulation or window-minimization investigation was attempted."
+  },
+  "native_only_followup": {
+    "result": "PASS_TAB_LEAVE_AUDIO_STOP_AND_NO_AUTOMATIC_RESTART; FRAME_TOTAL_NOT_RUN",
+    "rationale": "A separate native-only window was tried once to avoid binding a browser automation target. This is an observation of that native UI path; it does not retroactively change the failed document.visibilityState preconditions in the earlier attempts.",
+    "creation": "Native Chrome File→新規ウインドウ. Entered Sound v6 URL through the native omnibox. This new Sound page was never obtained through cua.createBrowserTab, cua.getTab, browser/getTab or playwright/evaluate. Only Google Chrome App AX, clicks and keys were used for its page.",
+    "before": {
+      "host_time_ms": 1794600775526,
+      "native_UI": "Sound Studies01 Playing; 音を停止する toggle1; Emberを再生しています。音量はいつでも調整できます。",
+      "motion": "Motion on",
+      "frame_total": "NOT_EXPOSED_IN_NATIVE_AX",
+      "telemetry_limit": "The displayed telemetry was expanded. Its AX text exposed rolling active_render statistics in an earlier read, but no usable total canvas frame counter could be obtained. Rolling20-second count was not treated as a monotonic frame total."
+    },
+    "tab_leave": "Native Command-T created a task-owned New Tab in the same single-window test. AX showed New Tab selected/on and Sound off. clock.sleep completed5005.6ms while no Sound page DOM/browser APIs were touched. Native Command-W then closed only that task-created blank/new tab.",
+    "after_return_before_manual_stop": {
+      "host_time_ms": 1794600798829,
+      "native_UI": "Sound Studies01 Stopped; 音を再生する toggle0; タブを離れたため音を停止しました。再生ボタンで再開できます。",
+      "playback_restarted_automatically": false,
+      "motion": "Motion on",
+      "frame_total": "NOT_EXPOSED_IN_NATIVE_AX"
+    },
+    "wall_interval_ms": 23303,
+    "interval_scope": "Includes native steps and state readbacks around the planned5-second quiet interval; it is not a precise document-hidden duration.",
+    "cleanup": "Did not click play again. Explicitly paused motion, confirmed Motion paused and Stopped/play0, then closed the task-created native-only Sound window with Command-W. Native Chrome returned to the existing owned editorial-v3 tab. No user-created tab was closed.",
+    "claims": {
+      "native_tab_switch": "PASS",
+      "app_reports_stop_due_to_tab_leave": "PASS",
+      "no_automatic_audio_restart_after_return": "PASS_NATIVE_UI",
+      "document_hidden_direct_observation": "NOT_RUN — no browser binding was used",
+      "continuous_frame_count_while_hidden": "NOT_RUN — total frame counter not exposed in native AX",
+      "frame_restart_after_return": "NOT_RUN — no monotonic total before/after"
+    }
+  },
+  "limitations": [
+    "The cause of the native-selection/document-visibility discrepancy was not established. No undocumented browser command, script override or broader user setting change was attempted to force it.",
+    "The continued frame/play states do not prove a hidden-state implementation bug because the browser reported the document as visible.",
+    "Playback state and Chrome's playback indication were observed. No physical audio-output capture or audio-node inspection was performed.",
+    "This real-browser attempt is separate from source/VM visibility tests and must not be recorded as their live equivalent."
+  ],
+  "evidence_retention": "Native Chrome AX selected-tab state and the two DOM-backed snapshots are retained in the CUA transcript. No screenshot/video artifact is claimed.",
+  "original_evidence_sha256": "0787d5517909baeaea682fb92e374971c344d6991402db11589a31778d71c413",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

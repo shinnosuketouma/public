@@ -10,8 +10,6 @@
   "rms": 0.014050503560456616,
   "nonzero_samples": 352195,
   "pass": true,
-  "public_export": {
-    "source_evidence_sha256": "8737a31736c2a19e2913da672a4b89d2c952909afe40dbdcd7551a5fe29ecc8f",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "8737a31736c2a19e2913da672a4b89d2c952909afe40dbdcd7551a5fe29ecc8f",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

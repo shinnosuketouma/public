@@ -1,0 +1,114 @@
+{
+  "revision": "v3",
+  "manifest_sha256": "64ceeb0e06b0e4f969a69e908aed47216369f9b6686cb63280ddb824350e4337",
+  "environment": "Codex IAB current desktop; viewport simulation; source frozen single-page index",
+  "performance": {
+    "1440x900": {
+      "active_ms": 20016.499999999964,
+      "sample_count": 1201,
+      "effective_fps": 60.00049958784014,
+      "median_ms": 16.69999999999709,
+      "p95_ms": 17.599999999998545,
+      "lcp_ms": 164,
+      "cls": 0.005075093582006802,
+      "long_tasks": [],
+      "overflow_px": 0
+    },
+    "390x844": {
+      "active_ms": 20016.50000000009,
+      "sample_count": 1180,
+      "effective_fps": 58.95136512377262,
+      "median_ms": 16.69999999999709,
+      "p95_ms": 17.39999999999418,
+      "lcp_ms": 80,
+      "cls": 0,
+      "long_tasks_duration_ms": [
+        55,
+        56,
+        75,
+        97,
+        66
+      ],
+      "overflow_px": 0,
+      "independent_dom_raw_recalculation": {
+        "count": 1180,
+        "sum_ms": 20016.5,
+        "wall_span_ms": 20016.5,
+        "wall_effective_fps": 58.95136512377289,
+        "median_ms": 16.69999999999709,
+        "p95_ms": 17.39999999999418,
+        "max_ms": 83.39999999999418
+      }
+    }
+  },
+  "pause": {
+    "updates_before_after": [
+      6160,
+      6160
+    ],
+    "scheduled_frames": [
+      0,
+      0
+    ],
+    "mode": "paused"
+  },
+  "computed_a11y": {
+    "viewport": [
+      390,
+      844
+    ],
+    "text_elements": 194,
+    "contrast_failures": [],
+    "controls": 37,
+    "targets_under44": [],
+    "method": "Computed text vs nearest opaque ancestor; supplementary, not full a11y certification"
+  },
+  "same_page_preview": {
+    "url_unchanged": true,
+    "dialog_open": true,
+    "initial_focus": "dialog-close",
+    "escape_close": true,
+    "focus_return": "paper preview trigger",
+    "inline_original_manuscript": true
+  },
+  "keyboard_observed": {
+    "method": "Actual native Tab/Return/Escape/Right, no programmatic focus",
+    "tab_sequence": [
+      "skip",
+      "brand",
+      "works",
+      "process",
+      "note",
+      "works CTA",
+      "paper preview"
+    ],
+    "paper_modal_open": true,
+    "paper_modal_escape": true,
+    "tab_to": "folio-hit",
+    "right_key_result": {
+      "progress": 1,
+      "mode": "paused",
+      "scheduled_frames": 0
+    },
+    "left_key_sent": true,
+    "left_completion_not_read": true,
+    "note": "An earlier count-based attempt reached Works instead of the paper button; it is not counted as successful modal navigation. The recorded successful attempt derived each next focus from current UI."
+  },
+  "search_empty": {
+    "query": "zz-no-matching-study",
+    "visible_result": "0 items",
+    "empty_state_visible": true,
+    "clear_button_visible": true
+  },
+  "known_defect": "Independent visual at320x740 finds cover TOC03 cut at lower edge; reviews/editorial-v3-visual.json. v4 assigned minimal responsive correction.",
+  "scope": "Single page only; no destination pages required. Existing one-page controls remain internally consistent.",
+  "acceptance": "FAIL / visual mobile3; do not count as accepted. These are observations, not a self-declared gate pass.",
+  "not_run": [
+    "physical mobile/touch",
+    "system reduced motion toggle",
+    "real no-JS for this revision",
+    "all remaining one-page controls"
+  ],
+  "original_evidence_sha256": "faeb6731d59c5de94f7a50f6f2dabc0a18d3092782e897286ab14be0b03024f3",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

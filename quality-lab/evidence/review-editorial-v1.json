@@ -206,8 +206,6 @@
   ],
   "evidence_retention": "Own work and remote reference screenshots were visually inspected in the CUA transcript only. No local screenshot/video artifact is claimed. No downloads or download event waits were used.",
   "gate_B": "NOT_PASS — provisional visual scores are3, matched reference comparison is UNVERIFIED, and nonvisual axes are UNKNOWN in this bounded review.",
-  "public_export": {
-    "source_evidence_sha256": "74bd89cc262845c05c990ec46e149f182c6fb69a68b8b5986b6fdf259349fb41",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "74bd89cc262845c05c990ec46e149f182c6fb69a68b8b5986b6fdf259349fb41",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

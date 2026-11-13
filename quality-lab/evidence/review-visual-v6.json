@@ -140,8 +140,6 @@
   ],
   "evidence_retention": "Observed screenshots and native UI state are in this verifier's CUA transcript. No local screenshot/video artifact is claimed. Parent performance results were not adopted as this verifier's measurements.",
   "overall_gate": "Visual baseline retained within the stated regression scope. Full A/B acceptance depends on the separate code, interaction, performance, accessibility and rights evidence.",
-  "public_export": {
-    "source_evidence_sha256": "c45ef20cd9bc0719dfadc92e70cc0179bfef20c1c5abd70f6860037afbad69c7",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "c45ef20cd9bc0719dfadc92e70cc0179bfef20c1c5abd70f6860037afbad69c7",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

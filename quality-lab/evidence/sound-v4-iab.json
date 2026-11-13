@@ -262,8 +262,6 @@
     "Visual scores are independent in reviews/visual-v4.json. Actual exports are in sound-v4-exports.json."
   ],
   "console_warnings_errors": [],
-  "public_export": {
-    "source_evidence_sha256": "3cb5a5b50b8eadb4526aacf7315cd44eb3787a0fcc8fb9469a0a2d2411c275e8",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "3cb5a5b50b8eadb4526aacf7315cd44eb3787a0fcc8fb9469a0a2d2411c275e8",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

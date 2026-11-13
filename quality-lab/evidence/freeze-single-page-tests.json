@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "tested_on": "2026-11-13T21:35:42.164Z",
+  "reviewer": "root/snapshot_implementer",
+  "evidence_type": "SOURCE_FIXTURE_SNAPSHOT_GUARDS",
+  "script_sha256": "261e7ba0b8629e2c1909786c1f95ffe6a5eb32b45c605e26f2acae2f0863b856",
+  "legacy_archive": {
+    "site_code": "gs-000012",
+    "revision": "v2",
+    "manifest_sha256": "a10e15e9f33d65e6b50a69c5dfe3c5790201c22192ca299569a125f7e8a49d7e"
+  },
+  "normal_frozen_manifests": {
+    "sound_v7": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+    "book_v4": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e"
+  },
+  "result": "PASS",
+  "passed": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "new root publication.html rejected before manifest or destination creation",
+      "result": "PASS"
+    },
+    {
+      "test": "arbitrary new HTML filename rejected",
+      "result": "PASS"
+    },
+    {
+      "test": "subdirectory index.html rejected before new manifest creation",
+      "result": "PASS"
+    },
+    {
+      "test": "subdirectory publication.html rejected",
+      "result": "PASS"
+    },
+    {
+      "test": "validly hashed but unknown multipage manifest cannot authorize new work",
+      "result": "PASS"
+    },
+    {
+      "test": "exact archived Book v2 reads with pinned digest and all source file hashes",
+      "result": "PASS"
+    },
+    {
+      "test": "exact archived Book v2 copy to temporary checkout and idempotent retry succeed",
+      "result": "PASS"
+    },
+    {
+      "test": "modified archived publication bytes rejected despite exact known manifest",
+      "result": "PASS"
+    },
+    {
+      "test": "modified archived asset bytes also rejected",
+      "result": "PASS"
+    },
+    {
+      "test": "extra nested HTML cannot borrow exact legacy manifest",
+      "result": "PASS"
+    },
+    {
+      "test": "forged legacy metadata with matching payload hashes rejected by pinned manifest digest",
+      "result": "PASS"
+    },
+    {
+      "test": "exact legacy payload cannot be copied under a different site or revision",
+      "result": "PASS"
+    },
+    {
+      "test": "no free-form legacy CLI flag is available",
+      "result": "PASS"
+    },
+    {
+      "test": "normal frozen Sound v7 remains valid and idempotently copyable",
+      "result": "PASS"
+    },
+    {
+      "test": "normal frozen Book v4 remains valid and idempotently copyable",
+      "result": "PASS"
+    },
+    {
+      "test": "new singlepage snapshot still freezes and retries idempotently",
+      "result": "PASS"
+    },
+    {
+      "test": "symlink protection retained",
+      "result": "PASS"
+    },
+    {
+      "test": "Stripe secret signature protection retained",
+      "result": "PASS"
+    },
+    {
+      "test": "per-file size limit retained",
+      "result": "PASS"
+    },
+    {
+      "test": "original frozen sources and temporary gallery root remain unchanged",
+      "result": "PASS"
+    }
+  ],
+  "original_frozen_sources_unchanged": true,
+  "real_public_checkout_modified": false,
+  "temporary_fixtures_deleted": false,
+  "harness_sha256": "441d80f4768d99fcfbc0e90eaf0d9e874d7d9ead95e06dae564a9c8f98fee0d0",
+  "limits": [
+    "Source/fixture checks only; this does not certify visual quality, live HTTP deployment, or overall credential absence.",
+    "Temporary copy/idempotence checks use an isolated fixture directory, never the real public checkout."
+  ],
+  "original_evidence_sha256": "4a94659acf3e45b717a122b733f0a3caf729916265062f48b096a98944557a63",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

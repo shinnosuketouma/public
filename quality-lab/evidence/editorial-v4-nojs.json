@@ -1,0 +1,47 @@
+{
+  "revision": "v4",
+  "manifest_sha256": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+  "evidence_type": "REAL_BROWSER_SANDBOX_SCRIPTING_DISABLED",
+  "url": "http://127.0.0.1:8765/editorial-studio/v4/site/",
+  "harness_url": "http://127.0.0.1:51498/",
+  "browser": "Codex IAB desktop",
+  "mechanism": "Original frozen HTML served unchanged in an iframe sandbox=allow-same-origin, with no allow-scripts. This is a real scripting-disabled browsing context/parser, not an OS/global browser preference toggle or script property monkeypatch.",
+  "observed": {
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "overflow_px": [
+      0,
+      0
+    ],
+    "html_class": "",
+    "js_ready": false,
+    "motion_diagnostics_exists": false,
+    "noscript_parsed_images": 4,
+    "all_13_image_elements_loaded": true,
+    "folio_control_disabled": true,
+    "menu_hidden": true,
+    "static_manuscript_and_study_images_visible": true,
+    "notice": "JavaScript is disabled; selection/save unavailable; view descriptions and static paper on this same page"
+  },
+  "source_bytes_modified": false,
+  "static_source_files": {
+    "index.html": "70c2b93c40abcd26a31d12562758539144463b2634f58339aa0d71888081a8c1",
+    "style.css": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3"
+  },
+  "result": "PASS_IN_OBSERVED_SANDBOX_CONTEXT",
+  "limits": [
+    "No global JavaScript setting was changed",
+    "Physical phone/system reduced-motion remain outside this test",
+    "Native Mac lock was not bypassed; this test used supported browser APIs only"
+  ],
+  "original_evidence_sha256": "e011b6cd6a5360d7fe1cf047f6ed96e67cf985d9ea55fb49d87e5835abce4785",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

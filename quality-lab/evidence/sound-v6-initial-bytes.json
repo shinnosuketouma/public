@@ -27,8 +27,6 @@
   "initial_bytes_uncompressed": 733685,
   "max_initial_bytes": 2000000,
   "pass": true,
-  "public_export": {
-    "source_evidence_sha256": "23de20ccc159dc67c9e80c55625b9575a0512cd7fd6e8df1134405d567ccda90",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "23de20ccc159dc67c9e80c55625b9575a0512cd7fd6e8df1134405d567ccda90",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

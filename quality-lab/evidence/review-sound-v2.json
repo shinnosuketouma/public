@@ -194,8 +194,6 @@
     "fresh standalone reference playback"
   ],
   "decision": "Retain as an improved but failing experiment. Fix mobile intermediate travel before claiming gate A/B PASS; complete missing mandatory evidence on the next candidate.",
-  "public_export": {
-    "source_evidence_sha256": "ee1bf244e48d6cb799ba860eae60e0dee1bf1e402387d3e26a3d622cdcb51d15",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "ee1bf244e48d6cb799ba860eae60e0dee1bf1e402387d3e26a3d622cdcb51d15",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

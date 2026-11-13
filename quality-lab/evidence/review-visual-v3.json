@@ -278,8 +278,6 @@
   ],
   "evidence_retention": "Screenshots of v3 and reference states were visually inspected in the CUA tool transcript. This review file records exact observable states and native-scroll readbacks; it does not claim locally retained PNG/video artifacts or full-frame continuous recordings.",
   "overall_gate_B": "NOT_PASS — hero_motion and mobile_composition are3, and the nonvisual axes remain UNKNOWN in this review. No total score is used to offset the unmet axes.",
-  "public_export": {
-    "source_evidence_sha256": "7d222d739cbceb28245c144149159307c6b3508f17cf6a50e6414742ef18f5f4",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "7d222d739cbceb28245c144149159307c6b3508f17cf6a50e6414742ef18f5f4",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

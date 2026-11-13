@@ -120,8 +120,6 @@
     "publication HTTP/hash readback"
   ],
   "decision": "Keep this frozen v1 as an UNVERIFIED/failed code-review experiment. Fix the measurement protocol, asynchronous state protection and dirty-state notice in a new revision; do not count it as an accepted production work.",
-  "public_export": {
-    "source_evidence_sha256": "d6443abd1cc0e5032735214fda1175969e293841e43be96cd446c6a304926f43",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "d6443abd1cc0e5032735214fda1175969e293841e43be96cd446c6a304926f43",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

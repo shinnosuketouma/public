@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "content_id": "gs-000012",
+  "revision": "editorial-studio/v2",
+  "url": "http://127.0.0.1:8765/editorial-studio/v2/site/",
+  "manifest_sha256_supplied": "a10e15e9f33d65e6b50a69c5dfe3c5790201c22192ca299569a125f7e8a49d7e",
+  "manifest_independently_hashed": false,
+  "input_read": [
+    "content/quality-lab/editorial-studio/v2/design/brief.md",
+    "content/quality-lab/editorial-studio/v2/design/benchmark.json"
+  ],
+  "implementation_source_read": false,
+  "status": "VISUAL_NOT_REACHED_MOBILE_TYPOGRAPHY",
+  "conclusion": "主役の一冊は大きく読める紙面へ改善され、表紙の目次→見開きの章/要点/読む順→全文へつながる用途と造形が成立した。新しい固定参照のdesktop視覚範囲では到達と判断。ただし390の読書ページ表紙が『あいだ／の／設計』と助詞一字を独立行へ送り、文字組を主役とする作品の携帯完成度としては未達。v1の旧Bold/Ink比較UNVERIFIEDは変更しない。",
+  "environment": {
+    "browser": "Chrome extension browser1, dedicated tab",
+    "own_viewports_read_back": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "reference_viewport_and_video_box": [
+      1280,
+      720
+    ],
+    "reference_video_native": [
+      1600,
+      900
+    ],
+    "normal_motion": "Initial autoplay observed, then visible pause/open/close controls used for endpoint inspection",
+    "mobile_is_viewport_simulation": true,
+    "viewport_reset": true,
+    "viewport_after_reset": [
+      1200,
+      852
+    ],
+    "not_run": [
+      "320/768/1024/1440 visual sweep",
+      "Exact normalized booklet progress sampling",
+      "Full intermediate reversal sweep",
+      "Reduced motion",
+      "Physical phone",
+      "Performance/fallback/code-rights audits"
+    ]
+  },
+  "reference_observations": {
+    "comparison_status": "MATCHED_DESKTOP_DRAWING_DIMENSIONS_OBSERVED",
+    "rule": "Own1280×720 page and remote reference video box0,0,1280,720; aspect16:9 preserved. Native media controls cover a bottom strip excluded from grading.",
+    "vante": {
+      "page_url": "https://motionsites.ai/?prompt=vante-ribbon-hero",
+      "media_url": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vante-ribbon-hero.mp4",
+      "samples": [
+        {
+          "time": 0,
+          "basis": "This verifier's earlier independent visual-benchmark.json observation of the same fixed clip; paused readyState4",
+          "observation": "大きな黒い余白から文字が入り、短い説明と固定ナビの役割が分かれる。"
+        },
+        {
+          "time": 2.282362,
+          "paused": true,
+          "readyState": 4,
+          "basis": "Fresh observation in this review",
+          "observation": "曲がった同じ映像帯が中央右を大きく占め、近い面は内容が読め遠景へ縮む。主役の変化の途中でも素材の同一性が明瞭。見出しの一部は主役の背後へ意図的に退場する。"
+        },
+        {
+          "time": 7,
+          "paused": true,
+          "readyState": 4,
+          "basis": "Fresh observation in this review",
+          "observation": "同じ素材が三列二段へ整列し、各面の内容を安定して鑑賞できる終点になる。"
+        }
+      ]
+    },
+    "card_stack": {
+      "page_url": "https://motionsites.ai/?prompt=card-stack",
+      "media_url": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/card-stack-hero.mp4",
+      "samples": [
+        {
+          "time": 0,
+          "paused": true,
+          "readyState": 4,
+          "observation": "薄い画像面が左下から右上の奥へ斜めに並ぶ。重なりと遠近の差で、単なる同寸のサムネイル列ではなく、各面を連続した対象として読める。"
+        },
+        {
+          "time": 3.590614,
+          "paused": true,
+          "readyState": 4,
+          "observation": "中央付近にマネキンの面が近づき、他の画像面も順序と薄い縁を保つ。上のナビと右下のcategory領域が主役の強い場所から分かれる。"
+        },
+        {
+          "time": 7,
+          "paused": true,
+          "readyState": 4,
+          "observation": "同じマネキンが右のほぼ全高のcropと左上のcropへ広がり、選んだ素材そのものを鑑賞する終点へ到達する。"
+        }
+      ]
+    },
+    "reuse": "Remote observation only; no reference prompt/source/media/screenshots downloaded or copied into the work/public repository.",
+    "limits": [
+      "Original live interactions",
+      "Original mobile",
+      "Original runtime performance",
+      "Original accessibility",
+      "Every intermediate frame and original reverse behavior"
+    ]
+  },
+  "own_observations": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Initial normal autoplay, intermediate book opening",
+      "observation": "左に案内/主CTA/読書リンク、右に大きい一冊。朱の表紙が立ち上がり、白い右面の内容が見える中間を観察。右の主役が左の案内を覆わず、表紙と紙面が同じ物として読める。正確なprogress/timeは取得していない。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Paused closed cover",
+      "observation": "『あいだの／設計』の二行と副題、三章の目次が朱の表紙を構成する。以前の小さな記号的なaida表紙とは異なり、読む内容と順序を初期に示す。右側の占有率が増え、左の案内と紙面を鑑賞する画面としてまとまる。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Paused open spread",
+      "observation": "左面に『入口を、ひとつにする。』、右面に『読む距離で、情報を分ける。』。大見出し、短い要点、番号と罫線で区切った三段階の情報、注記の順がある。本文を模した水平線の代わりに実際の意味を持つ文が入り、開くことで内容の読み順を理解できる。二面の白/朱index/黒い活字と薄い中央陰影の素材語彙が統一される。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Publication reading page, chapter02",
+      "observation": "左の目次と右の紙面、章番号、題、20pxの短い要点、16px本文、三つの読む距離の表/13px注記を確認。本文と図の関係が読み取れ、章立てとノートの目的が同じ内容から導かれる。font sizesは実DOMのcomputed styleで読戻した。性能やsource作者をここから推定しない。"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "Home initial, open and closing booklet",
+      "observation": "主CTAと読書リンク、表紙、開閉/pauseを初期画面内に置く。開いた状態は二面を縮めず第2章の一面となり、短い要点と三つの読む距離が読める。閉じる途中の朱表紙/白い紙端も同じ一冊として連続する。主見出し/本文/操作への主役の重なりは観察しなかった。"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "Publication chapter02 body and table",
+      "observation": "16px本文の行長と余白が維持され、表の各項目と注記が縦に読める。紙面の外へ横にはみ出す状態や本文の切れはこの観察では認めなかった。"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "Publication cover, repeated confirmation at scrollY441.5",
+      "read_back": {
+        "cover_h2_text": "あいだの設計",
+        "computed_font_size": "84px",
+        "width": 302,
+        "height": 315
+      },
+      "observation": "朱の表紙タイトルが『あいだ』『の』『設計』の三行となり、助詞一字が大きな独立行へ送られる。全文字は表示され、overflowや欠落ではないが、homeの表紙にある『あいだの／設計』のまとまりと読むリズムが崩れる。"
+    }
+  ],
+  "visual_scores": [
+    {
+      "axis": "composition_typography_material",
+      "score": 4,
+      "scope": "Desktop1280×720 main booklet and publication reading layout",
+      "reason": "大きな一冊の占有と左の案内を分け、紙面の大見出し/要点/小項目/注記を読む階層が生まれた。Vanteの安定した鑑賞終点、Card Stackの素材を読める大きさへの到着という比較軸に対し、主役の紙面を内容として鑑賞でき、明確な見劣りを認めない。写真の量や面の数の模倣は評価条件にしない。mobile表紙の不足は別軸へ残す。"
+    },
+    {
+      "axis": "hero_motion",
+      "score": 4,
+      "scope": "Observed initial intermediate, closed/open endpoints and a closing sample; not every normalized progress",
+      "reason": "同じ朱の表紙が開いて白い編集面となり、表紙目次から章/要点の順へ意味が続く。変化は単なる装飾的な回転で終わらず、読む内容を開示する因果を持つ。薄い面の同一性と文字の安全領域を保ち、比較対象のselection→inspectionと同じ観察軸で成立する。全フレームの連続性/速度の検査ではない。"
+    },
+    {
+      "axis": "mobile_composition",
+      "score": 3,
+      "scope": "390×844 home and publication, original-reference mobile parity UNKNOWN",
+      "reason": "一面への再組版と16px読書本文は成立した。一方、読書ページの表紙で84pxの題が302px幅に入りきらず『の』だけを独立行へ送る。文字組/編集を対象とする本作では、この大きなタイトルの組みを携帯完成形と評価できない。良いhomeと本文で表紙の不足を相殺しない。"
+    },
+    {
+      "axis": "self_directed_visual_concept",
+      "score": 4,
+      "scope": "Visible main-publication concept and content; inherited three studies not newly certified",
+      "reason": "用途に即した一冊を選び、表紙の三章、見開きの読む距離、全文、相談へ持ち帰る問いが同じ編集上の考えとしてつながる。基本図形を増やす代わりに実原稿から階層を作った点に独自の目的がある。Vante/Card Stackの素材や演出の複製ではない。source作者/権利や全Web作品との新規性はUNKNOWN。"
+    }
+  ],
+  "dominant_deficiencies": [
+    {
+      "rank": 1,
+      "category": "mobile_typography",
+      "evidence": "publication.html cover at390×844: first cover h2 computed84px, width302px, height315px; repeated visual observation shows『あいだ／の／設計』rather than the home cover's『あいだの／設計』.",
+      "cause": "Observed layout cause: this title's type scale and available line width do not preserve its meaningful word grouping. Implementation source was not read.",
+      "expected_change": "携帯の字面と改行位置を意味単位で制御し、『あいだの』『設計』を意図した二行へ収めるか同等に整った構成へ再組版する。nowrapだけで横はみ出しを作らず、本文16pxと紙面の余白を維持する。",
+      "retest": "新しい凍結版の390/320読書ページ表紙を実見。home/readerの題の連続性、助詞一字の独立なし、横はみ出しなし、続く本文/表の読みやすさを確認する。"
+    }
+  ],
+  "scope_limits": {
+    "v1_history": "Old Bold/Ink comparison stays UNVERIFIED. This review does not retroactively repair or overwrite editorial-v1.json.",
+    "inherited_studies": "The other three self-initiated studies were not re-evaluated as completed editorial/identity systems. Main-publication improvement does not certify every inherited visual.",
+    "function": "UNKNOWN — search, note/save/reload/import/export/print/failure contracts were not tested by this visual reviewer.",
+    "accessibility": "UNKNOWN — keyboard/touch/focus/reduced-motion/assistive technology not certified.",
+    "performance_resilience_rights": "UNKNOWN — separate metrics, fallback and source/asset audit required.",
+    "motion": "Paused/reference samples and observed transitions do not establish frame-by-frame continuity or original reverse behavior."
+  },
+  "evidence_retention": "Screenshots were visually inspected in the CUA transcript at recorded dimensions/states. No saved local PNG/video artifact is claimed; no reference media was downloaded or rehosted.",
+  "overall_gate_B": "NOT_PASS — mobile_composition remains3. Other three observed visual axes reach4 within their stated scope; nonvisual axes remainUNKNOWN in this review.",
+  "original_evidence_sha256": "47b699e365804a46b2ae675700cda4488068c24ce66d093940f35b83b12e522e",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

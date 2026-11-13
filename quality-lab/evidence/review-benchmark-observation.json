@@ -157,8 +157,6 @@
     "Native media controls overlay a small strip at the bottom of the video; do not grade content under that browser-control strip as if it were original website UI.",
     "Video currentTime was read adjacent to screenshots; live-playback metadata can differ by a fraction of a second from the captured frame. Paused observations are the stronger frame evidence."
   ],
-  "public_export": {
-    "source_evidence_sha256": "1b4585943ed0bb8367bea72d1801828bb1d6ad1b066831ace9921a48961d3477",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "1b4585943ed0bb8367bea72d1801828bb1d6ad1b066831ace9921a48961d3477",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

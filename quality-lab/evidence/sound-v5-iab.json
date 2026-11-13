@@ -171,8 +171,6 @@
     "real BFCache event capture",
     "separate GPU/Safari"
   ],
-  "public_export": {
-    "source_evidence_sha256": "36bf98f46c369e495b6ecc579b246b8107cb4ca8615ab2f0be5aa6dfcbc6f5dd",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "36bf98f46c369e495b6ecc579b246b8107cb4ca8615ab2f0be5aa6dfcbc6f5dd",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

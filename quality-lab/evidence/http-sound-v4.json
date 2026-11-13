@@ -75,8 +75,6 @@
     }
   ],
   "all_match": true,
-  "public_export": {
-    "source_evidence_sha256": "368c34cf708dcbb3393da0a920da3113386a73b350c6ae4312b7cf1c686bcdc4",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "368c34cf708dcbb3393da0a920da3113386a73b350c6ae4312b7cf1c686bcdc4",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

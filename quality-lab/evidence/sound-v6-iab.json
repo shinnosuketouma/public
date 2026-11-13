@@ -233,7 +233,7 @@
   "unchanged_function_evidence": "sound-v4-iab.json normal valid/invalid import, save-reset-restore, keyboard Tone, help/Escape; sound-v5-iab.json restoration fix. New v6 normal import/Back/export retested above.",
   "no_js": "Actual Chrome UI disable/reload/static image/noscript/restore recorded independently in ../reviews/visual-v6.json; not an IAB JS-setting toggle.",
   "initial_bytes_evidence": "sound-v6-initial-bytes.json: source-derived733685bytes, not browser Resource Timing",
-  "publication_readback": "PENDING",
+  "publication_readback": "http-sound-v6.json:14 files, all200/hash-match, Pages built4a1142e3a021bbbf727bad6a504c48934f85ab72",
   "acceptance": "Independent reviewer integrates evidence; this observation file does not self-declare overall PASS.",
   "unobserved_scope": [
     "physical phone/touch hardware",
@@ -241,8 +241,75 @@
     "system reduced-motion toggle",
     "real BFCache persisted event"
   ],
-  "public_export": {
-    "source_evidence_sha256": "65467b2012896262d8152a2dcb562c406a547cd5cceba1fb35a9c840cb2ec2b0",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "keyboard_only_journey": {
+    "method": "Native Tab/Shift+Tab/Return/End/Right/Left only, no pointer or programmatic focus after navigation",
+    "viewport": [
+      1280,
+      720
+    ],
+    "route": [
+      "skip link",
+      "brand",
+      "Instrument",
+      "help",
+      "hero CTA",
+      "Ember",
+      "Tidal",
+      "Halo",
+      "pause",
+      "tone",
+      "motion",
+      "volume",
+      "play",
+      "save",
+      "restore",
+      "export",
+      "import",
+      "WAV",
+      "reset"
+    ],
+    "actions": "Tab from initial body to Tidal, Return; Tab to Tone End, Motion Right, Volume Left; play Return/start then Return/stop; Tab/save Return; Tab/reset Return; Shift+Tab/restore Return; Tab/JSON export Return",
+    "preset": "Tidal02",
+    "edited_values": [
+      100,
+      73,
+      24
+    ],
+    "play_started": true,
+    "reset_values": [
+      38,
+      45,
+      25
+    ],
+    "restored_values": [
+      100,
+      73,
+      24
+    ],
+    "playing_after_restore": false,
+    "actual_download": {
+      "filename": "sound-studies-tidal.json",
+      "sha256": "0d2aeb95bbf8e969d9a599ab859ace2a8d174c63011092fe5429d167bf0469fb",
+      "data": {
+        "format": "genseki-sound-studies",
+        "version": 2,
+        "presetName": "Tidal",
+        "settings": {
+          "preset": 1,
+          "tone": 100,
+          "motion": 73,
+          "volume": 24
+        }
+      }
+    },
+    "pass": true
+  },
+  "input_scope": {
+    "pointer": "Mouse/trackpad-driven native CUA click/scroll in desktop IAB; mobile viewport does not emulate physical touch hardware",
+    "keyboard": "Native keys with actual Tab order, journey above",
+    "physical_touch": "NOT_RUN; explicitly outside the representative desktop viewport claim",
+    "hover_dependence": "No required operation depends on hover; presets/buttons/native range inputs support keyboard and pointer. Physical touchscreen behavior is not asserted."
+  },
+  "original_evidence_sha256": "0e115730a1a526fcabe39e53df073d5b6fdd4748a6d5d847169e400486ee088a",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

@@ -1,0 +1,498 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "content_id": "gs-000012",
+  "revision": "editorial-studio/v4",
+  "url": "http://127.0.0.1:8765/editorial-studio/v4/site/?qa=hover-fix",
+  "source_state_at_observation": "Corrected working source observed; orchestrator froze the same app/CSS during the bounded retest and supplied the fixed manifest afterwards.",
+  "manifest_sha256_supplied_by_orchestrator": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+  "working_source_descriptors_supplied": {
+    "app": "5c2f00a7…",
+    "css_sha256": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3"
+  },
+  "manifest_or_source_independently_hashed": false,
+  "source_read_to_infer_appearance": false,
+  "status": "VISUAL_REACHED_AFTER_HOVER_FIX_IN_OBSERVED_SCOPE",
+  "conclusion": "通常PCのhover有無の見開き終点で、左右とも読めるクリーム本文を確認。旧候補の赤鏡文字は再現しない。320閉表紙の全3章目次と下端余白、390/320の一面表示とsame-page拡大紙面も維持し、今回の4軸を4へ評価する。未凍結候補の3点評価をprior_unfrozen_runsへ完全保持し、以前の不合格を合格に書き換えたことにはしない。",
+  "scope": {
+    "deliverable": "Single-page design-reference experience: hero booklet, inherited same-page selected studies, existing enlarged-paper modal",
+    "excluded": "Separate publication reader/page/route, production business functions and printed-page production",
+    "history": "editorial-v2-visual.jsonの旧reader失敗とeditorial-v3-visual.jsonの320表紙03欠落は保持。このレビューは現在のsingle-page scopeだけを評価する。",
+    "limited_retest": "v3の320表紙欠落修正とshared reduce入口の追加に対する実見。以前の点数や実装者の自己評価へ合わせない。"
+  },
+  "environment": {
+    "browser": "Chrome extension browser1, dedicated task tab356766386",
+    "viewports_read_back": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "mobile_is_viewport_simulation": true,
+    "normal": "Default motion via ?qa=hover-fix. Visible pause/表紙/見開き controls, folio button click and ArrowRight/ArrowLeft, hero heading click for pointer exit, native page scroll used.",
+    "reduce": "Same-page ?motion=reduce QA entry. No OS preference changed and no browser reduced-motion emulation was applied.",
+    "native_ui_limitation": "Native UI not used in this retest; Mac lock limitation from preceding work was respected.",
+    "viewport_reset": true,
+    "viewport_after_reset": [
+      1710,
+      896
+    ],
+    "dedicated_tab_closed": true,
+    "not_run": [
+      "Exact frozenp=.5 matching for all widths",
+      "Full-frame reverse audit",
+      "Physical mobile device",
+      "NoJS live reload",
+      "Actual OS reduced-motion emulation",
+      "Performance/source/rights audit"
+    ]
+  },
+  "reference_scope": {
+    "fixed_references": "Vante/Card Stack retained from content/quality-lab/editorial-studio/v2/design/benchmark.json",
+    "independent_observation": "Reuse of this verifier's recorded1280×720 video observations in editorial-v2-visual.json: Vante0/2.282362/7 and Card Stack0/3.590614/7, paused readyState4; no new remote observation claimed.",
+    "comparison_axes": [
+      "Subject occupancy",
+      "Same material through transformation",
+      "Readable arrival",
+      "Text safety"
+    ],
+    "comparison_limit": "Comparable desktop video composition/material/motion only. Original live/mobile/function/performance/accessibility remainUNKNOWN. Remote media not downloaded or rehosted."
+  },
+  "observed_states": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "normal",
+      "state": "Manualclosed/paused, scrollY0; p.001117→0, hovertrue/filter none",
+      "observation": "大きい朱表紙と左案内/CTAの分離を保つ。題/副題/全3目次が紙面内で読める。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "normal",
+      "state": "folio click then ArrowRight; opening p.913727/paused/hovertrue/filter none",
+      "observation": "起きた紙の左面が第一章のクリーム本文を示し、右の第二章と同一の紙質へ連続する。鏡文字の朱表紙は見えない。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "normal",
+      "state": "at1794602713624, p1.000000/scale1/paused/hovertrue/filter none",
+      "observation": "フォリオをクリックしたポインタを保ったまま、左右両面が正方向のクリーム本文となる。第一章『入口を、ひとつにする。』、第二章『読む距離で、情報を分ける。』と各三段階の項目が読める。旧不具合の支配的状態が解消。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "normal",
+      "state": "Samep1 after hero heading click, hoverfalse/filter none",
+      "observation": "hoverを外しても同じ読める両本文を保つ。ポインタ状態によって裏面の内容が赤表紙へ置換されない。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "normal",
+      "state": "Pausedp.215794/scale.924738, hovertrue thenfalse, filter none both",
+      "observation": "表紙が起きて後ろの一面が見え始める中間。紙の連続性と左案内の保護を両ポインタ条件で保つ。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "mode": "normal",
+      "state": "Nonhover ArrowRight openingp.552392 and ArrowLeft fromp1 closingp.353631; hovered closing samplep.086273",
+      "observation": "前へ開く時も戻る時も、薄い面を経て表紙と本文の対応が連続する。sampled画像では赤鏡面は再発せず、文字/CTA領域へはみ出さない。readback値とスクリーンショットは連続動作の近接サンプルで完全な同一時刻ではない。"
+    },
+    {
+      "viewport": [
+        320,
+        740
+      ],
+      "mode": "normal",
+      "state": "表紙manual/paused/scrollY0, p.002282→0",
+      "observation": "01入口を決める、02距離を分ける、03問いを残すを全行確認。03の頁番号も朱紙内へ入り、下端余白がある。v3の情報切れは再発しない。"
+    },
+    {
+      "viewport": [
+        [
+          320,
+          740
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "mode": "normal",
+      "state": "Explicitopen and closed one-page hero; viewport readbacks exact",
+      "observation": "Openは第2章一面、closedは題/副題/全3項目を保つ。左案内が上、主役が下へ再構成され、開閉操作まで見える。横へ細かい二面を無理に縮めない。"
+    },
+    {
+      "viewport": [
+        [
+          390,
+          844
+        ],
+        [
+          320,
+          740
+        ],
+        [
+          1280,
+          720
+        ]
+      ],
+      "mode": "normal",
+      "state": "Same-page enlarged-paper modal",
+      "observation": "携帯は第一章の本文を縦に組み直して読ませ、PCは二面と右の設計説明に分かれる。原稿、章、要点、段階図、注記の役割が見える。390 modal時innerWidth390/body.scrollWidth390/dialog.open=true、URLはindexのまま。"
+    }
+  ],
+  "visual_scores": [
+    {
+      "axis": "composition_typography_material",
+      "score": 4,
+      "scope": "Observed1280/390/320 normal hero andsame-page preview; prior sharedreduce separately retained",
+      "reason": "主役の占有、案内との分離、朱/紙/黒の体系に加え、normalPC終点が左右とも読める章の紙面へ着地する。固定Vante/CardStackのmaterial inspection/readable arrival軸に今回の観測は見劣りしない。写実素材の種類や部品数を合わせる評価ではない。"
+    },
+    {
+      "axis": "hero_motion",
+      "score": 4,
+      "scope": "Observed normal hover/nonhover endpoints andsampled opening/closing middles; not a full-frame timing audit",
+      "reason": "同じ一冊の表紙が起き、内容を見せ、逆方向で表紙へ戻る因果が成立する。hover有無で裏面の内容が崩れず、案内/CTAの保護も保つ。主役変化の目的が読める終点まで通る。"
+    },
+    {
+      "axis": "mobile_composition",
+      "score": 4,
+      "scope": "390×844/320×740 viewport simulation, normalclosed/open andsame-page modal",
+      "reason": "320表紙03欠落がなく、題/副題/全章目次/下端余白を維持。開いた一面と拡大本文も読める。参照原作mobile同条件は未観察なので、その優劣までは主張しない。"
+    },
+    {
+      "axis": "self_directed_visual_concept",
+      "score": 4,
+      "scope": "Main original publication concept within single-page scope",
+      "reason": "入口/距離/持ち帰るという原稿の内容を、表紙/見開き/拡大の順序で一つにつなぐ自主企画になっている。件数、機能数、別ページ制作量を加点せず、内容と見せ方の結びつきを評価。"
+    }
+  ],
+  "dominant_deficiencies": [],
+  "additional_real_browser_checks": {
+    "shared_reduce": {
+      "status": "OBSERVED_VISUAL_PASS",
+      "query": "?motion=reduce",
+      "distinction": "Shared QA pathway exercised; not an actual OS preference or native DevTools emulation test.",
+      "dom_readbacks": {
+        "html_class": "js-ready motion-reduced motion-paused",
+        "html_data_motion": "full",
+        "motion_label": "▷動きは停止中",
+        "motion_button_disabled": true,
+        "computed_book_transition": "none",
+        "computed_leaf_front_transition": "none",
+        "static_style_samples": [
+          "--p:1.000000; --scale:1.000000;",
+          "manual close --p:0.000000; --scale:1.000000;",
+          "manual open --p:1.000000; --scale:1.000000;"
+        ]
+      },
+      "limits": "Visual stop/label/information and immediate switches only. No frame-rate or compositor-performance inference.",
+      "source_scope": "Observed in the immediately prior unfrozen v4run below. Not rerun after the53bytehoverfilter removal. Orchestrator reports the same sharedreduce path; this visual reviewer did not independently audit the diff."
+    },
+    "no_javascript": {
+      "status": "NOT_RUN",
+      "reason": "Native Chrome UI unavailable because the Mac was locked during the immediately preceding task cleanup. NoJS source audit belongs to another reviewer and is not counted as this live observation. No browser/OS setting changed."
+    }
+  },
+  "unknown": [
+    "Functional/error contracts",
+    "Keyboard/touch/focus/accessibility coverage",
+    "Performance/hidden/actualOSreduce behavior",
+    "NoJS actual UI inthisrevision",
+    "Source rights/handoff",
+    "All inherited studies as finished systems"
+  ],
+  "evidence_retention": "CUA screenshots/readbacks are in the transcript; no localPNG/video saved. Full original prefrozen evaluation preserved below; v2/v3 files unchanged.",
+  "overall_gate_B": "PASS_IN_OBSERVED_VISUAL_SCOPE — all4axes4 afterhoverfix. NativeNoJS, actualOSreduce, performance andsource gates remain separate/UNKNOWN.",
+  "resolved_deficiencies": [
+    {
+      "from": "editorial-v3-visual.json",
+      "issue": "320closedcover03contentcut",
+      "resolution": "Reobserved complete03andbottommargin at320×740"
+    },
+    {
+      "from": "prior_unfrozen_runs[0]",
+      "issue": "NormalPCopenleftmirroredredcover",
+      "resolution": "IndependentChromehovertrue/falsep1showsbothcreamchapters afterfilterremoval"
+    }
+  ],
+  "conditional_cause_evidence": {
+    "independently_observed_here": "Corrected source: hovertrue/filter none andhoverfalse/filter none both readable cream chapters atp1. Old own observation of mirroredcover is retained below.",
+    "orchestrator_observed_separately": {
+      "evidence": "docs/content-production/quality-lab/evidence/editorial-v4-hover.json",
+      "conditions": "OldCSS normalp1:hoverfalse/filter none→bothcream; hovertrue/filter brightness(1.025)→mirroredredleft. NewCSS hovertrue/filter none→bothcream. This verifier did not rerun the oldCSS toggles."
+    },
+    "normative_basis": {
+      "url": "https://www.w3.org/TR/css-transforms-2/#grouping-property-values",
+      "section": "7.1 Grouping property values",
+      "accessed": "2026-11-14",
+      "paraphrase": "non-none filter forces a flattened representation and a used transform-style of flat. Computed preserve-3d/backface-hidden alone therefore does not exclude grouping flattening.",
+      "interpretation": "The reported oldhovercondition difference plus the correctedfilter-none result supports the parent's filter-flattening diagnosis; this is an inference from separate runtime and normative evidence, not an independent source audit."
+    }
+  },
+  "interaction_observation_limit": "During the final PCpreview attempt, one batched close lookup timedout because no dialog was present. FreshAX followed by clicking the actual visible paper-preview button opened the modal, whose screenshot and closing state were then confirmed. No functional pass is inferred from that retry.",
+  "prior_unfrozen_runs": [
+    {
+      "schema_version": "1.0",
+      "reviewer": "independent /root/visual_verifier",
+      "observed_on_jst": "2026-11-14",
+      "content_id": "gs-000012",
+      "revision": "editorial-studio/v4",
+      "url": "http://127.0.0.1:8765/editorial-studio/v4/site/",
+      "source_state_at_observation": "Working source under independent audit; not yet frozen when task was assigned",
+      "manifest_sha256_supplied_by_orchestrator": null,
+      "working_source_descriptors_supplied": {
+        "app": "03efa1ed…",
+        "css": "158e016a…"
+      },
+      "manifest_or_source_independently_hashed": false,
+      "source_read_to_infer_appearance": false,
+      "status": "VISUAL_NOT_REACHED_NORMAL_PC_MIRRORED_COVER_AT_OPEN",
+      "conclusion": "320幅の閉表紙では目次03まで余白を残して収まり、v3の支配的な携帯欠落は解消した。しかし通常モーションのPC見開きでは、左面が本文ではなく赤い表紙の鏡文字として残る状態を複数回確認した。低モーションは両クリーム本文となる。通常PCの読める終点が不足するため、観測条件では視覚ゲート未達。",
+      "scope": {
+        "deliverable": "Single-page design-reference experience: hero booklet, inherited same-page selected studies, existing enlarged-paper modal",
+        "excluded": "Separate publication reader/page/route, production business functions and printed-page production",
+        "history": "editorial-v2-visual.jsonの旧reader失敗とeditorial-v3-visual.jsonの320表紙03欠落は保持。このレビューは現在のsingle-page scopeだけを評価する。",
+        "limited_retest": "v3の320表紙欠落修正とshared reduce入口の追加に対する実見。以前の点数や実装者の自己評価へ合わせない。"
+      },
+      "environment": {
+        "browser": "Chrome extension browser1, dedicated task tab356766382",
+        "viewports_read_back": [
+          [
+            1280,
+            720
+          ],
+          [
+            390,
+            844
+          ],
+          [
+            320,
+            740
+          ]
+        ],
+        "mobile_is_viewport_simulation": true,
+        "normal": "Default URL. Visible motion pause, 表紙 and 見開き controls used; native page scroll returned to scrollY0.",
+        "reduce": "Same-page ?motion=reduce QA entry. No OS preference changed and no browser reduced-motion emulation was applied.",
+        "native_ui_limitation": "Mac lock was detected during the preceding Sound cleanup in this session. Browser API remained usable; no unlock or setting bypass attempted.",
+        "viewport_reset": true,
+        "viewport_after_reset": [
+          1710,
+          896
+        ],
+        "dedicated_tab_closed": true,
+        "not_run": [
+          "Exactp=.5 sample",
+          "Full-frame reverse continuity",
+          "Physical mobile device",
+          "Native NoJS reload in this revision",
+          "OSmatchMedia reduced-motion emulation",
+          "Performance/source/rights audit"
+        ]
+      },
+      "reference_scope": {
+        "fixed_references": "Vante/Card Stack retained from content/quality-lab/editorial-studio/v2/design/benchmark.json",
+        "independent_observation": "Reuse of this verifier's recorded1280×720 video observations in editorial-v2-visual.json: Vante0/2.282362/7 and Card Stack0/3.590614/7, paused readyState4; no new remote observation claimed.",
+        "comparison_axes": [
+          "Subject occupancy",
+          "Same material through transformation",
+          "Readable arrival",
+          "Text safety"
+        ],
+        "comparison_limit": "Comparable desktop video composition/material/motion only. Original live/mobile/function/performance/accessibility remainUNKNOWN. Remote media not downloaded or rehosted."
+      },
+      "observed_states": [
+        {
+          "viewport": [
+            320,
+            740
+          ],
+          "mode": "normal",
+          "state": "scrollY0, 表紙manual, close-book aria-pressed=true, open-book=false, motion-pause=true",
+          "observation": "朱の閉表紙の題『あいだの／設計』、副題、01入口を決める・02距離を分ける・03問いを残すの全行と右の頁番号が紙面に収まる。03の下にも朱の余白が残り、v3の切れは再現しない。"
+        },
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "mode": "normal",
+          "state": "Closed and explicitly open endpoints atscrollY0",
+          "observation": "左案内は上、主役紙面は下へ再構成。閉表紙の3章目次が読め、openでは第2章の一面に切り替わる。見出し/要点/三段階の項目/頁下情報が紙面内にあり、主CTAと開閉操作も画面に入る。"
+        },
+        {
+          "viewport": [
+            320,
+            740
+          ],
+          "mode": "normal",
+          "state": "Explicitly open endpoint; screenshot after control caused native scroll; then mobile comparison",
+          "observation": "第2章の一面の見出し、要点、3項目が読める。320/390のsame-page modalでは第一章を縦に組み直し、本文が横へ切れない。320 modal時body.scrollWidth=320、dialog.open=true、URLはindexのまま。"
+        },
+        {
+          "viewport": [
+            [
+              390,
+              844
+            ],
+            [
+              320,
+              740
+            ],
+            [
+              1280,
+              720
+            ]
+          ],
+          "mode": "normal",
+          "state": "Paused intermediate style --p:0.177447; --scale:0.936515, scrollY0",
+          "observation": "同じ朱表紙が少し起き、後方の紙面が細く見える。mobileは表紙の3項目を失わず、PCも左の見出し/説明/CTAへ重ならない。主役の同一性と文字保護はこの中間で成立。"
+        },
+        {
+          "viewport": [
+            1280,
+            720
+          ],
+          "mode": "normal",
+          "state": "Closed endpoint, paused",
+          "observation": "左の2行見出しと案内/CTA、右の大きな朱の表紙、下端の説明/操作。大きい主役占有、青灰/朱/紙/黒の体系と薄い紙の影が一貫している。"
+        },
+        {
+          "viewport": [
+            1280,
+            720
+          ],
+          "mode": "normal",
+          "state": "Autoplay p=.850780/.968408 and repeated explicit見開き p=.990223→1.000000, paused, scrollY0",
+          "observation": "右の第2章はクリーム本文だが、左面は赤表紙の鏡文字として表示される。題、副題、目次まで反転し、第1章の読める本文終点にならない。明示見開き/一旦modal開閉後の再操作でも同じ。最終DOMstyle --p:1.000000; --scale:1.000000、paused=trueで再読戻し。原因をsourceから推測しない。"
+        },
+        {
+          "viewport": [
+            1280,
+            720
+          ],
+          "mode": "normal",
+          "state": "Same-page enlarged-paper modal",
+          "observation": "左右2面の本文/章/項目が読め、右には題/課題/設計/制作範囲が並ぶ。紙面に実際の文章があり、主役の内容を確認する終点はmodal内では成立する。ただしnormal heroの左面の鏡文字をこの別状態で相殺しない。"
+        },
+        {
+          "viewport": [
+            [
+              1280,
+              720
+            ],
+            [
+              390,
+              844
+            ],
+            [
+              320,
+              740
+            ]
+          ],
+          "mode": "?motion=reduce",
+          "state": "Initial open, visible 表紙/見開き switches, disabled停止中 label",
+          "observation": "PCは両クリーム本文の見開きが正しく表示され、通常の赤鏡文字左面とは異なる。390/320は第2章一面が静止し、表紙への切替でも目次03を含む全情報が残る。閉じる/開くの結果は即時で、動きを再生させず紙面を見ることができる。"
+        }
+      ],
+      "visual_scores": [
+        {
+          "axis": "composition_typography_material",
+          "score": 3,
+          "scope": "Observed normal1280/390/320 hero and same-page preview",
+          "reason": "閉表紙とmobile/modalの文字/紙/領域分離は4相当の精度。しかしnormal PC終点の片面が鏡文字の表紙になり、読める二面の素材鑑賞へ着地しない。固定比較のreadable arrival軸に対して現観測は不足。"
+        },
+        {
+          "axis": "hero_motion",
+          "score": 3,
+          "scope": "Sampled normal p0/.177447/.850780/.968408/.990223/1; no full-frame reverse audit",
+          "reason": "開く意味と同一物体の継続、案内の文字保護はある。しかし主役の大半を占める終点左面が反転表紙のままで、変化の目的である章の内容提示を完了できない。reduceの正常な終点を通常motionの代替合格にはしない。"
+        },
+        {
+          "axis": "mobile_composition",
+          "score": 4,
+          "scope": "390×844 and320×740 simulated widths, normal/reduce closed/open andsame-page modal",
+          "reason": "v3の320閉表紙03切れは解消。題/副題/全3章目次と下端余白が同じ紙面へ収まり、開いた紙面と拡大本文も縮小図像へ逃げず読める。固定参考のmobileは未観察なので、mobileの同条件参照優越まで主張しない。"
+        },
+        {
+          "axis": "self_directed_visual_concept",
+          "score": 4,
+          "scope": "Main authored publication concept within single-page scope",
+          "reason": "原稿の入口/距離/持ち帰るという内容と、表紙/見開き/拡大で見せる順序が一つにつながる。単なる基本図形の作品一覧より踏み込んだ編集意図がある。作品数、操作数、旧別readerの制作量は加点しない。"
+        }
+      ],
+      "dominant_deficiencies": [
+        {
+          "rank": 1,
+          "category": "normal_desktop_open_face_unreadable",
+          "evidence": "Chrome1280×720/scrollY0/default URL, repeated paused open endpointp1.000000: red mirrored cover onleft, cream chapter02 onright. Also observed atp.850780/.968408/.990223. Computed leaf-front/leaf-back backfaceVisibility bothhidden was read; this did not establish an implementation cause.",
+          "expected_change": "通常PCの開いた左面に、反転表紙ではなく読める第1章の紙面を安定して表示する。閉表紙とmobileの修正結果、reduceの正常な両本文は維持。",
+          "retest": "同じChrome1280×720 normalの閉→中間→明示見開き/paused終点を再実見。IAB等で結果が異なる場合は環境差として併記し、観測済みChromeの不足を消さない。",
+          "cause": "UNKNOWN — source not inspected; browser/compositing/environment origin not inferred."
+        }
+      ],
+      "additional_real_browser_checks": {
+        "shared_reduce": {
+          "status": "OBSERVED_VISUAL_PASS",
+          "query": "?motion=reduce",
+          "distinction": "Shared QA pathway exercised; not an actual OS preference or native DevTools emulation test.",
+          "dom_readbacks": {
+            "html_class": "js-ready motion-reduced motion-paused",
+            "html_data_motion": "full",
+            "motion_label": "▷動きは停止中",
+            "motion_button_disabled": true,
+            "computed_book_transition": "none",
+            "computed_leaf_front_transition": "none",
+            "static_style_samples": [
+              "--p:1.000000; --scale:1.000000;",
+              "manual close --p:0.000000; --scale:1.000000;",
+              "manual open --p:1.000000; --scale:1.000000;"
+            ]
+          },
+          "limits": "Visual stop/label/information and immediate switches only. No frame-rate or compositor-performance inference."
+        },
+        "no_javascript": {
+          "status": "NOT_RUN",
+          "reason": "Native Chrome UI unavailable because the Mac was locked during the immediately preceding task cleanup. NoJS source audit belongs to another reviewer and is not counted as this live observation. No browser/OS setting changed."
+        }
+      },
+      "unknown": [
+        "Functional/error contracts",
+        "Keyboard/touch/focus/accessibility coverage",
+        "Performance/hidden/actualOSreduce behavior",
+        "NoJS actual UI inthisrevision",
+        "Source rights/handoff",
+        "All inherited studies as finished systems"
+      ],
+      "evidence_retention": "Screenshots and DOM readbacks observed in the CUA transcript. No local PNG/video saved or claimed. v2/v3 failure evidence remains unchanged.",
+      "overall_gate_B": "NOT_PASS_IN_OBSERVED_CHROME_NORMAL — composition_typography_material andhero_motion3. Mobile clipping fix andshared reduce visual check pass within observed scope."
+    }
+  ],
+  "original_evidence_sha256": "690534a69a5fa8ff4c2df2640d7890d1363c5eea64af90805eb1b5c9c1423c71",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

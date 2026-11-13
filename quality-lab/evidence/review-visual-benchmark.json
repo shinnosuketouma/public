@@ -132,8 +132,6 @@
     "The first screenshot immediately after a seek at Vante 3.216828 had readyState 1 and was discarded. The readyState 4 screenshot was used.",
     "A native media-control AX click during initial Medusa loading returned a missing-layout error; a fresh state showed the video ended, and visible native seek coordinates were then used successfully."
   ],
-  "public_export": {
-    "source_evidence_sha256": "63470e4287646e631590ac95018761c7db8981875b89c6117d682b88aff1ba62",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "63470e4287646e631590ac95018761c7db8981875b89c6117d682b88aff1ba62",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

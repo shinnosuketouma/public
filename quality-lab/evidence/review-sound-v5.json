@@ -422,8 +422,6 @@
     "Scores4 in competitor-unknown functionality/performance/a11y dimensions mean the project internal acceptance standard within recorded environment, not measured superiority/equivalence to the original sites.",
     "A mandatory missing/unknown path cannot be converted into PASS merely because source code is plausible."
   ],
-  "public_export": {
-    "source_evidence_sha256": "cafcc796782c090919857d688aed8b064de1407433c07f12d3f270987e15ee42",
-    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
-  }
+  "original_evidence_sha256": "cafcc796782c090919857d688aed8b064de1407433c07f12d3f270987e15ee42",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
 }

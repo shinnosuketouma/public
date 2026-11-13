@@ -1,0 +1,109 @@
+{
+  "public_commit": "2a55dc01afec225e1c6e6fff21d021c6c73e37cc",
+  "pages_status": "built",
+  "observed_at": "2026-11-13T21:27:36.997254+00:00",
+  "base_url": "https://shinnosuketouma.github.io/public/",
+  "files": [
+    {
+      "path": "gs-000012/v4/README.md",
+      "status": 200,
+      "expected_sha256": "d2bc5c66145e8b49ff482bbe5fe7a048a02303b5d7fa3ab98da0c191f1e57ba7",
+      "actual_sha256": "d2bc5c66145e8b49ff482bbe5fe7a048a02303b5d7fa3ab98da0c191f1e57ba7",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/app.js",
+      "status": 200,
+      "expected_sha256": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01",
+      "actual_sha256": "5c2f00a7c98f261370f654e6e508c70a59e9eeb92ee2b771ae1907151eac6e01",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/asset-manifest.json",
+      "status": 200,
+      "expected_sha256": "9428fb54f7b56eea30f73e60d047ca6213a6e42e52473904eafb0729a0319f92",
+      "actual_sha256": "9428fb54f7b56eea30f73e60d047ca6213a6e42e52473904eafb0729a0319f92",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/assets/aida-cover.svg",
+      "status": 200,
+      "expected_sha256": "a85886c97f90bb421f70cd925ddb9a640646e3170a69a8f66c3afdca1a9b5385",
+      "actual_sha256": "a85886c97f90bb421f70cd925ddb9a640646e3170a69a8f66c3afdca1a9b5385",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/assets/aida-left.svg",
+      "status": 200,
+      "expected_sha256": "df9d78e9678f99ff2222ea57b4d6502a332aff62a2d97bac68a577e040ef15e6",
+      "actual_sha256": "df9d78e9678f99ff2222ea57b4d6502a332aff62a2d97bac68a577e040ef15e6",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/assets/aida-right.svg",
+      "status": 200,
+      "expected_sha256": "620cc676b7c3e60867f92dedc1efaa655a612f24d67a5c00b2d90f303a193a51",
+      "actual_sha256": "620cc676b7c3e60867f92dedc1efaa655a612f24d67a5c00b2d90f303a193a51",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/assets/favicon.svg",
+      "status": 200,
+      "expected_sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2",
+      "actual_sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/assets/kutou-poster.svg",
+      "status": 200,
+      "expected_sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04",
+      "actual_sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/assets/layers-cover.svg",
+      "status": 200,
+      "expected_sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954",
+      "actual_sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/assets/outline-poster.svg",
+      "status": 200,
+      "expected_sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6",
+      "actual_sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/frozen-manifest.json",
+      "status": 200,
+      "expected_sha256": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+      "actual_sha256": "b7e55f3650240dc9fdfbe8bc83bd5869bf847dce82a6d972545f7ee4b4dd195e",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/index.html",
+      "status": 200,
+      "expected_sha256": "70c2b93c40abcd26a31d12562758539144463b2634f58339aa0d71888081a8c1",
+      "actual_sha256": "70c2b93c40abcd26a31d12562758539144463b2634f58339aa0d71888081a8c1",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/style.css",
+      "status": 200,
+      "expected_sha256": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3",
+      "actual_sha256": "37a868e93d9aba66a51d46746f4b066acaec48065a3753ed6e60e8da4bd638d3",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v4/telemetry.js",
+      "status": 200,
+      "expected_sha256": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+      "actual_sha256": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+      "hash_match": true
+    }
+  ],
+  "all_match": true,
+  "original_evidence_sha256": "8a7061ef2c3190292270c52f54e7a1b07c2769eac5d0be21dfa8c045882ddbe1",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}

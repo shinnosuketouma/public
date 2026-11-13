@@ -1,0 +1,109 @@
+{
+  "public_commit": "2a55dc01afec225e1c6e6fff21d021c6c73e37cc",
+  "pages_status": "built",
+  "observed_at": "2026-11-13T21:27:35.144801+00:00",
+  "base_url": "https://shinnosuketouma.github.io/public/",
+  "files": [
+    {
+      "path": "gs-000011/v7/README.md",
+      "status": 200,
+      "expected_sha256": "fb6d967da626937097c89033a6964f9e1e9eb775ac983bdd5f4728eafcf7f088",
+      "actual_sha256": "fb6d967da626937097c89033a6964f9e1e9eb775ac983bdd5f4728eafcf7f088",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/app.js",
+      "status": 200,
+      "expected_sha256": "f43abbbf1da758c1e48bc19bb6e518b15ba30f3ecab4e2396c4b67485831a262",
+      "actual_sha256": "f43abbbf1da758c1e48bc19bb6e518b15ba30f3ecab4e2396c4b67485831a262",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/asset-manifest.json",
+      "status": 200,
+      "expected_sha256": "9149df303b76038e489778dc6fccc15d971dd393e57152b3cf2bfad771c8c847",
+      "actual_sha256": "9149df303b76038e489778dc6fccc15d971dd393e57152b3cf2bfad771c8c847",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/frozen-manifest.json",
+      "status": 200,
+      "expected_sha256": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+      "actual_sha256": "91176466dcaf6ab379e346f4fa4aac3cf64cbae830221121ff358191c19a932b",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/generate-fallback.py",
+      "status": 200,
+      "expected_sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102",
+      "actual_sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/index.html",
+      "status": 200,
+      "expected_sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e",
+      "actual_sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/interaction-contract.json",
+      "status": 200,
+      "expected_sha256": "24bc10272381602b98e4c50f4b39a7b9fbc65eccbba14e25c255f85027db1e1e",
+      "actual_sha256": "24bc10272381602b98e4c50f4b39a7b9fbc65eccbba14e25c255f85027db1e1e",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/mark.svg",
+      "status": 200,
+      "expected_sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd",
+      "actual_sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/motion-contract.json",
+      "status": 200,
+      "expected_sha256": "506b3320da7740fd7ac4cf95ea28ffb786aac359c363bd6d54c062d11724eaf0",
+      "actual_sha256": "506b3320da7740fd7ac4cf95ea28ffb786aac359c363bd6d54c062d11724eaf0",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/sculpture-ember.svg",
+      "status": 200,
+      "expected_sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40",
+      "actual_sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/sculpture-halo.svg",
+      "status": 200,
+      "expected_sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518",
+      "actual_sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/sculpture-tidal.svg",
+      "status": 200,
+      "expected_sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6",
+      "actual_sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/source-manifest.json",
+      "status": 200,
+      "expected_sha256": "aa99334e80b625758b69613f4b0387a3de3ad800417293787bb436bcab1847d4",
+      "actual_sha256": "aa99334e80b625758b69613f4b0387a3de3ad800417293787bb436bcab1847d4",
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v7/style.css",
+      "status": 200,
+      "expected_sha256": "acac5cf009bd413d0caadde86fdce08f836648486c6eac64322411f2ec9ce35c",
+      "actual_sha256": "acac5cf009bd413d0caadde86fdce08f836648486c6eac64322411f2ec9ce35c",
+      "hash_match": true
+    }
+  ],
+  "all_match": true,
+  "original_evidence_sha256": "b25e188a903a2848a360d68bf3f21bf37d4be5ffbded1b53a0e87afaa2cdb464",
+  "public_export_note": "Sanitized audit copy. Local user/project/temp paths normalized; inline harness implementation omitted. Outcomes, old failures and untested conditions preserved; original evidence digest binds the private source."
+}
