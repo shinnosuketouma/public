@@ -1,22 +1,12 @@
-# public — GENSEKI
+# GENSEKI — 体験検証版
 
-GENSEKIの閲覧用Webサイトを、番号＋名前で管理する公開リポジトリです。
-mainブランチのルートをGitHub Pagesへ配信します。`.nojekyll` により静的ファイルをそのまま提供します。
+Paper準拠の作品一覧・検索・詳細・ライブプレビュー・制作リソース取得を検証する静的ギャラリーです。
 
-- [01-orvein](01-orvein/): ORVEIN — 会話の先に、仕事が進む。
-- [02-selquen-studio](02-selquen-studio/): SELQUEN STUDIO — そのらしさを、次の可能性に。
-- [03-yonagisha](03-yonagisha/): 余凪舎 — 住まいに、余白を。
-- [04-neriqua](04-neriqua/): NERIQUA — 東京の住まいに、自分の余白を。
-- [05-lisqe-atelier](05-lisqe-atelier/): LISQÉ — 代官山のヘアアトリエ
-- [06-arqo-movement](06-arqo-movement/): ARQO — 自分のペースで、動く時間を。
-- [07-asanagi-roastery](07-asanagi-roastery/): 朝凪焙煎所 — 朝の余韻を、一杯に。
-- [08-sumika](08-sumika/): 澄間 — 鎌倉で、ほどける滞在。
-- [09-forme-lab](09-forme-lab/): FORME LAB — 考える。つくる。伝わる。
-- [10-senqari-objects](10-senqari-objects/): SENQARI objects — 暮らしに、香りの時間を。
+- [体験する](https://shinnosuketouma.github.io/public/)
+- 既存10作品の番号＋名前のデモURLを維持しています。管理コードはgs-000001〜gs-000010です。
+- 最新のユーザー指示により、体験検証中はプロンプト全文と正式な配布ZIPをすべての方へ開放しています。
+- 会員・決済・実予約・問い合わせ送信を処理しません。将来の本番会員サービスのホストを決定したものではありません。
+- デモは架空ブランドの概念作品で、顧客への納品実績ではありません。
+- 外部写真の原本は配布せず、素材ごとの条件を確認してください。新しいコード利用ライセンスや商用再配布権を自動付与しません。
 
-index.htmlを開くか、静的サーバーで閲覧できます。写真にはインターネット接続が必要です。
-`node build.mjs` で独立した静的ホスティング向けdistも生成できます。
-
-各作品は架空ブランドのコンセプトサイトです。予約・注文・問い合わせは外部送信しません。
-プレミアム用プロンプト、配布ZIP、参考CSV、非公開リポジトリの履歴は含みません。
-写真は外部URL参照。利用条件は https://unsplash.com/license を確認してください。
+mainのルートをそのままGitHub Pagesへ配信します。`gallery-release.json` に本体100ファイルのhashを記録しています。非公開リポジトリの履歴・参考CSV・運用記録・秘密値は含めません。
