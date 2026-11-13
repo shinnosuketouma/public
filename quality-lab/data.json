@@ -1,24 +1,118 @@
 {
   "updated": "2026-11-14",
-  "status": "初版v1を保存しました。立体と音の操作は動作していますが、1280×720で文字が重なるため不合格です。独立評価と修正版の制作を進めています。",
-  "revisions": [{
-    "id": "sound-v1", "title": "Sound Studies / v1", "date": "2026-11-14",
-    "verdict": "不合格・改善前", "gate": "FAIL", "path": "../gs-000011/v1/",
-    "code": "https://github.com/shinnosuketouma/public/tree/87614847ec7c2aad88b42f1bdd8e269a992fd1cd/gs-000011/v1",
-    "commit": "87614847ec7c2aad88b42f1bdd8e269a992fd1cd",
-    "summary": "指示書から制作した最初の実装。独自の金属彫刻とブラウザ内のアンビエント楽器を組み合わせました。詳細な構図を渡した実装試験であり、これだけで自律設計能力を証明しません。",
-    "changes": ["競合素材を使わずWebGLの立体を自作。3プリセットで輪郭・金属色・和音が変わります。", "音の明示再生と停止、明るさ・ゆらぎ・音量、設定の保存・復帰、JSON書き出しを実装。", "動きの停止、非表示停止、自作SVGの代替、実測値の診断表示を用意。"],
-    "issues": ["1280×720で日本語副題と下部説明が重なります。", "操作画面では立体が見えず、形と音を同時に調整する体験が分断されています。", "独立評価、全画面幅、低モーションの実測は検証中です。"],
-    "checks": [
-      {"name":"通常の立体描画とプリセット", "result":"PASS（観察範囲）", "evidence":"IAB 1280×720でEmber/Haloの異なる輪郭とWebGL描画を確認。"},
-      {"name":"1280×720の表示", "result":"FAIL", "evidence":"日本語副題と下部説明の重なり。"},
-      {"name":"構文・JSON・相対素材", "result":"PASS", "evidence":"構文検査、JSON parse、相対参照の実在。全10ソース約338KB。"},
-      {"name":"独立した作品品質判定", "result":"検証中", "evidence":"別担当がコードとブラウザを検査中。作者の自己点で合格にしません。"}
-    ]
-  }],
-  "references": [
-    {"title": "比較作例: Video Ribbon", "url": "https://motionsites.ai/?prompt=vante-ribbon-hero"},
-    {"title": "比較作例: Robot Jellyfish", "url": "https://motionsites.ai/?prompt=medusa-jellyfish-hero"}
+  "status": "初版の文字衝突を直し、同じ立体が操作画面へ移る演出と実際の音声書き出しを追加。操作中の体験は改善しましたが、携帯画面の移動途中で文字を覆う欠点が残っています。",
+  "revisions": [
+    {
+      "id": "sound-v1",
+      "title": "Sound Studies / v1",
+      "date": "2026-11-14",
+      "verdict": "不合格・改善前",
+      "gate": "FAIL",
+      "path": "../gs-000011/v1/",
+      "code": "https://github.com/shinnosuketouma/public/tree/87614847ec7c2aad88b42f1bdd8e269a992fd1cd/gs-000011/v1",
+      "commit": "87614847ec7c2aad88b42f1bdd8e269a992fd1cd",
+      "summary": "指示書から制作した最初の実装。独自の金属彫刻とブラウザ内のアンビエント楽器を組み合わせました。詳細な構図を渡した実装試験であり、これだけで自律設計能力を証明しません。",
+      "changes": [
+        "競合素材を使わずWebGLの立体を自作。3プリセットで輪郭・金属色・和音が変わります。",
+        "音の明示再生と停止、明るさ・ゆらぎ・音量、設定の保存・復帰、JSON書き出しを実装。",
+        "動きの停止、非表示停止、自作SVGの代替、実測値の診断表示を用意。"
+      ],
+      "issues": [
+        "1280×720で日本語副題と下部説明が重なります。",
+        "操作画面では立体が見えず、形と音を同時に調整する体験が分断されています。",
+        "独立評価、全画面幅、低モーションの実測は検証中です。"
+      ],
+      "checks": [
+        {
+          "name": "通常の立体描画とプリセット",
+          "result": "PASS（観察範囲）",
+          "evidence": "IAB 1280×720でEmber/Haloの異なる輪郭とWebGL描画を確認。"
+        },
+        {
+          "name": "1280×720の表示",
+          "result": "FAIL",
+          "evidence": "日本語副題と下部説明の重なり。"
+        },
+        {
+          "name": "構文・JSON・相対素材",
+          "result": "PASS",
+          "evidence": "構文検査、JSON parse、相対参照の実在。全10ソース約338KB。"
+        },
+        {
+          "name": "Independent A/B",
+          "result": "FAIL / FAIL",
+          "evidence": "composition_typography_assets:2; signature_motion:3; function_experience:3; mobile_accessibility:2; performance_resilience:3; originality_handoff:4"
+        }
+      ]
+    },
+    {
+      "id": "sound-v2",
+      "title": "Sound Studies / v2",
+      "date": "2026-11-14",
+      "verdict": "不合格・途中の衝突が残る",
+      "gate": "FAIL",
+      "path": "../gs-000011/v2/",
+      "code": "https://github.com/shinnosuketouma/public/tree/23995ca71ed0c655de24c6384b21f30680843aa3/gs-000011/v2",
+      "commit": "23995ca71ed0c655de24c6384b21f30680843aa3",
+      "summary": "初版の文字衝突を直し、同じ立体が操作画面へ移る演出と実際の音声書き出しを追加。操作中の体験は改善しましたが、携帯画面の移動途中で文字を覆う欠点が残っています。",
+      "changes": [
+        "1280×720で初版の本文の重なりを解消し、主要操作を初期画面内へ配置。",
+        "立体がスクロールとともに操作画面へ移動。携帯でも立体を見ながら音色を調整できます。",
+        "JSON読み込みと実8秒WAV書き出し、3種類の自作SVG代替、音声開始の取り消しとページ復帰を追加。",
+        "設定保存→初期化→復元、8秒WAVの実ファイルを主担当が検証。"
+      ],
+      "issues": [
+        "390×844の中間進捗0.64988で立体が見出しと説明を覆います。主担当と独立担当が同じ位置で再現。",
+        "デスクトップのCLSにばらつく観測があり、次版で起動・スクロール復帰の条件を固定して再測定します。",
+        "全幅・低モーション・読み込み失敗を含む最終受入は未完了。競合作例への到達は未判定です。"
+      ],
+      "checks": [
+        {
+          "name": "1280×720の旧本文衝突",
+          "result": "改善",
+          "evidence": "独立検査で副題の下端と下部説明の間に約105pxの空き。"
+        },
+        {
+          "name": "携帯の移動途中",
+          "result": "FAIL",
+          "evidence": "390×844、scrollY548.5、進捗0.64988で立体と見出しが衝突。"
+        },
+        {
+          "name": "保存・初期化・復元",
+          "result": "PASS",
+          "evidence": "明るさ100を保存→初期値38→復元100を実操作で確認。"
+        },
+        {
+          "name": "WAVの実ファイル",
+          "result": "PASS",
+          "evidence": "8秒、44.1kHz、mono、16bit、705644bytes。352195サンプルが非ゼロ、RMS約0.01405。"
+        },
+        {
+          "name": "描画性能（携帯幅のPC検証）",
+          "result": "PASS（範囲限定）",
+          "evidence": "主担当IAB:20.016秒58.8fps、中央値16.7ms、p95 17.6ms、LCP392ms、CLS0.005297。実機ではありません。"
+        },
+        {
+          "name": "独立評価A/B",
+          "result": "FAIL / FAIL",
+          "evidence": "6軸:構図3、演出3、機能3、携帯2、性能3、独自性4。欠測を合格へ含めていません。"
+        }
+      ]
+    }
   ],
-  "openItems": ["初版の実ブラウザ検証と独立評価。", "支配的な欠点の修正と改版ごとの公開。", "詳細ブリーフによる実装試験の後に、用途だけを渡す新しいコンテキストでの制作検証。"]
+  "references": [
+    {
+      "title": "比較作例: Video Ribbon",
+      "url": "https://motionsites.ai/?prompt=vante-ribbon-hero"
+    },
+    {
+      "title": "比較作例: Robot Jellyfish",
+      "url": "https://motionsites.ai/?prompt=medusa-jellyfish-hero"
+    }
+  ],
+  "openItems": [
+    "390×844の中間進捗0.64988で立体が見出しと説明を覆います。主担当と独立担当が同じ位置で再現。",
+    "デスクトップのCLSにばらつく観測があり、次版で起動・スクロール復帰の条件を固定して再測定します。",
+    "全幅・低モーション・読み込み失敗を含む最終受入は未完了。競合作例への到達は未判定です。"
+  ]
 }

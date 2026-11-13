@@ -24,7 +24,9 @@ fetch('data.json').then(r=>{if(!r.ok)throw Error('記録を取得できません
  if(data.revisions.length)selectors[1].selectedIndex=data.revisions.length-1;
  const openItems=document.querySelector('#open-items');openItems.replaceChildren(...data.openItems.map(t=>el('li',t)));
  const refs=document.querySelector('#references');for(const ref of data.references){if(!safeLink(ref.url))continue;const a=el('a',ref.title+' ↗');a.href=ref.url;a.target='_blank';a.rel='noopener';refs.append(a)}
- const load=()=>{for(const [i,id]of ['left-frame','right-frame'].entries()){const val=selectors[i].value;if(safePath(val))document.querySelector('#'+id).src=val}};
- document.querySelector('#load-compare').addEventListener('click',load);for(const s of selectors)s.addEventListener('change',()=>{if(document.querySelector('#left-frame').src)load()});
+ const clear=document.querySelector('#clear-compare');
+ const load=()=>{for(const [i,id]of ['left-frame','right-frame'].entries()){const val=selectors[i].value;if(safePath(val))document.querySelector('#'+id).src=val}clear.hidden=false};
+ clear.addEventListener('click',()=>{for(const id of ['left-frame','right-frame'])document.querySelector('#'+id).removeAttribute('src');clear.hidden=true;document.querySelector('#load-compare').focus()});
+ document.querySelector('#load-compare').addEventListener('click',load);for(const s of selectors)s.addEventListener('change',()=>{if(document.querySelector('#left-frame').getAttribute('src'))load()});
  const observer=new ResizeObserver(entries=>{for(const entry of entries)entry.target.querySelector('iframe').style.transform=`scale(${entry.contentRect.width/1280})`});document.querySelectorAll('.frame-shell').forEach(n=>observer.observe(n));
 }).catch(error=>{list.replaceChildren(el('p',error.message+' ページを再読み込みしてください。'));document.querySelector('#load-compare').disabled=true});
