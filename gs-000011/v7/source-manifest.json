@@ -1,0 +1,92 @@
+{
+  "version": "sound-studies-v7",
+  "status": "FROZEN_PENDING_NATIVE_VISIBILITY_OBSERVATION",
+  "change_scope": "Only bounded actual visibilitychange snapshots in existing diagnostics; no render/audio/state/design change",
+  "builder_checks": {
+    "javascript_syntax": "PASS",
+    "all_json_parse": "PASS",
+    "unique_ids": 39,
+    "local_asset_and_anchor_refs_checked": 10,
+    "v6_display_files_byte_identical": 7,
+    "audio_state_storage_import_export_renderer_processing_byte_identical": true
+  },
+  "independent_source_review": {
+    "result": "PASS",
+    "cases": 33,
+    "assertions": 177,
+    "app_sha256": "f43abbbf1da758c1e48bc19bb6e518b15ba30f3ecab4e2396c4b67485831a262",
+    "scope": "SOURCE_VM; real hidden frame-delta0 requires native browser readback"
+  },
+  "prior_v6_unfrozen_failure": {
+    "cases": 31,
+    "passed": 30,
+    "failed": 1,
+    "finding": "Chooser cancel allowed old asynchronous read to apply",
+    "resolution": "Fixed before v6 freeze; final31 cases162 assertions PASS; retained in independent evidence"
+  },
+  "prior_v6_visibility_limit": "Native actual tab leave showed auto-stop message; native AX did not expose frame totals, so hidden frame-stop evidence remained incomplete",
+  "public_copy": "NOT_RUN_BY_BUILDER",
+  "claimed_quality_gate_pass": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5946,
+      "sha256": "fb6d967da626937097c89033a6964f9e1e9eb775ac983bdd5f4728eafcf7f088"
+    },
+    {
+      "path": "app.js",
+      "bytes": 43523,
+      "sha256": "f43abbbf1da758c1e48bc19bb6e518b15ba30f3ecab4e2396c4b67485831a262"
+    },
+    {
+      "path": "asset-manifest.json",
+      "bytes": 2600,
+      "sha256": "9149df303b76038e489778dc6fccc15d971dd393e57152b3cf2bfad771c8c847"
+    },
+    {
+      "path": "generate-fallback.py",
+      "bytes": 3443,
+      "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102"
+    },
+    {
+      "path": "index.html",
+      "bytes": 10254,
+      "sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e"
+    },
+    {
+      "path": "interaction-contract.json",
+      "bytes": 9832,
+      "sha256": "24bc10272381602b98e4c50f4b39a7b9fbc65eccbba14e25c255f85027db1e1e"
+    },
+    {
+      "path": "mark.svg",
+      "bytes": 236,
+      "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+    },
+    {
+      "path": "motion-contract.json",
+      "bytes": 7437,
+      "sha256": "506b3320da7740fd7ac4cf95ea28ffb786aac359c363bd6d54c062d11724eaf0"
+    },
+    {
+      "path": "sculpture-ember.svg",
+      "bytes": 657185,
+      "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+    },
+    {
+      "path": "sculpture-halo.svg",
+      "bytes": 657184,
+      "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+    },
+    {
+      "path": "sculpture-tidal.svg",
+      "bytes": 657185,
+      "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+    },
+    {
+      "path": "style.css",
+      "bytes": 22929,
+      "sha256": "acac5cf009bd413d0caadde86fdce08f836648486c6eac64322411f2ec9ce35c"
+    }
+  ]
+}

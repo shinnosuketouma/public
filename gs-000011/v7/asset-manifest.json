@@ -1,0 +1,66 @@
+{
+  "version": "sound-studies-v7",
+  "external_dependencies": [],
+  "external_media": [],
+  "font": "OS installed font stack only; no font file redistributed",
+  "fallback_generator": "generate-fallback.py",
+  "assets": [
+    {
+      "file": "mark.svg",
+      "purpose": "Original geometric mark",
+      "source": "Authored for Sound Studies; generate-fallback.py projects the same original parametric surface used in app.js",
+      "classification": "ORIGINAL",
+      "rights": {
+        "preview": "ALLOWED",
+        "modification": "ALLOWED",
+        "source_distribution": "ALLOWED",
+        "member_distribution": "ALLOWED"
+      },
+      "bytes": 236,
+      "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+    },
+    {
+      "file": "sculpture-ember.svg",
+      "purpose": "Original preset-specific projected metallic surface fallback",
+      "source": "Authored for Sound Studies; generate-fallback.py projects the same original parametric surface used in app.js",
+      "classification": "ORIGINAL",
+      "rights": {
+        "preview": "ALLOWED",
+        "modification": "ALLOWED",
+        "source_distribution": "ALLOWED",
+        "member_distribution": "ALLOWED"
+      },
+      "bytes": 657185,
+      "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+    },
+    {
+      "file": "sculpture-tidal.svg",
+      "purpose": "Original preset-specific projected metallic surface fallback",
+      "source": "Authored for Sound Studies; generate-fallback.py projects the same original parametric surface used in app.js",
+      "classification": "ORIGINAL",
+      "rights": {
+        "preview": "ALLOWED",
+        "modification": "ALLOWED",
+        "source_distribution": "ALLOWED",
+        "member_distribution": "ALLOWED"
+      },
+      "bytes": 657185,
+      "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+    },
+    {
+      "file": "sculpture-halo.svg",
+      "purpose": "Original preset-specific projected metallic surface fallback",
+      "source": "Authored for Sound Studies; generate-fallback.py projects the same original parametric surface used in app.js",
+      "classification": "ORIGINAL",
+      "rights": {
+        "preview": "ALLOWED",
+        "modification": "ALLOWED",
+        "source_distribution": "ALLOWED",
+        "member_distribution": "ALLOWED"
+      },
+      "bytes": 657184,
+      "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+    }
+  ],
+  "fallback_scope": "Three original closed-form stills. Unfolded live motion requires WebGL; no third-party media."
+}

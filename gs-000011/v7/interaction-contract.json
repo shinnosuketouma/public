@@ -1,0 +1,272 @@
+{
+  "version": "sound-studies-v7",
+  "controls": [
+    {
+      "id": "preset-buttons",
+      "input": "click/key on single attached preview toolbar",
+      "result": "preset, title/description, tone/motion, live shape/audio and fallback synchronize",
+      "reverse": "select another preset"
+    },
+    {
+      "id": "instrument-links",
+      "input": "activate anchor",
+      "result": "native anchor scroll to preview-first vertical workbench or right-column desktop instrument; attached toolbar remains with shape",
+      "reverse": "native scroll to hero"
+    },
+    {
+      "id": "tone/motion/volume",
+      "input": "pointer or key range change",
+      "result": "output/range fill and actual audio/geometry inputs update"
+    },
+    {
+      "id": "play-toggle",
+      "input": "click",
+      "result": "Playing only after current-generation AudioContext resume succeeds in visible active page",
+      "failure": "visible error, Stopped",
+      "cancel": "hidden/pagehide invalidates pending generation and destroys context",
+      "reverse": "same button fades/stops"
+    },
+    {
+      "id": "save",
+      "input": "click",
+      "result": "one validated settings object in v2 localStorage key",
+      "failure": "visible storage error"
+    },
+    {
+      "id": "restore",
+      "input": "click",
+      "result": "validated saved v2 settings applied",
+      "empty": "visible empty message",
+      "failure": "bad JSON/version/range rejected"
+    },
+    {
+      "id": "reset",
+      "input": "click",
+      "result": "current parameters to Ember defaults; saved record retained"
+    },
+    {
+      "id": "export",
+      "input": "click",
+      "result": "actual format/version/settings JSON Blob download initiated; no claim disk save verified"
+    },
+    {
+      "id": "import",
+      "input": "choose local JSON file",
+      "result": "format genseki-sound-studies, version 1/2, 16KB max and all parameter bounds validated before apply; no upload",
+      "cancel": "Opening a new chooser, chooser cancel, empty-file change and pagehide invalidate previous import generations. Cancel does not modify canonical state.",
+      "failure": "visible error and unchanged state",
+      "concurrency": "Capture import generation and canonical edit revision; apply only while both match and page remains active. Increment edit revision on input/preset/reset/successful restore/import.",
+      "stale_status": "An old read rejection cannot overwrite a newer operation message. Current import discarded by later edit may report discard only if no newer status exists."
+    },
+    {
+      "id": "export-wav",
+      "input": "click",
+      "result": "same createAudioGraph as live playback into OfflineAudioContext; 8 seconds, 44100Hz, mono, 16bit PCM WAV, 705644 bytes",
+      "parameter_snapshot": "current preset/tone/motion/volume captured at click",
+      "failure": "visible failure",
+      "cancel": "invalidate export generation and discard render result; native offline computation may finish without download"
+    },
+    {
+      "id": "motion-toggle",
+      "input": "click",
+      "result": "pause/resume graphics independently of audio; accessible name persists on mobile",
+      "reduced": "disabled with explanation"
+    },
+    {
+      "id": "help",
+      "input": "click",
+      "result": "native dialog with initial close-button focus",
+      "reverse": "close/Escape/backdrop restores focus"
+    },
+    {
+      "id": "mobile-menu",
+      "input": "click",
+      "result": "aria-expanded/visibility sync",
+      "reverse": "button/anchor/Escape"
+    },
+    {
+      "id": "diagnostics",
+      "input": "native details toggle",
+      "result": "raw browser render/LCP/CLS and last-generated WAV observations"
+    },
+    {
+      "id": "history-navigation-state",
+      "input": "navigate away then Back, including bfcache and new document",
+      "result": "after browser form restoration and next RAF, range values/output/preset labels/buttons/graphics derive from canonical JS state",
+      "canonical": "bfcache existing state; new document initial state",
+      "audio": "remains stopped after pagehide",
+      "persistence": "saved localStorage record is not reset"
+    }
+  ],
+  "external_transmission": false,
+  "payment_inquiry": false,
+  "persistence": "one local settings record; no personal data",
+  "qa_status": "v7 independent SOURCE_VM33 cases177 assertions PASS at app SHA f43abbbf1da758c1e48bc19bb6e518b15ba30f3ecab4e2396c4b67485831a262; not actual hidden observation. Parent native tab-switch readback pending.",
+  "change_scope": "Observability only: up to12 actual visibilitychange snapshots in existing diagnostics. No interaction, state, audio or visual change.",
+  "contrast": {
+    "method": "WCAG relative luminance with sRGB linearization0.04045",
+    "threshold_normal_text": 4.5,
+    "matrix": [
+      {
+        "token": "muted",
+        "background_name": "paper",
+        "background": "#ebe9e2",
+        "before": "#68655d",
+        "after": "#5e5b53",
+        "ratio_before": 4.79088,
+        "ratio_after": 5.581094,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "accent",
+        "background_name": "paper",
+        "background": "#ebe9e2",
+        "before": "#bb3d20",
+        "after": "#ad351b",
+        "ratio_before": 4.547427,
+        "ratio_after": 5.235203,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "muted",
+        "background_name": "instrument",
+        "background": "#dedbd2",
+        "before": "#68655d",
+        "after": "#5e5b53",
+        "ratio_before": 4.204141,
+        "ratio_after": 4.897577,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "accent",
+        "background_name": "instrument",
+        "background": "#dedbd2",
+        "before": "#bb3d20",
+        "after": "#ad351b",
+        "ratio_before": 3.990504,
+        "ratio_after": 4.594048,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "muted",
+        "background_name": "panel",
+        "background": "#eeece5",
+        "before": "#68655d",
+        "after": "#5e5b53",
+        "ratio_before": 4.923592,
+        "ratio_after": 5.735695,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "accent",
+        "background_name": "panel",
+        "background": "#eeece5",
+        "before": "#bb3d20",
+        "after": "#ad351b",
+        "ratio_before": 4.673395,
+        "ratio_after": 5.380223,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "muted",
+        "background_name": "active_preset",
+        "background": "#e3e0d7",
+        "before": "#68655d",
+        "after": "#5e5b53",
+        "ratio_before": 4.409383,
+        "ratio_after": 5.136672,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "accent",
+        "background_name": "active_preset",
+        "background": "#e3e0d7",
+        "before": "#bb3d20",
+        "after": "#ad351b",
+        "ratio_before": 4.185317,
+        "ratio_after": 4.818325,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "muted",
+        "background_name": "diagnostics",
+        "background": "#e7e3d9",
+        "before": "#68655d",
+        "after": "#5e5b53",
+        "ratio_before": 4.54177,
+        "ratio_after": 5.290895,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "token": "accent",
+        "background_name": "diagnostics",
+        "background": "#e7e3d9",
+        "before": "#bb3d20",
+        "after": "#ad351b",
+        "ratio_before": 4.310976,
+        "ratio_after": 4.96299,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "usage": "primary_white",
+        "foreground": "#ffffff",
+        "background": "#ad351b",
+        "ratio_after": 6.359946,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "usage": "primary_hover",
+        "foreground": "#ffffff",
+        "background": "#9c2e15",
+        "ratio_after": 7.459478,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "usage": "play",
+        "foreground": "#ebe9e2",
+        "background": "#24231f",
+        "ratio_after": 12.946405,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "usage": "play_hover",
+        "foreground": "#ebe9e2",
+        "background": "#454139",
+        "ratio_after": 8.357918,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      },
+      {
+        "usage": "error",
+        "foreground": "#a42b17",
+        "background": "#eeece5",
+        "ratio_after": 6.049885,
+        "normal_text_requirement": 4.5,
+        "result": "PASS"
+      }
+    ],
+    "scope": "Static source colors over every opaque text background plus primary/play/error pairs; parent DOM readback is separate."
+  },
+  "prior_v6_source_review": "Builder syntax/static/contrast PASS. Independent SOURCE_VM31 cases162 assertions PASS at app SHA32f3affd568036b836a1638b83c5be185653a4927edc0bd5b4b20d208d4822a6. Real browser normal import/Back/export is parent QA.",
+  "prior_v6_prefreeze_failure": {
+    "cases": 31,
+    "passed": 30,
+    "failed": 1,
+    "finding": "New import chooser cancel did not invalidate old pending read",
+    "resolution": "v6 before freeze: generation increments on chooser open/cancel; final31 cases162 assertions PASS; history retained in evidence."
+  },
+  "prior_v6_visibility_limit": "Native-only actual tab leave showed auto-stop message; hidden frame delta was not readable through native AX, so its frame-stop proof was incomplete."
+}
