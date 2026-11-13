@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const directories=["01-orvein", "02-selquen-studio", "03-yonagisha", "04-neriqua", "05-lisqe-atelier", "06-arqo-movement", "07-asanagi-roastery", "08-sumika", "09-forme-lab", "10-senqari-objects"];
+const output=path.join(root,'dist');
+fs.mkdirSync(output,{recursive:true});
+for(const name of ['index.html','style.css','app.js','collection.js'])fs.copyFileSync(path.join(root,name),path.join(output,name));
+for(const name of [...directories,'previews'])fs.cpSync(path.join(root,name),path.join(output,name),{recursive:true});
+console.log('Built '+directories.length+' numbered website previews');
