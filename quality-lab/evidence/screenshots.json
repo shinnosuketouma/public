@@ -1,46 +1,116 @@
 {
   "purpose": "Static composition record only. No aesthetic judgment, motion-quality pass, or FPS/performance acceptance.",
-  "captured_count": 2,
+  "browser": "Google Chrome headless=new",
+  "renderer_flags": [
+    "--disable-gpu",
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader"
+  ],
+  "notes": [
+    "Initial screenshots only; no aesthetic or performance pass",
+    "Unmodified viewport crops from retained originals"
+  ],
   "records": [
     {
       "revision": "v1",
-      "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
       "viewport_requested": [
         1280,
         720
       ],
-      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
-      "wait_argument_ms": 4000,
-      "crop_box": [
-        0,
-        0,
+      "status": "CAPTURED",
+      "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
+      "frozen_source_hashes_match": true,
+      "initial_file": "sound-v1-1280x720.png",
+      "initial_sha256": "06fa896a87acce605ec2a9764bcdeae774b0b909ac562b21cc7b419b0e1138e6",
+      "initial_image_dimensions": [
         1280,
         720
       ],
-      "initial_file": "sound-v1-1280x720.png",
-      "initial_sha256": "06fa896a87acce605ec2a9764bcdeae774b0b909ac562b21cc7b419b0e1138e6",
-      "raw_sha256": "d32f561a6acdd1dd85d6c18a4e5d50c49ca825947332e9483899980a32f973b2",
-      "status": "CAPTURED"
+      "cropped_pixels_equal_raw_region": true
     },
     {
       "revision": "v1",
-      "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
       "viewport_requested": [
         390,
         844
       ],
-      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
-      "wait_argument_ms": 4000,
-      "crop_box": [
-        0,
-        0,
+      "status": "CAPTURED",
+      "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
+      "frozen_source_hashes_match": true,
+      "initial_file": "sound-v1-390x844.png",
+      "initial_sha256": "1afddb0b645d7e2b0891f177693ab2b58ee10660db76d17accb4424caa48a108",
+      "initial_image_dimensions": [
         390,
         844
       ],
-      "initial_file": "sound-v1-390x844.png",
-      "initial_sha256": "1afddb0b645d7e2b0891f177693ab2b58ee10660db76d17accb4424caa48a108",
-      "raw_sha256": "6306a1888283a1180952e20fb50940b7782031e524391d2c1c63c43a23e67218",
-      "status": "CAPTURED"
+      "cropped_pixels_equal_raw_region": true
+    },
+    {
+      "revision": "v2",
+      "viewport_requested": [
+        1280,
+        720
+      ],
+      "status": "NOT_RUN",
+      "frozen_manifest_sha256": "b74f10262e9e4f5c00886f328aeafd43c85d1ee5ab9c84890590e2a9b1be6155",
+      "frozen_source_hashes_match": true
+    },
+    {
+      "revision": "v2",
+      "viewport_requested": [
+        390,
+        844
+      ],
+      "status": "NOT_RUN",
+      "frozen_manifest_sha256": "b74f10262e9e4f5c00886f328aeafd43c85d1ee5ab9c84890590e2a9b1be6155",
+      "frozen_source_hashes_match": true
+    },
+    {
+      "revision": "v3",
+      "viewport_requested": [
+        1280,
+        720
+      ],
+      "status": "NOT_RUN",
+      "frozen_manifest_sha256": "088dea4698f951d112b579585edd3d159ff5b3d8196e0beb758719179b212e20",
+      "frozen_source_hashes_match": true
+    },
+    {
+      "revision": "v3",
+      "viewport_requested": [
+        390,
+        844
+      ],
+      "status": "NOT_RUN",
+      "frozen_manifest_sha256": "088dea4698f951d112b579585edd3d159ff5b3d8196e0beb758719179b212e20",
+      "frozen_source_hashes_match": true
+    },
+    {
+      "revision": "v5",
+      "viewport_requested": [
+        1280,
+        720
+      ],
+      "status": "CAPTURED",
+      "frozen_manifest_sha256": "d74f68958f1e80dc983008a24eef9ad67f6228c4c2a64d5f1eab3a6b0fa7dc94",
+      "frozen_source_hashes_match": true,
+      "initial_file": "sound-v5-1280x720.png",
+      "initial_sha256": "02f7af11016294d61d5d8439d17015e6a569939d15b763a176e704a4c443c43c",
+      "initial_image_dimensions": [
+        1280,
+        720
+      ],
+      "cropped_pixels_equal_raw_region": true
+    },
+    {
+      "revision": "v5",
+      "viewport_requested": [
+        390,
+        844
+      ],
+      "status": "NOT_RUN",
+      "frozen_manifest_sha256": "d74f68958f1e80dc983008a24eef9ad67f6228c4c2a64d5f1eab3a6b0fa7dc94",
+      "frozen_source_hashes_match": true
     }
   ]
 }

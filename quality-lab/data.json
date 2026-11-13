@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-14",
-  "status": "Sound Studies v4は固定比較の視覚4軸で到達しましたが、履歴復帰時の設定不整合を発見したためv5へ修正中です。用途だけから設計する2作目も、内容の弱さと機能の欠陥を独立評価で確認し、改善を続けています。",
+  "status": "Sound Studiesはv5まで保存。視覚4軸の到達後も、履歴復帰・文字コントラスト・非同期読込を別検査し、見つかった欠陥をv6で修正しています。用途だけから設計する綴目も、実際に読める冊子へ改善中です。",
   "revisions": [
     {
       "id": "sound-v1",
@@ -205,6 +205,60 @@
       ]
     },
     {
+      "id": "sound-v5",
+      "title": "Sound Studies / v5",
+      "date": "2026-11-14",
+      "verdict": "不合格・色と非同期処理を再検査",
+      "gate": "FAIL",
+      "path": "../gs-000011/v5/",
+      "code": "https://github.com/shinnosuketouma/public/tree/cea943b2911f70acefd1f3d79f0c6350e85071bc/gs-000011/v5",
+      "commit": "cea943b2911f70acefd1f3d79f0c6350e85071bc",
+      "summary": "履歴復帰時の設定不整合を修正。実際のBackと復帰後のJSON・WAV保存を確認しました。その後、補助文のコントラストと、遅延JSON読込が後編集を上書きする欠陥を再現し、v6へ進みます。",
+      "changes": [
+        "履歴復帰の次フレームで、正本stateからスライダー・出力値・主役を同期。",
+        "Long taskの対応可否と回数・最大・合計時間を実測。未対応はnull。",
+        "v4の構図・形・動きはbyte一致。視覚到達の根拠を保ちながら機能を修正。"
+      ],
+      "issues": [
+        "本文の一部が4.204:1、選択番号が4.185:1で、事前基準4.5:1に不足。",
+        "File.text待ち中に変更・初期化・プリセット選択・復元を行うと、古いJSONが後操作を上書き。独立VM4例すべてで再現。",
+        "実機スマホ・実BFCacheの観測は別の未検証範囲として残します。"
+      ],
+      "checks": [
+        {
+          "name": "履歴復帰と保存設定",
+          "result": "PASS",
+          "evidence": "Halo64/72/18→別画面→Backは全表示と値が初期状態へ一致。明示restoreはHalo64/72/18へ一致。自動再生せず。"
+        },
+        {
+          "name": "復帰後の実ファイル",
+          "result": "PASS",
+          "evidence": "JSONの設定一致、8秒/44.1kHz/mono/16bit/705644bytes、非ゼロ352042サンプルを照合。"
+        },
+        {
+          "name": "通常描画・PC環境",
+          "result": "PASS（範囲限定）",
+          "evidence": "1440:20.017秒58.8fps,p95 17.6ms,LCP188ms,CLS0。390:20.016秒59.95fps,p95 17.6ms,LCP440ms,CLS0。"
+        },
+        {
+          "name": "独立SOURCE_VM",
+          "result": "20 PASS / 4 FAIL",
+          "evidence": "storage/audio/JSON/WAVの拒否・取消・離脱とlongtask。実API許可・実ファイル保存の代わりではない。後編集4例はFAIL。"
+        },
+        {
+          "name": "文字・操作領域",
+          "result": "FAIL / PASS",
+          "evidence": "70文字要素中6項目でcontrast不足。計測した21操作は全44px以上。"
+        }
+      ],
+      "screenshots": [
+        {
+          "label": "v5 / PC 1280x720",
+          "path": "evidence/sound-v5-1280x720.png"
+        }
+      ]
+    },
+    {
       "id": "editorial-v1",
       "title": "綴目 / v1",
       "date": "2026-11-14",
@@ -254,7 +308,7 @@
     }
   ],
   "openItems": [
-    "Sound Studies v5の復帰不整合修正と、最終の全欠陥ゲート。",
+    "Sound Studies v6の色・非同期読込の修正を独立再検査し、公開後の全ファイルhashを確認。",
     "綴目v2の内容・造形と機能修正を、別担当が再評価。",
     "実機スマホ・別GPU・Safari、日次3件の継続処理能力は今回の検証範囲外。"
   ]
