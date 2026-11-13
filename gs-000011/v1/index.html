@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja" data-type="software">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sound Studies 01。かたちを見ながら音色を調整し、ブラウザでアンビエント音をつくるGENSEKIのインタラクティブ作品。">
+<meta name="theme-color" content="#ebe9e2">
+<meta name="page-type" content="software"><meta name="site-kind" content="software">
+<meta property="og:title" content="Sound Studies 01 — GENSEKI LAB"><meta property="og:description" content="音を、かたちからつくる。ブラウザで触れるアンビエント楽器。"><meta property="og:type" content="website">
+<title>Sound Studies 01 — GENSEKI LAB</title>
+<link rel="icon" href="mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#instrument">楽器の操作へ移動</a>
+<header class="header">
+  <a href="#top" class="brand" aria-label="GENSEKI LAB ページの先頭"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13Z M3 9.5 16 17l13-7.5 M16 17v13"/></svg><span>GENSEKI <b>LAB</b></span></a>
+  <span class="edition">Sound Studies <span class="edition-num">/ 01</span></span>
+  <nav aria-label="メインナビゲーション" class="desktop-nav"><a href="#instrument">Instrument</a><button type="button" data-help>使い方 <span aria-hidden="true">↗</span></button></nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">メニュー <span aria-hidden="true">＋</span></button>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="モバイルナビゲーション" hidden><a href="#instrument">音をつくる</a><button type="button" data-help>使い方を読む</button></nav>
+</header>
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-topline"><p>Interactive sound instrument</p><span><i aria-hidden="true"></i> Made to be played</span></div>
+    <div class="hero-copy"><h1 id="hero-title" lang="en">Sound,<br><span>in form.</span></h1><p class="hero-jp">音を、かたちからつくる。</p></div>
+    <div class="sculpture" id="sculpture">
+      <div class="object-shadow" aria-hidden="true"></div>
+      <img class="sculpture-fallback" src="sculpture.svg" alt="波打つ薄い金属の層が折り重なった、輪のかたちの彫刻" width="800" height="800">
+      <canvas id="form-canvas" aria-hidden="true"></canvas>
+      <span class="object-axis axis-top" aria-hidden="true">＋</span><span class="object-axis axis-bottom" aria-hidden="true">＋</span>
+      <div class="object-spec" aria-hidden="true"><span id="object-index">01</span><span id="object-material">Copper / warm</span></div>
+      <p id="graphics-notice" class="graphics-notice" hidden>この環境では静止画で表示しています。音色の調整はそのまま使えます。</p>
+    </div>
+    <div class="hero-bottom-copy"><p>輪郭を選び、響きを調整する。<br>3つのかたちからはじめる、<br>小さなアンビエント楽器。</p><a class="primary-button" href="#instrument">音をつくる <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5"/></svg></a><span class="local-note">登録不要・ブラウザ内で動作</span></div>
+    <div class="hero-dock">
+      <div class="preset-switch" role="group" aria-label="彫刻と音色のプリセット"><button type="button" class="preset active" data-preset="0" aria-pressed="true"><span>01</span> Ember</button><button type="button" class="preset" data-preset="1" aria-pressed="false"><span>02</span> Tidal</button><button type="button" class="preset" data-preset="2" aria-pressed="false"><span>03</span> Halo</button></div>
+      <div class="motion-state"><span class="motion-dot" aria-hidden="true"></span><span id="motion-label">Motion on</span><button type="button" id="motion-toggle" aria-pressed="false"><svg class="pause-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3v10M11 3v10"/></svg><span>動きを止める</span></button></div>
+      <a class="scroll-cue" href="#instrument" aria-label="楽器の操作へスクロール"><span>Scroll to play</span><span aria-hidden="true">↓</span></a>
+    </div>
+  </section>
+  <section class="instrument" id="instrument" aria-labelledby="instrument-title">
+    <div class="instrument-heading"><p class="section-index">01 / The instrument</p><h2 id="instrument-title">かたちを選ぶ。<br>響きをつくる。</h2><p>つまみを動かすと、音と彫刻が変わります。<br>再生ボタンを押すまで、音は鳴りません。</p></div>
+    <div class="instrument-panel">
+      <div class="panel-top"><span class="panel-title">Sound Studies 01</span><span class="signal-status" id="signal-status"><i aria-hidden="true"></i> Stopped</span></div>
+      <div class="selected-sound"><div><span class="selected-label">Selected form</span><h3 id="preset-name">Ember<span>01</span></h3><p id="preset-description">折り重なる銅の輪郭。低い和音に、丸い響きを重ねる。</p></div><svg class="mini-form" viewBox="0 0 140 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><ellipse cx="70" cy="70" rx="55" ry="29" transform="rotate(-42 70 70)"/><ellipse cx="70" cy="70" rx="55" ry="29" transform="rotate(-26 70 70)"/><ellipse cx="70" cy="70" rx="55" ry="29" transform="rotate(-10 70 70)"/><ellipse cx="70" cy="70" rx="55" ry="29" transform="rotate(6 70 70)"/><ellipse cx="70" cy="70" rx="55" ry="29" transform="rotate(22 70 70)"/><ellipse cx="70" cy="70" rx="55" ry="29" transform="rotate(38 70 70)"/></g></svg></div>
+      <div class="panel-presets" role="group" aria-label="音色プリセット"><button type="button" data-preset="0" aria-pressed="true" class="active">Ember</button><button type="button" data-preset="1" aria-pressed="false">Tidal</button><button type="button" data-preset="2" aria-pressed="false">Halo</button></div>
+      <div class="controls"><div class="range-control"><label for="tone">明るさ <span>Tone</span></label><output for="tone" id="tone-output">38</output><input id="tone" type="range" min="0" max="100" value="38"><div class="range-ends" aria-hidden="true"><span>Soft</span><span>Bright</span></div></div><div class="range-control"><label for="motion">ゆらぎ <span>Motion</span></label><output for="motion" id="motion-output">45</output><input id="motion" type="range" min="0" max="100" value="45"><div class="range-ends" aria-hidden="true"><span>Still</span><span>Fluid</span></div></div><div class="range-control"><label for="volume">音量 <span>Volume</span></label><output for="volume" id="volume-output">25</output><input id="volume" type="range" min="0" max="100" value="25"><div class="range-ends" aria-hidden="true"><span>Mute</span><span>Loud</span></div></div></div>
+      <div class="transport"><button type="button" id="play-toggle" class="play-button" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m5 3 8 5-8 5Z"/></svg><span>音を再生する</span></button><div class="level-display" aria-hidden="true"><div id="level-bars"></div></div><span class="audio-time" id="audio-time">00:00</span></div>
+      <div class="save-controls"><button type="button" id="save">設定を保存 <span aria-hidden="true">↗</span></button><button type="button" id="restore">保存した設定を戻す</button><button type="button" id="export">JSONを書き出す <span aria-hidden="true">↓</span></button><button type="button" id="reset">初期設定に戻す</button></div>
+      <p class="status-message" id="status-message" role="status" aria-live="polite">ヘッドフォンを使い、小さな音量からお試しください。</p>
+    </div>
+    <details class="diagnostics" id="diagnostics"><summary>動作データを表示する <span>Browser telemetry</span></summary><p>このブラウザの実測値です。描画は直近20秒の通常動作区間を集計します。停止・低モーション・非表示の時間は含めません。未対応項目はnullです。</p><pre id="diagnostics-json">計測を開始しています。</pre></details>
+    <div class="instrument-foot"><p>一つの設定から、音と立体を生成。</p><p>Web Audio + WebGL<br>外部への送信はありません。</p></div>
+  </section>
+</main>
+<footer class="footer"><a class="footer-brand" href="#top">Sound Studies <span>01</span></a><div><p>GENSEKIによるコンセプト作品。<br>生成した設定は、このブラウザに保存されます。</p><span>GENSEKI LAB / 2026</span></div><button type="button" data-help>操作と動作環境 <span aria-hidden="true">↗</span></button></footer>
+<dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-head"><span>Sound Studies 01</span><button type="button" id="help-close" aria-label="使い方を閉じる">×</button></div><h2 id="help-title">音のつくり方</h2><ol><li>Ember・Tidal・Haloから、かたちを選びます。</li><li>「音を再生する」を押すと音が鳴ります。音量は小さめから調整してください。</li><li>明るさはフィルター、ゆらぎは音と立体の変形量に反映されます。</li><li>「設定を保存」でこのブラウザに一件保存できます。JSONとして持ち出すこともできます。</li></ol><p>すべての操作はTab・Enter・方向キーで使えます。OSで「視差効果を減らす」設定が有効な場合、彫刻は静止します。WebGL非対応でも静止画と音色操作を利用できます。</p><p>タブを離れると音は停止します。戻ったときに自動では再生されません。音声合成はWeb Audio対応ブラウザが必要です。</p></dialog>
+<noscript><div class="noscript">音の再生と設定にはJavaScriptが必要です。彫刻の静止画と作品説明をご覧いただけます。</div></noscript>
+</body>
+</html>

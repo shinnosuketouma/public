@@ -1,0 +1,17 @@
+{
+  "version": "sound-studies-v1",
+  "state_source": "preset/tone/motion/volume plus renderer clock; audio and shape derive from the same preset",
+  "entrance": {"trigger":"initial draw", "duration_ms":1100, "scale":[0.92,1], "curve":"1-(1-p)^3", "copy_duration_ms":600,"copy_translate_y_px":[7,0],"blocks_input":false},
+  "idle": {"time_source":"clamped active dt <= 0.05 seconds", "drift_radians":0.06,"rotation_period_seconds":20.27,"deformation":"sin(t*3+clock*0.65+layer)*motion*0.055"},
+  "pointer": {"scope":"sculpture host only", "fine_pointer_only":true,"horizontal_radians":[-0.16,0.16],"vertical_radians":[-0.1,0.1],"follow":"1-exp(-8*dt)","touch":"no tracking"},
+  "preset": {"duration_ms":900,"curve":"p*p*(3-2*p)","interruption":"new interpolation starts from current weights","effects":["shape","material","audio frequencies","labels"],"reduced_motion":"instant"},
+  "controls": {"tone":"lowpass cutoff and material lightness", "motion":"mesh deformation, LFO depth/rate and delay wet gain", "volume":"master gain with short smoothing"},
+  "pause": {"control":"motion-toggle", "raf":"one pending/explicit input frame then no continuous RAF", "audio":"independent playback state"},
+  "reduced_motion": {"source":"prefers-reduced-motion", "idle":false,"pointer":false,"preset":"instant one-frame draw","information":"kept visible"},
+  "visibility": {"hidden":"cancel pending RAF and fade/close audio", "visible":"restart graphics clock without hidden dt; audio stays stopped"},
+  "resize": {"canvas":"actual host rectangle with bounded DPR", "mobile":"stacked hero, smaller mesh selected on initial load", "blocks_landscape":false},
+  "scroll_moment":{"implemented":false,"reason":"v1 baseline; planned improvement is the instrument/shape spatial continuity"},
+  "fallback":{"no_webgl":"original SVG plus functional audio controls", "context_lost":"show SVG; reload notice", "no_javascript":"SVG, explanation, JS requirement visible"},
+  "diagnostics":{"canvas_attributes":["data-renderer","data-frame","data-motion","data-resolution","data-vertices","data-triangles"],"actual_draw_only_frame_increment":true,"telemetry":"20-second raw active render intervals; not clamped dt; LCP/CLS observers"},
+  "evidence_frames":["load/settled","Ember/Tidal/Halo","pause before/after idle","reduced before/after idle","hidden/resumed","tone and motion input","1280x720 collision baseline"]
+}

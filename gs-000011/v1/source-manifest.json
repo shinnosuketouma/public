@@ -1,0 +1,56 @@
+{
+  "version": "sound-studies-v1",
+  "status": "FROZEN_BASELINE_PENDING_INDEPENDENT_QA",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3572,
+      "sha256": "37c039586f7cf3fae51c2186ca45eec9c513a4afbcb441054c0876f12cc21d58"
+    },
+    {
+      "path": "app.js",
+      "bytes": 28581,
+      "sha256": "83248f34351bf4564e64d57dc966a22cfbf1b19a74c7d6a1605aa2763ce19450"
+    },
+    {
+      "path": "asset-manifest.json",
+      "bytes": 1191,
+      "sha256": "fb57c70eb694645e84be0dca2e98ce3a66b91c35927f2237f189acaa8b9cd3df"
+    },
+    {
+      "path": "index.html",
+      "bytes": 10098,
+      "sha256": "8f3182c907724aeb7a3a581a6cc20843d2e9bcd2c02b0b1245c4b46db2ee13bf"
+    },
+    {
+      "path": "interaction-contract.json",
+      "bytes": 2072,
+      "sha256": "eb37e009fbf654745d77d20b66d2d316201fa51aa1f0743422ede0d4a7a3344d"
+    },
+    {
+      "path": "mark.svg",
+      "bytes": 236,
+      "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+    },
+    {
+      "path": "motion-contract.json",
+      "bytes": 2394,
+      "sha256": "5462ffd03ba335f5abc5878957a5e9f03078225e1141b97e787b87e2477444ee"
+    },
+    {
+      "path": "sculpture.svg",
+      "bytes": 266768,
+      "sha256": "f5f0fe8af198742b22f729399a5759ba5843023f16b4c1a504768ad82835c076"
+    },
+    {
+      "path": "style.css",
+      "bytes": 21594,
+      "sha256": "80727aeec1babd6422e35dbb69531139c1ccdaffcdb484659c932540a0a0148b"
+    }
+  ],
+  "known_defects": [
+    "1280x720 hero subtitle and bottom copy overlap",
+    "Sculpture not visible in lower instrument section; spatial continuity missing"
+  ],
+  "runtime_dependencies": []
+}

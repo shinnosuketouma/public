@@ -1,0 +1,20 @@
+{
+  "version":"sound-studies-v1",
+  "controls":[
+    {"id":"preset-buttons","input":"click/keyboard on any duplicate preset selector","result":"both selectors, title, description, material, index, tone/motion and shape/audio parameters synchronize","reverse":"select another preset"},
+    {"id":"instrument-links","input":"activate anchor","result":"native scroll to #instrument","reverse":"logo or native scroll"},
+    {"id":"tone/motion/volume","input":"pointer or keyboard range change","result":"output and range fill update; actual audio parameters and shape inputs change"},
+    {"id":"play-toggle","input":"click","result":"new AudioContext resumes before Playing state; real synthesis starts","failure":"visible error and Stopped state","reverse":"same control stops with fade"},
+    {"id":"save","input":"click","result":"one validated settings object stored in localStorage","failure":"visible storage error with JSON alternative"},
+    {"id":"restore","input":"click","result":"validated saved settings applied","empty":"visible no-saved-settings message","failure":"invalid JSON/range/version rejected visibly"},
+    {"id":"reset","input":"click","result":"current parameters return to Ember defaults; saved record retained"},
+    {"id":"export","input":"click","result":"JSON Blob download initiated; message does not claim disk save verification","failure":"visible failure"},
+    {"id":"motion-toggle","input":"click","result":"graphics pause/resume without changing audio playback","reduced":"disabled with OS setting label"},
+    {"id":"help","input":"click","result":"native modal dialog; focus close button","reverse":"close/Escape/backdrop click restores focus"},
+    {"id":"mobile-menu","input":"click","result":"aria-expanded and visibility synchronize","reverse":"same button, anchor or Escape"},
+    {"id":"diagnostics","input":"native details toggle","result":"raw measured browser telemetry visible"}
+  ],
+  "external_transmission":false,
+  "real_payment_or_inquiry":false,
+  "persistence":"one browser-local settings record; no personal data"
+}

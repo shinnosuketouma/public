@@ -1,0 +1,36 @@
+{
+  "version": "sound-studies-v1",
+  "external_dependencies": [],
+  "external_media": [],
+  "font": "OS installed font stack only; no font file redistribution",
+  "assets": [
+    {
+      "file": "mark.svg",
+      "purpose": "GENSEKI original geometric mark",
+      "source": "Original geometry authored for this task; no third-party media or code",
+      "classification": "ORIGINAL",
+      "rights": {
+        "preview": "ALLOWED",
+        "modification": "ALLOWED",
+        "source_distribution": "ALLOWED",
+        "member_distribution": "ALLOWED"
+      },
+      "bytes": 236,
+      "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+    },
+    {
+      "file": "sculpture.svg",
+      "purpose": "Original generated static fallback sculpture",
+      "source": "Original geometry authored for this task; no third-party media or code",
+      "classification": "ORIGINAL",
+      "rights": {
+        "preview": "ALLOWED",
+        "modification": "ALLOWED",
+        "source_distribution": "ALLOWED",
+        "member_distribution": "ALLOWED"
+      },
+      "bytes": 266768,
+      "sha256": "f5f0fe8af198742b22f729399a5759ba5843023f16b4c1a504768ad82835c076"
+    }
+  ]
+}
