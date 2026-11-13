@@ -1,0 +1,65 @@
+{
+  "schema": "genseki-original-assets-v1",
+  "site_code": "gs-000012",
+  "revision": "v1",
+  "assets": [
+    {
+      "path": "assets/aida-cover.svg",
+      "bytes": 1105,
+      "sha256": "4df6537cae43e38badf9d80dba1722dfe5f5a65bac9ad01c6419cee0561f8256",
+      "origin": "Original SVG authored for GENSEKI gs-000012 v1",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/aida-left.svg",
+      "bytes": 1155,
+      "sha256": "3bc01eefc2f8f431cb7ddad9747e8e59953145084c1fd8574b4ff032ba973ec9",
+      "origin": "Original SVG authored for GENSEKI gs-000012 v1",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/aida-right.svg",
+      "bytes": 1054,
+      "sha256": "7302d123c2db79097ce01a466cda4d6f27b56987f0db97ce9b965aa8d0a683b5",
+      "origin": "Original SVG authored for GENSEKI gs-000012 v1",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/favicon.svg",
+      "bytes": 199,
+      "sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2",
+      "origin": "Original SVG authored for GENSEKI gs-000012 v1",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/kutou-poster.svg",
+      "bytes": 866,
+      "sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04",
+      "origin": "Original SVG authored for GENSEKI gs-000012 v1",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/layers-cover.svg",
+      "bytes": 903,
+      "sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954",
+      "origin": "Original SVG authored for GENSEKI gs-000012 v1",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/outline-poster.svg",
+      "bytes": 1032,
+      "sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6",
+      "origin": "Original SVG authored for GENSEKI gs-000012 v1",
+      "external_source": null,
+      "font_binaries_embedded": false
+    }
+  ],
+  "external_dependencies": [],
+  "rights_note": "All graphics and code were newly authored for this concept. No competitor prompt, code, image, video or font binary is distributed. System fonts are referenced only."
+}

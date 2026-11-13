@@ -1,0 +1,69 @@
+{
+  "schema": "genseki-quality-lab/frozen-v1",
+  "created_at": "2026-11-13T18:38:37.804Z",
+  "site_code": "gs-000012",
+  "revision": "v1",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "e24dffdd68351596959a1649dc42ffded2cca68d32997af9379e0465086a820a",
+      "bytes": 3250
+    },
+    {
+      "path": "app.js",
+      "sha256": "b249e04a6a88f5e2135ff904581caa2f81b5e51bdb0c68919c051c201090b991",
+      "bytes": 24786
+    },
+    {
+      "path": "asset-manifest.json",
+      "sha256": "65e0c4b7b8a791ed8d093ce6f1500342f28ee4e40e4ec2791518d48443f3414f",
+      "bytes": 2373
+    },
+    {
+      "path": "assets/aida-cover.svg",
+      "sha256": "4df6537cae43e38badf9d80dba1722dfe5f5a65bac9ad01c6419cee0561f8256",
+      "bytes": 1105
+    },
+    {
+      "path": "assets/aida-left.svg",
+      "sha256": "3bc01eefc2f8f431cb7ddad9747e8e59953145084c1fd8574b4ff032ba973ec9",
+      "bytes": 1155
+    },
+    {
+      "path": "assets/aida-right.svg",
+      "sha256": "7302d123c2db79097ce01a466cda4d6f27b56987f0db97ce9b965aa8d0a683b5",
+      "bytes": 1054
+    },
+    {
+      "path": "assets/favicon.svg",
+      "sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2",
+      "bytes": 199
+    },
+    {
+      "path": "assets/kutou-poster.svg",
+      "sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04",
+      "bytes": 866
+    },
+    {
+      "path": "assets/layers-cover.svg",
+      "sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954",
+      "bytes": 903
+    },
+    {
+      "path": "assets/outline-poster.svg",
+      "sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6",
+      "bytes": 1032
+    },
+    {
+      "path": "index.html",
+      "sha256": "b95d34c85c7b7251fb7dcbc4a4dfba18997af5f2e22c14e1b80caf14b1cf8462",
+      "bytes": 17634
+    },
+    {
+      "path": "style.css",
+      "sha256": "dcbe42db7dddec357c8ef45d6be76c8ca8ef8401d3728cdc617783902e915160",
+      "bytes": 27846
+    }
+  ],
+  "totalBytes": 82203
+}
