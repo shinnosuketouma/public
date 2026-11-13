@@ -1,0 +1,46 @@
+{
+  "purpose": "Static composition record only. No aesthetic judgment, motion-quality pass, or FPS/performance acceptance.",
+  "captured_count": 2,
+  "records": [
+    {
+      "revision": "v1",
+      "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
+      "viewport_requested": [
+        1280,
+        720
+      ],
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "crop_box": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "initial_file": "sound-v1-1280x720.png",
+      "initial_sha256": "06fa896a87acce605ec2a9764bcdeae774b0b909ac562b21cc7b419b0e1138e6",
+      "raw_sha256": "d32f561a6acdd1dd85d6c18a4e5d50c49ca825947332e9483899980a32f973b2",
+      "status": "CAPTURED"
+    },
+    {
+      "revision": "v1",
+      "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
+      "viewport_requested": [
+        390,
+        844
+      ],
+      "motion": "Normal: no --reduced option, no reduced-motion media override. Fresh dedicated Chrome profile.",
+      "wait_argument_ms": 4000,
+      "crop_box": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "initial_file": "sound-v1-390x844.png",
+      "initial_sha256": "1afddb0b645d7e2b0891f177693ab2b58ee10660db76d17accb4424caa48a108",
+      "raw_sha256": "6306a1888283a1180952e20fb50940b7782031e524391d2c1c63c43a23e67218",
+      "status": "CAPTURED"
+    }
+  ]
+}
