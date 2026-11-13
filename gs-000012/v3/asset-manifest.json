@@ -1,0 +1,66 @@
+{
+  "schema": "genseki-original-assets-v1",
+  "site_code": "gs-000012",
+  "revision": "v3",
+  "assets": [
+    {
+      "path": "assets/aida-cover.svg",
+      "bytes": 1481,
+      "sha256": "a85886c97f90bb421f70cd925ddb9a640646e3170a69a8f66c3afdca1a9b5385",
+      "origin": "Original SVG authored for GENSEKI gs-000012; aida pages revised from the original v2 manuscript",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/aida-left.svg",
+      "bytes": 2156,
+      "sha256": "df9d78e9678f99ff2222ea57b4d6502a332aff62a2d97bac68a577e040ef15e6",
+      "origin": "Original SVG authored for GENSEKI gs-000012; aida pages revised from the original v2 manuscript",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/aida-right.svg",
+      "bytes": 2141,
+      "sha256": "620cc676b7c3e60867f92dedc1efaa655a612f24d67a5c00b2d90f303a193a51",
+      "origin": "Original SVG authored for GENSEKI gs-000012; aida pages revised from the original v2 manuscript",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/favicon.svg",
+      "bytes": 199,
+      "sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2",
+      "origin": "Original SVG authored for GENSEKI gs-000012; aida pages revised from the original v2 manuscript",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/kutou-poster.svg",
+      "bytes": 866,
+      "sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04",
+      "origin": "Original SVG authored for GENSEKI gs-000012; aida pages revised from the original v2 manuscript",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/layers-cover.svg",
+      "bytes": 903,
+      "sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954",
+      "origin": "Original SVG authored for GENSEKI gs-000012; aida pages revised from the original v2 manuscript",
+      "external_source": null,
+      "font_binaries_embedded": false
+    },
+    {
+      "path": "assets/outline-poster.svg",
+      "bytes": 1032,
+      "sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6",
+      "origin": "Original SVG authored for GENSEKI gs-000012; aida pages revised from the original v2 manuscript",
+      "external_source": null,
+      "font_binaries_embedded": false
+    }
+  ],
+  "external_dependencies": [],
+  "rights_note": "Original code, manuscript and graphics. No competitor prompt, source, screenshot, media or font binary is distributed. System fonts are referenced only.",
+  "scope": "Single-page design reference. Public HTML is index.html only; separate reader destinations are out of scope."
+}
