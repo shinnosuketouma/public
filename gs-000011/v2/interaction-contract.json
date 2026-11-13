@@ -1,0 +1,23 @@
+{
+  "version":"sound-studies-v2",
+  "controls":[
+    {"id":"preset-buttons","input":"click/key on either selector","result":"both selectors, title, description, material/index, tone/motion, live shape/audio and fallback synchronize","reverse":"select another preset"},
+    {"id":"instrument-links","input":"activate anchor","result":"native scroll to instrument; same sculpture travels into its dedicated visual slot","reverse":"native scroll to hero"},
+    {"id":"tone/motion/volume","input":"pointer or key range change","result":"output/range fill and actual audio/geometry inputs update"},
+    {"id":"play-toggle","input":"click","result":"Playing only after current-generation AudioContext resume succeeds in visible active page","failure":"visible error, Stopped","cancel":"hidden/pagehide invalidates pending generation and destroys context","reverse":"same button fades/stops"},
+    {"id":"save","input":"click","result":"one validated settings object in v2 localStorage key","failure":"visible storage error"},
+    {"id":"restore","input":"click","result":"validated saved v2 settings applied","empty":"visible empty message","failure":"bad JSON/version/range rejected"},
+    {"id":"reset","input":"click","result":"current parameters to Ember defaults; saved record retained"},
+    {"id":"export","input":"click","result":"actual format/version/settings JSON Blob download initiated; no claim disk save verified"},
+    {"id":"import","input":"choose local JSON file","result":"format genseki-sound-studies, version 1/2, 16KB max and all parameter bounds validated before apply; no upload","cancel":"visible cancel message and unchanged state","failure":"visible error and unchanged state"},
+    {"id":"export-wav","input":"click","result":"same createAudioGraph as live playback into OfflineAudioContext; 8 seconds, 44100Hz, mono, 16bit PCM WAV, 705644 bytes","parameter_snapshot":"current preset/tone/motion/volume captured at click","failure":"visible failure","cancel":"invalidate export generation and discard render result; native offline computation may finish without download"},
+    {"id":"motion-toggle","input":"click","result":"pause/resume graphics independently of audio; accessible name persists on mobile","reduced":"disabled with explanation"},
+    {"id":"help","input":"click","result":"native dialog with initial close-button focus","reverse":"close/Escape/backdrop restores focus"},
+    {"id":"mobile-menu","input":"click","result":"aria-expanded/visibility sync","reverse":"button/anchor/Escape"},
+    {"id":"diagnostics","input":"native details toggle","result":"raw browser render/LCP/CLS and last-generated WAV observations"}
+  ],
+  "external_transmission":false,
+  "payment_inquiry":false,
+  "persistence":"one local settings record; no personal data",
+  "qa_status":"Builder static checks completed; browser and independent review pending"
+}

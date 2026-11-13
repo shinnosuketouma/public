@@ -1,0 +1,74 @@
+{
+  "schema": "genseki-quality-lab/frozen-v1",
+  "created_at": "2026-11-13T18:06:05.927Z",
+  "site_code": "gs-000011",
+  "revision": "v2",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "9af18103749e9a09fed65b9a8be47d008bbe64f22a0e9f22e2379c341b134964",
+      "bytes": 5971
+    },
+    {
+      "path": "app.js",
+      "sha256": "66f338d86130a9db61ebffcf76d90d579f8f3d088b9e3582dbd76686cbfef085",
+      "bytes": 39198
+    },
+    {
+      "path": "asset-manifest.json",
+      "sha256": "608c595e3693daee6dda912eccc4412d745c33438384d5810234d6ba5a20b1c2",
+      "bytes": 2483
+    },
+    {
+      "path": "generate-fallback.py",
+      "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102",
+      "bytes": 3443
+    },
+    {
+      "path": "index.html",
+      "sha256": "a471eb9f0c5b5622b59222328df7f69d713490a9b2ae2ce193075a9e1c8772b0",
+      "bytes": 10864
+    },
+    {
+      "path": "interaction-contract.json",
+      "sha256": "72a1eae2f09d7acce95426387a2dbf4cf37fac494bb59fc85a2670507794aede",
+      "bytes": 2877
+    },
+    {
+      "path": "mark.svg",
+      "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd",
+      "bytes": 236
+    },
+    {
+      "path": "motion-contract.json",
+      "sha256": "87e8aba9b70f6276dceb0840572d3efe30584749c327bf1d40b2e147a0c6024e",
+      "bytes": 3417
+    },
+    {
+      "path": "sculpture-ember.svg",
+      "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40",
+      "bytes": 657185
+    },
+    {
+      "path": "sculpture-halo.svg",
+      "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518",
+      "bytes": 657184
+    },
+    {
+      "path": "sculpture-tidal.svg",
+      "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6",
+      "bytes": 657185
+    },
+    {
+      "path": "source-manifest.json",
+      "sha256": "b400053830e4866bac3c30270a68b62c25ae8929cec103f37376542976a563ea",
+      "bytes": 2194
+    },
+    {
+      "path": "style.css",
+      "sha256": "a82e97a8c2f70325ede46c1c0a373d8323b6d148d205393c70e0c87ad4b03627",
+      "bytes": 32467
+    }
+  ],
+  "totalBytes": 2074704
+}
