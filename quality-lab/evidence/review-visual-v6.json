@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "revision": "sound-studies/v6",
+  "url": "http://127.0.0.1:8765/sound-studies/v6/",
+  "manifest_sha256_supplied": "afe8a7ac8a7209f7e9805bed4cca28f99063b9ed736f45aa820c806f0c118be2",
+  "manifest_independently_hashed": false,
+  "review_type": "Limited visual regression review after v4 independent visual acceptance",
+  "baseline": "visual-v4.json and visual-benchmark.json",
+  "source_identity": "The orchestrator supplied a separate code review's byte-identity conclusion for v4/v6 composition, HTML, asset and shader. This reviewer did not independently hash or use implementation source to infer appearance.",
+  "status": "VISUAL_BASELINE_PRESERVED",
+  "conclusion": "通常の1280/390初期・中間・操作画面を実見し、補助文/アクセントの色変更で構図、主役の素材、文字の階層が退行した状態は観察しなかった。v4の視覚4軸の評価を維持する。全進捗/全preset/320等の全面的な再認定ではなく、限定差分再評価。",
+  "environment": {
+    "browser": "Chrome extension browser1, dedicated new tab",
+    "normal_motion_viewports_read_back": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "motion": "Normal, not reduced or paused during the standard observations",
+    "scroll": "Native Tab.scroll",
+    "physical_phone": false,
+    "viewport_reset": true,
+    "viewport_after_reset": [
+      1200,
+      852
+    ],
+    "coordination": "heldout_designer released the Chrome viewport; this review waited for the orchestrator's performance CPU window to end before rendering."
+  },
+  "normal_observations": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "scrollY": 0,
+      "p": 0,
+      "preset": "Ember",
+      "observation": "左の大きな二書体見出しと右の銅の彫刻、左下の説明/CTA、右下toolbarの役割は保持。補助文は弱すぎず、朱のCTAは主役の銅色と競合せず操作として読める。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "scrollY": 360,
+      "p": 0.5,
+      "preset": "Ember",
+      "observation": "右列の彫刻を大きく保ち、層の隙間/暗い内側/細い光を読める。左のinstrument見出し/説明と重ならず、v4で成立した中間構図を失っていない。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "scrollY": 1080,
+      "p": 1,
+      "preset": "Ember",
+      "observation": "左でTone/Motion/Volumeと補助ラベル、右で彫刻/presetが同時に読める。Tone38→80の値/slider位置/アクセントfocusの反映を確認。色の差で意味の階層が逆転した状態や文字切れは観察しなかった。sliderの音への効果は検査外。"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 0,
+      "p": 0,
+      "preset": "Ember, Tone80",
+      "observation": "縦構成、初期画面内のCTA、大きい主役、toolbarを維持。説明/補助文と主役の優先順は読みやすく、色変更が過剰な強調になっていない。"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 422,
+      "p": 0.5,
+      "preset": "Ember",
+      "observation": "主役を小物化せず、層の変化を読み続けられる。番号/名前はtoolbar内にあり、彫刻との重なりは観察せず。"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollY": 1266,
+      "p": 1,
+      "preset": "Ember→Tidal",
+      "observation": "上preview/preset、下sliderの関係を保持。Tidal選択で選択枠/説明/値が変わる状態を観察。補助ラベルと数値が読め、素材を含む構図の退行は観察しなかった。"
+    }
+  ],
+  "visual_scores": [
+    {
+      "axis": "composition_typography_material",
+      "score": 4,
+      "basis": "v4 baseline retained and limited v6 live states confirm no color-induced regression"
+    },
+    {
+      "axis": "hero_motion",
+      "score": 4,
+      "basis": "v4 full sampled visual review plus v6 normal initial/middle/operation observations; no new all-progress timing certification"
+    },
+    {
+      "axis": "mobile_composition",
+      "score": 4,
+      "basis": "v4 390/320 baseline; v6 390 live regression check. Original-reference mobile parity remains UNKNOWN"
+    },
+    {
+      "axis": "visual_originality",
+      "score": 4,
+      "basis": "v4 visible concept retained; source authorship/rights not independently audited"
+    }
+  ],
+  "dominant_visual_deficiencies": [],
+  "no_javascript_real_browser_observation": {
+    "status": "OBSERVED",
+    "method": "Native Chrome app UI only. Selected the dedicated Sound v6 tab by its visible tab name, opened docked DevTools, used the command palette's Disable JavaScript item, then reloaded. No injected script, alternate automation, browser-wide content setting or global preference change was used.",
+    "disabled_evidence": "Chrome native AX exposed『このページの JavaScript はブロックされました。』after the command. Reloaded page AX exposed the noscript sentence, while the canvas/preset toolbar was absent.",
+    "observed_view": "DevTools dock reduced the page drawing width to about645px. This is an additional fallback observation, not a1280/390 reference comparison; the exact inner dimensions were not measured while scripting was disabled.",
+    "top_observation": "At the top, the two-font title, Japanese purpose, main link and a static copper sculpture image rendered. The sculpture was coarser than the normal WebGL image but clearly communicated the same subject.",
+    "bottom_observation": "At the bottom, a dark readable notice said『音の再生と設定にはJavaScriptが必要です。彫刻の静止画と作品説明をご覧いただけます。』. The existing descriptive text remained accessible through native scrolling. No audio/control-success claim was made.",
+    "restoration": "The native palette's Enable JavaScript item was located, but command activation/readback was unstable. The dedicated DevTools panel was then closed through its visible Close button, the page reloaded, and ordinary JavaScript behavior was empirically confirmed: selecting Tidal updated preset, slider values, description and sculpture; normal toolbar returned; noscriptVisible=false; native Chrome AX no longer exposed the JavaScript-blocked message. DevTools was closed and viewport was default1200×852.",
+    "limitations": "Fallback visibility/information only. This did not test all no-JS links or certify a functional instrument without JavaScript. Native DevTools AX IDs were briefly stale; fresh UI observations and the visible Close control recovered without changing another tab."
+  },
+  "not_run_in_this_review": [
+    "Full p0/.25/.5/.65/.75/1 and reverse sweep on v6",
+    "320/768/1024/1440 v6 visual sweep",
+    "Reduced-motion",
+    "Audio/save/import/export/error contracts",
+    "Performance/GPU metrics",
+    "Contrast ratio calculations",
+    "Physical phone",
+    "Rights/source/handoff audit"
+  ],
+  "evidence_retention": "Observed screenshots and native UI state are in this verifier's CUA transcript. No local screenshot/video artifact is claimed. Parent performance results were not adopted as this verifier's measurements.",
+  "overall_gate": "Visual baseline retained within the stated regression scope. Full A/B acceptance depends on the separate code, interaction, performance, accessibility and rights evidence.",
+  "public_export": {
+    "source_evidence_sha256": "c45ef20cd9bc0719dfadc92e70cc0179bfef20c1c5abd70f6860037afbad69c7",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

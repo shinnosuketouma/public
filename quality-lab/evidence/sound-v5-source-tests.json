@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "evidence_type": "SOURCE_VM",
+  "tested_on": "2026-11-13T19:15:15.300Z",
+  "revision": "v5",
+  "app_sha256": "a3d368a7df8f71131126361fd356f9dff7ee9f52e1a0091c4cc0a20ded69a5ce",
+  "source_segments": [
+    {
+      "name": "prelude",
+      "sha256": "86d1a1a5a5b2610835f0d4b1a69ef7f18e9a3f04529a194040b6adf6d04bb88e"
+    },
+    {
+      "name": "UI projection and parameter handlers",
+      "sha256": "4f987d476cfc5532806dfe1f24a7f91a9b2ebfca8846858003a6f6336d68b816"
+    },
+    {
+      "name": "actual validation/storage/JSON/WAV/audio handlers",
+      "sha256": "0d83fd3b83999249b6f64924bc2051c69e2c9858ddb3b65762706ba531e7819f"
+    },
+    {
+      "name": "actual audio UI/lifecycle/motion/visibility handlers",
+      "sha256": "d50a16e78d7fe64a0907f1ff3867801e6f9f7de175a79e163c96169589c09f42"
+    }
+  ],
+  "harness_sha256": "3ea6dddd5a97f5c950ad0d2d5e05b152c78382fec15d848d2112de5313157b37",
+  "method": "Actual frozen source substrings run without edits in isolated Node vm. DOM/storage/AudioContext/OfflineAudioContext/object URL/file read/timer/RAF APIs are deterministic mocks. Source updateLabels, audio graph/await cancellation, handlers and pagehide/pageshow are actual functions. No full renderer is instantiated.",
+  "no_js": {
+    "evidence_type": "STATIC_SOURCE",
+    "result": "Noscript declares original Ember SVG background in reserved hero slot, hides JS moving host, and provides static explanation plus JavaScript-required notice.",
+    "browser_javascript_disabled": "NOT_RUN; actual disabled-JS browser layout is not asserted"
+  },
+  "assertions": 143,
+  "checks": [
+    {
+      "id": "storage_denied_save_restore",
+      "result": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "restore_empty_invalid_and_retry",
+      "result": "PASS",
+      "assertions": 10
+    },
+    {
+      "id": "audio_resume_rejection_ui_recovers",
+      "result": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "audio_unsupported_and_nonrunning_resume",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "audio_pending_cancel_by_pagehide_then_late_resolve",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "audio_pending_hidden_late_resolve_and_reject",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "audio_normal_stop_then_reentry_never_autoplays",
+      "result": "PASS",
+      "assertions": 5
+    },
+    {
+      "id": "json_valid_round_known_fields_no_upload",
+      "result": "PASS",
+      "assertions": 4
+    },
+    {
+      "id": "json_invalid_variants_keep_state",
+      "result": "PASS",
+      "assertions": 20
+    },
+    {
+      "id": "json_cancel_and_read_rejection",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "json_pagehide_late_read_resolution_or_rejection_discarded",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "json_newer_read_wins",
+      "result": "PASS",
+      "assertions": 1
+    },
+    {
+      "id": "json_export_url_and_download_rejection",
+      "result": "PASS",
+      "assertions": 6
+    },
+    {
+      "id": "wav_unsupported_and_render_rejection",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "wav_user_cancel_late_resolution_or_rejection_discarded",
+      "result": "PASS",
+      "assertions": 10
+    },
+    {
+      "id": "wav_pagehide_late_resolution_or_rejection_discarded",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "wav_download_url_or_click_rejection",
+      "result": "PASS",
+      "assertions": 8
+    },
+    {
+      "id": "history_form_state_projection_and_frame_cancellation",
+      "result": "PASS",
+      "assertions": 7
+    },
+    {
+      "id": "json_pending_read_preserves_later_toneinput",
+      "result": "FAIL",
+      "assertions": 1,
+      "error": "AssertionError [ERR_ASSERTION]: Old import completion must not replace a later explicit settings action\n+ actual - expected\n\n  {\n+   motion: 72,\n+   preset: 2,\n+   tone: 64,\n+   volume: 18\n-   motion: 45,\n-   preset: 0,\n-   tone: 91,\n-   volume: 25\n  }\n\n    at same (TEMP/sound-v5-independent-tests.cjs:11:44)\n    at TEMP/sound-v5-independent-tests.cjs:71:3\n    at async test (TEMP/sound-v5-independent-tests.cjs:41:56)\n    at async TEMP/sound-v5-independent-tests.cjs:63:65"
+    },
+    {
+      "id": "json_pending_read_preserves_later_reset",
+      "result": "FAIL",
+      "assertions": 1,
+      "error": "AssertionError [ERR_ASSERTION]: Old import completion must not replace a later explicit settings action\n+ actual - expected\n\n  {\n+   motion: 72,\n+   preset: 2,\n+   tone: 64,\n+   volume: 18\n-   motion: 45,\n-   preset: 0,\n-   tone: 38,\n-   volume: 25\n  }\n\n    at same (TEMP/sound-v5-independent-tests.cjs:11:44)\n    at TEMP/sound-v5-independent-tests.cjs:71:3\n    at async test (TEMP/sound-v5-independent-tests.cjs:41:56)\n    at async TEMP/sound-v5-independent-tests.cjs:63:65"
+    },
+    {
+      "id": "json_pending_read_preserves_later_preset",
+      "result": "FAIL",
+      "assertions": 1,
+      "error": "AssertionError [ERR_ASSERTION]: Old import completion must not replace a later explicit settings action\n+ actual - expected\n\n  {\n    motion: 72,\n+   preset: 2,\n-   preset: 1,\n    tone: 64,\n+   volume: 18\n-   volume: 25\n  }\n\n    at same (TEMP/sound-v5-independent-tests.cjs:11:44)\n    at TEMP/sound-v5-independent-tests.cjs:71:3\n    at async test (TEMP/sound-v5-independent-tests.cjs:41:56)\n    at async TEMP/sound-v5-independent-tests.cjs:63:65"
+    },
+    {
+      "id": "json_pending_read_preserves_later_restore",
+      "result": "FAIL",
+      "assertions": 1,
+      "error": "AssertionError [ERR_ASSERTION]: Old import completion must not replace a later explicit settings action\n+ actual - expected\n\n  {\n+   motion: 72,\n+   preset: 2,\n+   tone: 64,\n+   volume: 18\n-   motion: 22,\n-   preset: 1,\n-   tone: 11,\n-   volume: 33\n  }\n\n    at same (TEMP/sound-v5-independent-tests.cjs:11:44)\n    at TEMP/sound-v5-independent-tests.cjs:71:3\n    at async test (TEMP/sound-v5-independent-tests.cjs:41:56)\n    at async TEMP/sound-v5-independent-tests.cjs:63:65"
+    },
+    {
+      "id": "longtask_observer_bounded_aggregate_and_unsupported",
+      "result": "PASS",
+      "assertions": 7
+    },
+    {
+      "id": "nojs_static_fallback_declaration",
+      "result": "PASS",
+      "assertions": 5,
+      "evidence_type": "STATIC_SOURCE"
+    }
+  ],
+  "race_observations": [
+    {
+      "scenario": "pending File.text -> toneinput -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 0,
+        "tone": 91,
+        "motion": 45,
+        "volume": 25
+      },
+      "actual_after_old_read": {
+        "preset": 2,
+        "tone": 64,
+        "motion": 72,
+        "volume": 18
+      },
+      "overwrote_later_intent": true
+    },
+    {
+      "scenario": "pending File.text -> reset -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 0,
+        "tone": 38,
+        "motion": 45,
+        "volume": 25
+      },
+      "actual_after_old_read": {
+        "preset": 2,
+        "tone": 64,
+        "motion": 72,
+        "volume": 18
+      },
+      "overwrote_later_intent": true
+    },
+    {
+      "scenario": "pending File.text -> preset -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 1,
+        "tone": 64,
+        "motion": 72,
+        "volume": 25
+      },
+      "actual_after_old_read": {
+        "preset": 2,
+        "tone": 64,
+        "motion": 72,
+        "volume": 18
+      },
+      "overwrote_later_intent": true
+    },
+    {
+      "scenario": "pending File.text -> restore -> old File.text resolve",
+      "expected_later_intent": {
+        "preset": 1,
+        "tone": 11,
+        "motion": 22,
+        "volume": 33
+      },
+      "actual_after_old_read": {
+        "preset": 2,
+        "tone": 64,
+        "motion": 72,
+        "volume": 18
+      },
+      "overwrote_later_intent": true
+    }
+  ],
+  "result": "FAIL",
+  "limits": [
+    "SOURCE_VM is source-level control-flow evidence, not a browser permission-dialog, actual audio output, real file dialog, disk save, navigation-restoration timing, GPU or performance observation.",
+    "OfflineAudioContext cancellation discards its eventual result; harness does not claim cancellation stops native rendering computation.",
+    "Actual browser-generated WAV/JSON content, real normal interactions, BFCache/new-document restoration and source-bound performance are parent QA.",
+    "The harness does not execute WebGL renderer/placeSculpture or layout."
+  ],
+  "public_export": {
+    "source_evidence_sha256": "d1e7118d7dc5f6417566c97f06a261abaa1f7c185da9ab8a1612bad184146082",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

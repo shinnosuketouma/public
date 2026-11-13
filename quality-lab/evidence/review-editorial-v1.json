@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "content_id": "gs-000012",
+  "revision": "editorial-studio/v1",
+  "url": "http://127.0.0.1:8765/editorial-studio/v1/site/",
+  "manifest_sha256_supplied": "ffdb135f9809f69cd186eff2dc7163b556cadc62e3fd60d8d150396f7374835b",
+  "manifest_independently_hashed": false,
+  "input_read": [
+    "content/quality-lab/editorial-studio/v1/design/brief.md",
+    "content/quality-lab/editorial-studio/v1/design/benchmark.json"
+  ],
+  "implementation_source_read": false,
+  "status": "VISUAL_NOT_REACHED_AND_REFERENCE_UNVERIFIED",
+  "conclusion": "冊子を主役にした用途の選択と、青い作業面/白い紙面/朱の表紙の統一は成立。自主企画の紙面そのものがまだ基本図形と大見出しの研究段階に見え、編集された内容を扱う精度の証明が弱い。固定参照との同条件到達はUNVERIFIED。",
+  "environment": {
+    "browser": "Chrome extension browser 1",
+    "dedicated_tabs": true,
+    "own_viewports_read_back": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "reference_gallery_viewport_read_back": [
+      1200,
+      852
+    ],
+    "mobile_is_viewport_simulation": true,
+    "motion_modes": "Normal autoplay initially observed; then paused via visible control for closed/open endpoint inspection.",
+    "viewport_reset": true,
+    "viewport_after_reset": [
+      1200,
+      852
+    ],
+    "not_run": [
+      "320/768/1024/1440 visual inspection",
+      "reduced motion",
+      "physical phone",
+      "exact p0/.25/.5/.65/.75/1 sampling",
+      "performance",
+      "download/export/save tests"
+    ]
+  },
+  "observed_states": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Initial autoplay, intermediate opening",
+      "observation": "左上に明朝の二行見出し、右上に対象利用者/説明/CTA、下中央に冊子。朱色の表紙がほぼ垂直に立ち、白い右紙面が見える中間を観察。書物としての同一性は分かり、主要見出しやCTAを覆わない。正確な進捗/経過秒は取得していない。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Paused, 表紙 button selected",
+      "observation": "朱色の長方形表紙に大きな白いaida、黒い日本語題、円、小さい補助文と罫線。影と斜めの姿勢で机上の冊子を示す。広い青い面に対し閉じた一冊は小さめで、主役の中身より周辺の余白の印象が強い。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Paused, 見開き button selected",
+      "observation": "白い二面が中央の綴じ目を挟んで開く。左の巨大な『間』と朱の矩形/白円、右の半円と黒帯、上下の罫線でまとまる。紙の中央には薄い陰影がある。右下の三段組に見える箇所は短い水平線の集まりで、編集対象の文章/データ/図版の関係を読む状態にはなっていない。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Closing action sample",
+      "observation": "表紙へ戻す操作後に、朱の表紙が斜めに前へ重なり下側の白い紙端を残す状態を観察。連続した一冊として読めた。端点間の全フレーム/速度や任意進捗での反転は未観察。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "Works grid, all four self-initiated studies",
+      "observation": "二列の整った一覧。あいだの設計はheroと同じ見開き、句読は青地に大きな白い句読点、積層は緑色の三層の箱形、未完の輪郭は黄色地に細い楕円線の球。色ごとの整理と媒体名は読みやすい。一方、観察した図案は各一つの簡単なモチーフを紙面へ置く構成が中心で、年次レポートの情報面、展示の複数媒体展開などのデザイン精度は視覚では示されない。作品数4だけでは範囲の広さの証明にしない。"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "あいだの設計 detail modal",
+      "observation": "左に表紙を大きく、右に説明/課題/考え方/範囲を置く二列。記述は整理されているが、図版は表紙の拡大で、読める内容を含む新しい見開きや編集の展開はここでも追加されない。"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "Initial/open/closed hero and first work card",
+      "observation": "見出し→説明→幅いっぱいのCTA→冊子→表示操作の縦構成に変わる。主CTAと開閉操作は初期画面内にあり、見出し/説明を冊子が隠す状態は認めなかった。閉じた表紙と開いた見開きの両方を確認。開いた見開きは形と巨大な『間』/半円は読めるが、小さい本文は鑑賞できる大きさではない。一覧は一列に並び、タイトル/説明/ノート追加の順が明快。"
+    }
+  ],
+  "reference_verification": {
+    "overall": "UNVERIFIED",
+    "fixed_comparison_contract": "Own 1440×900 capture and each reference preserve aspect ratio inside a619×432 letterboxed canvas. This independent bounded review did not produce that own capture/canvas, so it does not claim matched geometry comparison.",
+    "references": [
+      {
+        "title": "Bold Portfolio Hero",
+        "url": "https://motionsites.ai/?prompt=%226%22",
+        "observed": "A grey frame only. Image complete=true, natural800×558, drawn619×431.75 at x25/y85, gallery viewport1200×852.",
+        "status": "UNVERIFIED — original visual subject and typography not observed by this verifier. The builder's earlier orange/person observation was not treated as this verifier's own evidence."
+      },
+      {
+        "title": "Ink Portfolio",
+        "url": "https://motionsites.ai/?prompt=ink-portfolio",
+        "observed_media_url": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/ink-portfolio.mp4",
+        "metadata": {
+          "natural": [
+            1440,
+            810
+          ],
+          "drawn_box": [
+            25,
+            85,
+            619,
+            348.1875
+          ],
+          "adjacent_currentTime": 1.2429,
+          "paused": false,
+          "readyState": 2
+        },
+        "observed": "黒地に大きなNoa Velden、右列のMotion Built Sites、中央の暗い有機的形と部分的な写真の表示を観察。文字の役割分けは明確。benchmark記載の中央Workと周辺objectの場面はこの観察では取得できなかった。",
+        "status": "PARTIAL — the clip was observed, but the intended comparison state and matched own canvas were not established. No continuous-motion parity claim."
+      }
+    ],
+    "needed_for_retest": [
+      "Boldの有効な描画状態を同じ固定対象で観察し、灰色の代替面を作品の構図と誤認しない。",
+      "Inkの固定clipで実際の時刻と読めるframeを記録し、benchmarkの場面記述と対応を確認する。",
+      "自作1440×900の初期/中間/終点を固定619×432canvasに比率保持で配置し、各描画矩形を記録する。第三者素材を公開repoへ保存しない。"
+    ],
+    "rights": "Remote observation only. No prompt/source/media download, copying into the work, or rehosting."
+  },
+  "scores": [
+    {
+      "axis": "composition_typography_material",
+      "score": 3,
+      "status": "PROVISIONAL_INTERNAL_REVIEW; reference parity UNVERIFIED",
+      "reason": "配色、見出しの書体、端の整列、CTAの順序は整理されている。紙面の広がりも明快。ただしPCの閉じた主役は広い青い面の中で小さく、紙面を鑑賞するより空白と枠組みが先に残る。拡大した紙面も基本図形と小さな罫線主体で、素材/内容の精度にまだ支配的な不足がある。"
+    },
+    {
+      "axis": "hero_motion",
+      "score": 3,
+      "status": "PROVISIONAL_SAMPLED_STATES; reference parity UNVERIFIED",
+      "reason": "表紙→垂直に近い中間→白い見開きの因果が明快で、同じ一冊を保つ。文字も守る。開いた結果の内容が同じ基本図形の別配置に留まり、開くことで『編集された情報の順序』が分かるというbriefの主張を、動きの前後で十分に見せられていない。正確な中間p/反転のサンプリングは未完了で、連続性の完全な点数ではない。"
+    },
+    {
+      "axis": "mobile_composition",
+      "score": 3,
+      "status": "PROVISIONAL_390_VIEWPORT_ONLY; reference mobile UNVERIFIED",
+      "reason": "縦への再構成、CTAの面積、作品一覧の順序は成立する。端点で見出し/本文/操作が冊子と競合する状態はなかった。ただしheroと一覧ともに紙面内の小文字は読める密度にならず、グラフィックの記号を見ることと編集物を読むことの間が埋まっていない。原作mobile、実機、全進捗、a11yは未観察。"
+    },
+    {
+      "axis": "self_directed_visual_concept",
+      "score": 3,
+      "status": "PROVISIONAL_VISIBLE_WORK_ONLY; authorship/source audit UNKNOWN",
+      "reason": "業種に関係のある一冊を選び、作例を相談ノートへ結ぶ目的は具体的。自主企画表記も見える。四つの図案は配色/図形を変えているが、文字一語+基本図形+補助文の域を越える編集や媒体展開の独自のルールはまだ視覚で証明されない。企画数とcontrol数は加点理由にしない。"
+    }
+  ],
+  "dominant_deficiencies": [
+    {
+      "rank": 1,
+      "category": "content_material / editorial_design",
+      "evidence": "1280の開いた冊子と作品一覧、あいだの設計detail。右紙面の段組は水平線の集まりで、detailも同じ表紙を拡大する。年次レポート/展示への展開も一覧では表紙/一枚の図案に留まる。",
+      "cause": "視覚的な原因は、実際に編集する対象の密度/階層/関係を描く代わりに、象徴的な一文字と図形で作品を完結させていること。コード上の原因は未調査。",
+      "expected_change": "一件の主役作品を深め、実際に読める自主原稿と図版の関係、見出し/本文/注記の順、複数紙面で続くルールを造形へ反映する。新規作品数や飾りのモーションを増やさず、いまの一冊の中身を完成させる。",
+      "retest": "表紙/見開き/詳細を1280と390で観察し、説明文を読まなくても編集対象の内容と順序の変化が見えるか確認する。"
+    },
+    {
+      "rank": 2,
+      "category": "composition / subject_occupancy",
+      "evidence": "1280×720の閉じた表紙は、左上の見出しと右上の説明の下に広い青い空間を残し、小さな一冊として中央に置かれる。390では一冊を読めるほど拡げる余地が少なく、小文字は形状に留まる。",
+      "cause": "初期の余白量と、主役の鑑賞可能な大きさの配分がまだ十分に結びついていない。",
+      "expected_change": "対象の紙面を見せる目的から初期/到着の占有率と文字組を再検討し、余白が主役を強める構図へ整理する。携帯は紙面を単に縮めるだけで失う内容が何かを明確にし、その内容を読める配置にする。",
+      "retest": "同じ画面寸法の初期一枚と開いた一枚を比較し、冊子の記憶に残る図案と編集の精度が説明/CTAと同時に理解できるか確認する。"
+    },
+    {
+      "rank": 3,
+      "category": "comparison_evidence",
+      "evidence": "Boldは灰色、Inkはmanifest記載と異なる観察場面。自作1440→619canvasも未作成。",
+      "cause": "固定対象を選んだことと、読める同条件の参照証跡を取得したことがまだ分離されている。作品の造形欠陥とは別の検証不足。",
+      "expected_change": "上記needed_for_retestの条件を満たし、現在のUNVERIFIEDを残したまま次の観察を追記する。観察不能を高い点数で埋めない。",
+      "retest": "参照二件と自作の実描画矩形/時刻/状態を揃えた独立再比較。"
+    }
+  ],
+  "unknown": [
+    "Functional completion and data persistence/export",
+    "Performance and fault tolerance",
+    "Keyboard/touch/reduced-motion/accessibility",
+    "Source rights/reproduction/handoff",
+    "Exact whole-transition continuity"
+  ],
+  "evidence_retention": "Own work and remote reference screenshots were visually inspected in the CUA transcript only. No local screenshot/video artifact is claimed. No downloads or download event waits were used.",
+  "gate_B": "NOT_PASS — provisional visual scores are3, matched reference comparison is UNVERIFIED, and nonvisual axes are UNKNOWN in this bounded review.",
+  "public_export": {
+    "source_evidence_sha256": "74bd89cc262845c05c990ec46e149f182c6fb69a68b8b5986b6fdf259349fb41",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

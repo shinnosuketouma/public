@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "revision": "sound-studies/v4",
+  "url": "http://127.0.0.1:8765/sound-studies/v4/",
+  "manifest_sha256_supplied": "b91f03ecb88fd11894fc4ac41b6bf8c20dd7d1f6da9aa405b31de5e8ee5e191c",
+  "manifest_independently_hashed": false,
+  "implementation_source_seen": false,
+  "status": "OBSERVED_VISUAL_SCOPE_REACHED",
+  "conclusion": "観察したdesktop視覚範囲では固定Vante/Medusaに対して到達と判断。主役を右列に保ったまま層が開くため、文字を守ることと彫刻を読むことが中間でも両立する。携帯は大きなpreviewと操作の縦構成へ変わり、番号もtoolbar内に保護される。これは視覚範囲の判断であり、機能/性能/a11y/権利を含む総合合格ではない。",
+  "environment": {
+    "browser": "Chrome extension browser 1",
+    "dedicated_new_tab": true,
+    "viewports_read_back": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "hero_heights_read_back": [
+      720,
+      844,
+      740
+    ],
+    "motion_mode": "Normal motion, not reduced and not explicitly paused",
+    "scroll_method": "Native Tab.scroll; no script scroll assignment or internal state mutation",
+    "progress": "p=clamp(scrollY/heroHeight,0,1), #sculpture data-scroll-progress read back",
+    "viewport_reset": true,
+    "viewport_after_reset": [
+      1200,
+      852
+    ],
+    "physical_phone": false,
+    "not_run": [
+      "1440/1024/768 visual inspection",
+      "reduced-motion visual inspection",
+      "physical device",
+      "performance/fallback tests"
+    ]
+  },
+  "reference_scope": {
+    "reference_observation": "visual-benchmark.json — this verifier's independently observed fixed Vante/Medusa clips, reused without re-reading author scores or implementation",
+    "shared_desktop_video_box": [
+      1280,
+      720
+    ],
+    "scope": "Composition, material/depth cues, recognizability through state changes, text protection and stable arrival layout only",
+    "not_required_to_copy": "The references' ribbon, mechanical object, number of parts, color system or amount of motion",
+    "browser_limit": "Both the reference observations and v4 observations here used Chrome. The project quality-config names IAB; this review does not certify IAB runtime behavior.",
+    "original_unobserved": [
+      "live controls/audio/persistence",
+      "mobile",
+      "keyboard/accessibility",
+      "runtime performance",
+      "all frames and original reverse-scroll behavior"
+    ]
+  },
+  "observations": {
+    "desktop_1280x720": {
+      "initial": "左に大きなSound/in formと日本語目的、右に金属彫刻。説明とCTAは左下、presetとpauseは彫刻の下へまとめる。対象/主操作/主役の視線順が明快で、浮遊した別の番号ラベルはない。",
+      "presets": [
+        {
+          "name": "Ember",
+          "observation": "銅色の凝縮した折り層。薄い縁の光と暗い内側、波打つ三つ葉に近い輪郭がある。"
+        },
+        {
+          "name": "Tidal",
+          "observation": "切替が到着した後は銀色の横へ広がる波状の輪。前の形から同じ層の物体が変わることを読み取れる。"
+        },
+        {
+          "name": "Halo",
+          "observation": "到着後は大きな穴を持つ薄い明色金属環。主役の素材語彙を保ちながら、Emberとの差が一目で分かる。"
+        }
+      ],
+      "halo_forward": [
+        {
+          "p": "0.00000",
+          "scrollY": 0,
+          "observation": "右列の大きい環と左列の見出しが分かれる。"
+        },
+        {
+          "p": "0.25000",
+          "scrollY": 180,
+          "observation": "主役が同じ右列で大きさを保ち、左の説明/CTAを覆わない。"
+        },
+        {
+          "p": "0.50000",
+          "scrollY": 360,
+          "observation": "薄い層・暗い内側・明るい縁を読み続けられる。主役が小物化する中間はない。左にinstrument見出しが入り、右の主役と同じ画面を構成する。"
+        },
+        {
+          "p": "0.65000",
+          "scrollY": 468,
+          "observation": "右の主役/toolbarを保ち、左のinstrument見出し/説明/操作パネルが入る。文字の上を横切る軌道を持たず、読みの領域が一貫する。"
+        },
+        {
+          "p": "0.75000",
+          "scrollY": 540,
+          "observation": "輪の層の間隔と向きが変化しても、同じ環として認識できる。本文とtoolbarは明瞭。"
+        },
+        {
+          "p": "1.00000",
+          "scrollY": 720,
+          "observation": "左に説明と音色/slider、右に大きな彫刻とpresetが残る、安定した楽器画面へ到着する。"
+        }
+      ],
+      "halo_reverse_read_back": [
+        {
+          "scrollY": 540,
+          "p": "0.75000"
+        },
+        {
+          "scrollY": 468,
+          "p": "0.65000"
+        },
+        {
+          "scrollY": 360,
+          "p": "0.50000"
+        },
+        {
+          "scrollY": 180,
+          "p": "0.25000"
+        },
+        {
+          "scrollY": 0,
+          "p": "0.00000"
+        }
+      ],
+      "reverse_observation": "同じpresetの逆方向で、右列とtoolbarの配置が対応する状態へ戻る。大きな位置飛び、主役の消失、文字への通過は観察しなかった。ambient motionのある個々の輪郭までpixel一致とは主張しない。",
+      "ember_additional_samples": {
+        "progress": [
+          0,
+          0.5,
+          1
+        ],
+        "observation": "初期の密な銅の折り層から、中間で右側の波と層の隙間が開き、到着では複数の層の向きがほどけた状態になる差を観察。Haloより差が明瞭。対象の素材と輪郭を捨てて別絵へ交換していない。"
+      }
+    },
+    "mobile_390x844": {
+      "initial": "見出し/説明/CTAが上、その下に大きな彫刻とtoolbar。意味のまとまりを縦に再構成しており、主CTAは初期画面に収まる。説明の改行は390では自然に読めた。",
+      "forward_preset": "Ember default Tone38/Motion45",
+      "forward": [
+        {
+          "scrollY": 0,
+          "p": "0.00000"
+        },
+        {
+          "scrollY": 211,
+          "p": "0.25000"
+        },
+        {
+          "scrollY": 422,
+          "p": "0.50000"
+        },
+        {
+          "scrollY": 548.5,
+          "p": "0.64988"
+        },
+        {
+          "scrollY": 633,
+          "p": "0.75000"
+        },
+        {
+          "scrollY": 844,
+          "p": "1.00000"
+        }
+      ],
+      "observation": "中間でも彫刻は層を読める大きさを保つ。toolbarの番号/名前を主役が隠す状態は見られず、本文/見出しとの通路も競合しない。到着では大きなpreviewを上、説明と操作を下へ分ける。p=.5付近では主に彫刻を鑑賞する静かな画面となるが、主役を小さく運ぶ空白ではなく素材と層の変化を読める。",
+      "interaction_view": {
+        "scrollY": 1266,
+        "observation": "previewとpresetが上部に残り、下半分でTone/Motion/Volumeを読める。Toneを38→90、Motionを45→90へ操作し、値/slider位置と主役が同時に可視であることを確認した。単発の変化をambient motionから切り分けて計測していないため、各sliderのgeometryへの因果量や音への効果はこのレビューではUNKNOWN。"
+      },
+      "reverse": [
+        {
+          "scrollY": 633,
+          "p": "0.75000"
+        },
+        {
+          "scrollY": 548.5,
+          "p": "0.64988"
+        },
+        {
+          "scrollY": 422,
+          "p": "0.50000"
+        },
+        {
+          "scrollY": 211,
+          "p": "0.25000"
+        },
+        {
+          "scrollY": 0,
+          "p": "0.00000"
+        }
+      ],
+      "reverse_limit": "EmberのTone/Motion90で逆方向を観察したため、forwardと同じgeometryの厳密比較ではない。配置/主役性/文字の保護を比較した。"
+    },
+    "mobile_320x740": {
+      "initial": "主見出し、説明、CTA、金属彫刻、三presetとpauseが幅内に収まる。説明が狭い列で語中改行するが読め、見出し/CTAの視線を壊すほどの過密はない。",
+      "forward_preset": "Ember Tone90/Motion90 inherited from the preceding interaction",
+      "forward": [
+        {
+          "scrollY": 0,
+          "p": "0.00000"
+        },
+        {
+          "scrollY": 185,
+          "p": "0.25000"
+        },
+        {
+          "scrollY": 370,
+          "p": "0.50000"
+        },
+        {
+          "scrollY": 481,
+          "p": "0.65000"
+        },
+        {
+          "scrollY": 555,
+          "p": "0.75000"
+        },
+        {
+          "scrollY": 740,
+          "p": "1.00000"
+        }
+      ],
+      "presets_at_arrival": "Ember→Tidal→Haloを選び、遷移直後と到着後の両方を目視。各状態で主役とtoolbarは読め、番号/文字への衝突は観察しなかった。",
+      "reverse_preset": "Halo default Tone78/Motion28",
+      "reverse": [
+        {
+          "scrollY": 555,
+          "p": "0.75000"
+        },
+        {
+          "scrollY": 481,
+          "p": "0.65000"
+        },
+        {
+          "scrollY": 370,
+          "p": "0.50000"
+        },
+        {
+          "scrollY": 185,
+          "p": "0.25000"
+        },
+        {
+          "scrollY": 0,
+          "p": "0.00000"
+        }
+      ],
+      "reverse_limit": "Forward/reverseは異なるpreset。これは異なる輪郭でも通路/大きさ/ラベルが成立する確認で、同一geometryのpixel比較ではない。"
+    }
+  },
+  "visual_scores": [
+    {
+      "axis": "composition_typography_material",
+      "score": 4,
+      "scope": "Observed1280×720 initial/intermediate/arrival desktop states and preset visuals",
+      "reason": "書体と余白で左の目的/操作と右の主役を分け、toolbarも同じ右列で一貫する。層の薄い光、暗い内側、穴の輪郭が金属として整合する。Medusaの部品数を真似せず少ない素材語彙で固有の立体を読み取れ、Vanteの文字/素材の役割分けに対しても、観察した構図に明確な見劣りを認めない。"
+    },
+    {
+      "axis": "hero_motion",
+      "score": 4,
+      "scope": "Sampled scroll states and reverse, three preset transitions, Ember additional0/.5/1",
+      "reason": "右列の大きな主役を保ち、層が開く変化を読み続けながら楽器画面へ到着する。逆方向でも同じ構図へ戻り、主要文字/toolbarを守る。Emberで凝縮から層がほどける差が明瞭で、物体を鑑賞する状態から調整する状態へつながる意図がある。Vanteの帯→一覧、Medusaの組立→分解と同じ表現量である必要はなく、同じ主役の同一性/理解/終着を保つという比較軸で見劣りしない。Haloの変化は控えめだが、この用途の静かな環という状態を破綻させない。"
+    },
+    {
+      "axis": "mobile_composition",
+      "score": 4,
+      "scope": "v4 internal visual standard on390/320 viewport simulation; original mobile parity UNKNOWN",
+      "reason": "上のpreviewと下のcontrolへ再構成され、主役を小物化せず番号/名前/本文から分けられる。すべての指定pと逆方向で、文字を守るため主役の素材を捨てる状態はなく、操作時も主役を見続けられる。三つのpresetを最小幅で切り替えても構図を保つ。原作mobileとの比較ではなく、今回のGENSEKI携帯視覚条件への到達点数。"
+    },
+    {
+      "axis": "visual_originality",
+      "score": 4,
+      "scope": "Visible concept relative to the two fixed references",
+      "reason": "音色を薄い金属層の凝縮/波/開いた環として表す系列と、その物体を保持して楽器へ移る構成が固有。Vanteの映像帯やMedusaの白い機械を複製する必要なしに、同じ題材の素材と変化を一貫して示す。全Web作品への新規性やコード/素材の作者は本レビューの主張範囲外。"
+    }
+  ],
+  "dominant_deficiencies": [],
+  "nonblocking_refinements": [
+    "320幅のCTA横説明は『音を/調整』『つ/くる』のような語中改行が残る。読めるが、さらに文字組を整える余地がある。",
+    "Haloのscroll変化はEmberより小さい。各入力と層変化の因果を厳密に評価するには、ambient motionを止めた入力前後の別検査が必要。これは未測定の視覚因果であり機能不良という指摘ではない。"
+  ],
+  "unscored_axes": {
+    "function_and_experience": "UNKNOWN — audio/save/reload/import/export/failure paths not tested by this verifier",
+    "accessibility": "UNKNOWN — touch/key/focus/reduced-motion/assistive technology not tested",
+    "performance_and_resilience": "UNKNOWN — no metrics, GPU/fallback or hidden-state tests",
+    "rights_and_handoff": "UNKNOWN — source/asset/manifest audit intentionally not performed"
+  },
+  "evidence_retention": "Own-work screenshots were visually inspected in the CUA transcript at the read-back states. No saved local PNG/video or full-frame recording is claimed. Reference evidence is the existing independently authored visual-benchmark.json and its CUA observations, not copied media.",
+  "limits": [
+    "Sampled states and reverse observations do not establish frame-by-frame continuity or runtime smoothness.",
+    "Normal motion only, tested widths only, viewport simulations only.",
+    "No author self-score or implementation source was used to justify the scores. Earlier observations identify which visual defect was resolved, but v4 was judged from its own visible states."
+  ],
+  "overall_gate_B": "PENDING_OTHER_AXES — four observed visual axes score4. Full B and A require the separate functional/performance/accessibility/rights evidence; this file alone is not a full PASS.",
+  "public_export": {
+    "source_evidence_sha256": "bb30af5f91e3182e5eac5c6c0ac07c52ae81791a78b7099d2547a9f32cebf319",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

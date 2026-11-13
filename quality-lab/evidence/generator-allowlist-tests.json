@@ -1,0 +1,22 @@
+{
+  "passed": 3,
+  "failed": 0,
+  "tests": [
+    {
+      "test": "sole known Python generator is allowed and hashed",
+      "pass": true
+    },
+    {
+      "test": "bad.py is rejected before manifest creation",
+      "pass": true
+    },
+    {
+      "test": "repeated freeze preserves complete manifest and hashes",
+      "pass": true
+    }
+  ],
+  "public_export": {
+    "source_evidence_sha256": "bfd73022c8f48e35ef68db9a47420582778bca7c19af53f36a737bd0b077bf28",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

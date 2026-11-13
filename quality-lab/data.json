@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-14",
-  "status": "Sound Studiesはv5まで保存。視覚4軸の到達後も、履歴復帰・文字コントラスト・非同期読込を別検査し、見つかった欠陥をv6で修正しています。用途だけから設計する綴目も、実際に読める冊子へ改善中です。",
+  "status": "Sound Studies v6は独立31ケースと通常描画・実ファイル・低モーションの再検査が成功し、視覚の到達も維持。全軸と公開読戻しを最終統合中です。用途だけから設計した綴目v2は、独立検査で見つかった非同期境界とNoJS案内をv3で修正しています。",
   "revisions": [
     {
       "id": "sound-v1",
@@ -259,6 +259,64 @@
       ]
     },
     {
+      "id": "sound-v6",
+      "title": "Sound Studies / v6",
+      "date": "2026-11-14",
+      "verdict": "最終受入の統合待ち",
+      "gate": "PENDING",
+      "path": "../gs-000011/v6/",
+      "code": "https://github.com/shinnosuketouma/public/tree/2611771494a969363171142c4740505c03f81a28/gs-000011/v6",
+      "commit": "2611771494a969363171142c4740505c03f81a28",
+      "summary": "文字色と、JSON読込の取消・後編集・ページ離脱を修正。独立31ケースと実操作の再検査が成功し、視覚4軸も到達を維持。公開ファイルの読戻しと全軸の最終統合を確認しています。",
+      "changes": [
+        "補助文字とアクセントの2色を調整。実背景15組で4.5以上、最小4.594。",
+        "読込開始時の世代・編集revision・active状態を照合し、取消後や後操作後の古い結果・error表示を破棄。",
+        "390幅で正常JSON→保存→再生→Back→復元→JSON/WAVの実保存まで再検査。",
+        "JavaScriptを実際に無効にした別のChrome検証でも、静止画と説明を表示。検証後に通常動作へ復元。"
+      ],
+      "issues": [
+        "公開HTTP/hash読戻しと独立6軸の最終統合が済むまで正式合格にしません。",
+        "実機スマホ・別GPU・Safari、実BFCache event、OS設定変更は未検証。"
+      ],
+      "checks": [
+        {
+          "name": "独立SOURCE_VM",
+          "result": "31 PASS / 162 assertions",
+          "evidence": "取消・後編集4種・遅延reject・非active・音声/storage/WAV拒否等。途中候補で失敗した1例も記録を保持。"
+        },
+        {
+          "name": "最終IAB通常描画",
+          "result": "PASS（PCのviewport模擬）",
+          "evidence": "1440:20.017秒60fps,p95 17.5ms,LCP244ms,CLS0。390:20.000秒60fps,p95 17.5ms,LCP144ms,CLS0。"
+        },
+        {
+          "name": "文字・操作領域",
+          "result": "PASS（測定範囲）",
+          "evidence": "390幅70文字要素で不足0、最小4.818。21操作は全44px以上。"
+        },
+        {
+          "name": "全幅・主役の保護",
+          "result": "PASS（観察範囲）",
+          "evidence": "6幅で横はみ出し0。最終sourceの初期/中間を再確認、他進捗/逆方向は同一geometryの検査と独立視覚再評価を併記。"
+        },
+        {
+          "name": "実ファイル・復帰",
+          "result": "PASS",
+          "evidence": "Halo64/72/18で復帰後のJSON一致、実WAV8秒/705644bytes/非ゼロPCMを確認。"
+        },
+        {
+          "name": "低モーション・代替・NoJS",
+          "result": "PASS（分けた条件）",
+          "evidence": "IABquery reduce/staticで停止と3自作SVGを確認。実NoJSはChrome DevTools UIで静止画/案内を観察し元へ戻した。"
+        },
+        {
+          "name": "独立視覚",
+          "result": "4 / 4 / 4 / 4",
+          "evidence": "v4との描画byte同一性と、v6通常初期/中間/操作の実再観察。色変更による退行なし。"
+        }
+      ]
+    },
+    {
       "id": "editorial-v1",
       "title": "綴目 / v1",
       "date": "2026-11-14",
@@ -295,6 +353,50 @@
           "evidence": "300msのframeを捨てる計算、読込待ちの後編集上書き、選択後の保存済み表示が残る問題を独立再現。"
         }
       ]
+    },
+    {
+      "id": "editorial-v2",
+      "title": "綴目 / v2",
+      "date": "2026-11-14",
+      "verdict": "不合格・非同期境界を修正へ",
+      "gate": "FAIL",
+      "path": "../gs-000012/v2/",
+      "code": "https://github.com/shinnosuketouma/public/tree/0fa1a059ffffebea388c49258a9e35dfc8f859de/gs-000012/v2",
+      "commit": "0fa1a059ffffebea388c49258a9e35dfc8f859de",
+      "summary": "実際の3章の原稿を、表紙・見開き・詳細・全文読書ページへ統一。計測と未保存表示を改善しましたが、独立検査で取消・離脱・古いerror表示とNoJS印刷の欠陥を確認しました。視覚の独立評価は別に継続します。",
+      "changes": [
+        "自主原稿は入口・読む距離・相談の余白の3章。図も本文の意味に合わせ、同じ冊子を複数の読書状態で表示。",
+        "1280の閉じた冊子を大きくし、携帯は片面の読める要点へ到着する構成へ変更。",
+        "20秒の有界計測で300msの遅いframeも保持、CLS max-session、未対応null、選択変更も未保存へ更新。",
+        "Vante/CardStackを1280×720で制作前に観察し直した新版benchmarkを保持。旧v1のUNVERIFIEDは消さない。"
+      ],
+      "issues": [
+        "読込待ち中に新dialogを取り消した後やpagehide後でも、古い読込がノートを適用。",
+        "古い読込のrejectが後の作品選択メッセージを上書き。",
+        "NoJSのindex印刷案内に反してprint CSSが本文を非表示。静的な全文ページの印刷へ案内を正します。"
+      ],
+      "checks": [
+        {
+          "name": "独立SOURCE_VM",
+          "result": "15 PASS / 3 FAIL",
+          "evidence": "18ケース99 assertions。旧主要3指摘は改善したが、取消・離脱・catchの境界で新たに再現。"
+        },
+        {
+          "name": "遅いframeの保持",
+          "result": "改善",
+          "evidence": "16.7/300/16.7msの全intervalを含め8.998fps。停止境界のみ測定から分離。"
+        },
+        {
+          "name": "source/素材/参照",
+          "result": "PASS（監査範囲）",
+          "evidence": "15ファイル123459bytes、全hash・素材・相対HTML参照・秘密signature/path/symlink監査一致。"
+        },
+        {
+          "name": "競合作例への到達",
+          "result": "未判定",
+          "evidence": "新版固定比較に沿った独立視覚評価を継続。AはFAILのため合格数へ含めない。"
+        }
+      ]
     }
   ],
   "references": [
@@ -305,11 +407,15 @@
     {
       "title": "比較作例: Robot Jellyfish",
       "url": "https://motionsites.ai/?prompt=medusa-jellyfish-hero"
+    },
+    {
+      "title": "綴目v2の追加比較: Card Stack",
+      "url": "https://motionsites.ai/?prompt=card-stack"
     }
   ],
   "openItems": [
-    "Sound Studies v6の色・非同期読込の修正を独立再検査し、公開後の全ファイルhashを確認。",
-    "綴目v2の内容・造形と機能修正を、別担当が再評価。",
+    "Sound Studies v6の公開HTTP/hashと独立最終合否の統合。",
+    "綴目v2の独立視覚評価、v3で取消・離脱・古いerror・NoJS案内を修正し再検査。",
     "実機スマホ・別GPU・Safari、日次3件の継続処理能力は今回の検証範囲外。"
   ]
 }

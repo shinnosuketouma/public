@@ -1,0 +1,429 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000011",
+  "revision": "v5",
+  "status": "FAILED_CONTRAST_AND_STALE_IMPORT",
+  "frozen_manifest_sha256": "d74f68958f1e80dc983008a24eef9ad67f6228c4c2a64d5f1eab3a6b0fa7dc94",
+  "gate_a": "FAIL",
+  "gate_b": "FAIL",
+  "motionsites_equivalence": "VISUAL_SCOPE_REACHED_BY_EXACT_SOURCE_INHERITANCE; OVERALL_NOT_ACCEPTED",
+  "source_review": {
+    "result": "P2 stale-import mutation confirmed by independent SOURCE_VM; other reviewed lifecycle/telemetry changes have no actionable source finding.",
+    "javascript_syntax": "PASS",
+    "manifest_files": [
+      {
+        "path": "README.md",
+        "bytes": 3573,
+        "sha256": "dfc219c38110a76a8a836b91253c86bf44daa794218359b5bfe0f5f2523b1625",
+        "manifest_match": true
+      },
+      {
+        "path": "app.js",
+        "bytes": 42273,
+        "sha256": "a3d368a7df8f71131126361fd356f9dff7ee9f52e1a0091c4cc0a20ded69a5ce",
+        "manifest_match": true
+      },
+      {
+        "path": "asset-manifest.json",
+        "bytes": 2600,
+        "sha256": "150d3aa0305b7ca316914469bf69dff5ed21c27ac9a75dc62b4a45a2dfd38be2",
+        "manifest_match": true
+      },
+      {
+        "path": "generate-fallback.py",
+        "bytes": 3443,
+        "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102",
+        "manifest_match": true
+      },
+      {
+        "path": "index.html",
+        "bytes": 10254,
+        "sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e",
+        "manifest_match": true
+      },
+      {
+        "path": "interaction-contract.json",
+        "bytes": 4136,
+        "sha256": "6ea5a7aea83fbce92e4ac863e69e95d9411e50741fa98da95021f8ffa72c07ab",
+        "manifest_match": true
+      },
+      {
+        "path": "mark.svg",
+        "bytes": 236,
+        "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd",
+        "manifest_match": true
+      },
+      {
+        "path": "motion-contract.json",
+        "bytes": 6716,
+        "sha256": "8cb6a3439a741f231a1848ebcfafd04f6d4a671bccab44c5b8c5005deb36fc71",
+        "manifest_match": true
+      },
+      {
+        "path": "sculpture-ember.svg",
+        "bytes": 657185,
+        "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40",
+        "manifest_match": true
+      },
+      {
+        "path": "sculpture-halo.svg",
+        "bytes": 657184,
+        "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518",
+        "manifest_match": true
+      },
+      {
+        "path": "sculpture-tidal.svg",
+        "bytes": 657185,
+        "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6",
+        "manifest_match": true
+      },
+      {
+        "path": "source-manifest.json",
+        "bytes": 2463,
+        "sha256": "d7349a5f9b75f9ade465aa46302307ef1022b0eb0282e842f6acc00184d25e83",
+        "manifest_match": true
+      },
+      {
+        "path": "style.css",
+        "bytes": 22929,
+        "sha256": "9ea5d1e2e38ac344d958c9aafe602574bb8a40f385f6f51d72ee6cdf9419585a",
+        "manifest_match": true
+      }
+    ],
+    "manifest_mismatches": [],
+    "functional_and_visual_blocks": [
+      {
+        "name": "settings_storage_JSON_WAV_live_audio",
+        "identical_to_v4": true,
+        "bytes": 14219,
+        "sha256": "0d83fd3b83999249b6f64924bc2051c69e2c9858ddb3b65762706ba531e7819f",
+        "boundaries": [
+          "function validSettings(value)",
+          "const levelBars ="
+        ]
+      },
+      {
+        "name": "geometry_shader_scroll_render",
+        "identical_to_v4": true,
+        "bytes": 14759,
+        "sha256": "4d81ed887ca4eb44e76577d0660e44c42caadab722b3578ccffd0cd2cf154d56",
+        "boundaries": [
+          "function placeSculpture()",
+          "EOF"
+        ]
+      }
+    ],
+    "visual_static_identity": [
+      {
+        "path": "index.html",
+        "identical_to_v4": true,
+        "sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e"
+      },
+      {
+        "path": "style.css",
+        "identical_to_v4": true,
+        "sha256": "9ea5d1e2e38ac344d958c9aafe602574bb8a40f385f6f51d72ee6cdf9419585a"
+      },
+      {
+        "path": "mark.svg",
+        "identical_to_v4": true,
+        "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+      },
+      {
+        "path": "sculpture-ember.svg",
+        "identical_to_v4": true,
+        "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+      },
+      {
+        "path": "sculpture-tidal.svg",
+        "identical_to_v4": true,
+        "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+      },
+      {
+        "path": "sculpture-halo.svg",
+        "identical_to_v4": true,
+        "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+      },
+      {
+        "path": "generate-fallback.py",
+        "identical_to_v4": true,
+        "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102"
+      }
+    ],
+    "reviewed_changes": [
+      "pageshow schedules one RAF after native form history restoration; updateLabels/updateMotionUI/setAudioUI project canonical state, preset and ranges together. pagehide cancels stale restoration RAF.",
+      "Bounded scalar longtask count/total/max is added; unsupported observer remains false/null and unknown support stays null. Existing rolling20-second render intervals unchanged.",
+      "Audio/JSON/WAV/storage code and layout/shaders are unchanged from v4; no new network or external material dependency."
+    ],
+    "rights": "Original procedural shaders/audio, original SVG generator and four original SVG files. No external media/runtime/font file. Asset-manifest hash/size fields and source-manifest frozen entries are consistent.",
+    "builder_assertions": "Not treated as independent acceptance; our source audit and SOURCE_VM are separate."
+  },
+  "evidence": {
+    "source_vm": {
+      "path": "../evidence/sound-v5-source-tests.json",
+      "result": "FAIL",
+      "assertions": 143,
+      "case_count": 24,
+      "app_sha256": "a3d368a7df8f71131126361fd356f9dff7ee9f52e1a0091c4cc0a20ded69a5ce",
+      "scope": "Actual extracted source control flow with deterministic DOM/storage/audio/file/timer mocks; not real browser API or disk-save evidence. Harness source and hash are preserved inside evidence JSON.",
+      "checks_passed": 20,
+      "checks_failed": 4
+    },
+    "parent_iab": {
+      "path": "../evidence/sound-v5-iab.json",
+      "source_bound": true,
+      "observations": "1440 and39020-second active measures meet fixed numeric targets; ordinary Back produces coherent stopped Ember initial state; explicit saved restore yields Halo64/72/18 consistently; pause zero frame delta; reduced smoke and p.64988 mobile text protection.",
+      "contrast_failure": [
+        {
+          "text": "01",
+          "ratio": 4.19,
+          "min": 4.5,
+          "color": "#bb3d20",
+          "background": "#e3e0d7"
+        },
+        {
+          "text": "01 / The instrument",
+          "ratio": 4.2,
+          "min": 4.5,
+          "color": "#68655d",
+          "background": "#dedbd2"
+        },
+        {
+          "text": "Instrument description",
+          "ratio": 4.2,
+          "min": 4.5,
+          "color": "#68655d",
+          "background": "#dedbd2"
+        },
+        {
+          "text": "Browser telemetry",
+          "ratio": 4.2,
+          "min": 4.5
+        },
+        {
+          "text": "Telemetry description",
+          "ratio": 4.2,
+          "min": 4.5
+        },
+        {
+          "text": "Web Audio + WebGL / no external transmission",
+          "ratio": 4.2,
+          "min": 4.5
+        }
+      ],
+      "back_scope": "Observed ordinary history Back. Real BFCache path is not asserted from this result."
+    },
+    "actual_exports": {
+      "path": "../evidence/sound-v5-exports.json",
+      "source_bound": true,
+      "scenario": "After Back and explicit saved settings restore",
+      "settings": {
+        "preset": 2,
+        "tone": 64,
+        "motion": 72,
+        "volume": 18
+      },
+      "WAV": {
+        "bytes": 705644,
+        "channels": 1,
+        "sample_rate": 44100,
+        "frames": 352800,
+        "duration_seconds": 8.0,
+        "peak": 0.023712158203125,
+        "rms": 0.009809140480823408,
+        "sha256": "80d7cc0bcf8de4518b3886941a29189a063a563461a59e7075bdddd5b2ef5623"
+      },
+      "JSON": {
+        "filename": "sound-studies-halo (2).json",
+        "data": {
+          "format": "genseki-sound-studies",
+          "version": 2,
+          "presetName": "Halo",
+          "settings": {
+            "preset": 2,
+            "tone": 64,
+            "motion": 72,
+            "volume": 18
+          }
+        },
+        "sha256": "9dba717d3b6a1b756f3a55891fcfd445c45b488e29c8b1122d151493a9bdab24"
+      },
+      "interpretation": "Parent inspected actual generated files after ordinary Back and explicit restore. Reviewer validated reported structure, settings, frame/duration/byte arithmetic and manifest identity; did not repeat native download wait."
+    },
+    "inherited_v4": {
+      "layout_functions": "../evidence/sound-v4-iab.json",
+      "fresh_visual": "visual-v4.json",
+      "identity_basis": "HTML/CSS/assets/generator plus full geometry/shader/render block are byte-identical, not an approximate screenshot claim. v5 parent mobile intermediate and initial1280 smoke support reuse. v4 Back mismatch is explicitly superseded only for observed ordinary Back; v5 contrast defect overrides visual score.",
+      "scope": "Same selected Vante/Medusa1280x720 reference clips and internal mobile viewport composition; no parity claim about unknown competitor functions/performance/mobile."
+    }
+  },
+  "findings": [
+    {
+      "priority": "P1",
+      "category": "accessibility_contrast",
+      "title": "13/16px の本文と選択中preset番号が固定コントラスト4.5:1を下回る",
+      "locations": [
+        "style.css:2 (--muted #68655d and --accent #bb3d20)",
+        "style.css:78 (.instrument background #dedbd2)",
+        "style.css:81 and style.css:83 (13/16px muted text)",
+        "style.css:69 and style.css:71 (.preset.active background / active span color)"
+      ],
+      "evidence_type": "Parent IAB computed-style scan plus independent source color-pair ratio calculation",
+      "evidence": {
+        "muted_on_instrument": {
+          "foreground": "#68655d",
+          "background": "#dedbd2",
+          "ratio": 4.2041409805841
+        },
+        "selected_preset_number": {
+          "foreground": "#bb3d20",
+          "background": "#e3e0d7",
+          "ratio": 4.185316532184338
+        },
+        "required": 4.5,
+        "parent_observed_failures": 6
+      },
+      "cause": "Muted text and accent token are reused over darker section/active backgrounds without matching normal-text contrast.",
+      "expected_change": "Darken text tokens or adjust the relevant backgrounds so every actual13/16px text/background pair reaches>=4.5:1; preserve geometry and verify hover/active/error as applicable.",
+      "retest": "Recompute actual text/background pairs across six configured widths, three presets and active toolbar states; confirm no token change introduces another small-text failure. Retain keyboard focus/target checks. This single mandatory failure prevents gate A PASS."
+    },
+    {
+      "priority": "P2",
+      "category": "async_import_state_race",
+      "title": "File.textの完了待ち中に行った後の編集を、古いJSON読み込みが上書きする",
+      "locations": [
+        "app.js:201–214 (generation check only invalidates on a later import/pagehide)",
+        "app.js:132–144 (preset/input mutations)",
+        "app.js:161–176 (restore/reset mutations)"
+      ],
+      "evidence_type": "SOURCE_VM actual extracted import and explicit-edit handlers, deterministic delayed File.text",
+      "evidence": [
+        {
+          "scenario": "pending File.text -> toneinput -> old File.text resolve",
+          "expected_later_intent": {
+            "preset": 0,
+            "tone": 91,
+            "motion": 45,
+            "volume": 25
+          },
+          "actual_after_old_read": {
+            "preset": 2,
+            "tone": 64,
+            "motion": 72,
+            "volume": 18
+          },
+          "overwrote_later_intent": true
+        },
+        {
+          "scenario": "pending File.text -> reset -> old File.text resolve",
+          "expected_later_intent": {
+            "preset": 0,
+            "tone": 38,
+            "motion": 45,
+            "volume": 25
+          },
+          "actual_after_old_read": {
+            "preset": 2,
+            "tone": 64,
+            "motion": 72,
+            "volume": 18
+          },
+          "overwrote_later_intent": true
+        },
+        {
+          "scenario": "pending File.text -> preset -> old File.text resolve",
+          "expected_later_intent": {
+            "preset": 1,
+            "tone": 64,
+            "motion": 72,
+            "volume": 25
+          },
+          "actual_after_old_read": {
+            "preset": 2,
+            "tone": 64,
+            "motion": 72,
+            "volume": 18
+          },
+          "overwrote_later_intent": true
+        },
+        {
+          "scenario": "pending File.text -> restore -> old File.text resolve",
+          "expected_later_intent": {
+            "preset": 1,
+            "tone": 11,
+            "motion": 22,
+            "volume": 33
+          },
+          "actual_after_old_read": {
+            "preset": 2,
+            "tone": 64,
+            "motion": 72,
+            "volume": 18
+          },
+          "overwrote_later_intent": true
+        }
+      ],
+      "cause": "importGeneration advances for later imports/pagehide only; no settings mutation revision is captured and checked across await file.text().",
+      "expected_change": "Track authoritative settings-edit revision (or explicitly invalidate pending import) on every user preset/range/reset/successful restore mutation. Check both the import generation and captured edit revision before applying a read or showing its delayed failure. A newer explicit action must win. Keep new-import and pagehide invalidation.",
+      "retest": "Delay File.text, then change each range/select preset/reset/restore, and resolve/reject old read. Confirm later UI/state/audio/shader/export state stays unchanged and stale status does not replace later intent. Confirm ordinary valid import still applies, invalid import retains settings and newer import still wins."
+    }
+  ],
+  "scores": [
+    {
+      "axis": "composition_typography_assets",
+      "score": 4,
+      "status": "VISUAL_SOURCE_INHERITANCE",
+      "reason": "Fresh v4 visual scope applies through exact visual code/assets identity; contrast failure remains separately binding."
+    },
+    {
+      "axis": "signature_motion",
+      "score": 4,
+      "status": "VISUAL_SOURCE_INHERITANCE",
+      "reason": "Same full-size unfolding/interpolation/shader code and v5 sampled mobile smoke; reference scope unchanged."
+    },
+    {
+      "axis": "function_experience",
+      "score": 3,
+      "status": "FAIL_ASYNC_IMPORT_OVERWRITE",
+      "reason": "Ordinary Back and export journey improved, but delayed JSON import replaces later explicit settings edits. Four independent actual-handler race cases fail."
+    },
+    {
+      "axis": "mobile_accessibility",
+      "score": 3,
+      "status": "FAIL_CONTRAST",
+      "reason": "Mobile composition retained, but six ordinary small-text pairs miss the fixed contrast requirement."
+    },
+    {
+      "axis": "performance_resilience",
+      "score": 4,
+      "status": "SCOPED_MEASURED_EVIDENCE",
+      "reason": "Representative current-desktop IAB1440/39020-second active metrics meet fixed targets; scalar longtask evidence exists, source failure paths discard cancelled work. Browser JS-disabled rendering/real BFCache/other GPUs remain unverified."
+    },
+    {
+      "axis": "originality_handoff",
+      "score": 4,
+      "status": "SOURCE_VERIFIED",
+      "reason": "Frozen13-file source matches; own shaders/audio/assets; explicit operation/motion/source contracts and reproducible original fallback generator."
+    }
+  ],
+  "not_run_or_unknown": {
+    "real_BFCache_event": "UNKNOWN; ordinary Back and mocked pagehide/pageshow are distinguished",
+    "noJS_browser_layout": "NOT_RUN; only noscript/static source path inspected",
+    "OS_reduced_motion_toggle": "NOT_RUN; forced query implementation path is separate",
+    "physical_phone_touch_and_separate_GPU_Safari_Firefox": "NOT_RUN; outside current viewport/current-IAB claim",
+    "public_HTTP_readback": "Not performed by this reviewer; parent publishing audit is separate"
+  },
+  "decision": "Keep v5 frozen as a failing revision. State-restoration and longtask changes are supported, but contrast and four reproduced stale-import overwrite paths fail A; function and mobile/a11y axes remain3. In v6 fix colors plus explicit settings-edit revision protection, then rerun failing cases and source-bound final browser smoke. Do not count v5 as accepted.",
+  "limits": [
+    "All borrowed parent observations are explicitly attributed, source-bound and inspected as saved evidence rather than treated as independent repeated UI execution.",
+    "Total source tree2,070,177bytes includes all three fallback SVG files and metadata; it is not the measured initial transfer and must not be substituted for that metric.",
+    "Scores4 in competitor-unknown functionality/performance/a11y dimensions mean the project internal acceptance standard within recorded environment, not measured superiority/equivalence to the original sites.",
+    "A mandatory missing/unknown path cannot be converted into PASS merely because source code is plausible."
+  ],
+  "public_export": {
+    "source_evidence_sha256": "cafcc796782c090919857d688aed8b064de1407433c07f12d3f270987e15ee42",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

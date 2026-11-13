@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000011",
+  "revision": "v2",
+  "frozen_manifest_sha256": "b74f10262e9e4f5c00886f328aeafd43c85d1ee5ab9c84890590e2a9b1be6155",
+  "gate_a": "FAIL",
+  "gate_b": "FAIL",
+  "motionsites_equivalence": "NOT_ESTABLISHED",
+  "scope": "Bounded regression review of v1 fixes and major new defects. Source/audio lifecycle/fallback generator reviewed; Chrome screenshots, DOM and actual telemetry inspected. Not a complete all-viewport acceptance run.",
+  "environment": {
+    "browser": "Chrome extension browser 1; parent IAB measurements are separate",
+    "url": "http://localhost:8765/sound-studies/v2/",
+    "actual_viewports_verified": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "physical_mobile": false,
+    "viewport_override_reset": true
+  },
+  "improvements": [
+    {
+      "item": "1280×720 hero collision fixed",
+      "evidence": {
+        "hero_height": 720,
+        "japanese_subhead_y": [
+          342.140625,
+          366.140625
+        ],
+        "lower_copy_y": [
+          471.5,
+          608
+        ],
+        "gap_px": 105.359375
+      },
+      "result": "Independent screenshot and DOM: h1/subhead/copy/CTA/preset dock fit without the v1 text collision."
+    },
+    {
+      "item": "Actual sculpture visible while adjusting",
+      "evidence": {
+        "scrollY": 970.5,
+        "progress": 1,
+        "sculpture_rect": {
+          "x": 20,
+          "y": 162.78125,
+          "width": 350,
+          "height": 210
+        }
+      },
+      "result": "Instrument has the real canvas preview; ArrowRight on tone changed38→39 with the sculpture still visible."
+    },
+    {
+      "item": "Pause has mobile accessible name",
+      "result": "390×844 AX exposes 立体の動きを止める. app.js keeps aria-label when span is visually hidden."
+    },
+    {
+      "item": "Pending audio cancellation and pageshow recovery added",
+      "result": "Code inspection: audioGeneration, pendingAudio, hidden/pageInactive checks after resume, unconditional pending disposal on stop, pageshow timer recreation and graphics wake address the v1 paths. Runtime delayed-resume/bfcache race NOT_RUN."
+    },
+    {
+      "item": "Three original fallbacks and useful exports",
+      "result": "Code and source manifest: preset-specific SVGs generated from the same original parametric geometry; no external runtime dependencies/media. JSON import with size/shape bounds and WAV render/cancel exist. Actual saved files remain parent QA responsibility."
+    }
+  ],
+  "top_findings": [
+    {
+      "priority": "P1",
+      "category": "motion_composition",
+      "title": "携帯の中間遷移で彫刻が見出しと説明へ重なる",
+      "locations": [
+        "app.js:449-466 (placeSculpture)",
+        "style.css (mobile .sculpture z-index:36 and mobile slots)"
+      ],
+      "evidence": {
+        "viewport": [
+          390,
+          844
+        ],
+        "scrollY": 548.5,
+        "progress": 0.64988,
+        "slot": "travel",
+        "sculpture_rect": {
+          "x": 20,
+          "y": 293.23101806640625,
+          "width": 350,
+          "height": 255.4921875,
+          "bottom": 548.7232055664062
+        },
+        "instrument_heading_rect": {
+          "x": 20,
+          "y": 353.5,
+          "width": 317.4453125,
+          "height": 211.28125,
+          "bottom": 564.78125
+        }
+      },
+      "observation": "The dark sculpture crosses both heading lines and the copy area in the independent Chrome screenshot. Final p1 placement is good, but the route between the safe endpoints is not safe.",
+      "cause": "The full bounding rectangle is linearly interpolated between two document slots; neither the path nor the glyph/description protection zones constrain the interpolated stage.",
+      "expected_change": "Define a safe intermediate route or a clipped handoff region. Mobile can switch directly between two reserved slots or use a dedicated transition band; avoid passing through heading/copy. Preserve native scroll and reverse continuity.",
+      "retest": "390/320/768 and desktop: p0/.25/.5/.65/.75/1 forward/reverse, with screenshots and rectangle/text collision checks. Verify final interactive preview remains visible."
+    }
+  ],
+  "scores": [
+    {
+      "axis": "composition_typography_assets",
+      "score": 3,
+      "reason": "Desktop hero text collision fixed and all controls fit; mobile transition still damages reading."
+    },
+    {
+      "axis": "signature_motion",
+      "score": 3,
+      "reason": "Same sculpture now moves into the live instrument; intermediate mobile trajectory is not finished. New standalone benchmark playback by this reviewer was not performed; equivalence is not asserted."
+    },
+    {
+      "axis": "function_experience",
+      "score": 3,
+      "reason": "Live preview and keyboard tone adjustment observed; source implements useful JSON/WAV flows. Full save/import/download lifecycle not independently run in this bounded review."
+    },
+    {
+      "axis": "mobile_accessibility",
+      "score": 2,
+      "reason": "Pause naming fixed and initial390 overflow absent, but major reading collision at normal scroll.320 and full keyboard/reduce acceptance NOT_RUN."
+    },
+    {
+      "axis": "performance_resilience",
+      "score": 3,
+      "reason": "390 normal render20.1s56.62fps/p95 17.6ms/LCP92/CLS.005297 is within thresholds. Desktop CLS observations vary with startup/restoration and are not yet conclusive; forced-failure/lifecycle runtime checks missing."
+    },
+    {
+      "axis": "originality_handoff",
+      "score": 4,
+      "reason": "Own mesh/shader/audio and own projected fallback generator with fixed source hashes; no competing media or third-party runtime copied."
+    }
+  ],
+  "telemetry_390": {
+    "count": 1138,
+    "span_seconds": 20.1,
+    "effective_fps": 56.62,
+    "median_ms": 16.7,
+    "p95_ms": 17.6,
+    "lcp_ms": 92,
+    "cls": 0.005297,
+    "resolution": "350x340"
+  },
+  "desktop_cls_observations": [
+    {
+      "context": "Initial1280 reload after setting viewport, reported scroll0",
+      "lcp_ms": 124,
+      "cls": 0.182002
+    },
+    {
+      "context": "Reload after changing viewport while scroll restoration retained scroll1289.5",
+      "lcp_ms": 172,
+      "cls": 0.341115,
+      "limit": "Not a clean first-screen performance sample."
+    },
+    {
+      "context": "Explicit native scroll to0, viewport1280x720 read back, reload",
+      "lcp_ms": 108,
+      "cls": 0,
+      "frames_at_observation": 6,
+      "limit": "Early observation only; a stable20-second desktop retest and layout-shift source evidence are still needed."
+    }
+  ],
+  "diagnostic_warning": "Do not pick only CLS0 as the release result or present .182 as a proven reproducible startup defect. The divergent startup/restoration cases need a controlled run and source attribution. Mobile20-second sample is a separate observation.",
+  "console": {
+    "levels": [
+      "error",
+      "warn"
+    ],
+    "entries": [],
+    "limit": "Only this tab and observed interval; not proof of all paths."
+  },
+  "not_run": [
+    "320/768/1024/1440 in this v2 independent pass",
+    "full trajectory grid and reverse",
+    "reduced runtime",
+    "forced WebGL fallback runtime",
+    "three fallback UI states runtime",
+    "Audio resume delayed hidden race runtime",
+    "bfcache restored runtime",
+    "Audio listening quality",
+    "saved JSON/WAV file verification",
+    "JSON import/invalid file interaction",
+    "all keyboard/menu/dialog paths",
+    "public deployment readback",
+    "fresh standalone reference playback"
+  ],
+  "decision": "Retain as an improved but failing experiment. Fix mobile intermediate travel before claiming gate A/B PASS; complete missing mandatory evidence on the next candidate.",
+  "public_export": {
+    "source_evidence_sha256": "ee1bf244e48d6cb799ba860eae60e0dee1bf1e402387d3e26a3d622cdcb51d15",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

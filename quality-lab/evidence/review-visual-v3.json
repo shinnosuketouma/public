@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "revision": "sound-studies/v3",
+  "url": "http://127.0.0.1:8765/sound-studies/v3/",
+  "frozen_manifest_sha256_supplied_by_orchestrator": "088dea4698f951d112b579585edd3d159ff5b3d8196e0beb758719179b212e20",
+  "manifest_hash_independently_verified": false,
+  "prior_sound_versions_or_scores_seen": false,
+  "implementation_source_seen": false,
+  "status": "VISUAL_NOT_REACHED",
+  "claim": "初期/到着構図と金属の素材表現は良好。ただし中間運動の主役性と、携帯の番号ラベル保護が今回の視覚到達基準に未達。機能/性能を含む総合B合否は本レビューだけでは判定しない。",
+  "environment": {
+    "browser": "Chrome extension browser 1",
+    "dedicated_new_tab": true,
+    "viewports_read_back": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "motion": "Normal motion; sculpture was not paused during this review.",
+    "navigation": "Native browser scrolling through Tab.scroll; no page-script scroll assignment or internal state mutation.",
+    "progress_contract": "p=clamp(scrollY/actualHeroHeight,0,1), supplied by the orchestrator and cross-checked against visible #sculpture data-scroll-progress in reverse observations and mobile observations.",
+    "viewport_reset": true,
+    "viewport_after_reset": [
+      1200,
+      852
+    ],
+    "physical_phone": false,
+    "not_run": [
+      "1440×900 visual review",
+      "1024/768 visual review",
+      "reduced-motion visual review"
+    ]
+  },
+  "reference": {
+    "observation_file": "visual-benchmark.json",
+    "references": [
+      "vante-ribbon-hero",
+      "medusa-jellyfish-hero"
+    ],
+    "shared_comparison_size": [
+      1280,
+      720
+    ],
+    "comparison_scope": "Desktop composition, material cues, readable motion states and text protection against the fixed remote clips at a 1280×720 video box. Original live-site interaction, mobile, performance and accessibility were not observed.",
+    "browser_limit": "This verifier observed both the references and v3 in Chrome. The fixed manifest names IAB, so this is an additional Chrome visual observation, not a same-environment runtime certification.",
+    "mobile_scope": "The phone scores concern v3's own visual composition standard. No reference phone layout was observed, so they do not establish parity with the originals on mobile."
+  },
+  "observations": {
+    "desktop_1280x720": {
+      "initial_ember": "左に大きなサンセリフ/斜体セリフの二行見出し、右に銅色の折り重なる彫刻。日本語の目的と主CTAが初期画面内にあり、主役のための余白がある。彫刻は単なる球ではなく薄い層と三つ葉に近い穴の輪郭を持つ。",
+      "three_presets": [
+        {
+          "preset": "Ember",
+          "observation": "銅色の凝縮した折り層。山谷の縁に細い光が入り、内側は暗く、独自の不均一な輪郭を持つ。"
+        },
+        {
+          "preset": "Tidal",
+          "observation": "切替直後には前の形から移り、到着後は銀色の横へ広がる波状の輪として読めた。見出しや操作領域を動かさず主役側が変化する。"
+        },
+        {
+          "preset": "Halo",
+          "observation": "到着後は薄い明色の金属環。銅色の凝縮形より開いた穴と細い輪郭を持ち、同じ層状の素材語彙が続く。"
+        }
+      ],
+      "forward_scroll": [
+        {
+          "p": 0,
+          "scrollY": 0,
+          "preset": "Halo",
+          "observation": "初期の大きな見出しと大きな主役が左右に分かれる。"
+        },
+        {
+          "p": 0.25,
+          "scrollY": 180,
+          "preset": "Halo",
+          "observation": "主役は右上側の小さめの環へ縮小。左の説明/CTAを覆わない。"
+        },
+        {
+          "p": 0.5,
+          "scrollY": 360,
+          "preset": "Halo",
+          "observation": "主役は画面中央寄りの約80px級の小物となり、見出しと操作パネルに挟まれた余白を移動する。薄い縁や内側の素材差は初期より読みづらく、画面の視覚的な主役ではなくなる。大きさはスクリーンショットの目視概算で、厳密なpixel bbox計測ではない。"
+        },
+        {
+          "p": 0.65,
+          "scrollY": 468,
+          "preset": "Halo",
+          "observation": "小さい環が左列の右端下方を通る。文字を守る一方、広い無地の面に小物が一つという構図になる。"
+        },
+        {
+          "p": 0.75,
+          "scrollY": 540,
+          "preset": "Halo",
+          "observation": "環が再び大きくなり始め、左列の下方に置かれる。見出し/説明/右の操作は判読できる。"
+        },
+        {
+          "p": 1,
+          "scrollY": 720,
+          "preset": "Halo",
+          "observation": "左の説明の下に彫刻、右にpresetと各slider。到着後は素材を読める大きさへ戻り、使う画面としてまとまる。"
+        }
+      ],
+      "reverse_scroll": {
+        "read_back": [
+          {
+            "scrollY": 540,
+            "p": "0.75000"
+          },
+          {
+            "scrollY": 468,
+            "p": "0.65000"
+          },
+          {
+            "scrollY": 360,
+            "p": "0.50000"
+          },
+          {
+            "scrollY": 180,
+            "p": "0.25000"
+          },
+          {
+            "scrollY": 0,
+            "p": "0.00000"
+          }
+        ],
+        "observation": "逆方向の同じ進捗で、観察した位置/大きさは前進時と対応した。中間で本文/主要操作を覆う飛びは目視では認めなかった。全フレーム連続性やframe timingを保証する観察ではない。"
+      }
+    },
+    "mobile_390x844": {
+      "initial": "見出し→彫刻→説明/CTA→presetの縦構成へ変わる。主役は大きく、主要CTAも画面内にある。CTA左の説明は幅が狭く『調/整』等の語中改行が生じ、本文の落ち着きはPCより弱い。",
+      "forward_read_back": [
+        {
+          "scrollY": 211,
+          "p": "0.25000"
+        },
+        {
+          "scrollY": 422,
+          "p": "0.50000"
+        },
+        {
+          "scrollY": 548.5,
+          "p": "0.64988"
+        },
+        {
+          "scrollY": 633,
+          "p": "0.75000"
+        },
+        {
+          "scrollY": 844,
+          "p": "1.00000"
+        }
+      ],
+      "reverse_read_back": [
+        {
+          "scrollY": 633,
+          "p": "0.75000"
+        },
+        {
+          "scrollY": 548.5,
+          "p": "0.64988"
+        },
+        {
+          "scrollY": 422,
+          "p": "0.50000"
+        },
+        {
+          "scrollY": 211,
+          "p": "0.25000"
+        },
+        {
+          "scrollY": 0,
+          "p": "0.00000"
+        }
+      ],
+      "observation": "全指定進捗で見出し/説明/CTAを主役が横切る状態は認めなかった。小さな彫刻は右側の通路を下り、到着時に説明と操作パネルの間で拡大する。p=.25ではHaloの彫刻が右下の『03』へ重なり、番号の左側を隠す。主要本文が安全であることと、補助番号の重なりは区別する。"
+    },
+    "mobile_320x740": {
+      "initial": "小幅でも見出し、彫刻、主CTA、presetが収まる。彫刻は認識できる大きさを維持する。CTA横の説明は三行の細い列となる。",
+      "forward_read_back": [
+        {
+          "scrollY": 185,
+          "p": "0.25000"
+        },
+        {
+          "scrollY": 370,
+          "p": "0.50000"
+        },
+        {
+          "scrollY": 481,
+          "p": "0.65000"
+        },
+        {
+          "scrollY": 555,
+          "p": "0.75000"
+        },
+        {
+          "scrollY": 740,
+          "p": "1.00000"
+        }
+      ],
+      "additional_reverse_sample": {
+        "scrollY": 185,
+        "p": "0.25000",
+        "preset": "Ember",
+        "observation": "Emberへ切替後に逆scrollで戻っても、彫刻が『01』の左側に重なる。番号の問題はHaloだけの輪郭に限定されない。"
+      },
+      "interaction_view": {
+        "scrollY": 1258,
+        "observation": "操作を表示するまで進むと彫刻が上部に残り、その下でpreset/sliderを見られる。HaloのToneを78から20へ変更し、値とslider位置の反映を観察。小さな彫刻でこの入力による視覚差は明確に判定できなかった。続くEmber選択では、上部主役が銅色の凝縮形へ変わるのを観察した。保存/export/audioの成否は本担当では検査していない。"
+      },
+      "not_run": "320幅の逆方向全指定進捗は未実施。逆方向の完全なサンプリングは1280/390で実施した。"
+    }
+  },
+  "visual_scores": [
+    {
+      "axis": "composition_typography_material",
+      "score": 4,
+      "scope": "Observed desktop initial/arrival states and three preset visuals",
+      "reason": "主役と二書体の見出し、説明、CTAの優先順が明快。折り層の薄い光、暗い内側、輪郭の変化が一つの金属物として整合する。Medusaの部品数を模倣せず、少ない素材語彙でも固有の形と奥行きがある。Vanteの余白と文字の役割分けに対し、初期と到着の構図は明確な見劣りを認めない。",
+      "limits": "この4は中間運動の質、全幅、実装権利や機能の完成を含まない。"
+    },
+    {
+      "axis": "hero_motion",
+      "score": 3,
+      "scope": "Preset transitions, sampled native-scroll forward/reverse states",
+      "reason": "同じ彫刻が変形/移動すること、逆方向で対応する位置へ戻ること、主要文字を守ることは成立する。ただしp=.5〜.65で主役が小さな小物となり、金属の素材も形の違いも読みづらい。Vanteの帯から一覧への中間は素材の内容と目的を保ち、Medusaの分解は同じ対象の理解を増やす。v3の中間は文字回避のための運搬区間として見え、状態変化自体の視覚的な必然性がまだ弱い。",
+      "limits": "全フレーム/速度の測定ではない。滑らかな描画や数値上の無衝突を否定する評価ではなく、観察した中間構図の不足。"
+    },
+    {
+      "axis": "mobile_composition",
+      "score": 3,
+      "scope": "Viewport simulation 390×844 and 320×740, v3 internal visual standard",
+      "reason": "PC縮小ではなく縦へ再構成され、操作中も彫刻とcontrolを同時に見られる。主見出し/本文/CTAの通路は守られる。一方p=.25の番号ラベル03/01への重なりが残り、小さい説明列の語中改行も構図の精度を落とす。補助情報まで意図通りに保護した携帯完成形には未到達。",
+      "limits": "比較対象のmobileは未観察。touch/key/reduced-motion/a11y合格や実機携帯品質の点数ではない。"
+    },
+    {
+      "axis": "visual_originality",
+      "score": 4,
+      "scope": "Observable visual concept relative to the two fixed references",
+      "reason": "Vanteの映像リボンやMedusaの白い機械を再現せず、音色を薄い金属層の彫刻とし、銅の凝縮/銀の波/開いた環の一貫した系列を作っている。観察した二作品との関係では独立した視覚の考え方が明瞭。",
+      "limits": "全Web作品との新規性、コード/素材の作者、権利、再実行/引継ぎはsource/manifest監査をしていないためUNKNOWN。"
+    }
+  ],
+  "unscored_axes": {
+    "functional_experience": "UNKNOWN — audio, save, reload, import/export, failure behavior not independently tested by this visual verifier",
+    "accessibility": "UNKNOWN — keyboard, focus, reduced-motion and assistive technology not tested",
+    "performance_and_resilience": "UNKNOWN — no runtime metrics or fallback tests run",
+    "handoff_and_rights": "UNKNOWN — source/asset/manifest audit intentionally outside this review"
+  },
+  "dominant_deficiencies": [
+    {
+      "rank": 1,
+      "classification": "motion_design / composition",
+      "evidence": "1280×720, Halo at scrollY360/468 (p=.5/.65), forward and reverse: a small ring crosses a broad plain region, while its metal layers and its difference from the other forms become difficult to read.",
+      "cause": "Observable design cause: the middle travel scale removes the subject's visual authority. The implementation cause is UNKNOWN because source was not read.",
+      "expected_change": "Recompose the travel corridor and its scale/trajectory so that the same subject remains readable and its arrival toward the instrument is visually purposeful, while preserving the current safe text/control regions. Do not compensate by adding unrelated parts or effects.",
+      "retest": "At the same 1280×720 drawing size, compare p0/.25/.5/.65/.75/1 and reverse. The metal silhouette and purpose should stay readable in the intermediate states as well as at the attractive endpoints."
+    },
+    {
+      "rank": 2,
+      "classification": "composition / text_protection",
+      "evidence": "390×844 Halo at scrollY211/p.25 and 320×740 Halo/Ember at scrollY185/p.25: the lower-right sculpture crosses the preset number03/01 and hides the number's left side. The main heading/body/CTA remain clear.",
+      "cause": "Observable design cause: the number and the sculpture do not have separated motion/exit regions in this intermediate state. The implementation cause is UNKNOWN.",
+      "expected_change": "Give the number a deliberate earlier exit or an independent protected position during travel; preserve its meaning at the endpoints. Also ease the narrow CTA-side explanatory line wrapping when revising the mobile composition.",
+      "retest": "Inspect Ember/Tidal/Halo at p.25 and nearby intermediate points on390/320, forward and reverse; no meaningful label should be partly hidden by the subject."
+    }
+  ],
+  "evidence_retention": "Screenshots of v3 and reference states were visually inspected in the CUA tool transcript. This review file records exact observable states and native-scroll readbacks; it does not claim locally retained PNG/video artifacts or full-frame continuous recordings.",
+  "overall_gate_B": "NOT_PASS — hero_motion and mobile_composition are3, and the nonvisual axes remain UNKNOWN in this review. No total score is used to offset the unmet axes.",
+  "public_export": {
+    "source_evidence_sha256": "7d222d739cbceb28245c144149159307c6b3508f17cf6a50e6414742ef18f5f4",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

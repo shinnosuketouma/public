@@ -1,0 +1,77 @@
+{
+  "public_commit": "ba6dbb6a60a993bd5dcdb7a31c0ad6bd4a34d905",
+  "pages_status": "built",
+  "base_url": "https://shinnosuketouma.github.io/public/",
+  "files": [
+    {
+      "path": "gs-000012/v1/index.html",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/frozen-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/asset-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/README.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/style.css",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/app.js",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/assets/kutou-poster.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/assets/outline-poster.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/assets/aida-left.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/assets/aida-cover.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/assets/layers-cover.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/assets/aida-right.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000012/v1/assets/favicon.svg",
+      "status": 200,
+      "hash_match": true
+    }
+  ],
+  "all_match": true,
+  "public_export": {
+    "source_evidence_sha256": "13917691b9ee5ff306ffa07970d6791462ca2f8c3f6e47a590d0ffa291901add",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

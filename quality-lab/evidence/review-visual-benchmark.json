@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/visual_verifier",
+  "observed_on_jst": "2026-11-14",
+  "status": "OBSERVED_WITH_SCOPE_LIMITS",
+  "prior_sound_versions_seen": false,
+  "environment": {
+    "browser": "Chrome extension browser 1",
+    "dedicated_tab": true,
+    "viewport": [
+      1280,
+      720
+    ],
+    "video_box": [
+      0,
+      0,
+      1280,
+      720
+    ],
+    "native_video": [
+      1600,
+      900
+    ],
+    "viewport_and_video_box_read_back_from_DOM": true,
+    "temporary_viewport_reset": true,
+    "viewport_after_reset": [
+      1200,
+      852
+    ],
+    "environment_difference": "The benchmark manifest names Codex IAB. This verifier only had Chrome extension access. Geometry was matched, but this is not a same-browser runtime comparison."
+  },
+  "method": "Native media seek with paused readyState 4 read back before each interpreted screenshot. The videos were observed remotely in a dedicated browser tab; media, source, prompt and third-party screenshots were not downloaded, rehosted or saved to the repository.",
+  "references": [
+    {
+      "id": "vante",
+      "page_url": "https://motionsites.ai/?prompt=vante-ribbon-hero",
+      "observed_media_url": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vante-ribbon-hero.mp4",
+      "observations": [
+        {
+          "time_seconds": 0,
+          "paused": true,
+          "readyState": 4,
+          "observation": "黒い大きな余白の中で小さな上部ナビを保ち、大見出しは画面の左右端から入る位置。中央説明は下方へ置かれている。入口から全領域を埋めていない。"
+        },
+        {
+          "time_seconds": 1.631067,
+          "paused": true,
+          "readyState": 4,
+          "observation": "中央の二行の大見出しの間に短い説明があり、主役の連続映像帯はその下を対角に通る。大きな文字と小さな映像を同じ優先度にせず、明快な視線の順序がある。"
+        },
+        {
+          "time_seconds": 3.216828,
+          "paused": true,
+          "readyState": 4,
+          "observation": "連続映像帯が画面上部へ移り、大見出しは左右へ退場しても中央説明は残る。文字の退場と説明の保護に役割差があり、単に全要素を同じ方向へ動かしていない。"
+        },
+        {
+          "time_seconds": 4.3172,
+          "paused": true,
+          "readyState": 4,
+          "observation": "映像帯が六面の一覧へほどける中間。到着前は各面の位置に差があり、帯から一覧へ変形していることが読める。"
+        },
+        {
+          "time_seconds": 4.728964,
+          "paused": true,
+          "readyState": 4,
+          "observation": "六面が三列二段に整い、列・間隔・外縁が揃う。素材の内容を見られる安定した終着構図があり、大きな運動の目的が一覧の閲覧へ結びつく。"
+        }
+      ],
+      "visual_bar": [
+        "初期・中間・終着を通して同じ素材が変化していると読めること。",
+        "動く主役と、残す文字・退場する文字に空間上の役割があること。",
+        "終着が意図のある整列と閲覧可能な大きさを持つこと。"
+      ]
+    },
+    {
+      "id": "medusa",
+      "page_url": "https://motionsites.ai/?prompt=medusa-jellyfish-hero",
+      "observed_media_url": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/medusa-jellyfish-hero.mp4",
+      "observations": [
+        {
+          "time_seconds": 0.113268,
+          "paused": true,
+          "readyState": 4,
+          "observation": "白い外殻、黒い内側、橙の機構、青緑の巻き部が役割を分ける。白い表面にも縁と薄い陰影があり、暗い内部と隙間が立体を説明している。中央主役と左右の情報パネルの領域が分かれる。"
+        },
+        {
+          "time_seconds": 2.644822,
+          "paused": true,
+          "readyState": 4,
+          "observation": "中央コアと上蓋が上方へ離れ、外殻が開いても同じ機械だと理解できる。部品の輪郭、接合する向き、内部の暗さが連続している。注釈は外側へ引き、周辺パネルを主役で隠していない。"
+        },
+        {
+          "time_seconds": 4.915857,
+          "paused": true,
+          "readyState": 4,
+          "observation": "分解した腕の白黒の連続と中央殻の大きな輪郭が両立する。部品数そのものより、各部がどこに属するかと、反射・厚み・隙間の整合が完成度を支えている。橙の状態色は周辺UIにも繰り返され、同じ技術対象としてまとまる。"
+        },
+        {
+          "time_seconds": 7,
+          "paused": true,
+          "readyState": 4,
+          "observation": "本体が上へ画面外に抜け、腕が残る終盤状態も観察した。この動画だけでは実操作で同じ状態へ到達できることは確認できない。"
+        }
+      ],
+      "visual_bar": [
+        "素材の明暗・縁・反射・隙間が同じ構造を説明すること。",
+        "大きな状態変化の前後で主役の同一性と部位の意味が保たれること。",
+        "表示する情報と主役のための領域を分け、読み続ける文字を守ること。"
+      ]
+    }
+  ],
+  "application_to_v3": {
+    "scope": "1280×720 desktop visual composition, material, authored motion states and text protection. 1440×900 and phone viewport are separate v3 observations, because no original mobile reference was observed.",
+    "independent_threshold": "Score 4 means no evident inferiority against the fixed clips within an observable visual axis. Extra components, a matching motif, attractive endpoints or functional correctness alone do not justify 4.",
+    "expected_evidence": [
+      "A clear instrument purpose and a legible sculpture/control composition at the same desktop drawing size.",
+      "A metal surface with deliberate thin edges, interior darkness, reflection and a recognizable silhouette, without requiring Medusa's mechanical vocabulary.",
+      "A transition whose sampled intermediate and reverse states preserve the text/control safety regions.",
+      "Observable visual causality between sound choices/adjustments and the sculpture, followed by a stable usable composition."
+    ]
+  },
+  "unknown_from_reference_video": [
+    "Original live-site controls, actual sound, persistence/export and failure states",
+    "Original runtime performance, device/GPU behavior and network resilience",
+    "Original mobile layout, touch, keyboard and accessibility",
+    "Frame-by-frame continuity and original reverse-scroll behavior"
+  ],
+  "limitations": [
+    "Paused samples support claims about the observed states, not complete continuous playback or original interactive timing.",
+    "The browser's native media controls cover a bottom strip; that strip was excluded from grading original page content.",
+    "The first screenshot immediately after a seek at Vante 3.216828 had readyState 1 and was discarded. The readyState 4 screenshot was used.",
+    "A native media-control AX click during initial Medusa loading returned a missing-layout error; a fresh state showed the video ended, and visible native seek coordinates were then used successfully."
+  ],
+  "public_export": {
+    "source_evidence_sha256": "63470e4287646e631590ac95018761c7db8981875b89c6117d682b88aff1ba62",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

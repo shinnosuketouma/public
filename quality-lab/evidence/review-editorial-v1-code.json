@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000012",
+  "revision": "v1",
+  "scope": "Bounded source/function/measurement review; no browser or download wait used in this pass.",
+  "frozen_manifest_sha256": "ffdb135f9809f69cd186eff2dc7163b556cadc62e3fd60d8d150396f7374835b",
+  "manifest_files": 12,
+  "manifest_mismatches": [],
+  "source_review": "CHANGES_REQUIRED",
+  "gate_a": "FAIL",
+  "gate_b": "PENDING_SEPARATE_VISUAL_REVIEW",
+  "accepted_production_count": 0,
+  "findings": [
+    {
+      "priority": "P1",
+      "title": "遅いframeを除外した累積telemetryは受入性能の証拠に使えない",
+      "locations": [
+        "site/app.js:147",
+        "site/app.js:150",
+        "site/app.js:152",
+        "site/app.js:153",
+        "site/app.js:166"
+      ],
+      "evidence": "実際のtick関数をVMで実行し、raw16.7/300/16.7msの入力から300msが除外され、activeMs33.4・実効59.88fpsと報告することを確認。全3intervalでは約9.00fps。interval配列は上限/期間なしで蓄積し、200msごとに全copy/sort/JSON化する。CLSは全期間の単純和でmax-sessionではなく、非対応時も初期0が残る。",
+      "impact": "引っかかりを性能結果から隠し、長時間開いた場合は計測処理自体が増大する。採用済みquality-configの20秒実測と比較できない。",
+      "fix": "実際に動作した区間の全raw intervalを遅さで除外せず、時刻付きの固定20秒ring bufferへ記録。非表示/停止の境界だけを別状態として除外し、生sampleと中央値/p95/実効fpsを出す。CLSはmax-session、非対応指標はnull/unsupported。longTasksも有界にする。",
+      "retest": "300ms以上のstallを含む実ブラウザfixture、20秒通常、停止/hidden復帰、長時間保持、未対応Observerで欠測を確認。"
+    },
+    {
+      "priority": "P2",
+      "title": "非同期JSON読込みが後から行った編集や初期化を上書きする",
+      "locations": [
+        "site/app.js:89",
+        "site/app.js:91",
+        "site/app.js:100"
+      ],
+      "evidence": "実import handlerと実validDraftをVMで実行。file.textを保留し、その間に新しいdraft編集/初期化状態を設定してから、有効な旧JSONをresolveすると旧JSONのdraftへ置き換わった。世代token/dirty revision/取消検査がない。",
+      "impact": "読み込み中の操作や後から始めた読込みより前の結果が、現在の入力を失わせ得る。",
+      "fix": "読込み世代とdraft編集revisionを記録し、await後にどちらも一致する場合だけ適用。新規import/reset/編集で古い結果を無効化するか、読込み中の編集を明示停止して取消操作を設ける。",
+      "retest": "遅延した有効JSONの読込み中にreset/編集/次のfile選択を行い、古い結果が最新stateを壊さないこと。"
+    },
+    {
+      "priority": "P2",
+      "title": "作品の追加・取消で保存済み表示が未保存へ変わらない",
+      "locations": [
+        "site/app.js:60",
+        "site/app.js:64",
+        "site/app.js:70",
+        "site/app.js:95",
+        "site/app.js:108"
+      ],
+      "evidence": "#storage-noteを未保存へ更新するのはpurpose/medium/timing/notesのinput handlerのみ。保存/復元後のtoggleProjectはdraft.selectedを変えてsync/statusするが、保存時刻または復元済み表示を維持する。",
+      "impact": "ノートの重要な選択変更が保存されていないのに保存済みの説明が残り、reload時に直前の作品選択を失う。",
+      "fix": "全draft変更を一つのmarkDirtyへ集約し、作品の追加/取消・選択rowの削除でも未保存表示へ更新する。保存成功時だけ保存済みrevisionを更新する。",
+      "retest": "保存→作品追加/取消→未保存表示→reloadでは旧保存state、再保存→reloadでは新stateになることを確認。"
+    }
+  ],
+  "verified_checks": {
+    "syntax": "node --check PASS",
+    "validator_boundaries": [
+      {
+        "case": "valid complete draft",
+        "result": "ALLOWED"
+      },
+      {
+        "case": "unknown project id",
+        "result": "REJECTED"
+      },
+      {
+        "case": "duplicate project id",
+        "result": "REJECTED"
+      },
+      {
+        "case": "unknown purpose",
+        "result": "REJECTED"
+      },
+      {
+        "case": "timing61chars",
+        "result": "REJECTED"
+      },
+      {
+        "case": "notes1201chars",
+        "result": "REJECTED"
+      },
+      {
+        "case": "incomplete draft for save/JSON",
+        "result": "ALLOWED_AS_DESIGNED"
+      }
+    ],
+    "safe_output": "Imported strings are assigned by textContent or input.value; selected ids use Object.hasOwn(PROJECTS), and known fields are copied into a fresh draft. No HTML injection path found in reviewed code.",
+    "file_input_focus": "No issue found after full selector inspection: .file-label:has(+.file-input:focus-visible) relays a visible outline to the label; the early concern about clipped-only focus was withdrawn. Runtime key-only import still NOT_RUN.",
+    "print_code": "Print requires the same selected/purpose validation and has @media print for the note-only sheet. Real print preview and output pagination NOT_RUN.",
+    "rights": "Seven small SVGs are original authored study graphics with no external media/runtime/font binary. The source and manifest match; client outcomes are explicitly not claimed."
+  },
+  "builder_evidence_assessment": {
+    "path": "content/quality-lab/editorial-studio/v1/evidence/builder-checks.json",
+    "decision": "Useful implementation observations, not independent acceptance. It explicitly labels UNVERIFIED, notes pre-freeze screenshot differences, incomplete downloads and unfinished skill gate. These limits must be retained.",
+    "not_inherited_as_final_pass": [
+      "final frozen viewport screenshots",
+      "20-second representative performance",
+      "saved export file content",
+      "JSON import roundtrip/error UI",
+      "print output",
+      "full keyboard/touch route",
+      "independent visual score"
+    ]
+  },
+  "not_run": [
+    "browser interactions by this reviewer in this pass",
+    "all final viewport renders",
+    "reduced/pause/hidden runtime",
+    "representative20-second metrics",
+    "full JSON import UI and cancellation",
+    "localStorage quota/security/corruption UI",
+    "actual TXT/JSON saved bytes",
+    "print preview/output",
+    "complete key-only journey",
+    "publication HTTP/hash readback"
+  ],
+  "decision": "Keep this frozen v1 as an UNVERIFIED/failed code-review experiment. Fix the measurement protocol, asynchronous state protection and dirty-state notice in a new revision; do not count it as an accepted production work.",
+  "public_export": {
+    "source_evidence_sha256": "d6443abd1cc0e5032735214fda1175969e293841e43be96cd446c6a304926f43",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

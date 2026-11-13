@@ -1,0 +1,94 @@
+{
+  "passed": 21,
+  "failed": 0,
+  "tests": [
+    {
+      "test": "local freeze",
+      "pass": true
+    },
+    {
+      "test": "append/idempotence preserve existing gallery",
+      "pass": true
+    },
+    {
+      "test": "source mutation rejected",
+      "pass": true
+    },
+    {
+      "test": "existing public revision rejected",
+      "pass": true
+    },
+    {
+      "test": "source symlink rejected",
+      "pass": true
+    },
+    {
+      "test": "hidden rejected",
+      "pass": true
+    },
+    {
+      "test": "credentials rejected",
+      "pass": true
+    },
+    {
+      "test": "prompt rejected",
+      "pass": true
+    },
+    {
+      "test": "api-key rejected",
+      "pass": true
+    },
+    {
+      "test": "unknown rejected",
+      "pass": true
+    },
+    {
+      "test": "oversize rejected",
+      "pass": true
+    },
+    {
+      "test": "secret-signature rejected",
+      "pass": true
+    },
+    {
+      "test": "site traversal rejected",
+      "pass": true
+    },
+    {
+      "test": "revision traversal rejected",
+      "pass": true
+    },
+    {
+      "test": "dot segment source rejected",
+      "pass": true
+    },
+    {
+      "test": "source root symlink rejected",
+      "pass": true
+    },
+    {
+      "test": "public revision symlink rejected",
+      "pass": true
+    },
+    {
+      "test": "relative provenance only",
+      "pass": true
+    },
+    {
+      "test": "unknown option rejected",
+      "pass": true
+    },
+    {
+      "test": "duplicate option rejected",
+      "pass": true
+    },
+    {
+      "test": "missing required option rejected",
+      "pass": true
+    }
+  ],
+  "public_export": {
+    "source_evidence_sha256": "fc0389d582f92bcb6689d9923b4e329b6c226327c14c847c4bc70f71be4fe585",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

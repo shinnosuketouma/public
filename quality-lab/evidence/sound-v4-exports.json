@@ -1,0 +1,42 @@
+{
+  "date_jst": "2026-11-14",
+  "source_url": "http://127.0.0.1:8765/sound-studies/v4/?qa-width=1440",
+  "source_manifest_sha256": "b91f03ecb88fd11894fc4ac41b6bf8c20dd7d1f6da9aa405b31de5e8ee5e191c",
+  "settings": {
+    "preset": 2,
+    "tone": 64,
+    "motion": 72,
+    "volume": 18
+  },
+  "filename": "sound-studies-halo-8s.wav",
+  "channels": 1,
+  "sample_width": 2,
+  "sample_rate": 44100,
+  "frames": 352800,
+  "duration_seconds": 8.0,
+  "bytes": 705644,
+  "sha256": "14d15ff2333b2a96f2f779c1a990aedaee3a4cc0bf27021a661223a3ce4179ef",
+  "peak": 0.023712158203125,
+  "rms": 0.009809140529802642,
+  "nonzero_samples": 352042,
+  "pass": true,
+  "json_export": {
+    "filename": "sound-studies-halo (1).json",
+    "sha256": "9dba717d3b6a1b756f3a55891fcfd445c45b488e29c8b1122d151493a9bdab24",
+    "data": {
+      "format": "genseki-sound-studies",
+      "version": 2,
+      "presetName": "Halo",
+      "settings": {
+        "preset": 2,
+        "tone": 64,
+        "motion": 72,
+        "volume": 18
+      }
+    }
+  },
+  "public_export": {
+    "source_evidence_sha256": "14fcd8f16e36a225c3860af23e29c0d5c8f7c456034a3b453ffb3e1aa908a1d5",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

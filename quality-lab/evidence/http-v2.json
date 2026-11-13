@@ -1,0 +1,81 @@
+{
+  "url": "https://shinnosuketouma.github.io/public/gs-000011/v2/",
+  "source_commit": "b3c3bf845cb5a9fafed6688234f2c241d2857fa8",
+  "files": [
+    {
+      "path": "README.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "asset-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "generate-fallback.py",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "interaction-contract.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "mark.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "motion-contract.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "sculpture-ember.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "sculpture-halo.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "sculpture-tidal.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "source-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "frozen-manifest.json",
+      "status": 200,
+      "hash_match": true
+    }
+  ],
+  "pass": true,
+  "public_export": {
+    "source_evidence_sha256": "8ecc62374a29d3519432d165b6533251d0d93498fad3269eb9f5998d07706ffc",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

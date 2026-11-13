@@ -1,0 +1,42 @@
+{
+  "source_revision": "v6",
+  "manifest_sha256": "afe8a7ac8a7209f7e9805bed4cca28f99063b9ed736f45aa820c806f0c118be2",
+  "scenario": "Actual IAB390 valid JSON import, save, play, Back, saved restore, export",
+  "settings": {
+    "preset": 2,
+    "tone": 64,
+    "motion": 72,
+    "volume": 18
+  },
+  "filename": "sound-studies-halo-8s (2).wav",
+  "channels": 1,
+  "sample_width": 2,
+  "sample_rate": 44100,
+  "frames": 352800,
+  "duration_seconds": 8.0,
+  "bytes": 705644,
+  "sha256": "38dec7f9b6c3ebfc79ad80ab58f266283efe8fe61e07f60ff6609b3582be0b58",
+  "peak": 0.023712158203125,
+  "rms": 0.009809140347072424,
+  "nonzero_samples": 352042,
+  "json_export": {
+    "filename": "sound-studies-halo (3).json",
+    "data": {
+      "format": "genseki-sound-studies",
+      "version": 2,
+      "presetName": "Halo",
+      "settings": {
+        "preset": 2,
+        "tone": 64,
+        "motion": 72,
+        "volume": 18
+      }
+    },
+    "sha256": "9dba717d3b6a1b756f3a55891fcfd445c45b488e29c8b1122d151493a9bdab24"
+  },
+  "pass": true,
+  "public_export": {
+    "source_evidence_sha256": "08758e53c851ac9e6df784249f53fe43ae22d306bda7b4a2a5d81427f1dff258",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

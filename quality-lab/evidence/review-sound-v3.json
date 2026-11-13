@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000011",
+  "revision": "v3",
+  "status": "SOURCE_REVIEW_COMPLETE_ACCEPTANCE_PENDING",
+  "frozen_manifest_sha256": "088dea4698f951d112b579585edd3d159ff5b3d8196e0beb758719179b212e20",
+  "gate_a": "PENDING",
+  "gate_b": "PENDING",
+  "motionsites_equivalence": "PENDING_VISUAL_AND_ACCEPTANCE_EVIDENCE",
+  "source_review": {
+    "result": "NO_ACTIONABLE_FINDINGS_IN_REVIEWED_DIFF",
+    "javascript_syntax": "PASS",
+    "frozen_manifest_files": 13,
+    "frozen_manifest_mismatches": [],
+    "change_scope": [
+      "bounded piecewise sculpture path with reserved corridor and decoration fade",
+      "natural-flow instrument column and end slot",
+      "hide fixed host until positioned without changing in-flow content",
+      "raw layout-shift sources for diagnosing CLS",
+      "consolidated CSS and noscript fallback positioning"
+    ],
+    "function_identity": {
+      "settings_storage_json_wav_audio_lifecycle_help": {
+        "identical_to_v2": true,
+        "bytes": 19308,
+        "sha256": "109f3f89ee5e18f465f260221f1a66aa31a3b9b6e15d426d9ecd1f62276fed93",
+        "source_boundaries": [
+          "function validSettings(value)",
+          "function placeSculpture()"
+        ]
+      },
+      "preset_and_initial_runtime": {
+        "identical_to_v2": true,
+        "bytes": 1495,
+        "sha256": "649142d3c2882560fd962b3667dc7643533054b4e3b8df3837e61f74896ef73a",
+        "source_boundaries": [
+          "const presets = [",
+          "const metrics = {"
+        ]
+      },
+      "geometry_and_material_shaders": {
+        "identical_to_v2": true,
+        "bytes": 3764,
+        "sha256": "ddc5a4dabf40b9130a0c44807ac3f566a22c8acbad3c7d5201259b5243b1ac39",
+        "source_boundaries": [
+          "const vertexSource = `",
+          "function createRenderer()"
+        ]
+      }
+    },
+    "asset_identity": [
+      {
+        "path": "mark.svg",
+        "identical_to_v2": true,
+        "bytes": 236,
+        "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+      },
+      {
+        "path": "sculpture-ember.svg",
+        "identical_to_v2": true,
+        "bytes": 657185,
+        "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+      },
+      {
+        "path": "sculpture-tidal.svg",
+        "identical_to_v2": true,
+        "bytes": 657185,
+        "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+      },
+      {
+        "path": "sculpture-halo.svg",
+        "identical_to_v2": true,
+        "bytes": 657184,
+        "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+      },
+      {
+        "path": "generate-fallback.py",
+        "identical_to_v2": true,
+        "bytes": 3443,
+        "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102"
+      }
+    ],
+    "rights": "No new third-party media/runtime dependency added. Same original geometry/material shaders, preset-specific SVGs and own generator as reviewed v2. OS font stack only; no font file redistribution.",
+    "notes": [
+      "Synthetic4020 rectangle assertions are described by Builder; they are not a substitute for real text/glyph/slot bounds in the browser.",
+      "Visual continuity and safety of the new path require forward/intermediate/reverse real-browser observations. No visual PASS is inferred from source."
+    ]
+  },
+  "inherited_evidence": [
+    {
+      "path": "docs/content-production/quality-lab/evidence/sound-v2-wav.json",
+      "scope": "Actual PCM/WAV header and nonzero signal checks on v2; exporter/live audio graph block is byte-identical in v3.",
+      "observed_values": {
+        "channels": 1,
+        "sample_width": 2,
+        "sample_rate": 44100,
+        "frames": 352800,
+        "duration_seconds": 8,
+        "bytes": 705644,
+        "sha256": "940ab250f3f241eb6cef84f565f56ed84a5597a837ed1f214e4dc8dbccf2132e",
+        "peak": 0.032745361328125,
+        "rms": 0.014050503560456616
+      },
+      "limits": "This evidence JSON does not itself bind a frozen source manifest, settings snapshot, or saved artifact path. It is inherited regression evidence, not a fresh v3 export PASS."
+    },
+    {
+      "path": "docs/content-production/quality-lab/evidence/sound-v2-iab.json",
+      "scope": "v2 observed save/reset/restore tone100→38→100 and preview visible; matching functional block retained.",
+      "limits": "The v3 CSS/DOM wrapper changed, so a final v3 interaction smoke test remains required."
+    }
+  ],
+  "acceptance_evidence": {
+    "parent_final_browser_qa": "PENDING",
+    "fresh_visual_verifier_v3": "PENDING"
+  },
+  "scores": [
+    {
+      "axis": "composition_typography_assets",
+      "score": null,
+      "status": "PENDING_FINAL_EVIDENCE"
+    },
+    {
+      "axis": "signature_motion",
+      "score": null,
+      "status": "PENDING_FINAL_EVIDENCE"
+    },
+    {
+      "axis": "function_experience",
+      "score": null,
+      "status": "PENDING_FINAL_EVIDENCE"
+    },
+    {
+      "axis": "mobile_accessibility",
+      "score": null,
+      "status": "PENDING_FINAL_EVIDENCE"
+    },
+    {
+      "axis": "performance_resilience",
+      "score": null,
+      "status": "PENDING_FINAL_EVIDENCE"
+    },
+    {
+      "axis": "originality_handoff",
+      "score": 4,
+      "status": "SOURCE_VERIFIED",
+      "reason": "Own geometry/shader/audio and generator, no new external runtime/media, manifest hashes match."
+    }
+  ],
+  "decision": "Do not mark all A/B PASS until the final source-bound browser evidence and fresh visual evaluation have been inspected. Source review alone has no new actionable blocker.",
+  "public_export": {
+    "source_evidence_sha256": "e3fcb50337467cda2e358b37e1bbbae4797fcbd9f8a84c735527a96a552e2c69",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "date_jst": "2026-11-14",
+  "revision": "v6",
+  "manifest_sha256": "afe8a7ac8a7209f7e9805bed4cca28f99063b9ed736f45aa820c806f0c118be2",
+  "environment": "Codex IAB on the same desktop; physical mobile devices NOT_RUN",
+  "active_render": {
+    "1440x900": {
+      "span_seconds": 20.017,
+      "count": 1201,
+      "effective_fps": 60,
+      "median_ms": 16.7,
+      "p95_ms": 17.5,
+      "lcp_ms": 244,
+      "cls": 0,
+      "long_tasks_navigation": {
+        "supported": true,
+        "count": 1,
+        "max_duration_ms": 54,
+        "total_duration_ms": 54
+      },
+      "resolution": "649x680"
+    },
+    "390x844": {
+      "span_seconds": 20,
+      "count": 1200,
+      "effective_fps": 60,
+      "median_ms": 16.7,
+      "p95_ms": 17.5,
+      "lcp_ms": 144,
+      "cls": 0,
+      "long_tasks_navigation": {
+        "supported": true,
+        "count": 0,
+        "max_duration_ms": 0,
+        "total_duration_ms": 0
+      },
+      "resolution": "350x360"
+    }
+  },
+  "layout_smoke": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "initial_and_p65_overflow": [
+        0,
+        0
+      ],
+      "cta_bottom": 653.773193359375,
+      "progress": 0.65,
+      "host": [
+        658.6812744140625,
+        79.19999694824219,
+        573.3125,
+        560
+      ],
+      "heading": [
+        48,
+        320,
+        517.40625,
+        242.53125
+      ]
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "initial_and_p65_overflow": [
+        0,
+        0
+      ],
+      "cta_bottom": 693.0130615234375,
+      "progress": 0.64974,
+      "host": [
+        529.324951171875,
+        88.40625,
+        462.6640625,
+        608
+      ],
+      "heading": [
+        32,
+        349,
+        419.515625,
+        226.6875
+      ]
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "initial_and_p65_overflow": [
+        0,
+        0
+      ],
+      "cta_bottom": 409.8638916015625,
+      "progress": 0.6499,
+      "host": [
+        32,
+        187.16465759277344,
+        704,
+        509.9453125
+      ],
+      "heading": [
+        32,
+        916.4453125,
+        704,
+        226.6875
+      ]
+    },
+    {
+      "viewport": [
+        320,
+        740
+      ],
+      "initial_and_p65_overflow": [
+        0,
+        0
+      ],
+      "cta_bottom": 316.3015441894531,
+      "progress": 0.65,
+      "host": [
+        16,
+        150,
+        288,
+        340
+      ],
+      "heading": [
+        16,
+        647,
+        288,
+        261.078125
+      ]
+    }
+  ],
+  "additional_layout_viewports": {
+    "1440x900_overflow": 0,
+    "390x844_overflow": 0
+  },
+  "layout_inheritance": "All progress samples and reverse in sound-v4-iab.json / reviews/visual-v4.json; HTML, CSS geometry and renderer byte equivalence independently confirmed. v6 final width smoke above, visual-v6 independently reobserved initial/middle/control.",
+  "computed_a11y": {
+    "viewport": [
+      390,
+      844
+    ],
+    "text_elements": 70,
+    "contrast_failures": [],
+    "minimum_observed_ratio": 4.818,
+    "controls": 21,
+    "targets_under44": [],
+    "method": "Computed text foreground vs nearest opaque ancestor background. Supplementary check, not complete a11y certification."
+  },
+  "pause": {
+    "frames_before_after": [
+      2374,
+      2374
+    ],
+    "continuous_frame_delta": 0
+  },
+  "normal_import": {
+    "preset": "Halo03",
+    "range_values": [
+      64,
+      72,
+      18
+    ],
+    "outputs": [
+      64,
+      72,
+      18
+    ],
+    "status": "Imported with filechooser and actual file"
+  },
+  "save_play_back_restore": {
+    "saved_settings": [
+      2,
+      64,
+      72,
+      18
+    ],
+    "play_started": true,
+    "after_back": {
+      "preset": "Ember01",
+      "range_values": [
+        38,
+        45,
+        25
+      ],
+      "outputs": [
+        38,
+        45,
+        25
+      ],
+      "playing": false
+    },
+    "saved_restore": "Halo64/72/18, actual JSON/WAV settings verified in sound-v6-exports.json",
+    "scope": "Ordinary Back observed; real BFCache event is not asserted."
+  },
+  "fallback_route": {
+    "query": "graphics=static&motion=reduce",
+    "renderer": "fallback",
+    "motion": "reduced",
+    "loaded_images": [
+      "sculpture-ember.svg",
+      "sculpture-tidal.svg",
+      "sculpture-halo.svg"
+    ],
+    "labels": [
+      "Ember01",
+      "Tidal02",
+      "Halo03"
+    ],
+    "mobile_menu_help_escape": "PASS"
+  },
+  "reduced_route": {
+    "query": "motion=reduce",
+    "renderer": "webgl",
+    "motion": "reduced",
+    "frames_before_after_idle": [
+      2,
+      2
+    ],
+    "tone_key_end": 100,
+    "output": 100,
+    "frames_after_input": 4,
+    "continuous_frame_delta": 0,
+    "note": "Input causes a finite pair of render updates; no continuous animation. OS preference was not toggled."
+  },
+  "console_warnings_errors": [],
+  "source_failure_tests": "sound-v6-source-tests.json: independent SOURCE_VM31 cases162 assertions PASS, including stale import cancel/edit/reject, audio/storage/WAV failures. Not real permission dialogs.",
+  "unchanged_function_evidence": "sound-v4-iab.json normal valid/invalid import, save-reset-restore, keyboard Tone, help/Escape; sound-v5-iab.json restoration fix. New v6 normal import/Back/export retested above.",
+  "no_js": "Actual Chrome UI disable/reload/static image/noscript/restore recorded independently in ../reviews/visual-v6.json; not an IAB JS-setting toggle.",
+  "initial_bytes_evidence": "sound-v6-initial-bytes.json: source-derived733685bytes, not browser Resource Timing",
+  "publication_readback": "PENDING",
+  "acceptance": "Independent reviewer integrates evidence; this observation file does not self-declare overall PASS.",
+  "unobserved_scope": [
+    "physical phone/touch hardware",
+    "Safari/separate GPU",
+    "system reduced-motion toggle",
+    "real BFCache persisted event"
+  ],
+  "public_export": {
+    "source_evidence_sha256": "65467b2012896262d8152a2dcb562c406a547cd5cceba1fb35a9c840cb2ec2b0",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

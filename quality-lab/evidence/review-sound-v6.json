@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000011",
+  "revision": "v6",
+  "status": "SOURCE_PASS_PENDING_FINAL_BROWSER_AND_PUBLIC_READBACK",
+  "gate_a": "PENDING",
+  "gate_b": "PENDING",
+  "frozen_manifest": {
+    "sha256": "afe8a7ac8a7209f7e9805bed4cca28f99063b9ed736f45aa820c806f0c118be2",
+    "files": 13,
+    "mismatches": []
+  },
+  "tested_app_sha256": "32f3affd568036b836a1638b83c5be185653a4927edc0bd5b4b20d208d4822a6",
+  "source_review": {
+    "result": "問題なし: reviewed source changes and SOURCE_VM31 cases/162 assertions pass after the cancellation correction.",
+    "javascript_syntax": "PASS",
+    "reviewed_changes": [
+      "stateEditRevision increments for every native range input, preset selection, reset, successful restore and successful import. Import captures it before await, and discards results after any later explicit settings action.",
+      "New import-dialog start and cancel invalidate prior generations; missing-file change also invalidates via existing generation increment. pagehide/new-import generation protections remain.",
+      "Stale read rejections cannot overwrite later explicit status; a later range edit without another status receives a discard explanation.",
+      "Only two CSS custom properties change: muted#68655d→#5e5b53 and accent#bb3d20→#ad351b. CSS is otherwise byte-identical."
+    ],
+    "unchanged_segments": [
+      {
+        "name": "WAV encoding/export + WebAudio graph/start/stop",
+        "identical_to_v5": true,
+        "bytes": 9668,
+        "sha256": "5e5171f09c175897a0bcc3e11f30ce467c587a537052773712a241329c3734fa",
+        "boundaries": [
+          "function downloadBlob(blob, filename)",
+          "const levelBars ="
+        ]
+      },
+      {
+        "name": "geometry shader scroll and renderer",
+        "identical_to_v5": true,
+        "bytes": 14759,
+        "sha256": "4d81ed887ca4eb44e76577d0660e44c42caadab722b3578ccffd0cd2cf154d56",
+        "boundaries": [
+          "function placeSculpture()",
+          "EOF"
+        ]
+      }
+    ],
+    "static_files": [
+      {
+        "path": "index.html",
+        "identical_to_v5": true,
+        "sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e"
+      },
+      {
+        "path": "mark.svg",
+        "identical_to_v5": true,
+        "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+      },
+      {
+        "path": "sculpture-ember.svg",
+        "identical_to_v5": true,
+        "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+      },
+      {
+        "path": "sculpture-tidal.svg",
+        "identical_to_v5": true,
+        "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+      },
+      {
+        "path": "sculpture-halo.svg",
+        "identical_to_v5": true,
+        "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+      },
+      {
+        "path": "generate-fallback.py",
+        "identical_to_v5": true,
+        "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102"
+      }
+    ],
+    "css_other_bytes_identical": true,
+    "rights": "No new runtime/media/font dependency or asset. All original SVGs/generator remain byte-identical to v5/v4. Asset/source/frozen metadata final identity is separately audited after freeze.",
+    "implementation_self_tests": "Not accepted as independent evidence. Actual extracted source is run under a reviewer-authored VM with deterministic failure/deferred API mocks."
+  },
+  "source_vm": {
+    "path": "../evidence/sound-v6-source-tests.json",
+    "result": "PASS",
+    "case_count": 31,
+    "assertions": 162,
+    "checks_failed": 0,
+    "bound_app_sha256": "32f3affd568036b836a1638b83c5be185653a4927edc0bd5b4b20d208d4822a6",
+    "prior_unfrozen_runs_preserved": 1,
+    "method": "Actual source UI/state/audio/JSON/WAV/lifecycle handlers with mock DOM/storage/audio/file/timers; separate from browser permission dialogs, file save, navigation timing, GPU or performance."
+  },
+  "resolved_v5_findings": [
+    {
+      "finding": "Delayed File.text overwrites later range/preset/reset/restore",
+      "result": "SOURCE_VM_PASS",
+      "evidence": "Four success-resolution races and six delayed-rejection/status cases preserve later intent."
+    },
+    {
+      "finding": "Small-text contrast below4.5",
+      "result": "PENDING_BROWSER_COMPUTED_STYLE",
+      "evidence": "Only tokens darkened; final actual background/active/error/focus states must be checked by parent IAB."
+    }
+  ],
+  "additional_unfrozen_cancellation_fix": {
+    "scenario": "Pending read→new dialog→cancel→old read resolves",
+    "before_fix": "Confirmed SOURCE_VM_FAIL, included in prior_unfrozen_runs",
+    "after_fix": "PASS; old generation discarded, state and cancel intent retained"
+  },
+  "findings": [],
+  "scores": [
+    {
+      "axis": "composition_typography_assets",
+      "score": 4,
+      "status": "V4_VISUAL_IDENTITY_PENDING_V6_COLOR_SMOKE"
+    },
+    {
+      "axis": "signature_motion",
+      "score": 4,
+      "status": "V4_GEOMETRY_SHADER_IDENTITY_PENDING_V6_SMOKE"
+    },
+    {
+      "axis": "function_experience",
+      "score": null,
+      "status": "PENDING_FINAL_BROWSER_NORMAL_IMPORT_BACK_EXPORT"
+    },
+    {
+      "axis": "mobile_accessibility",
+      "score": null,
+      "status": "PENDING_ACTUAL_CONTRAST_AND_KEYBOARD_SMOKE"
+    },
+    {
+      "axis": "performance_resilience",
+      "score": null,
+      "status": "PENDING_BOUND_PERFORMANCE_INHERITANCE_AND_FINAL_SMOKE"
+    },
+    {
+      "axis": "originality_handoff",
+      "score": 4,
+      "status": "ORIGINAL_SOURCE_REVIEWED_PENDING_FROZEN_AND_PUBLIC_IDENTITY"
+    }
+  ],
+  "pending_evidence": [
+    "Frozen13-file manifest hash/bytes against source tested here.",
+    "Parent final IAB color/normal import/ordinary Back/generated-file checks plus reduced/static/keyboard smoke.",
+    "Exact inheritance audit for v4 six widths/visual and v5 representative20-second measurements; minor changed tokens still require fresh color observation.",
+    "Public HTTP and repository frozen-source hash readback."
+  ],
+  "not_run_or_unknown": [
+    "Real BFCache event capture is separate from ordinary Back and mocked pagehide/pageshow.",
+    "Browser JavaScript-disabled rendered layout NOT_RUN; static noscript source path inspected.",
+    "Physical phone, OS preference toggle, other GPU/Safari/Firefox not asserted."
+  ],
+  "decision": "Source changes are ready to freeze. Do not mark A/B PASS until source-bound final mandatory observations are inspected; prior visual4 alone does not clear missing functionality/a11y/performance or publishing evidence.",
+  "public_export": {
+    "source_evidence_sha256": "fc968cf758d61d677c3bf961c17649b503e99a40e5cedbbcf269f65f1a54803d",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

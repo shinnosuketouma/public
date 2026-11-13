@@ -1,0 +1,57 @@
+{
+  "id": "sound-v3",
+  "title": "Sound Studies / v3",
+  "date": "2026-11-14",
+  "verdict": "不合格・途中で主役が弱まる",
+  "gate": "FAIL",
+  "path": "../gs-000011/v3/",
+  "code": "https://github.com/shinnosuketouma/public/tree/297d96d0341422c11e32fbd6e514bdc33a5d43a2/gs-000011/v3",
+  "commit": "297d96d0341422c11e32fbd6e514bdc33a5d43a2",
+  "summary": "文字を避ける通路を作り、中間で本文を覆う問題は解消しました。しかし主役が小さくなりすぎ、途中の構図が競合水準へ届きませんでした。衝突をなくすだけでは完成にしない、という次の判断につながった版です。",
+  "changes": [
+    "携帯は右側の通路を通って見出し下へ着地。親IAB390幅の進捗.25/.5/.65/.75/1で主見出しとの矩形交差0を確認。",
+    "自然な見出し高さの下24pxへ表示域を置き、CSSの追記連鎖を整理。",
+    "別の評価担当が、旧版や旧採点を見ずに競合動画と1280×720で比較。保存・音声等の機能コードはv2とbyte一致。"
+  ],
+  "issues": [
+    "中間進捗.5〜.65で立体が約80pxの小物になり、素材と形の違いが読みにくくなります。",
+    "携帯の進捗.25で番号01/03が立体に隠れる状態が残ります。",
+    "主見出しの無衝突と、作品としてのモーション品質を分ける必要があります。次版は縮小回避をやめ、構成から変更します。"
+  ],
+  "checks": [
+    {
+      "name": "390幅の主見出し保護",
+      "result": "改善",
+      "evidence": "進捗.25/.5/.64988/.75/1、全点で立体hostと見出しの矩形交差0。逆方向も独立観察。"
+    },
+    {
+      "name": "構図・文字・素材",
+      "result": "4 / 5",
+      "evidence": "独立視覚評価。初期と到着の構図・金属素材は今回の比較に明確な見劣りを認めず。中間は別判定。"
+    },
+    {
+      "name": "主役モーション",
+      "result": "3 / 5・未達",
+      "evidence": "Vanteの中間は素材の内容、Medusaの分解は構造の理解を保つ。v3の中間は文字回避の運搬区間に見える。"
+    },
+    {
+      "name": "携帯構図 / 独自性",
+      "result": "3 / 5、4 / 5",
+      "evidence": "携帯の番号重なり・細い説明列が残る。独自の素材系列は評価。元作例の携帯対応は未観察。"
+    },
+    {
+      "name": "固定source・機能継承",
+      "result": "PASS（継承範囲）",
+      "evidence": "13ファイルhash一致。v2→v3の保存/JSON/WAV/Audio等19308bytesと3SVG/generatorは完全一致。v3実書出しの再検査とは区別。"
+    },
+    {
+      "name": "作品品質の到達",
+      "result": "未達",
+      "evidence": "視覚評価はVISUAL_NOT_REACHED。最終欠陥ゲートも未完了で、合格数へ含めません。"
+    }
+  ],
+  "public_export": {
+    "source_evidence_sha256": "a3541565adaaa6cdc993fb4c989b15975242826c443574efbfba14c8a3ee1d65",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

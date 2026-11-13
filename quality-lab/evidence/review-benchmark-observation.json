@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "observed_on_jst": "2026-11-14",
+  "status": "OBSERVED_WITH_SCOPE_LIMITS",
+  "environment": {
+    "browser": "Chrome extension browser1",
+    "viewport": [
+      1280,
+      720
+    ],
+    "displayed_video_box": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 720
+    },
+    "native_video": [
+      1600,
+      900
+    ],
+    "viewport_verified_from_DOM": true,
+    "viewport_override_reset": true
+  },
+  "method": "Native browser media playback and UI seek. Metadata read from the visible video element. Each interpreted still was read after readyState4; seek-readyState1 screenshots were not used as reliable frame evidence. No video/source/prompt was downloaded or rehosted.",
+  "references": [
+    {
+      "id": "vante",
+      "page_url": "https://motionsites.ai/?prompt=vante-ribbon-hero",
+      "observed_media_url": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vante-ribbon-hero.mp4",
+      "duration_seconds": 7,
+      "video_box": [
+        1280,
+        720
+      ],
+      "native": [
+        1600,
+        900
+      ],
+      "frames": [
+        {
+          "time": 0,
+          "paused": true,
+          "readyState": 4,
+          "observation": "広い黒い空間、隅の小さなブランド/ナビ、中央の短い説明。大見出しの断片が画面端へ置かれ、これから入る動きを構図の一部にしている。"
+        },
+        {
+          "time": 1.636731,
+          "paused": true,
+          "readyState": 4,
+          "observation": "中央に二段の大見出し、短い説明を二行の間に置く。小さな連続映像面が画面下を斜めに走り、文字と映像帯の役割が分かれる。画面を大きなカード枠で埋めず空間を残す。"
+        },
+        {
+          "time": 3.216828,
+          "paused": true,
+          "readyState": 4,
+          "observation": "映像帯が上方へ移り、大見出しは左右へ意図的に退場する。中央の短い説明は同じ場所に残る。主見出しの意図した画面外退出と、読み続ける説明の安全領域を区別している。"
+        },
+        {
+          "time": 4.7233,
+          "paused": true,
+          "readyState": 4,
+          "observation": "6面が揃った3列2段へ到着。上・下段の端、間隔、横の領域が整う。動きの終点が普通に閲覧できる一覧になり、映像素材そのものも各面で独立して動く。"
+        },
+        {
+          "time": 7,
+          "paused": true,
+          "readyState": 4,
+          "observation": "最終3列2段の構図を維持。大きな移動の後に安定した閲覧状態を用意する。"
+        }
+      ],
+      "limited_native_playback_observed": {
+        "playing_state_read_at_seconds": 0.2262,
+        "claim": "Playback state observed; the original live site and its scroll input were not operated."
+      },
+      "quality_standard": [
+        "一つの素材群が、離れた初期状態・移動中・完成一覧を通して同じものとして読める。",
+        "空間の距離と素材の判読性を両立する。遠景は小さく、完成一覧では内容を読める大きさへ戻す。",
+        "文字と主役をただ同時に動かすのでなく、主見出しの退場/説明の保持/一覧への着地という役割を分ける。",
+        "終点は整列し、中間にも意図のある構図がある。最終一枚だけきれいでも十分ではない。"
+      ],
+      "not_observed": [
+        "original live-site interaction",
+        "original mobile",
+        "original keyboard/accessibility",
+        "original runtime performance",
+        "all intermediate frames and reverse scroll"
+      ]
+    },
+    {
+      "id": "medusa",
+      "page_url": "https://motionsites.ai/?prompt=medusa-jellyfish-hero",
+      "observed_media_url": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/medusa-jellyfish-hero.mp4",
+      "duration_seconds": 7,
+      "video_box": [
+        1280,
+        720
+      ],
+      "native": [
+        1600,
+        900
+      ],
+      "frames": [
+        {
+          "time_metadata_adjacent_to_screenshot": 0.1248,
+          "paused": false,
+          "readyState": 4,
+          "observation": "白い機械の外殻・暗い内部・橙の歯車と縁・青緑の内部部品・多数の小さな締結点があり、単一materialの球とは異なる素材/部品の役割が見える。主役は中央、数値/図表/状態のパネルは左右へ分け、文字の場所を予約している。"
+        },
+        {
+          "time": 2.644822,
+          "paused": true,
+          "readyState": 4,
+          "observation": "外殻が開き、ポンプ部が上へ離れる。外側と内側の複数部品、連結した腕、注釈線、内部の暗さがそれぞれ奥行きを伝える。操作対象らしい状態色と主役の分解状態が同じ画面に示される。ただし実機能の結果だとは動画だけから断定しない。"
+        },
+        {
+          "time": 4.915857,
+          "paused": true,
+          "readyState": 4,
+          "observation": "上部コア・外殻・下部部品・腕がさらに離れた分解状態。輪郭が大きく変わっても、それぞれが同じ機械の部品として読める。内部の黒と白い殻、橙/青緑の差、接触/隙間の陰影が、細部の量だけでなく組立ての理解を助ける。"
+        }
+      ],
+      "quality_standard": [
+        "主役に部位と素材の役割がある。明暗/反射/隙間が同じ3D構造を説明する。",
+        "大きな状態変化でも輪郭と因果が読める。主役を無関係な別絵へ差し替えるだけではない。",
+        "表示する製品UIと主役を同じ画面で関連づける。GENSEKI側は動画の見せかけではなく実入力と実結果を確認する。",
+        "情報パネル/見出しと主役のための領域を設計し、意図しない重なりを避ける。"
+      ],
+      "not_observed": [
+        "original live controls and underlying data",
+        "original runtime performance",
+        "original mobile",
+        "original accessibility",
+        "a physical device",
+        "all intermediate frames"
+      ]
+    }
+  ],
+  "application_to_sound_studies": {
+    "required_for_desktop_visual_scope": [
+      "1280×720で対象・主役・主要操作が読める完成構図。",
+      "彫刻の薄い層、反射、内側の暗さ、輪郭に意図がある。単なるprimitiveやblurred glowだけで完成としない。",
+      "preset/音色操作と、実際の彫刻の変化を同じ画面で因果として確認できる。",
+      "hero→instrumentの始点/中間/終点/逆方向すべてが意図のある構図で、説明と操作を壊さない。",
+      "動きの後に、安定して使える状態が残る。"
+    ],
+    "not_required_to_copy": [
+      "競合のブランド/文章/素材/映像リボン/機械造形を複製すること。",
+      "同じ部品数・同じ演出数へ増やすこと。",
+      "動画に見える小さなUI文字や未検証の操作をGENSEKIの実用品質へそのまま採用すること。"
+    ],
+    "scoring_rule": "この観察はdesktopの視覚範囲だけの比較入力。機能・性能・携帯・a11yはGENSEKI独自の合否ゲートで確認し、競合より上/同等とは動画から言わない。未完成の中間軌道を、良いhero一枚や高fpsで相殺しない。"
+  },
+  "evidence_retention": "Reference screenshots were displayed in the verifier tool output only; third-party screenshots/media were not copied into the public repository. This JSON contains authored observations and source URLs.",
+  "limitations": [
+    "Sampling does not establish frame-by-frame continuity, original interactive reverse behavior, runtime fps, or accessibility.",
+    "Native media controls overlay a small strip at the bottom of the video; do not grade content under that browser-control strip as if it were original website UI.",
+    "Video currentTime was read adjacent to screenshots; live-playback metadata can differ by a fraction of a second from the captured frame. Paused observations are the stronger frame evidence."
+  ],
+  "public_export": {
+    "source_evidence_sha256": "1b4585943ed0bb8367bea72d1801828bb1d6ad1b066831ace9921a48961d3477",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

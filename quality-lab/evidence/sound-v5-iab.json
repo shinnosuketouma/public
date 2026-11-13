@@ -1,0 +1,178 @@
+{
+  "date_jst": "2026-11-14",
+  "source_revision": "v5",
+  "manifest_sha256": "d74f68958f1e80dc983008a24eef9ad67f6228c4c2a64d5f1eab3a6b0fa7dc94",
+  "environment": "Codex IAB current desktop; viewport simulation only",
+  "active_render": {
+    "1440x900": {
+      "span_seconds": 20.017,
+      "count": 1177,
+      "effective_fps": 58.8,
+      "median_ms": 16.7,
+      "p95_ms": 17.6,
+      "lcp_ms": 188,
+      "cls": 0,
+      "long_tasks_navigation": {
+        "supported": true,
+        "count": 5,
+        "max_duration_ms": 74,
+        "total_duration_ms": 325
+      },
+      "resolution": "649x680"
+    },
+    "390x844": {
+      "span_seconds": 20.016,
+      "count": 1200,
+      "effective_fps": 59.95,
+      "median_ms": 16.7,
+      "p95_ms": 17.6,
+      "lcp_ms": 440,
+      "cls": 0,
+      "long_tasks_navigation": {
+        "supported": true,
+        "count": 2,
+        "max_duration_ms": 76,
+        "total_duration_ms": 132
+      },
+      "resolution": "350x360"
+    }
+  },
+  "back_retest": {
+    "before": {
+      "preset": "Halo03",
+      "range_values": [
+        64,
+        72,
+        18
+      ],
+      "outputs": [
+        64,
+        72,
+        18
+      ],
+      "playing": true,
+      "frame": 4781
+    },
+    "after": {
+      "preset": "Ember01",
+      "range_values": [
+        38,
+        45,
+        25
+      ],
+      "outputs": [
+        38,
+        45,
+        25
+      ],
+      "playing": false,
+      "frame": 68
+    },
+    "explicit_saved_restore": {
+      "preset": "Halo03",
+      "range_values": [
+        64,
+        72,
+        18
+      ],
+      "outputs": [
+        64,
+        72,
+        18
+      ]
+    },
+    "status": "PASS",
+    "scope": "Observed ordinary history Back. Real BFCache path is not asserted from this result."
+  },
+  "pause": {
+    "frames_before_after": [
+      5807,
+      5807
+    ],
+    "continuous_frame_delta": 0
+  },
+  "reduced_smoke": {
+    "query": "motion=reduce",
+    "frame_first": 2,
+    "mode": "reduced",
+    "overflow_px": 0
+  },
+  "mobile_p65": {
+    "progress": 0.64988,
+    "host": [
+      20,
+      158.3388214111328,
+      350,
+      420.3046875
+    ],
+    "heading": [
+      20,
+      763.8046875,
+      350,
+      211.28125
+    ],
+    "intersection": 0
+  },
+  "accessibility_scan": {
+    "method": "DOM computed colors and nearest opaque ancestor background; supplementary to keyboard/visual inspection",
+    "text_elements": 70,
+    "controls": 21,
+    "targets_under44": [],
+    "contrast_status": "FAIL",
+    "failures": [
+      {
+        "text": "01",
+        "ratio": 4.19,
+        "min": 4.5,
+        "color": "#bb3d20",
+        "background": "#e3e0d7"
+      },
+      {
+        "text": "01 / The instrument",
+        "ratio": 4.2,
+        "min": 4.5,
+        "color": "#68655d",
+        "background": "#dedbd2"
+      },
+      {
+        "text": "Instrument description",
+        "ratio": 4.2,
+        "min": 4.5,
+        "color": "#68655d",
+        "background": "#dedbd2"
+      },
+      {
+        "text": "Browser telemetry",
+        "ratio": 4.2,
+        "min": 4.5
+      },
+      {
+        "text": "Telemetry description",
+        "ratio": 4.2,
+        "min": 4.5
+      },
+      {
+        "text": "Web Audio + WebGL / no external transmission",
+        "ratio": 4.2,
+        "min": 4.5
+      }
+    ]
+  },
+  "inherited_evidence": [
+    "sound-v4-iab.json six-width layout and functions; verified only after source equivalence review",
+    "../reviews/visual-v4.json visual scope"
+  ],
+  "actual_exports": "sound-v5-exports.json",
+  "gate_a": "FAIL",
+  "reason": "Small text contrast below pre-fixed4.5:1; lifecycle correction passed",
+  "not_run": [
+    "physical phone",
+    "OS preference toggle",
+    "real BFCache event capture",
+    "separate GPU/Safari"
+  ],
+  "public_export": {
+    "source_evidence_sha256": "36bf98f46c369e495b6ecc579b246b8107cb4ca8615ab2f0be5aa6dfcbc6f5dd",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

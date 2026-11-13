@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000011",
+  "revision": "v4",
+  "status": "FAILED_BROWSER_REENTRY_STATE_REGRESSION",
+  "frozen_manifest_sha256": "b91f03ecb88fd11894fc4ac41b6bf8c20dd7d1f6da9aa405b31de5e8ee5e191c",
+  "gate_a": "FAIL",
+  "gate_b": "FAIL_FOR_OVERALL_ACCEPTANCE",
+  "motionsites_equivalence": "VISUAL_SCOPE_REACHED_BUT_OVERALL_ACCEPTANCE_FAILED",
+  "source_review": {
+    "result": "NO_ACTIONABLE_FINDINGS_IN_REVIEWED_DIFF",
+    "javascript_syntax": "PASS",
+    "manifest_files": 13,
+    "manifest_mismatches": [],
+    "html_unique_ids": 39,
+    "duplicate_ids": [],
+    "broken_local_references": [],
+    "functional_block_identity": {
+      "settings_storage_json_wav_audio_lifecycle_help": {
+        "identical_to_v3": true,
+        "bytes": 19308,
+        "sha256": "109f3f89ee5e18f465f260221f1a66aa31a3b9b6e15d426d9ecd1f62276fed93",
+        "boundaries": [
+          "function validSettings(value)",
+          "function placeSculpture()"
+        ]
+      },
+      "preset_initial_state": {
+        "identical_to_v3": true,
+        "bytes": 1495,
+        "sha256": "649142d3c2882560fd962b3667dc7643533054b4e3b8df3837e61f74896ef73a",
+        "boundaries": [
+          "const presets = [",
+          "const metrics = {"
+        ]
+      }
+    },
+    "assets": [
+      {
+        "path": "mark.svg",
+        "identical_to_v3": true,
+        "bytes": 236,
+        "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+      },
+      {
+        "path": "sculpture-ember.svg",
+        "identical_to_v3": true,
+        "bytes": 657185,
+        "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+      },
+      {
+        "path": "sculpture-tidal.svg",
+        "identical_to_v3": true,
+        "bytes": 657185,
+        "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+      },
+      {
+        "path": "sculpture-halo.svg",
+        "identical_to_v3": true,
+        "bytes": 657184,
+        "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+      },
+      {
+        "path": "generate-fallback.py",
+        "identical_to_v3": true,
+        "bytes": 3443,
+        "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102"
+      }
+    ],
+    "reviewed_changes": [
+      "One attached preset/pause toolbar remains with the sculpture; canvas/fallback are inside a separate render-area excluding60px toolbar.",
+      "Reading and controls use left column on desktop; corresponding full-size art slots remain on the right. At<=900, the full preview is first/sticky with text/controls below.",
+      "The source removes the narrow compact corridor and uses actual full-slot bounds in native-scroll interpolation.",
+      "The vertex surface unfolds original layers and recalculates finite-difference normals; same camera distance uniform feeds vertex and fragment shading.",
+      "The camera contain calculation is based on actual render-area aspect; near/far constants match .1/40.",
+      "Removed object index/material/slot label DOM ids no longer have app references. Duplicate preset group and old hero dock are removed.",
+      "No-JS shows original SVG inside the reserved hero-art-slot and hides the JS-only moving host."
+    ],
+    "projection_review": "For a sphere bounded by radiusR, camera distanceR*sqrt(1+(f/(.92*min(1,aspect)))^2) produces the intended NDC margin. The formula itself is coherent; actual geometry bound, all states and GPU render are still browser/sampling evidence requirements.",
+    "rights": "Original shaders/geometry/audio and original preset SVG generator; no new external runtime/media/font binary. Same reviewed assets as v3.",
+    "limits": [
+      "24029 Builder analytic assertions are not equivalent to real viewport/focus/scroll/glyph/GPU acceptance.",
+      "Audio/storage/export code byte identity supports regression reuse but the moved toolbar and new DOM layout still need final interaction smoke tests."
+    ]
+  },
+  "pending_evidence": {
+    "parent_final_iab_layout_and_interaction": "PENDING_FILE",
+    "fresh_visual_v4": "INSPECTED_visual-v4.json",
+    "public_source_and_http_readback": "PENDING"
+  },
+  "parent_progress_not_yet_adopted_as_final_pass": {
+    "scope": "Message observations only; source-bound saved evidence pending",
+    "390_performance_reported": {
+      "span_seconds": 20.017,
+      "effective_fps": 59.95,
+      "median_ms": 16.7,
+      "p95_ms": 17.4,
+      "lcp_ms": 240,
+      "cls": 0
+    },
+    "other_reported": "1280/390 sampled progression no overflow or text covering;390Tone38→100 with visible focus; remaining widths/reduced/static/import/files in progress."
+  },
+  "findings": [
+    {
+      "priority": "P1",
+      "category": "browser_reentry_state",
+      "title": "ブラウザ履歴復帰でrange値だけが復元され、音・ラベル・保存用stateと乖離する",
+      "locations": [
+        "app.js:391 (pageshow handler; calls setAudioUI/placeSculpture but not updateLabels)",
+        "app.js:81 (UI state projection)"
+      ],
+      "evidence_type": "parent IAB1440 live observation; detailed parent evidence file pending",
+      "scenario": [
+        "Import valid Halo JSON: preset2/tone64/motion72/volume18.",
+        "Start real audio; observed00:22.",
+        "Navigate to report and browser Back.",
+        "Audio is correctly stopped (playfalse/00:00), but browser-restored native ranges are64/72/18 while preset-name/outputs/state projection showEmber38/45/25."
+      ],
+      "impact": "Displayed input values no longer describe the actual shader/audio/save/export state. The next action can persist or render different settings from those visible to the user.",
+      "cause": "Native form history restoration is outside the application state projection. Existing pageshow restores timers/audio UI but does not enforce one authoritative mapping for preset, range values, outputs and generated state after restoration.",
+      "expected_change": "Choose and document the authoritative navigation-reentry state. Reconcile native restored values and app state after the browser restoration timing, then project all labels/controls/preset/fallback/audio consistently. Keep audio stopped until explicit user start.",
+      "retest": "Import non-default settings→play→navigate→Back/Forward and reload with native form restoration. Verify ranges/output/preset/visual/audio params and subsequent JSON/WAV/save all describe the same state; check paused/reduce and BFCache versus new-document navigation separately."
+    }
+  ],
+  "scores": [
+    {
+      "axis": "composition_typography_assets",
+      "score": 4,
+      "status": "VISUAL_V4_SCOPE_VERIFIED",
+      "reason": "Fresh visual-v4 matched desktop observations against fixed clips; source identity independently audited."
+    },
+    {
+      "axis": "signature_motion",
+      "score": 4,
+      "status": "VISUAL_V4_SCOPE_VERIFIED",
+      "reason": "Full-size layer unfolding/forward/reverse and text protection reached observed visual scope."
+    },
+    {
+      "axis": "function_experience",
+      "score": 3,
+      "status": "FAILED_REENTRY",
+      "reason": "Navigation return leaves range values different from authoritative settings; not a complete usable persistence/reentry experience."
+    },
+    {
+      "axis": "mobile_accessibility",
+      "score": null,
+      "status": "PENDING_FUNCTIONAL_A11Y_EVIDENCE",
+      "reason": "Visual mobile composition reached4; full a11y/interaction evidence not yet inspected."
+    },
+    {
+      "axis": "performance_resilience",
+      "score": null,
+      "status": "PENDING_FINAL_EVIDENCE",
+      "reason": "Parent progress metrics within targets but state-restoration defect and missing acceptance evidence prevent complete approval."
+    },
+    {
+      "axis": "originality_handoff",
+      "score": 4,
+      "status": "SOURCE_VERIFIED",
+      "reason": "Own source/assets with frozen13-file hash match and explicit operation/motion contracts; no external runtime/media introduced."
+    }
+  ],
+  "decision": "Retain v4 as a visually improved but functionally failing frozen experiment. v5 must resolve native restoration mismatch and complete source-bound acceptance evidence; visual4 scores do not compensate for gateA failure.",
+  "visual_evidence": {
+    "path": "docs/content-production/quality-lab/reviews/visual-v4.json",
+    "reviewer": "independent /root/visual_verifier",
+    "manifest_sha256_supplied": "b91f03ecb88fd11894fc4ac41b6bf8c20dd7d1f6da9aa405b31de5e8ee5e191c",
+    "source_identity_bound_by_this_review": true,
+    "result": "OBSERVED_VISUAL_SCOPE_REACHED",
+    "visual_scores": [
+      {
+        "axis": "composition_typography_material",
+        "score": 4,
+        "scope": "Observed1280×720 initial/intermediate/arrival desktop states and preset visuals",
+        "reason": "書体と余白で左の目的/操作と右の主役を分け、toolbarも同じ右列で一貫する。層の薄い光、暗い内側、穴の輪郭が金属として整合する。Medusaの部品数を真似せず少ない素材語彙で固有の立体を読み取れ、Vanteの文字/素材の役割分けに対しても、観察した構図に明確な見劣りを認めない。"
+      },
+      {
+        "axis": "hero_motion",
+        "score": 4,
+        "scope": "Sampled scroll states and reverse, three preset transitions, Ember additional0/.5/1",
+        "reason": "右列の大きな主役を保ち、層が開く変化を読み続けながら楽器画面へ到着する。逆方向でも同じ構図へ戻り、主要文字/toolbarを守る。Emberで凝縮から層がほどける差が明瞭で、物体を鑑賞する状態から調整する状態へつながる意図がある。Vanteの帯→一覧、Medusaの組立→分解と同じ表現量である必要はなく、同じ主役の同一性/理解/終着を保つという比較軸で見劣りしない。Haloの変化は控えめだが、この用途の静かな環という状態を破綻させない。"
+      },
+      {
+        "axis": "mobile_composition",
+        "score": 4,
+        "scope": "v4 internal visual standard on390/320 viewport simulation; original mobile parity UNKNOWN",
+        "reason": "上のpreviewと下のcontrolへ再構成され、主役を小物化せず番号/名前/本文から分けられる。すべての指定pと逆方向で、文字を守るため主役の素材を捨てる状態はなく、操作時も主役を見続けられる。三つのpresetを最小幅で切り替えても構図を保つ。原作mobileとの比較ではなく、今回のGENSEKI携帯視覚条件への到達点数。"
+      },
+      {
+        "axis": "visual_originality",
+        "score": 4,
+        "scope": "Visible concept relative to the two fixed references",
+        "reason": "音色を薄い金属層の凝縮/波/開いた環として表す系列と、その物体を保持して楽器へ移る構成が固有。Vanteの映像帯やMedusaの白い機械を複製する必要なしに、同じ題材の素材と変化を一貫して示す。全Web作品への新規性やコード/素材の作者は本レビューの主張範囲外。"
+      }
+    ],
+    "limits": [
+      "Fixed1280desktop clips only; original mobile/function/performance/a11y unknown.",
+      "Fresh visual reviewer did not inspect implementation or independently hash manifest; source audit supplies that identity separately.",
+      "This visual result does not override gateA reentry failure."
+    ]
+  },
+  "mandatory_evidence_audit": {
+    "configuration": "docs/content-production/quality-lab/quality-config.json (quality-lab-v2.1)",
+    "guide": "docs/content-production/autonomous-quality-standard.md sections5/6",
+    "checklist_for_v5": [
+      "Source/frozen/QA/public hash match and separate deployment readback.",
+      "All6 configured widths, normal and reduced layouts; intermediate/reverse/resize and main controls are protected.",
+      "Representative IAB1440/39020-second actual active samples with LCP/CLS and bounded raw intervals; initial transfer<=2MB.",
+      "Pause/reduce/hidden: zero autonomous render, explicit input frames allowed; resume after return without autoplay.",
+      "Browser Back/Forward/BFCache/new-document restoration synchronizes app/preset/ranges/outputs and generated files.",
+      "Real audio play/stop, preset/tone/motion/volume, save/reset/restore, JSON export/import/invalid/cancel, actual WAV header/PCM/readback and export cancellation.",
+      "Keyboard route including toolbar/ranges/dialogEscape/focus return/menu; target sizes, text contrast and visible focus.",
+      "WebGL unavailable/static and noJS information/fallback, and visible storage/import/audio failure behavior.",
+      "Long-task observation as required by guide; unsupported/missing is markednull/NOT_RUN rather than0.",
+      "Fresh visual-v5 confirmation or defensible exact visual-code identity reuse with a final smoke check."
+    ],
+    "open_items_at_this_update": [
+      "Full final IAB evidence file not yet supplied.",
+      "Sound source records LCP/CLS/frame intervals but no long-task observer; guide requests long-task recording.",
+      "Physical mobile/Safari/Firefox remain excluded-scope limitations, not covered by viewport simulation.",
+      "Final touch-specific event coverage and OS reduced-motion versus query-forced route must be stated honestly; an unrun mandatory path cannot be labeledPASS."
+    ]
+  },
+  "public_export": {
+    "source_evidence_sha256": "e7337263f2122e33174a12135f3a1e1a0238412dfab4c6e8d8360ead506a6c51",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

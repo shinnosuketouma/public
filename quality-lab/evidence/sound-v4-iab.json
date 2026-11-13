@@ -1,0 +1,269 @@
+{
+  "date_jst": "2026-11-14",
+  "source_revision": "v4",
+  "manifest_sha256": "b91f03ecb88fd11894fc4ac41b6bf8c20dd7d1f6da9aa405b31de5e8ee5e191c",
+  "environment": "Codex IAB current desktop; viewport simulation only",
+  "layout": {
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "horizontal_overflow_all_px": 0,
+    "missing_images_initial": [],
+    "hero_cta_in_initial_viewport_all": true,
+    "desktop_1280": {
+      "progress": [
+        0.25,
+        0.5,
+        0.65,
+        0.75,
+        1
+      ],
+      "scroll_y": [
+        180,
+        360,
+        468,
+        540,
+        720
+      ],
+      "host_width": [
+        574.9609375,
+        573.9296875,
+        573.3125,
+        572.8984375,
+        571.8671875
+      ],
+      "host_height": 560,
+      "heading_intersection_area_all": 0
+    },
+    "mobile_390": {
+      "progress": [
+        0.25,
+        0.5,
+        0.64988,
+        0.75,
+        1
+      ],
+      "scroll_y": [
+        211,
+        422,
+        548.5,
+        633,
+        844
+      ],
+      "host_width": 350,
+      "host_height": 420.3046875,
+      "host_top": [
+        311.771484375,
+        215.84765625,
+        158.3388214111328,
+        119.923828125,
+        24
+      ],
+      "heading_top": [
+        1101.3046875,
+        890.3046875,
+        763.8046875,
+        679.3046875,
+        468.3046875
+      ],
+      "heading_intersection_area_all": 0
+    },
+    "other_widths_p65": {
+      "320": {
+        "host": [
+          16,
+          150,
+          288,
+          340
+        ],
+        "heading_top": 647
+      },
+      "768": {
+        "host": [
+          32,
+          187.16465759277344,
+          704,
+          509.9453125
+        ],
+        "heading_top": 916.4453125
+      },
+      "1024": {
+        "host": [
+          529.324951171875,
+          88.40625,
+          462.6640625,
+          608
+        ],
+        "heading_top": 349,
+        "heading_right": 451.515625
+      },
+      "1440": {
+        "host": [
+          743.2484130859375,
+          88.4000015258789,
+          648.75,
+          740
+        ],
+        "heading_top": 395,
+        "heading_right": 635.328125
+      }
+    },
+    "mobile_keyboard_tone_end": {
+      "before": 38,
+      "after": 100,
+      "focused": "tone",
+      "input_vertical": [
+        616.27,
+        660.27
+      ],
+      "preview_bottom": 432.3,
+      "focus_visible": true
+    }
+  },
+  "active_render": {
+    "1440x900": {
+      "span_seconds": 20.016,
+      "count": 1057,
+      "effective_fps": 52.81,
+      "median_ms": 16.7,
+      "p95_ms": 17.7,
+      "lcp_ms": 160,
+      "cls_before_interaction": 0
+    },
+    "390x844": {
+      "span_seconds": 20.017,
+      "count": 1200,
+      "effective_fps": 59.95,
+      "median_ms": 16.7,
+      "p95_ms": 17.4,
+      "lcp_ms": 240,
+      "cls": 0
+    }
+  },
+  "pause": {
+    "frames_before_after": [
+      10796,
+      10796
+    ],
+    "motion": "paused",
+    "continuous_frame_delta": 0
+  },
+  "save_reset_restore": {
+    "tone": [
+      100,
+      38,
+      100
+    ],
+    "status": "PASS"
+  },
+  "help": {
+    "open": true,
+    "escape_close": true,
+    "focus_return": "使い方 ↗"
+  },
+  "json_import": {
+    "valid": {
+      "preset": "Halo03",
+      "tone": 64,
+      "motion": 72,
+      "volume": 18
+    },
+    "invalid": {
+      "preset": 99,
+      "tone": -10,
+      "rejected": true,
+      "retained_preset": "Halo03",
+      "retained_tone": 64
+    }
+  },
+  "reduced_static_route": {
+    "url_query": "graphics=static&motion=reduce",
+    "renderer": "fallback",
+    "motion": "reduced",
+    "motion_control_disabled": true,
+    "images_loaded": [
+      "sculpture-ember.svg",
+      "sculpture-tidal.svg",
+      "sculpture-halo.svg"
+    ],
+    "preset_labels": [
+      "Ember01",
+      "Tidal02",
+      "Halo03"
+    ],
+    "mobile_menu_help_escape": "PASS"
+  },
+  "reduced_webgl_route": {
+    "url_query": "motion=reduce",
+    "renderer": "webgl",
+    "motion": "reduced",
+    "frame_first": 2,
+    "resolution": "350x360",
+    "frame_later": 2,
+    "frame_after_tone_end": 3,
+    "tone_after_end": 100,
+    "continuous_frame_delta": 0
+  },
+  "navigation_lifecycle": {
+    "playing_before": true,
+    "elapsed_before": "00:22",
+    "playing_after": false,
+    "elapsed_after": "00:00",
+    "form_state_bug": {
+      "status": "FAIL",
+      "scenario": "Import Halo64/72/18, play, navigate to report, browser back",
+      "preset_after": "Ember01",
+      "outputs_after": [
+        38,
+        45,
+        25
+      ],
+      "range_values_after": [
+        64,
+        72,
+        18
+      ],
+      "expected": "Ranges, outputs, preset and canonical audio/graphics state must agree"
+    }
+  },
+  "gate_a": "FAIL",
+  "gate_b": "PENDING_NONVISUAL_AXES",
+  "not_run": [
+    "physical mobile devices",
+    "OS reduced motion toggle",
+    "separate GPU/Safari"
+  ],
+  "scope_notes": [
+    "Reduced routes exercise the implementation; no claim that system preference was changed.",
+    "v4 is immutable; the navigation defect is assigned to v5.",
+    "Visual scores are independent in reviews/visual-v4.json. Actual exports are in sound-v4-exports.json."
+  ],
+  "console_warnings_errors": [],
+  "public_export": {
+    "source_evidence_sha256": "3cb5a5b50b8eadb4526aacf7315cd44eb3787a0fcc8fb9469a0a2d2411c275e8",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

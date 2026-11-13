@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "independent /root/quality_reviewer",
+  "reviewed_on_jst": "2026-11-14",
+  "site_code": "gs-000011",
+  "revision": "v1",
+  "frozen_manifest_sha256": "42703f63e756b31ff9d821af91df50263b2a29757fb7565bb3ee3095060906a7",
+  "source": "content/quality-lab/sound-studies/v1/",
+  "environment": {
+    "browser": "Chrome extension, browser 1; child context had no IAB access",
+    "url": "http://localhost:8765/sound-studies/v1/",
+    "actual_viewports_verified": [
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "physical_mobile": false,
+    "viewport_override_reset": true
+  },
+  "gate_a": "FAIL",
+  "gate_b": "FAIL",
+  "motionsites_equivalence": "NOT_ESTABLISHED",
+  "comparison_limit": "Code and the authored page were independently inspected. Parent-provided benchmark observations were read. The verifier did not complete a fresh standalone playback of the benchmark clips; no equivalent-or-better claim is made.",
+  "top_findings": [
+    {
+      "priority": "P1",
+      "category": "composition",
+      "title": "1280×720で本文が衝突し、プリセットが初期画面外になる",
+      "locations": [
+        "style.css:2 (.hero / .hero-copy / .hero-bottom-copy)"
+      ],
+      "evidence": {
+        "hero_height": 820,
+        "japanese_subhead_y": [
+          462.296875,
+          490.796875
+        ],
+        "lower_copy_y": [
+          477.9140625,
+          666
+        ],
+        "overlap_px": 12.8828125,
+        "horizontal_overflow": false
+      },
+      "cause": "820px min-heightと通常flowの見出し、bottom固定の説明を同時に使用し、低いviewportの文字保護領域を確保していない。",
+      "expected_change": "1280×720でも一画面に主役・h1・日本語説明・主要CTA・プリセットが収まり、見出し/説明が交差しない専用height layoutへ変更。",
+      "retest": "同じviewportの初期表示と各preset、1440/1024/768/390/320で実寸・衝突を再確認。"
+    },
+    {
+      "priority": "P1",
+      "category": "experience",
+      "title": "音と形を調整する画面で主役の彫刻を見られない",
+      "locations": [
+        "index.html:28 (#sculpture, hero)",
+        "index.html:42 (#instrument)",
+        "app.js:80 (mini-form color/rotation only)"
+      ],
+      "evidence": "Instrumentでは3D canvasは画面上に残らず、調整UI横には同じellipse群の小さなSVGがある。tone/motion変更時の形の結果を見るにはheroへ戻る必要がある。",
+      "cause": "主役と操作UIが別画面に分断され、mini-formは実際のgeometryを反映しない。",
+      "expected_change": "調整中に実際の彫刻を同時表示し、preset/tone/motionの操作と変形を因果として確認できる構図へ変更。複数canvasを不用意に増やさず、一つの主役を継続表示する。",
+      "retest": "主操作画面のPC/SPで全rangeとpresetを変更し、入力・音・実geometryが同じstateへ反映されることを観察。"
+    },
+    {
+      "priority": "P1",
+      "category": "lifecycle_and_accessibility",
+      "title": "音声開始待ちとページ復帰の取消・復旧処理、および小画面pauseの名前が不足",
+      "locations": [
+        "app.js:183",
+        "app.js:184",
+        "app.js:186",
+        "app.js:240",
+        "app.js:241",
+        "app.js:258",
+        "app.js:264",
+        "style.css:4 (#motion-toggle>span display:none at <=1150px)"
+      ],
+      "evidence_type": "code-confirmed control paths; delayed-resume/hidden and bfcache race not runtime reproduced",
+      "evidence": "ctx.resume待ち中はplaying=falseのためvisibilitychangeのif(playing)が開始中contextを閉じない。await後にhidden/世代/同じaudio instanceかを検査せずplaying=trueへ進む。pagehideで音声UI timerをclearするがpageshowで再作成しない。1150px以下でpauseの唯一の文字spanをdisplay:none、SVGはaria-hidden、通常時aria-labelも削除する。",
+      "expected_change": "音声開始に世代token/starting stateを持ちhidden/pagehideで取消、await後にvisibleとinstanceを照合。pageshow persistedで必要timer/graphicsを復旧。pause/resumeの意味を常にaria-labelへ残す。",
+      "retest": "resume遅延中にhidden/pagehide→resolve、戻る/進む後の音声とpaused graphicsのUI更新、1024/390/320でpause accessible nameを確認。"
+    }
+  ],
+  "scores": [
+    {
+      "axis": "composition_typography_assets",
+      "score": 2,
+      "reason": "主役の金属襞と大きい文字は成立するが1280×720の読ませる本文が衝突。"
+    },
+    {
+      "axis": "signature_motion",
+      "score": 3,
+      "reason": "3presetで輪郭/材質が連続変形し、通常idleとpauseが成立。画面間の主役と操作の連続性は未完成。比較動画の新規独立観察未完了につき4以上にしない。"
+    },
+    {
+      "axis": "function_experience",
+      "score": 3,
+      "reason": "明示再生でPlayingと実analyserの非ゼロ値を確認、rangeのArrowRightで値/出力が同期。保存/復帰/exportは検証call停止で観測結果未回収。調整時の主役が画面外。"
+    },
+    {
+      "axis": "mobile_accessibility",
+      "score": 2,
+      "reason": "小画面pauseのaccessible name欠落をコードから確認。390/320の独立表示検査は未実施。"
+    },
+    {
+      "axis": "performance_resilience",
+      "score": 3,
+      "reason": "Chrome通常動作20秒の実測は目標内。音声開始取消/復帰処理の経路不足と、失敗/reduced/hiddenの実行未検証が残る。"
+    },
+    {
+      "axis": "originality_handoff",
+      "score": 4,
+      "reason": "全sourceを読み、外部依存/第三者素材なしの自作mesh・shader・音声処理・manifest/契約を確認。独立新規企画能力を証明する試験ではない。"
+    }
+  ],
+  "verified": {
+    "normal_renderer": "webgl",
+    "mesh": {
+      "vertices": 49575,
+      "triangles": 95040
+    },
+    "presets": "Ember/Tidal/Haloでactive state・説明・tone/motion・材質labelと輪郭差分を観察。短い中間frameとsettled frameを目視。",
+    "pause": {
+      "before_frame": 5602,
+      "after_frame": 5602,
+      "result": "No autonomous draw after pause during later observation; explicit play and range input then advanced to 5604, consistent with one-frame redraws."
+    },
+    "audio": "Play click changed aria-pressed to true and UI to Playing. analyser-derived bar heights included 22.3765px,16.4471px,3.52941px; real synthesis graph exists. Listening quality and final stop observation not verified.",
+    "keyboard_range": {
+      "tone_before": 78,
+      "key": "ArrowRight",
+      "tone_after": 79,
+      "output_after": "79"
+    },
+    "telemetry_1280": {
+      "count": 1184,
+      "span_seconds": 20.001,
+      "effective_fps": 59.2,
+      "median_ms": 16.7,
+      "p95_ms": 18.4,
+      "lcp_ms": 592,
+      "cls": 0,
+      "resolution": "730x595"
+    },
+    "telemetry_after_1440_resize": {
+      "count": 1152,
+      "span_seconds": 20.016,
+      "effective_fps": 57.55,
+      "median_ms": 16.7,
+      "p95_ms": 18.4,
+      "resolution": "821x675",
+      "limit": "Recent window can include pre-resize intervals; not a separate stable-size performance pass."
+    }
+  },
+  "not_run": [
+    "390x844 independent render",
+    "320x740 independent render",
+    "1024/768 render",
+    "reduced motion runtime",
+    "hidden/pagehide race runtime",
+    "bfcache restore runtime",
+    "WebGL unavailable runtime",
+    "storage blocked/corrupt runtime",
+    "save/reset/restore observed outcome",
+    "JSON saved-file contents",
+    "complete keyboard flow/dialog/menu",
+    "console log inspection",
+    "fresh standalone reference playback",
+    "physical mobile and cross-browser coverage"
+  ],
+  "tool_limit": "Final multi-action browser call with download event waiting timed out and reset the runtime; its unreturned observations are not claimed as PASS. Earlier screenshots were displayed in verifier tool output; no persistent screenshot artifact was saved by this verifier.",
+  "decision": "Keep v1 as a public experimental failure. Fix the three dominant findings in v2; do not count v1 as a production-quality pass.",
+  "public_export": {
+    "source_evidence_sha256": "d1fa33421e3414058ac4821764b052f3000c7519d3e80334435e56629675b3ab",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

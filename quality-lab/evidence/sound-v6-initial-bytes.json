@@ -1,0 +1,34 @@
+{
+  "source_revision": "v6",
+  "manifest_sha256": "afe8a7ac8a7209f7e9805bed4cca28f99063b9ed736f45aa820c806f0c118be2",
+  "method": "Source-derived uncompressed byte upper bound for initial HTML relative resources; same-origin static files, system fonts, no external requests in source. Not browser Resource Timing. Preset Tidal/Halo load only after selection.",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 10254
+    },
+    {
+      "path": "style.css",
+      "bytes": 22929
+    },
+    {
+      "path": "app.js",
+      "bytes": 43081
+    },
+    {
+      "path": "mark.svg",
+      "bytes": 236
+    },
+    {
+      "path": "sculpture-ember.svg",
+      "bytes": 657185
+    }
+  ],
+  "initial_bytes_uncompressed": 733685,
+  "max_initial_bytes": 2000000,
+  "pass": true,
+  "public_export": {
+    "source_evidence_sha256": "23de20ccc159dc67c9e80c55625b9575a0512cd7fd6e8df1134405d567ccda90",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

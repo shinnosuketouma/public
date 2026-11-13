@@ -1,0 +1,63 @@
+{
+  "date_jst": "2026-11-14",
+  "revision": "v2",
+  "environment": "Codex IAB desktop, mobile viewport simulation",
+  "viewport": [
+    390,
+    844
+  ],
+  "url": "http://127.0.0.1:8765/sound-studies/v2/",
+  "horizontal_overflow_px": 0,
+  "lcp_ms": 392,
+  "cls": 0.005297,
+  "active_render": {
+    "count": 1177,
+    "span_seconds": 20.016,
+    "effective_fps": 58.8,
+    "median_ms": 16.7,
+    "p95_ms": 17.6
+  },
+  "intermediate_collision": {
+    "status": "FAIL",
+    "scrollY": 548.5,
+    "progress": 0.64988,
+    "sculpture_rect": {
+      "x": 20,
+      "y": 293.23101806640625,
+      "width": 350,
+      "height": 255.4921875
+    }
+  },
+  "instrument_preview": {
+    "status": "PASS_VISIBLE",
+    "scrollY": 1350.5,
+    "rect": {
+      "x": 20,
+      "y": 8,
+      "width": 350,
+      "height": 210
+    }
+  },
+  "save_reset_restore": {
+    "status": "PASS",
+    "tone_values": [
+      100,
+      38,
+      100
+    ]
+  },
+  "wav_saved": "PASS: actual file header and nonzero PCM verified separately",
+  "not_run": [
+    "physical mobile",
+    "OS reduced motion",
+    "JSON import",
+    "forced graphics fallback",
+    "all widths"
+  ],
+  "gate_a": "FAIL",
+  "gate_b": "FAIL",
+  "public_export": {
+    "source_evidence_sha256": "73079eef27e518de4520da9ccdafb8f4f9467a1ce3d208c7c6eda542698064be",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

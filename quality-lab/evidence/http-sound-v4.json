@@ -1,0 +1,82 @@
+{
+  "public_commit": "ba6dbb6a60a993bd5dcdb7a31c0ad6bd4a34d905",
+  "pages_status": "built",
+  "base_url": "https://shinnosuketouma.github.io/public/",
+  "files": [
+    {
+      "path": "gs-000011/v4/source-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/motion-contract.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/index.html",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/sculpture-ember.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/frozen-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/generate-fallback.py",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/sculpture-halo.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/asset-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/README.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/interaction-contract.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/mark.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/style.css",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/sculpture-tidal.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "gs-000011/v4/app.js",
+      "status": 200,
+      "hash_match": true
+    }
+  ],
+  "all_match": true,
+  "public_export": {
+    "source_evidence_sha256": "368c34cf708dcbb3393da0a920da3113386a73b350c6ae4312b7cf1c686bcdc4",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

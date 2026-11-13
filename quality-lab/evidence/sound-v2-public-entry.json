@@ -1,0 +1,58 @@
+{
+  "id": "sound-v2",
+  "title": "Sound Studies / v2",
+  "date": "2026-11-14",
+  "verdict": "不合格・途中の衝突が残る",
+  "gate": "FAIL",
+  "path": "../gs-000011/v2/",
+  "code": "https://github.com/shinnosuketouma/public/tree/23995ca71ed0c655de24c6384b21f30680843aa3/gs-000011/v2",
+  "commit": "23995ca71ed0c655de24c6384b21f30680843aa3",
+  "summary": "初版の文字衝突を直し、同じ立体が操作画面へ移る演出と実際の音声書き出しを追加。操作中の体験は改善しましたが、携帯画面の移動途中で文字を覆う欠点が残っています。",
+  "changes": [
+    "1280×720で初版の本文の重なりを解消し、主要操作を初期画面内へ配置。",
+    "立体がスクロールとともに操作画面へ移動。携帯でも立体を見ながら音色を調整できます。",
+    "JSON読み込みと実8秒WAV書き出し、3種類の自作SVG代替、音声開始の取り消しとページ復帰を追加。",
+    "設定保存→初期化→復元、8秒WAVの実ファイルを主担当が検証。"
+  ],
+  "issues": [
+    "390×844の中間進捗0.64988で立体が見出しと説明を覆います。主担当と独立担当が同じ位置で再現。",
+    "デスクトップのCLSにばらつく観測があり、次版で起動・スクロール復帰の条件を固定して再測定します。",
+    "全幅・低モーション・読み込み失敗を含む最終受入は未完了。競合作例への到達は未判定です。"
+  ],
+  "checks": [
+    {
+      "name": "1280×720の旧本文衝突",
+      "result": "改善",
+      "evidence": "独立検査で副題の下端と下部説明の間に約105pxの空き。"
+    },
+    {
+      "name": "携帯の移動途中",
+      "result": "FAIL",
+      "evidence": "390×844、scrollY548.5、進捗0.64988で立体と見出しが衝突。"
+    },
+    {
+      "name": "保存・初期化・復元",
+      "result": "PASS",
+      "evidence": "明るさ100を保存→初期値38→復元100を実操作で確認。"
+    },
+    {
+      "name": "WAVの実ファイル",
+      "result": "PASS",
+      "evidence": "8秒、44.1kHz、mono、16bit、705644bytes。352195サンプルが非ゼロ、RMS約0.01405。"
+    },
+    {
+      "name": "描画性能（携帯幅のPC検証）",
+      "result": "PASS（範囲限定）",
+      "evidence": "主担当IAB:20.016秒58.8fps、中央値16.7ms、p95 17.6ms、LCP392ms、CLS0.005297。実機ではありません。"
+    },
+    {
+      "name": "独立評価A/B",
+      "result": "FAIL / FAIL",
+      "evidence": "6軸:構図3、演出3、機能3、携帯2、性能3、独自性4。欠測を合格へ含めていません。"
+    }
+  ],
+  "public_export": {
+    "source_evidence_sha256": "020b2b0a47846293346649605e622853aa8f1a363abfd5579ef64b4be18b126e",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

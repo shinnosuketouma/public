@@ -1,0 +1,17 @@
+{
+  "channels": 1,
+  "sample_width": 2,
+  "sample_rate": 44100,
+  "frames": 352800,
+  "duration_seconds": 8.0,
+  "bytes": 705644,
+  "sha256": "940ab250f3f241eb6cef84f565f56ed84a5597a837ed1f214e4dc8dbccf2132e",
+  "peak": 0.032745361328125,
+  "rms": 0.014050503560456616,
+  "nonzero_samples": 352195,
+  "pass": true,
+  "public_export": {
+    "source_evidence_sha256": "8737a31736c2a19e2913da672a4b89d2c952909afe40dbdcd7551a5fe29ecc8f",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

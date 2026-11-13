@@ -1,0 +1,34 @@
+{
+  "date_jst": "2026-11-14",
+  "revision": "sound-v1",
+  "environment": "Codex IAB",
+  "url": "http://127.0.0.1:8765/sound-studies/v1/",
+  "viewport": [
+    1280,
+    720
+  ],
+  "renderer": "webgl",
+  "lcp_ms": 520,
+  "cls": 0,
+  "active_render": {
+    "count": 1201,
+    "span_seconds": 20.013,
+    "effective_fps": 60.01,
+    "median_ms": 16.7,
+    "p95_ms": 18
+  },
+  "mesh": {
+    "vertices": 49575,
+    "triangles": 95040
+  },
+  "render_resolution": "1167x952",
+  "horizontal_overflow_px": 0,
+  "pause_frame_after_click": 1491,
+  "pause_followup": "PASS: frame remained 1491 across subsequent observation",
+  "visual_verdict": "FAIL: subtitle overlaps lower description; preset dock below first viewport",
+  "scope": "Local desktop browser only. Not physical mobile or competitor runtime performance.",
+  "public_export": {
+    "source_evidence_sha256": "5757bbad0aef462a8512bb8ad8d4c9d163bdb67412f3be4dace455d3a0e20103",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}

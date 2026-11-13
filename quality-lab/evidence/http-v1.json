@@ -1,0 +1,66 @@
+{
+  "source_commit": "43bef7bd0e717a6c8d0aba69ccb9183c3819d61f",
+  "url": "https://shinnosuketouma.github.io/public/gs-000011/v1/",
+  "files": [
+    {
+      "path": "README.md",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "asset-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "interaction-contract.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "mark.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "motion-contract.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "sculpture.svg",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "source-manifest.json",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "hash_match": true
+    },
+    {
+      "path": "frozen-manifest.json",
+      "status": 200,
+      "hash_match": true
+    }
+  ],
+  "pass": true,
+  "public_export": {
+    "source_evidence_sha256": "5d0ff7fb3af377eb2e82a49a887d6312d1084131f9a81af345ebb4547f07b97a",
+    "notes": "Local absolute project/temp paths normalized. Embedded VM harness text/location omitted; original harness hash, method and case results retained. This is a sanitized export, not byte-identical original evidence."
+  }
+}
