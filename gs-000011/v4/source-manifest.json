@@ -1,0 +1,78 @@
+{
+  "version": "sound-studies-v4",
+  "status": "FROZEN_PENDING_BROWSER_AND_INDEPENDENT_QA",
+  "change_scope": "full-size preview-first/right-column composition, attached toolbar, unfolding geometry, contain fit; audio/storage/files unchanged",
+  "builder_checks": {
+    "javascript_syntax": "PASS",
+    "all_json_parse": "PASS",
+    "unique_ids": 39,
+    "local_asset_and_anchor_refs_checked": 10,
+    "synthetic_rect_and_contain_assertions": 24029,
+    "audio_and_file_processing_v3_byte_identical": true,
+    "synthetic_scope": "Actual placement function with synthetic layout rects and analytic contain sphere; not real browser/GPU verification"
+  },
+  "browser_qa": "NOT_RUN_BY_BUILDER",
+  "claimed_quality_gate_pass": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5038,
+      "sha256": "ee08ebbeb4bfe07930a2bfce32e5616eb84b9a8d70ea532d77b6edd399d29ee8"
+    },
+    {
+      "path": "app.js",
+      "bytes": 40537,
+      "sha256": "b4f375fdbe616559650e6bbc9111c2dfce637a51f599150d26dc6c0e5935f33d"
+    },
+    {
+      "path": "asset-manifest.json",
+      "bytes": 2600,
+      "sha256": "b2d92a432570cd1e1da236656921acd3b2ac14f428d34a240c9f1c1d0a33c80e"
+    },
+    {
+      "path": "generate-fallback.py",
+      "bytes": 3443,
+      "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102"
+    },
+    {
+      "path": "index.html",
+      "bytes": 10254,
+      "sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e"
+    },
+    {
+      "path": "interaction-contract.json",
+      "bytes": 3677,
+      "sha256": "8522a1773bd165df1d7a72fb5db236dfd17589087d14c000c692c32ece2e1a8f"
+    },
+    {
+      "path": "mark.svg",
+      "bytes": 236,
+      "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+    },
+    {
+      "path": "motion-contract.json",
+      "bytes": 5955,
+      "sha256": "0fd9dae60cc2e8180cf915c518701226f4428c40e176dde232392435e1b647cd"
+    },
+    {
+      "path": "sculpture-ember.svg",
+      "bytes": 657185,
+      "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+    },
+    {
+      "path": "sculpture-halo.svg",
+      "bytes": 657184,
+      "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+    },
+    {
+      "path": "sculpture-tidal.svg",
+      "bytes": 657185,
+      "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+    },
+    {
+      "path": "style.css",
+      "bytes": 22929,
+      "sha256": "9ea5d1e2e38ac344d958c9aafe602574bb8a40f385f6f51d72ee6cdf9419585a"
+    }
+  ]
+}

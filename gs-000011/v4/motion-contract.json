@@ -1,0 +1,159 @@
+{
+  "version": "sound-studies-v4",
+  "state_source": "preset/tone/motion/volume; active renderer clock; native scroll progress. Audio and shape derive from the same preset.",
+  "composition": {
+    "desktop": "Hero words/CTA left, sculpture right. Instrument heading and control panel left, sticky sculpture right. Both slots have approximately the same width/height.",
+    "vertical": "At <=900px, hero words/description/CTA all precede the large stage. Instrument begins with the sticky stage; heading/control column starts24px below the stage in natural flow.",
+    "stage_height": "desktop100svh-160px; vertical clamp(420px,49.8svh,540px); <=360px340px",
+    "toolbar_height_px": 60,
+    "viewports_pending_browser_qa": [
+      [
+        1440,
+        900
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "initialization": "Both stage slots reserve flow from initial HTML; fixed host appears after actual placement. No js-active-dependent flow toggle.",
+    "focus": "Vertical root scroll-padding is stage height+24; instrument anchor has compensating negative stage scroll-margin; fields/buttons have12px top and24px bottom scroll-margin."
+  },
+  "entrance": {
+    "duration_ms": 1100,
+    "scale": [
+      0.92,
+      1
+    ],
+    "curve": "1-(1-p)^3",
+    "copy_duration_ms": 600,
+    "copy_translate_y_px": [
+      7,
+      0
+    ],
+    "blocks_input": false
+  },
+  "idle": {
+    "time_source": "active dt <= 0.05 seconds",
+    "drift_radians": 0.06,
+    "rotation_period_seconds": 20.27,
+    "deformation": "sin(t*3+clock*0.65+layer)*motion*0.055"
+  },
+  "pointer": {
+    "scope": "current sculpture host only",
+    "fine_pointer_only": true,
+    "horizontal_radians": [
+      -0.16,
+      0.16
+    ],
+    "vertical_radians": [
+      -0.1,
+      0.1
+    ],
+    "follow": "1-exp(-8*dt)",
+    "touch": "no tracking"
+  },
+  "preset": {
+    "duration_ms": 900,
+    "curve": "p*p*(3-2*p)",
+    "interruption": "start from current weights",
+    "effects": [
+      "shape",
+      "material",
+      "audio frequencies",
+      "labels",
+      "fallback source"
+    ],
+    "reduced_motion": "instant"
+  },
+  "native_scroll": {
+    "implemented": true,
+    "progress": "clamp(scrollY/heroHeight,0,1)",
+    "placement": "lerp actual hero/instrument slot rects directly; no small corridor or discrete detour",
+    "stage_size": "Same stage-height and nearby full widths at both endpoints; no intentional shrink at intermediate progress",
+    "shape_progress": "p*p*(3-2*p)",
+    "geometry": "Three original layers unfold: binormal offset*(layer-1)*0.52, depth offset*(layer-1)*0.42; layer rotations add0.23/0.28rad and twist loosens by18%. Finite-difference normals derive from the same surface.",
+    "reading_protection": "PC keeps artwork entirely in the right column; vertical layout reserves the entire preview before text/controls",
+    "toolbar": "Preset/pause buttons live inside host below the render-area and move with the same stage; no floating large index labels",
+    "reverse": "same native progress and same geometry",
+    "after_arrival": "follow real sticky instrument slot",
+    "reduced_or_paused": "snap to nearest original/full-size slot; no animated travel",
+    "scroll_jacking": false,
+    "builder_verification": "24029 assertions using actual placeSculpture with synthetic rects plus analytic contain fit; not real browser layout verification"
+  },
+  "pause": {
+    "control": "motion-toggle, always named by aria-label",
+    "raf": "one pending/explicit input frame then no continuous RAF",
+    "audio": "independent playback"
+  },
+  "reduced_motion": {
+    "source": "OS prefers-reduced-motion OR query motion=reduce",
+    "cannot_override_os": true,
+    "idle": false,
+    "pointer": false,
+    "preset": "instant one-frame draw",
+    "information": "visible"
+  },
+  "visibility": {
+    "hidden": "cancel graphics RAF; cancel pending audio resume by generation; stop/dispose audio; no automatic sound restart",
+    "pagehide": "also clear UI timer, cancel pending placement frame, invalidate offline/export/import results",
+    "pageshow": "restore UI timer and graphics; audio remains stopped"
+  },
+  "resize": {
+    "canvas": "slot bounds with fixed maximum-slot drawing buffer; DPR <=1.6 desktop /1.35 phone",
+    "mesh": "mobile segments selected on initial load",
+    "blocks_landscape": false
+  },
+  "fallback": {
+    "no_webgl": "original preset-specific SVG + functional sound controls",
+    "context_lost": "SVG and reload notice",
+    "no_javascript": "SVG, explanation, JS requirement"
+  },
+  "diagnostics": {
+    "actual_draw_only_frame_increment": true,
+    "attributes": [
+      "data-renderer",
+      "data-frame",
+      "data-motion",
+      "data-resolution",
+      "data-vertices",
+      "data-triangles"
+    ],
+    "performance": "20-second actual active frame intervals, LCP and max-session CLS; unsupported=null",
+    "layout_shift_sources": "Raw max-session CLS unchanged; up to20 source entries with prior/current rectangles and recent-input flag."
+  },
+  "evidence_frames_required": [
+    "initial CTA/fullstage/toolbar in all6 widths",
+    "large open structure at p0/.25/.5/.65/.75/1 and reverse",
+    "all toolbar states forward/reverse",
+    "vertical focus visible below sticky preview",
+    "normal/reduced full-layout contract",
+    "20-second performance/CLS",
+    "existing save/import/audio/WAV regression"
+  ],
+  "projection": {
+    "aspect_source": "render-area excludes60px toolbar",
+    "camera_fit": "2.4*sqrt(1+(2.52/(0.92*min(1,aspect)))^2)",
+    "contain_radius_world": 2.4,
+    "clip_planes": "near0.1/far40",
+    "same_camera_uniform_in_vertex_and_fragment": true,
+    "initial_geometry_sample_max_radius": 2.1305,
+    "limit": "Sampled parameter states are not every possible browser/GPU/frame."
+  }
+}
