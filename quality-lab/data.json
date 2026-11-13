@@ -1,0 +1,24 @@
+{
+  "updated": "2026-11-14",
+  "status": "初版v1を保存しました。立体と音の操作は動作していますが、1280×720で文字が重なるため不合格です。独立評価と修正版の制作を進めています。",
+  "revisions": [{
+    "id": "sound-v1", "title": "Sound Studies / v1", "date": "2026-11-14",
+    "verdict": "不合格・改善前", "gate": "FAIL", "path": "../gs-000011/v1/",
+    "code": "https://github.com/shinnosuketouma/public/tree/87614847ec7c2aad88b42f1bdd8e269a992fd1cd/gs-000011/v1",
+    "commit": "87614847ec7c2aad88b42f1bdd8e269a992fd1cd",
+    "summary": "指示書から制作した最初の実装。独自の金属彫刻とブラウザ内のアンビエント楽器を組み合わせました。詳細な構図を渡した実装試験であり、これだけで自律設計能力を証明しません。",
+    "changes": ["競合素材を使わずWebGLの立体を自作。3プリセットで輪郭・金属色・和音が変わります。", "音の明示再生と停止、明るさ・ゆらぎ・音量、設定の保存・復帰、JSON書き出しを実装。", "動きの停止、非表示停止、自作SVGの代替、実測値の診断表示を用意。"],
+    "issues": ["1280×720で日本語副題と下部説明が重なります。", "操作画面では立体が見えず、形と音を同時に調整する体験が分断されています。", "独立評価、全画面幅、低モーションの実測は検証中です。"],
+    "checks": [
+      {"name":"通常の立体描画とプリセット", "result":"PASS（観察範囲）", "evidence":"IAB 1280×720でEmber/Haloの異なる輪郭とWebGL描画を確認。"},
+      {"name":"1280×720の表示", "result":"FAIL", "evidence":"日本語副題と下部説明の重なり。"},
+      {"name":"構文・JSON・相対素材", "result":"PASS", "evidence":"構文検査、JSON parse、相対参照の実在。全10ソース約338KB。"},
+      {"name":"独立した作品品質判定", "result":"検証中", "evidence":"別担当がコードとブラウザを検査中。作者の自己点で合格にしません。"}
+    ]
+  }],
+  "references": [
+    {"title": "比較作例: Video Ribbon", "url": "https://motionsites.ai/?prompt=vante-ribbon-hero"},
+    {"title": "比較作例: Robot Jellyfish", "url": "https://motionsites.ai/?prompt=medusa-jellyfish-hero"}
+  ],
+  "openItems": ["初版の実ブラウザ検証と独立評価。", "支配的な欠点の修正と改版ごとの公開。", "詳細ブリーフによる実装試験の後に、用途だけを渡す新しいコンテキストでの制作検証。"]
+}
