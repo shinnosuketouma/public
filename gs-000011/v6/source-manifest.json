@@ -1,0 +1,88 @@
+{
+  "version": "sound-studies-v6",
+  "status": "FROZEN_PENDING_PARENT_BROWSER_QA",
+  "change_scope": "Two color tokens for normal text contrast and stale asynchronous JSON import guards only",
+  "builder_checks": {
+    "javascript_syntax": "PASS",
+    "all_json_parse": "PASS",
+    "unique_ids": 39,
+    "local_asset_and_anchor_refs_checked": 10,
+    "contrast_pairs": 15,
+    "minimum_normal_text_ratio": 4.594048,
+    "css_only_two_tokens": true,
+    "css_changed_byte_positions": 10,
+    "v5_other_display_assets_byte_identical": 6
+  },
+  "independent_source_review": {
+    "result": "PASS",
+    "cases": 31,
+    "assertions": 162,
+    "app_sha256": "32f3affd568036b836a1638b83c5be185653a4927edc0bd5b4b20d208d4822a6",
+    "evidence": "docs/content-production/quality-lab/evidence/sound-v6-source-tests.json",
+    "scope": "SOURCE_VM, not real browser timing"
+  },
+  "browser_qa": "NOT_RUN_BY_BUILDER",
+  "claimed_quality_gate_pass": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3669,
+      "sha256": "739b5f72accfd005c9bee7beb9e9a469b8e048d6514d4aad52cef9750a257aa5"
+    },
+    {
+      "path": "app.js",
+      "bytes": 43081,
+      "sha256": "32f3affd568036b836a1638b83c5be185653a4927edc0bd5b4b20d208d4822a6"
+    },
+    {
+      "path": "asset-manifest.json",
+      "bytes": 2600,
+      "sha256": "689aeb6a344b5c5fbbca0ec7ea1e0591957e7956937b5ac7239fc67fd88711ad"
+    },
+    {
+      "path": "generate-fallback.py",
+      "bytes": 3443,
+      "sha256": "948a1a37bd43fc6ea890b9e561080095cd3a380b8ee404ba06a33885b0556102"
+    },
+    {
+      "path": "index.html",
+      "bytes": 10254,
+      "sha256": "925b605c8e6eee8006de529cbc820e2273e78b484d9c4c0c6f88dd4ffe68155e"
+    },
+    {
+      "path": "interaction-contract.json",
+      "bytes": 9087,
+      "sha256": "b481ec523037549f17bd807bf552abf451b51e478a98b7024e944fb969bcdfed"
+    },
+    {
+      "path": "mark.svg",
+      "bytes": 236,
+      "sha256": "881e9660cb28489fc124acafdfe6fe57efd2ca2a21fe2baf40130ac2b96f82dd"
+    },
+    {
+      "path": "motion-contract.json",
+      "bytes": 6872,
+      "sha256": "11c4fa1af7f0022f56e266b1ad5bcab6077da85fd8f090f9f6a8527af8293b46"
+    },
+    {
+      "path": "sculpture-ember.svg",
+      "bytes": 657185,
+      "sha256": "b72df01d9a32c8081c79d83e08d20e26da7f97d7286296af8ec432c094118d40"
+    },
+    {
+      "path": "sculpture-halo.svg",
+      "bytes": 657184,
+      "sha256": "5a901db8af4c1a9c3fad65bc6f95619a97d68580417927238b1296ea6ee69518"
+    },
+    {
+      "path": "sculpture-tidal.svg",
+      "bytes": 657185,
+      "sha256": "5787908def52ba848bc7ea6b5fd07fec0056c5bbf8bafa3063d9dd60572d35b6"
+    },
+    {
+      "path": "style.css",
+      "bytes": 22929,
+      "sha256": "acac5cf009bd413d0caadde86fdce08f836648486c6eac64322411f2ec9ce35c"
+    }
+  ]
+}
