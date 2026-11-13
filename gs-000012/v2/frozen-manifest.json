@@ -1,0 +1,84 @@
+{
+  "schema": "genseki-quality-lab/frozen-v1",
+  "created_at": "2026-11-13T19:24:11.586Z",
+  "site_code": "gs-000012",
+  "revision": "v2",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "993332d37ea6839f1ac210e598d959e93715e978e8132a20db311b4ba79c5a15",
+      "bytes": 4301
+    },
+    {
+      "path": "app.js",
+      "sha256": "0bade586474029f381e03e564b6513bacd7241bf11307a06ad7f8bac22766f3f",
+      "bytes": 26029
+    },
+    {
+      "path": "asset-manifest.json",
+      "sha256": "8d5417ee71cca1d1a17d9f8fd4e2b9bba33c761fdbd33c900a5b528d19134d46",
+      "bytes": 2703
+    },
+    {
+      "path": "assets/aida-cover.svg",
+      "sha256": "a85886c97f90bb421f70cd925ddb9a640646e3170a69a8f66c3afdca1a9b5385",
+      "bytes": 1481
+    },
+    {
+      "path": "assets/aida-left.svg",
+      "sha256": "df9d78e9678f99ff2222ea57b4d6502a332aff62a2d97bac68a577e040ef15e6",
+      "bytes": 2156
+    },
+    {
+      "path": "assets/aida-right.svg",
+      "sha256": "620cc676b7c3e60867f92dedc1efaa655a612f24d67a5c00b2d90f303a193a51",
+      "bytes": 2141
+    },
+    {
+      "path": "assets/favicon.svg",
+      "sha256": "630fd2f821784bedce3bc5bd9c3c7d38709f7886852f31f2af750b5d959f40f2",
+      "bytes": 199
+    },
+    {
+      "path": "assets/kutou-poster.svg",
+      "sha256": "6420ae14ab40789ec228a0c326db9459feaf98a0a531bada73547ef562548f04",
+      "bytes": 866
+    },
+    {
+      "path": "assets/layers-cover.svg",
+      "sha256": "3b9bf1bb8ace09ae16ab7d65085b7be3bb3a7a7f2e487367489f0aec5f863954",
+      "bytes": 903
+    },
+    {
+      "path": "assets/outline-poster.svg",
+      "sha256": "59726d98649f23b1bc2a103b9f8507f996d6d983296481698429bd5d3ae67fe6",
+      "bytes": 1032
+    },
+    {
+      "path": "index.html",
+      "sha256": "4d159d0025d859cdb468fcc12b9353b61f5aaa3b1366f592e1c7295ad7aec567",
+      "bytes": 18075
+    },
+    {
+      "path": "publication.html",
+      "sha256": "f7bd65e5e8099d5d6a6cdf8f1f0983abd2372302084888231194c207fff8c542",
+      "bytes": 6877
+    },
+    {
+      "path": "publication.js",
+      "sha256": "0114da457a8c79a6da8cd608a46f9916f843f372922d7a27b8b69c283dd432fc",
+      "bytes": 7260
+    },
+    {
+      "path": "style.css",
+      "sha256": "7897367c58ce46a0e3076cd03fab11d04ccb6f046a06c7549a8c4b1a5165db8b",
+      "bytes": 46173
+    },
+    {
+      "path": "telemetry.js",
+      "sha256": "d25ab5d756d81ec73cb853509b10eae13b67cf45a56a1264bec2b61cdbcd8e61",
+      "bytes": 3263
+    }
+  ],
+  "totalBytes": 123459
+}
